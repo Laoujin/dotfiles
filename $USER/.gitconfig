@@ -1,0 +1,23 @@
+[user]
+	name = Laoujin\n
+	email = woutervs@hotmail.com\n
+[merge]
+	tool = bc3
+[mergetool "kdiff3"]
+        path = c:/Program Files (x86)/KDiff3/kdiff3.exe
+[diff]
+	tool = bc3
+        guitool = kdiff3
+[difftool "kdiff3"]
+        path = c:/Program Files (x86)/KDiff3/kdiff3.exe
+[alias]
+  st = status
+  ci = commit
+  br = branch
+  co = checkout
+  df = diff
+  lg = log -p
+[difftool "bc3"]
+	path = C:\\Program Files (x86)\\Beyond Compare 3\\bcomp.exe
+[mergetool "bc3"]
+	path = C:\\Program Files (x86)\\Beyond Compare 3\\bcomp.exe
