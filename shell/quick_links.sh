@@ -15,5 +15,5 @@ function www(){
 }
 
 function dotfiles(){
-  cd /c/unix/code/bash/shellconfig/
+  cd /c/unix/code/dotfiles/
 }
