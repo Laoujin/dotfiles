@@ -13,3 +13,7 @@ function unixcode(){
 function www(){
   cd /c/unix/wamp/www/
 }
+
+function dotfiles(){
+  cd /c/unix/code/bash/shellconfig/
+}
