@@ -11,5 +11,5 @@ function createUserHomeLink($file)
 	}
 }
 
-createUserHomeLink(".gitconfig")
-createUserHomeLink(".bashrc")
+createUserHomeLink ".gitconfig"
+createUserHomeLink ".bashrc"
