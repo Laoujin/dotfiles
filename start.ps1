@@ -1,19 +1,5 @@
 ﻿cls
 
-################
-"## GIT BASH ##"
-################
-function createUserHomeLink($file)
-{
-	$destination = "$HOME\$file"
-	if (-not (Test-Path ($destination)))
-	{
-		$params = "mklink $destination $PSScriptRoot\Users\$file"
-		cmd /c $params
-	}
-}
-
-createUserHomeLink(".gitconfig")
-createUserHomeLink(".bashrc")
+& "$PSScriptRoot\Users\gitbash.ps1"
 
 
