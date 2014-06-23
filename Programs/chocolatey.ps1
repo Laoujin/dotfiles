@@ -10,6 +10,9 @@
 #	Write-Host "chocolatey_bin_root set to c:\unix"
 #}
 
+cinst IrfanView
+# need to manually tick out Propertier > Extensions runAs administrator (or fails silently)
 
+cinst DiffMerge
 
 #cinst dexpot # needs evaluation
