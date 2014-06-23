@@ -67,9 +67,46 @@ if (-not ("AdjPriv" -as [type]))
 	Write-Host "Enable SeTakeOwnershipPrivilege is: $success"
 }
 
+function Test-RegistryValue
+{
+    param(
+        [Alias("PSPath")]
+        [Parameter(Position = 0, Mandatory = $true, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true)]
+        [String]$Path
+        ,
+        [Parameter(Position = 1, Mandatory = $true)]
+        [String]$Name
+        ,
+        [Switch]$PassThru
+    ) 
+
+    process {
+        if (Test-Path $Path) {
+            $Key = Get-Item -LiteralPath $Path
+            if ($Key.GetValue($Name, $null) -ne $null) {
+                if ($PassThru) {
+                    Get-ItemProperty $Path $Name
+                } else {
+                    $true
+                }
+            } else {
+                $false
+            }
+        } else {
+            $false
+        }
+    }
+}
+
 function updateRegistryKey($desc, $hive, $regPathRaw, $regKey, $disabledValue, $activeValue) 
 {
 	$regPath = "Registry::$hive\$regPathRaw"
+	
+	# Create regKey if it does not exist
+	if (Test-RegistryValue $regPath $regKey $false)
+	{
+		Write-Host "$regPathRaw does exist"
+	}
 
 	# Check owner
 	$currentOwnerName = (Get-Acl $regPath).Owner
@@ -116,23 +153,37 @@ function updateRegistryKey($desc, $hive, $regPathRaw, $regKey, $disabledValue, $
 	}
 }
 
+function peekRegKey($hive, $key)
+{
+	Write-Host "Peeking $hive\$key"
+	$regPath = "Registry::$hive\$key"
+	$acl = Get-Acl $regPath
+	Write-Host $acl
+	
+	$reg = Get-ItemProperty -Path $regPath #-Name $regKey | Select-Object -ExpandProperty $regKey
+	Write-Host $reg
+}
+
 # OneDrive
-updateRegistryKey "Remove OneDrive from Navigation pane" 'HKEY_CLASSES_ROOT' 'CLSID\{8E74D236-7F35-4720-B138-1FED0B85EA75}\ShellFolder' "Attributes" 4034920525 4035969101
+#updateRegistryKey "OneDrive icon in Navigation pane" 'HKEY_CLASSES_ROOT' 'CLSID\{8E74D236-7F35-4720-B138-1FED0B85EA75}\ShellFolder' "Attributes" 4034920525 4035969101
 
 # Homegroup
 # services.msc
 # Stop HomeGroup Listener and HomeGroup Provider
 
 # Network
-updateRegistryKey "Remove Network from Navigation pane" 'HKEY_CLASSES_ROOT' 'CLSID\{F02C1A0D-BE21-4350-88B0-7367FC96EF3C}\ShellFolder' "Attributes" 2953052260 2962489444
+updateRegistryKey "Network icon in Navigation pane" 'HKEY_CLASSES_ROOT' 'CLSID\{F02C1A0D-BE21-4350-88B0-7367FC96EF3C}\ShellFolder' "Attributes" 2953052260 2962489444
 
 # This PC Folders
 
+#peekRegKey "HKEY_CURRENT_USER" "Software\Classes\CLSID\{59031a47-3f72-44a7-89c5-5595fe6b30ee}"
+
+updateRegistryKey "User folder group in Windows Explorer" 'HKEY_CURRENT_USER' 'Software\Classes\CLSID\{59031a47-3f72-44a7-89c5-5595fe6b30ee}' "System.IsPinnedToNameSpaceTree" 00000000 00000001
 
 # Library
 # currently not visible in open/close dialog
 
 
 # open/save dialogs (Windows 8.1)
-updateRegistryKey "Remove OneDrive" 'HKEY_LOCAL_MACHINE' 'SOFTWARE\Wow6432Node\Classes\CLSID\{8E74D236-7F35-4720-B138-1FED0B85EA75}\ShellFolder' "Attributes" 4034920525 4035969101
-updateRegistryKey "Remove Network" 'HKEY_LOCAL_MACHINE' 'SOFTWARE\Wow6432Node\Classes\CLSID\{F02C1A0D-BE21-4350-88B0-7367FC96EF3C}\ShellFolder' "Attributes" 2953052260 2962489444
+#updateRegistryKey "OneDrive in open/save dialogs" 'HKEY_LOCAL_MACHINE' 'SOFTWARE\Wow6432Node\Classes\CLSID\{8E74D236-7F35-4720-B138-1FED0B85EA75}\ShellFolder' "Attributes" 4034920525 4035969101
+#updateRegistryKey "Network in open/save dialogs" 'HKEY_LOCAL_MACHINE' 'SOFTWARE\Wow6432Node\Classes\CLSID\{F02C1A0D-BE21-4350-88B0-7367FC96EF3C}\ShellFolder' "Attributes" 2953052260 2962489444
