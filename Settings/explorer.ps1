@@ -170,15 +170,17 @@ function peekRegKey($hive, $key)
 # Homegroup
 # services.msc
 # Stop HomeGroup Listener and HomeGroup Provider
+# C1Cc64rN47
 
 # Network
-updateRegistryKey "Network icon in Navigation pane" 'HKEY_CLASSES_ROOT' 'CLSID\{F02C1A0D-BE21-4350-88B0-7367FC96EF3C}\ShellFolder' "Attributes" 2953052260 2962489444
+#updateRegistryKey "Network icon in Navigation pane" 'HKEY_CLASSES_ROOT' 'CLSID\{F02C1A0D-BE21-4350-88B0-7367FC96EF3C}\ShellFolder' "Attributes" 2953052260 2962489444
 
 # This PC Folders
 
-#peekRegKey "HKEY_CURRENT_USER" "Software\Classes\CLSID\{59031a47-3f72-44a7-89c5-5595fe6b30ee}"
+peekRegKey "HKEY_CURRENT_USER" "Software\Classes\CLSID\{59031a47-3f72-44a7-89c5-5595fe6b30ee}"
+# current = 0
 
-updateRegistryKey "User folder group in Windows Explorer" 'HKEY_CURRENT_USER' 'Software\Classes\CLSID\{59031a47-3f72-44a7-89c5-5595fe6b30ee}' "System.IsPinnedToNameSpaceTree" 00000000 00000001
+#updateRegistryKey "User folder group in Windows Explorer" 'HKEY_CURRENT_USER' 'Software\Classes\CLSID\{59031a47-3f72-44a7-89c5-5595fe6b30ee}' "System.IsPinnedToNameSpaceTree" 00000001 00000000
 
 # Library
 # currently not visible in open/close dialog
@@ -187,3 +189,7 @@ updateRegistryKey "User folder group in Windows Explorer" 'HKEY_CURRENT_USER' 'S
 # open/save dialogs (Windows 8.1)
 #updateRegistryKey "OneDrive in open/save dialogs" 'HKEY_LOCAL_MACHINE' 'SOFTWARE\Wow6432Node\Classes\CLSID\{8E74D236-7F35-4720-B138-1FED0B85EA75}\ShellFolder' "Attributes" 4034920525 4035969101
 #updateRegistryKey "Network in open/save dialogs" 'HKEY_LOCAL_MACHINE' 'SOFTWARE\Wow6432Node\Classes\CLSID\{F02C1A0D-BE21-4350-88B0-7367FC96EF3C}\ShellFolder' "Attributes" 2953052260 2962489444
+
+
+# Remove context menu items
+#HKEY_CLASSES_ROOT\*\shellex\ContextMenuHandlers
