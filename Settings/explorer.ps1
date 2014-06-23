@@ -1,5 +1,12 @@
 ﻿cls
 
+# many configurations can be found at:
+#http://www.eightforums.com/tutorials/
+
+# New context menu
+# HKEY_CLASSES_ROOT -> find extension and delete ShellNew key
+# To add: Add ShellNew key and add New String Value "NullFile" (with no value)
+
 # Customize Windows Explorer
 ########################
 "## WINDOWS EXPLORER ##"

@@ -1,0 +1,49 @@
+Windows Registry Editor Version 5.00
+
+; Created by: Shawn Brink
+; http://www.eightforums.com
+; Tutorial: http://www.eightforums.com/tutorials/15624-pin-start-files-windows-8-a.html
+
+
+[-HKEY_CLASSES_ROOT\*\shell\pintostartscreen]
+
+[-HKEY_CLASSES_ROOT\*\shellex\ContextMenuHandlers\PintoStartScreen]
+
+[HKEY_CLASSES_ROOT\exefile\shellex\ContextMenuHandlers\PintoStartScreen]
+@="{470C0EBD-5D73-4d58-9CED-E91E22E23282}"
+
+[-HKEY_CLASSES_ROOT\exefile\shell\pintostartscreen]
+
+[HKEY_CLASSES_ROOT\exefile\shellex\ContextMenuHandlers\PintoStartScreen]
+@="{470C0EBD-5D73-4d58-9CED-E91E22E23282}"
+
+[-HKEY_CLASSES_ROOT\Folder\shell\pintostartscreen]
+
+[HKEY_CLASSES_ROOT\Folder\shellex\ContextMenuHandlers\PintoStartScreen]
+@="{470C0EBD-5D73-4d58-9CED-E91E22E23282}"
+
+[HKEY_CLASSES_ROOT\lnkfile]
+"IsShortcut"=""
+
+[-HKEY_CLASSES_ROOT\mscfile\shell\pintostartscreen]
+
+[HKEY_CLASSES_ROOT\mscfile\shellex\ContextMenuHandlers\PintoStartScreen]
+@="{470C0EBD-5D73-4d58-9CED-E91E22E23282}"
+
+
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Classes\exefile\shellex\ContextMenuHandlers\PintoStartScreen]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\exefile\shellex\ContextMenuHandlers\PintoStartScreen]
+@="{470C0EBD-5D73-4d58-9CED-E91E22E23282}"
+
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Folder\shellex\ContextMenuHandlers\PintoStartScreen]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Folder\shellex\ContextMenuHandlers\PintoStartScreen]
+@="{470C0EBD-5D73-4d58-9CED-E91E22E23282}"
+
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Classes\mscfile\shellex\ContextMenuHandlers\PintoStartScreen]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\mscfile\shellex\ContextMenuHandlers\PintoStartScreen]
+@="{470C0EBD-5D73-4d58-9CED-E91E22E23282}"
+
+
