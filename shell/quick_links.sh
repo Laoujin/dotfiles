@@ -11,7 +11,7 @@ function tactics(){
 }
 
 function autokey(){
-  cd /c/unix/code/Autohotkey/Projects/WinDevHelper/
+  cd /c/unix/code/Autohotkey/
 }
 
 function code(){
