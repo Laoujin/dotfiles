@@ -11,8 +11,8 @@ function Create-UserHomeLink($file) {
 	if (-not (Test-Path ($destination))) {
 		$params = "mklink $destination $PSScriptRoot\Links\$file"
 		cmd /c $params
-	}
-	else {
+
+	} else {
 		Write-Host "Destination already existed: $file" -ForegroundColor red
 	}
 }
@@ -34,9 +34,34 @@ for ($i = 0; $i -lt $links.dirs.length; $i++) {
 	if (-not (Test-Path ($link))) {
 		$params = "mklink /J $link $target"
 		cmd /c $params
-	}
-	else {
+
+	} else {
 		Write-Host "Destination already existed: $link" -ForegroundColor red
+	}
+}
+
+Write-Host
+
+##################################################################### SHORTCUTS
+
+Write-Title("START WITH WINDOWS")
+Write-Host "Programs starting when Windows starts"
+
+for ($i = 0; $i -lt $links.autoStart.length; $i++) {
+	$file = $links.autoStart[$i]
+	$fileName = [System.IO.Path]::GetFileName($file)
+	$link = "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Startup\$fileName.lnk"
+
+	if (-not (Test-Path ($link))) {
+		$WshShell = New-Object -comObject WScript.Shell
+		$Shortcut = $WshShell.CreateShortcut($link)
+		$Shortcut.TargetPath = $file
+		$Shortcut.WorkingDirectory = Split-Path $file
+		$Shortcut.Save()
+		Write-Host "Link created: $file"
+
+	} else {
+		Write-Host "Autostarts already: $file" -ForegroundColor red
 	}
 }
 

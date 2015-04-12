@@ -6,5 +6,6 @@
 	}, {
 		"target": "$HOME\\Dropbox\\Personal\\Programming\\www",
 		"link": "C:\\wamp\\www"
-	}]
+	}],
+	"autoStart": ["c:\\code\\Autohotkey\\MiKe\\mike.ahk"]
 }
