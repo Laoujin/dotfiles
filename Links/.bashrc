@@ -1,6 +1,6 @@
 clear
 
-SHELLCONFIG_PATH="/C/Users/Wouter/Dropbox/Personal/Programming/UnixCode/dotfiles"
+SHELLCONFIG_PATH="/C/code/dotfiles"
 
 source $SHELLCONFIG_PATH/shell/quick_links.sh
 

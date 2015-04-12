@@ -1,30 +1,29 @@
 function sangu() {
-	cd "/C/Users/Wouter/Dropbox/Personal/Programming/UnixCode/TribalWars/sangupackage-source/"
+	cd "/c/code/TribalWars/sangupackage-source/"
 }
 
 function sangudebug() {
-	cd "/C/Users/Wouter/Dropbox/Personal/Programming/UnixCode/TribalWars/TWTactics/TribalWars/bin/Debug/WorldData/nl10/"
+	cd "/c/code/TribalWars/TWTactics/TribalWars/bin/Debug/WorldData/nl10/"
 }
 
 function tactics(){
-  cd "/C/Users/Wouter/Dropbox/Personal/Programming/UnixCode/TribalWars/TWTactics/"
+  cd "/c/code/TribalWars/TWTactics/"
 }
 
 function autokey(){
-  cd "/C/Users/Wouter/Dropbox/Personal/Programming/UnixCode/Autohotkey/"
+  cd "/c/code/Autohotkey/"
 }
 
 function code(){
-  cd "/C/Users/Wouter/Dropbox/Personal/Programming/UnixCode/"
+  cd "/c/code/"
 }
 
 function www(){
-	echo "need junction"
   cd "/C/wamp/www/"
 }
 
 function dotfiles(){
-  cd "/C/Users/Wouter/Dropbox/Personal/Programming/UnixCode/dotfiles/"
+  cd "/c/code/dotfiles/"
 }
 
 echo commands: sangu, sangudebug, tactics, autokey, code, www, dotfiles

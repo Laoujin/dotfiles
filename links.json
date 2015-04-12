@@ -1,3 +1,10 @@
 {
-	"home": [".gitconfig", ".bashrc"]
+	"home": [".gitconfig", ".bashrc"],
+	"dirs": [{
+		"target": "$HOME\\Dropbox\\Personal\\Programming\\UnixCode",
+		"link": "c:\\code"
+	}, {
+		"target": "$HOME\\Dropbox\\Personal\\Programming\\www",
+		"link": "C:\\wamp\\www"
+	}]
 }
