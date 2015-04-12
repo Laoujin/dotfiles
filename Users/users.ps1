@@ -1,5 +1,5 @@
 ﻿################
-"## GIT BASH ##"
+"## USERS FOLDER (HOME) ##"
 ################
 function createUserHomeLink($file)
 {
