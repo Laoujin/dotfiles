@@ -1,6 +1,4 @@
-﻿. ..\Helpers\Console.ps1
-
-Write-Title("USERS FOLDER (HOME)")
+﻿Write-Title("USERS FOLDER (HOME)")
 Write-Host "Create symlinks for Users\Account"
 Write-Host "Home: $HOME"
 
