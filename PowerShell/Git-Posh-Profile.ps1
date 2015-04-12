@@ -14,7 +14,7 @@ function global:prompt {
 	# Reset color, which can be messed up by Enable-GitColors
 	$Host.UI.RawUI.ForegroundColor = $GitPromptSettings.DefaultForegroundColor
 
-	Write-Host($pwd.ProviderPath) -nonewline
+	Write-Host($pwd.ProviderPath) -nonewline -ForegroundColor green
 
 	Write-VcsStatus
 
@@ -30,3 +30,4 @@ Start-SshAgent -Quiet
 
 $global:GitPromptSettings.WorkingForegroundColor    = [ConsoleColor]::Yellow 
 $global:GitPromptSettings.UntrackedForegroundColor  = [ConsoleColor]::Yellow
+$global:GitPromptSettings.BranchForegroundColor  = [ConsoleColor]::Green
