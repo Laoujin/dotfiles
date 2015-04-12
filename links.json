@@ -11,6 +11,10 @@
 		{
 			"link": "$PSScriptRoot\\PowerShell\\Microsoft.PowerShell_profile.ps1",
 			"to": "$MYDOCUMENTS\\WindowsPowerShell\\Microsoft.PowerShell_profile.ps1"
+		},
+		{
+			"link": "$PSScriptRoot\\Settings\\Programs\\ConEmu.xml",
+			"to": "C:\\tools\\cmder\\config\\ConEmu.xml"
 		}
 	],
 	"dirs": [
