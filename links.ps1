@@ -1,35 +1,18 @@
-﻿$links = Get-Content "links.json" | Out-String | ConvertFrom-Json
+$config = Get-Content "$PSScriptRoot\links.json" | Out-String | ConvertFrom-Json
 
-########################################################################## SYMLINKS
-
-Write-Title("USERS FOLDER (HOME)")
-Write-Host "Create symlinks for Users\Account"
-Write-Host "Home: $HOME"
-
-function Create-UserHomeLink($file) {
-	$destination = "$HOME\$file"
-	if (-not (Test-Path ($destination))) {
-		$params = "mklink $destination $PSScriptRoot\Links\$file"
-		cmd /c $params
-
-	} else {
-		Write-Host "Destination already existed: $file" -ForegroundColor darkgray
-	}
+function Set-VariablePaths($path) {
+	$path = $path.Replace('$HOME', $HOME)
+	$path = $path.Replace('$PSScriptRoot', $PSScriptRoot)
+	return $path
 }
-
-for ($i = 0; $i -lt $links.home.length; $i++) {
-	Create-UserHomeLink $links.home[$i]
-}
-
-Write-Host
 
 ########################################################################## JUNCTIONS
 
 Write-Title("JUNCTIONS")
 
-for ($i = 0; $i -lt $links.dirs.length; $i++) {
-	$link = $links.dirs[$i].link
-	$target = $links.dirs[$i].target.Replace('$HOME', $HOME)
+for ($i = 0; $i -lt $config.dirs.length; $i++) {
+	$link = Set-VariablePaths($config.dirs[$i].link)
+	$target = Set-VariablePaths($config.dirs[$i].to)
 	
 	if (-not (Test-Path ($link))) {
 		$params = "mklink /J $link $target"
@@ -42,6 +25,30 @@ for ($i = 0; $i -lt $links.dirs.length; $i++) {
 
 Write-Host
 
+########################################################################## SYMLINKS
+
+Write-Title("SYMLINKS")
+Write-Host "Home: $HOME"
+
+function Create-FileLink($file, $to) {
+	$file = Set-VariablePaths($file)
+	$to = Set-VariablePaths($to)
+
+	if (-not (Test-Path ($to))) {
+		$params = "mklink $to $file"
+		cmd /c $params
+
+	} else {
+		Write-Host "Destination already existed: $to" -ForegroundColor darkgray
+	}
+}
+
+for ($i = 0; $i -lt $config.files.length; $i++) {
+	Create-FileLink $config.files[$i].link $config.files[$i].to
+}
+
+Write-Host
+
 ##################################################################### SHORTCUTS
 
 $startupFolder = "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Startup\"
@@ -50,8 +57,8 @@ Write-Title("START WITH WINDOWS")
 Write-Host "Programs starting when Windows starts"
 Write-Host "Dir: $startupFolder"
 
-for ($i = 0; $i -lt $links.autoStart.length; $i++) {
-	$file = $links.autoStart[$i]
+for ($i = 0; $i -lt $config.autoStart.length; $i++) {
+	$file = $config.autoStart[$i]
 	$fileName = [System.IO.Path]::GetFileName($file)
 	$link = "$startupFolder$fileName.lnk"
 

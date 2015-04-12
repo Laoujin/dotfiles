@@ -1,11 +1,23 @@
 {
-	"home": [".gitconfig", ".bashrc"],
-	"dirs": [{
-		"target": "$HOME\\Dropbox\\Personal\\Programming\\UnixCode",
-		"link": "c:\\code"
-	}, {
-		"target": "$HOME\\Dropbox\\Personal\\Programming\\www",
-		"link": "C:\\wamp\\www"
-	}],
+	"files": [
+		{
+			"link": "$PSScriptRoot\\shell\\.gitconfig",
+			"to": "$HOME\\.gitconfig"
+		},
+		{
+			"link": "$PSScriptRoot\\shell\\.bashrc",
+			"to": "$HOME\\.bashrc"
+		}
+	],
+	"dirs": [
+		{
+			"link": "c:\\code",
+			"to": "$HOME\\Dropbox\\Personal\\Programming\\UnixCode"
+		},
+		{
+			"link": "C:\\wamp\\www",
+			"to": "$HOME\\Dropbox\\Personal\\Programming\\www"
+		}
+	],
 	"autoStart": ["c:\\code\\Autohotkey\\MiKe\\mike.ahk"]
 }

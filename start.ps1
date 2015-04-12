@@ -1,4 +1,4 @@
-﻿cls
+cls
 
 #Set-ExecutionPolicy Unrestricted
 
