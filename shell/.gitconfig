@@ -37,5 +37,11 @@
 	helper = !'C:\\Users\\Wouter\\AppData\\Roaming\\GitCredStore\\git-credential-winstore.exe'
 
 [color "status"]
-	changed = cyan normal bold
-	untracked = cyan normal bold
+	changed = magenta bold
+	untracked = magenta bold
+
+[color "diff"]
+	meta = blue white
+	frag = normal bold
+	old = magenta bold
+	new = green bold

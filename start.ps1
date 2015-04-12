@@ -15,6 +15,6 @@ Write-Host
 
 & "$PSScriptRoot\PowerShell\modules.ps1"
 
-& "$PSScriptRoot\shell\node-npm.ps1"
+#& "$PSScriptRoot\shell\node-npm.ps1"
 
-#& "$PSScriptRoot\Settings\explorer.ps1"
+& "$PSScriptRoot\Settings\explorer.ps1"

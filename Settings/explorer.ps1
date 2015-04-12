@@ -78,13 +78,11 @@ if (-not ("AdjPriv" -as [type]))
 function Test-RegistryValue
 {
     param(
-        [Alias("PSPath")]
         [Parameter(Position = 0, Mandatory = $true, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true)]
-        [String]$Path
-        ,
+        [String]$Path,
         [Parameter(Position = 1, Mandatory = $true)]
-        [String]$Name
-        ,
+        [String]$Name,
+        [Parameter(Position = 1)]
         [Switch]$PassThru
     ) 
 
@@ -124,10 +122,10 @@ function updateRegistryKey($desc, $hive, $regPathRaw, $regKey, $disabledValue, $
 		switch ($hive)
 		{
 			"HKEY_LOCAL_MACHINE" { $hive = [Microsoft.Win32.Registry]::LocalMachine; break }
-         "HKEY_CURRENT_USER" { $hive = [Microsoft.Win32.Registry]::CurrentUser; break }
-         "HKEY_CLASSES_ROOT" { $hive = [Microsoft.Win32.Registry]::ClassesRoot; break }
-         "HKEY_CURRENT_CONFIG" { $hive = [Microsoft.Win32.Registry]::CurrentConfig; break }
-         "HKEY_USERS" { $hive = [Microsoft.Win32.Registry]::Users; break }
+			"HKEY_CURRENT_USER" { $hive = [Microsoft.Win32.Registry]::CurrentUser; break }
+			"HKEY_CLASSES_ROOT" { $hive = [Microsoft.Win32.Registry]::ClassesRoot; break }
+			"HKEY_CURRENT_CONFIG" { $hive = [Microsoft.Win32.Registry]::CurrentConfig; break }
+			"HKEY_USERS" { $hive = [Microsoft.Win32.Registry]::Users; break }
 		}
 		$key = $hive.OpenSubKey($regPathRaw, [Microsoft.Win32.RegistryKeyPermissionCheck]::ReadWriteSubTree, [System.Security.AccessControl.RegistryRights]::TakeOwnership)
 
@@ -172,8 +170,10 @@ function peekRegKey($hive, $key)
 	Write-Host $reg
 }
 
+#regedit /s c:\file.reg
+
 # OneDrive
-#updateRegistryKey "OneDrive icon in Navigation pane" 'HKEY_CLASSES_ROOT' 'CLSID\{8E74D236-7F35-4720-B138-1FED0B85EA75}\ShellFolder' "Attributes" 4034920525 4035969101
+updateRegistryKey "OneDrive icon in Navigation pane" 'HKEY_CLASSES_ROOT' 'CLSID\{8E74D236-7F35-4720-B138-1FED0B85EA75}\ShellFolder' "Attributes" 4034920525 4035969101
 
 # Homegroup
 # services.msc
@@ -181,22 +181,22 @@ function peekRegKey($hive, $key)
 # C1Cc64rN47
 
 # Network
-#updateRegistryKey "Network icon in Navigation pane" 'HKEY_CLASSES_ROOT' 'CLSID\{F02C1A0D-BE21-4350-88B0-7367FC96EF3C}\ShellFolder' "Attributes" 2953052260 2962489444
+updateRegistryKey "Network icon in Navigation pane" 'HKEY_CLASSES_ROOT' 'CLSID\{F02C1A0D-BE21-4350-88B0-7367FC96EF3C}\ShellFolder' "Attributes" 2953052260 2962489444
 
 # This PC Folders
 
-peekRegKey "HKEY_CURRENT_USER" "Software\Classes\CLSID\{59031a47-3f72-44a7-89c5-5595fe6b30ee}"
+#peekRegKey "HKEY_CURRENT_USER" "Software\Classes\CLSID\{59031a47-3f72-44a7-89c5-5595fe6b30ee}"
 # current = 0
 
-#updateRegistryKey "User folder group in Windows Explorer" 'HKEY_CURRENT_USER' 'Software\Classes\CLSID\{59031a47-3f72-44a7-89c5-5595fe6b30ee}' "System.IsPinnedToNameSpaceTree" 00000001 00000000
+updateRegistryKey "User folder group in Windows Explorer" 'HKEY_CURRENT_USER' 'Software\Classes\CLSID\{59031a47-3f72-44a7-89c5-5595fe6b30ee}' "System.IsPinnedToNameSpaceTree" 00000001 00000000
 
 # Library
 # currently not visible in open/close dialog
 
 
 # open/save dialogs (Windows 8.1)
-#updateRegistryKey "OneDrive in open/save dialogs" 'HKEY_LOCAL_MACHINE' 'SOFTWARE\Wow6432Node\Classes\CLSID\{8E74D236-7F35-4720-B138-1FED0B85EA75}\ShellFolder' "Attributes" 4034920525 4035969101
-#updateRegistryKey "Network in open/save dialogs" 'HKEY_LOCAL_MACHINE' 'SOFTWARE\Wow6432Node\Classes\CLSID\{F02C1A0D-BE21-4350-88B0-7367FC96EF3C}\ShellFolder' "Attributes" 2953052260 2962489444
+updateRegistryKey "OneDrive in open/save dialogs" 'HKEY_LOCAL_MACHINE' 'SOFTWARE\Wow6432Node\Classes\CLSID\{8E74D236-7F35-4720-B138-1FED0B85EA75}\ShellFolder' "Attributes" 4034920525 4035969101
+updateRegistryKey "Network in open/save dialogs" 'HKEY_LOCAL_MACHINE' 'SOFTWARE\Wow6432Node\Classes\CLSID\{F02C1A0D-BE21-4350-88B0-7367FC96EF3C}\ShellFolder' "Attributes" 2953052260 2962489444
 
 
 # Remove context menu items
