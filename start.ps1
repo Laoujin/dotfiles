@@ -1,12 +1,17 @@
 ﻿cls
 
+#Set-ExecutionPolicy Unrestricted
+
 . .\Helpers\Console.ps1
 #Show-Colors
+#$Host.UI.RawUI.ForegroundColor = 
 
 Write-Title("Boxstarter")
 Write-Host "Install all software with Boxstarter"
 Write-Host "Url: https://gist.github.com/Laoujin/12f5d2f76d51ee6c0a49"
 Write-Host
+
+& "$PSScriptRoot\PowerShell\modules.ps1"
 
 & "$PSScriptRoot\links.ps1"
 
