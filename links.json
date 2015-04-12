@@ -7,6 +7,10 @@
 		{
 			"link": "$PSScriptRoot\\shell\\.bashrc",
 			"to": "$HOME\\.bashrc"
+		},
+		{
+			"link": "$PSScriptRoot\\PowerShell\\Microsoft.PowerShell_profile.ps1",
+			"to": "$MYDOCUMENTS\\WindowsPowerShell\\Microsoft.PowerShell_profile.ps1"
 		}
 	],
 	"dirs": [

@@ -3,6 +3,7 @@ $config = Get-Content "$PSScriptRoot\links.json" | Out-String | ConvertFrom-Json
 function Set-VariablePaths($path) {
 	$path = $path.Replace('$HOME', $HOME)
 	$path = $path.Replace('$PSScriptRoot', $PSScriptRoot)
+	$path = $path.Replace('$MYDOCUMENTS', [environment]::getfolderpath("mydocuments"))
 	return $path
 }
 
@@ -28,7 +29,6 @@ Write-Host
 ########################################################################## SYMLINKS
 
 Write-Title("SYMLINKS")
-Write-Host "Home: $HOME"
 
 function Create-FileLink($file, $to) {
 	$file = Set-VariablePaths($file)
