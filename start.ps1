@@ -17,4 +17,5 @@ Write-Host
 
 #& "$PSScriptRoot\shell\node-npm.ps1"
 
-& "$PSScriptRoot\Settings\explorer.ps1"
+& "$PSScriptRoot\Settings\registry.ps1"
+#& "$PSScriptRoot\Settings\explorer.ps1"

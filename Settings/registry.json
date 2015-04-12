@@ -1,0 +1,13 @@
+{
+	"regFiles":
+	[
+		{
+			"context": "Windows Explorer",
+			"desc": "Show the Desktop, Documents, Downloads, Music, Pictures and Videos folders below 'This PC'",
+			"fileOn": "Explorer_ThisPCFolders_Restore.reg",
+			"fileOff": "Explorer_ThisPCFolders_Remove.reg",
+			"default": "on",
+			"value": "off"
+		}
+	]
+}
