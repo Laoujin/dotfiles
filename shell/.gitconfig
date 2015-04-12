@@ -32,6 +32,9 @@
 
 [core]
 	autocrlf = true
+	
+[push]
+	default = simple
 
 [credential]
 	helper = !'C:\\Users\\Wouter\\AppData\\Roaming\\GitCredStore\\git-credential-winstore.exe'
