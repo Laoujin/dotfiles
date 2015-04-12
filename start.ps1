@@ -15,4 +15,10 @@ Write-Host
 
 & "$PSScriptRoot\PowerShell\modules.ps1"
 
-#& "$PSScriptRoot\Settings\explorer.ps1"
+# Write-Title("NODE")
+# Write-Host "Installing Global NPM Packages"
+# npm install -g gulp
+# npm install -g jade
+# Write-Host
+
+& "$PSScriptRoot\Settings\explorer.ps1"
