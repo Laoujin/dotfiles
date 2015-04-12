@@ -10,12 +10,13 @@ for ($i = 0; $i -lt $config.regFiles.length; $i++) {
 	Write-Host "$($reg.desc): " -nonewline -ForegroundColor $color
 	if ($reg.value -eq "on") {
 		Write-Host "On" -ForegroundColor $color
-		regedit /s "$PSScriptRoot\Settings\$reg.fileOn"
+		$regFile = "$PSScriptRoot\Settings\$($reg.fileOn)"
 
 	} else {
 		Write-Host "Off" -ForegroundColor $color
-		regedit /s "$PSScriptRoot\Settings\$reg.fileOff"
+		$regFile = "$PSScriptRoot\Settings\$($reg.fileOff)"
 	}
+	regedit /s $regFile
 }
 
 # registry.json structure:
@@ -27,3 +28,5 @@ for ($i = 0; $i -lt $config.regFiles.length; $i++) {
 #    "default": "on",
 #    "value": "off"
 # }
+
+Write-Host

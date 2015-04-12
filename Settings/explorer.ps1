@@ -131,3 +131,5 @@ Update-RegistryKey "OneDrive icon in Navigation pane" 'HKEY_CLASSES_ROOT' 'CLSID
 
 # Remove context menu items
 #HKEY_CLASSES_ROOT\*\shellex\ContextMenuHandlers
+
+Write-Host

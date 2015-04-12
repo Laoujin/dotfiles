@@ -55,7 +55,7 @@ $startupFolder = "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Startup\"
 
 Write-Title("START WITH WINDOWS")
 Write-Host "Programs starting when Windows starts"
-Write-Host "Dir: $startupFolder"
+Write-Host "Dir: $startupFolder" -ForegroundColor darkgray
 
 for ($i = 0; $i -lt $config.autoStart.length; $i++) {
 	$file = $config.autoStart[$i]
