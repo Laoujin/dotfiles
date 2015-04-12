@@ -1,5 +1,4 @@
-﻿cls
-
+﻿
 # many configurations can be found at:
 #http://www.eightforums.com/tutorials/
 
@@ -8,9 +7,8 @@
 # To add: Add ShellNew key and add New String Value "NullFile" (with no value)
 
 # Customize Windows Explorer
-########################
-"## WINDOWS EXPLORER ##"
-########################
+Write-Title("WINDOWS EXPLORER")
+
 ## Code from http://social.technet.microsoft.com/Forums/windowsserver/en-US/e718a560-2908-4b91-ad42-d392e7f8f1ad/take-ownership-of-a-registry-key-and-change-permissions?forum=winserverpowershell#04b180cc-d75c-4491-8060-be451882ba44
 ## Taken from P/Invoke.NET with minor adjustments.
 $definition = @'

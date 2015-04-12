@@ -2,10 +2,12 @@
 Write-Host "Create symlinks for Users\Account"
 Write-Host "Home: $HOME"
 
-function createUserHomeLink($file) {
+$links = Get-Content "links.json" | Out-String | ConvertFrom-Json
+
+function Create-UserHomeLink($file) {
 	$destination = "$HOME\$file"
 	if (-not (Test-Path ($destination))) {
-		$params = "mklink $destination $PSScriptRoot\$file"
+		$params = "mklink $destination $PSScriptRoot\Links\$file"
 		cmd /c $params
 	}
 	else {
@@ -13,5 +15,6 @@ function createUserHomeLink($file) {
 	}
 }
 
-createUserHomeLink ".gitconfig"
-createUserHomeLink ".bashrc"
+for ($i = 0; $i -lt $links.home.length; $i++) {
+	Create-UserHomeLink $links.home[$i]
+}
