@@ -20,7 +20,7 @@ for ($i = 0; $i -lt $config.dirs.length; $i++) {
 		cmd /c $params
 
 	} else {
-		Write-Host "Destination already existed: $link" -ForegroundColor darkgray
+		Write-Host "Already exists: $link" -ForegroundColor darkgray
 	}
 }
 
@@ -39,7 +39,7 @@ function Create-FileLink($file, $to) {
 		cmd /c $params
 
 	} else {
-		Write-Host "Destination already existed: $to" -ForegroundColor darkgray
+		Write-Host "Already exists: $to" -ForegroundColor darkgray
 	}
 }
 
@@ -71,7 +71,7 @@ for ($i = 0; $i -lt $config.autoStart.length; $i++) {
 		Write-Host "Link created: $file" -ForegroundColor yellow
 
 	} else {
-		Write-Host "Autostarts already: $file" -ForegroundColor darkgray
+		Write-Host "Already autostarts: $file" -ForegroundColor darkgray
 	}
 }
 
