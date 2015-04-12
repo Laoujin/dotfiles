@@ -2,6 +2,9 @@
 # many configurations can be found at:
 #http://www.eightforums.com/tutorials/
 
+# Useful Windows dotfiles?
+# https://github.com/jayharris/dotfiles-windows/blob/master/windows.ps1 (IIS configuration etc)
+
 # New context menu
 # HKEY_CLASSES_ROOT -> find extension and delete ShellNew key
 # To add: Add ShellNew key and add New String Value "NullFile" (with no value)

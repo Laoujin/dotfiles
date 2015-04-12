@@ -1,15 +1,20 @@
 [user]
   name = Laoujin
   email = woutervs@hotmail.com
+
 [merge]
   tool = bc3
+
 [mergetool "kdiff3"]
   path = c:/Program Files (x86)/KDiff3/kdiff3.exe
+
 [diff]
   tool = bc3
   guitool = kdiff3
+
 [difftool "kdiff3"]
   path = c:/Program Files (x86)/KDiff3/kdiff3.exe
+
 [alias]
   st = status
   ci = commit
@@ -18,11 +23,19 @@
   df = diff
   lg = log -p
   amend = commit -a --amend --no-edit
+
 [difftool "bc3"]
   path = C:\\Program Files (x86)\\Beyond Compare 3\\bcomp.exe
+
 [mergetool "bc3"]
   path = C:\\Program Files (x86)\\Beyond Compare 3\\bcomp.exe
+
 [core]
   autocrlf = true
+
 [credential]
   helper = !'C:\\Users\\Wouter\\AppData\\Roaming\\GitCredStore\\git-credential-winstore.exe'
+  
+[color "status"]
+	changed = cyan normal bold
+	untracked = cyan normal bold

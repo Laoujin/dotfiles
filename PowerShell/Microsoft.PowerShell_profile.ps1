@@ -1,4 +1,4 @@
 ﻿
-# Load posh-git example profile
-. 'C:\Users\Wouter\Documents\WindowsPowerShell\Modules\posh-git\profile.example.ps1'
+# Posh-Git Profile
+. 'C:\code\dotfiles\PowerShell\Git-Posh-Profile.ps1'
 
