@@ -5,3 +5,4 @@
 # Change colors
 $hostColors = (Get-Host).PrivateData
 $hostColors.ErrorForegroundColor = "DarkMagenta"
+#$Host.UI.RawUI.ForegroundColor = 

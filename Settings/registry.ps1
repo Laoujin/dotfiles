@@ -19,6 +19,8 @@ for ($i = 0; $i -lt $config.regFiles.length; $i++) {
 	& regedit /s $regFile
 }
 
+# rest of the registry stuff is done in explorer.ps1
+
 # registry.json structure:
 # {
 #    "context": "Windows Explorer",

@@ -1,15 +1,4 @@
-﻿# many configurations can be found at:
-#http://www.eightforums.com/tutorials/
-
-# Useful Windows dotfiles?
-# https://github.com/jayharris/dotfiles-windows/blob/master/windows.ps1 (IIS configuration etc)
-
-# New context menu
-# HKEY_CLASSES_ROOT -> find extension and delete ShellNew key
-# To add: Add ShellNew key and add New String Value "NullFile" (with no value)
-
-# Customize Windows Explorer
-Write-Title "WINDOWS EXPLORER"
+﻿Write-Title "WINDOWS EXPLORER"
 
 $currentPath = Split-Path $MyInvocation.PSCommandPath
 
@@ -92,7 +81,7 @@ function Update-RegistryKey($desc, $hive, $regPathRaw, $regKey, $disabledValue, 
 	}
 }
 
-function peekRegKey($hive, $key) {
+function Peek-RegistryKey($hive, $key) {
 	Write-Host "Peeking $hive\$key"
 	$regPath = "Registry::$hive\$key"
 	$acl = Get-Acl $regPath
@@ -103,20 +92,26 @@ function peekRegKey($hive, $key) {
 }
 
 # OneDrive
-Update-RegistryKey "OneDrive icon in Navigation pane" 'HKEY_CLASSES_ROOT' 'CLSID\{8E74D236-7F35-4720-B138-1FED0B85EA75}\ShellFolder' "Attributes" 4034920525 4035969101
+#Peek-RegistryKey "HKEY_CLASSES_ROOT" "CLSID\{8E74D236-7F35-4720-B138-1FED0B85EA75}\ShellFolder"
+
+#Update-RegistryKey "OneDrive icon in Navigation pane" 'HKEY_CLASSES_ROOT' 'CLSID\{8E74D236-7F35-4720-B138-1FED0B85EA75}\ShellFolder' "Attributes" 4034920525 4035969101
+
+# LEFT OF Here #
+################
+# - Update-RegistryKey should work. Peek-RegistryKey: Not tested (and missing parameter)
+# - registry.json contains regKeys for one but it is not yet read.
 
 # Homegroup
 # services.msc
 # Stop HomeGroup Listener and HomeGroup Provider
-# C1Cc64rN47
+# Manually...
 
 # Network
 #Update-RegistryKey "Network icon in Navigation pane" 'HKEY_CLASSES_ROOT' 'CLSID\{F02C1A0D-BE21-4350-88B0-7367FC96EF3C}\ShellFolder' "Attributes" 2953052260 2962489444
 
 # This PC Folders
+# This is done in registry.ps1
 
-#peekRegKey "HKEY_CURRENT_USER" "Software\Classes\CLSID\{59031a47-3f72-44a7-89c5-5595fe6b30ee}"
-# current = 0
 #Update-RegistryKey "User folder group in Windows Explorer" 'HKEY_CURRENT_USER' 'Software\Classes\CLSID\{59031a47-3f72-44a7-89c5-5595fe6b30ee}' "System.IsPinnedToNameSpaceTree" 00000001 00000000
 
 
@@ -129,7 +124,6 @@ Update-RegistryKey "OneDrive icon in Navigation pane" 'HKEY_CLASSES_ROOT' 'CLSID
 #Update-RegistryKey "Network in open/save dialogs" 'HKEY_LOCAL_MACHINE' 'SOFTWARE\Wow6432Node\Classes\CLSID\{F02C1A0D-BE21-4350-88B0-7367FC96EF3C}\ShellFolder' "Attributes" 2953052260 2962489444
 
 
-# Remove context menu items
-#HKEY_CLASSES_ROOT\*\shellex\ContextMenuHandlers
+
 
 Write-Host

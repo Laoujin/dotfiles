@@ -3,8 +3,7 @@ cls
 #Set-ExecutionPolicy Unrestricted
 
 . .\Helpers\Console.ps1
-#Show-Colors
-#$Host.UI.RawUI.ForegroundColor = 
+#Show-Colors # defined in Helpers\Console.ps1
 
 Write-Title("Boxstarter")
 Write-Host "Install all software with Boxstarter"
@@ -18,4 +17,23 @@ Write-Host
 #& "$PSScriptRoot\shell\node-npm.ps1"
 
 #& "$PSScriptRoot\Settings\explorer.ps1"
-& "$PSScriptRoot\Settings\registry.ps1"
+#& "$PSScriptRoot\Settings\registry.ps1"
+
+
+
+
+# Next steps: 
+
+# New context menu
+# HKEY_CLASSES_ROOT -> find extension and delete ShellNew key
+# To add: Add ShellNew key and add New String Value "NullFile" (with no value)
+
+# Remove context menu items
+#HKEY_CLASSES_ROOT\*\shellex\ContextMenuHandlers
+
+# many configurations can be found at:
+#http://www.eightforums.com/tutorials/
+
+# Useful Windows dotfiles?
+# https://github.com/jayharris/dotfiles-windows/blob/master/windows.ps1 (IIS configuration etc)
+
