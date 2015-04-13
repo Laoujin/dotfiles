@@ -104,7 +104,7 @@ function Peek-RegistryKey($hive, $key) {
 # Homegroup
 # services.msc
 # Stop HomeGroup Listener and HomeGroup Provider
-# Manually...
+# Control Panel -> Advanced Sharing Settings -> Turn off network discovery
 
 # Network
 #Update-RegistryKey "Network icon in Navigation pane" 'HKEY_CLASSES_ROOT' 'CLSID\{F02C1A0D-BE21-4350-88B0-7367FC96EF3C}\ShellFolder' "Attributes" 2953052260 2962489444
