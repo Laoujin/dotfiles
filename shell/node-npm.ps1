@@ -11,7 +11,11 @@ function Update-Node-Package($name) {
 	}
 }
 
-Update-Node-Package "gulp"
-Update-Node-Package "jade"
+$currentPath = Split-Path $MyInvocation.PSCommandPath
+$config = Get-Content "$currentPath\shell\node-npm.json" | Out-String | ConvertFrom-Json
+
+for ($i = 0; $i -lt $config.length; $i++) {
+	Update-Node-Package $config[$i]
+}
 
 Write-Host

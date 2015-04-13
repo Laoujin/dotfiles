@@ -1,4 +1,5 @@
 [
 	"jade",
-	"gulp"
+	"gulp",
+	"jshint"
 ]
