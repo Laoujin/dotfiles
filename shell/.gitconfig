@@ -23,6 +23,8 @@
 	df = diff
 	lg = log -p
 	amend = commit -a --amend --no-edit
+	dt = difftool
+    mt = mergetool
 
 [difftool "bc3"]
 	path = C:\\Program Files (x86)\\Beyond Compare 3\\bcomp.exe
