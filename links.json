@@ -9,6 +9,10 @@
 			"to": "$HOME\\.bashrc"
 		},
 		{
+			"link": "$PSScriptRoot\\shell\\conf\\httpd.conf",
+			"to": "C:\\wamp\\bin\\apache\\apache2.4.9\\conf\\httpd.conf"
+		},
+		{
 			"link": "$PSScriptRoot\\PowerShell\\Microsoft.PowerShell_profile.ps1",
 			"to": "$MYDOCUMENTS\\WindowsPowerShell\\Microsoft.PowerShell_profile.ps1"
 		},
