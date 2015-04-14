@@ -13,6 +13,11 @@
 			"to": "C:\\wamp\\bin\\apache\\apache2.4.9\\conf\\httpd.conf"
 		},
 		{
+			"link": "$PSScriptRoot\\shell\\conf\\php.ini",
+			"to": "C:\\wamp\\bin\\php\\php5.5.12\\php.ini"
+		},
+		
+		{
 			"link": "$PSScriptRoot\\PowerShell\\Microsoft.PowerShell_profile.ps1",
 			"to": "$MYDOCUMENTS\\WindowsPowerShell\\Microsoft.PowerShell_profile.ps1"
 		},
