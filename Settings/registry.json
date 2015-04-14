@@ -13,6 +13,7 @@
 	"regKeys":
 	[
 		{
+			"type:": "toggle",
 			"context": "Windows Explorer",
 			"desc": "Show OneDrive icon in Navigation pane",
 			"hive": "HKEY_CLASSES_ROOT",
@@ -22,6 +23,42 @@
 			"off": "4035969101",
 			"default": "on",
 			"value": "off"
+		},
+		{
+			"type": "fixed",
+			"context": "Ditto",
+			"desc": "Use Win + Alt + D to open Ditto history at mouse cursor (default conflicts with SublimeText)",
+			"hive": "HKEY_CURRENT_USER",
+			"regPathRaw": "Software\\Ditto",
+			"regKey": "DittoHotKey",
+			"value": "c44"
+		},
+		{
+			"type": "fixed",
+			"context": "Ditto",
+			"desc": "Paste what was last copied with Control + 0",
+			"hive": "HKEY_CURRENT_USER",
+			"regPathRaw": "Software\\Ditto",
+			"regKey": "Position1",
+			"value": "261" // => all hex values
+		},
+		{
+			"type": "fixed",
+			"context": "Ditto",
+			"desc": "Paste what was previously copied with Control + 1",
+			"hive": "HKEY_CURRENT_USER",
+			"regPathRaw": "Software\\Ditto",
+			"regKey": "Position2",
+			"value": "262"
+		},
+		{
+			"type": "fixed",
+			"context": "Ditto",
+			"desc": "Paste what was 'previously previously' copied with Control + 2",
+			"hive": "HKEY_CURRENT_USER",
+			"regPathRaw": "Software\\Ditto",
+			"regKey": "Position3",
+			"value": "263"
 		}
 	]
 }
