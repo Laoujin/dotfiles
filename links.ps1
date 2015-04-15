@@ -8,44 +8,30 @@ function Set-VariablePaths($path) {
 	return $path
 }
 
-########################################################################## JUNCTIONS
+function Create-Link($data) {
+	$link = Set-VariablePaths($data.link)
+	$to = Set-VariablePaths($data.to)
 
-Write-Title("JUNCTIONS")
-
-for ($i = 0; $i -lt $config.dirs.length; $i++) {
-	$link = Set-VariablePaths($config.dirs[$i].link)
-	$target = Set-VariablePaths($config.dirs[$i].to)
-	
-	if (-not (Test-Path ($link))) {
-		$params = "mklink /J $link $target"
-		cmd /c $params
-
+	if ($data.type -eq "file") {
+		$operation = "mklink $to $link"
 	} else {
-		Write-Host "Already exists: $link" -ForegroundColor darkgray
+		$operation = "mklink /J $to $link"
 	}
-}
-
-Write-Host
-
-########################################################################## SYMLINKS
-
-Write-Title("SYMLINKS")
-
-function Create-FileLink($file, $to) {
-	$file = Set-VariablePaths($file)
-	$to = Set-VariablePaths($to)
 
 	if (-not (Test-Path ($to))) {
-		$params = "mklink $to $file"
-		cmd /c $params
+		cmd /c $operation
 
 	} else {
 		Write-Host "Already exists: $to" -ForegroundColor darkgray
 	}
 }
 
-for ($i = 0; $i -lt $config.files.length; $i++) {
-	Create-FileLink $config.files[$i].link $config.files[$i].to
+########################################################################## JUNCTIONS, SYMLINKS
+
+Write-Title("JUNCTIONS")
+
+for ($i = 0; $i -lt $config.links.length; $i++) {
+	Create-Link $config.links[$i]
 }
 
 Write-Host
