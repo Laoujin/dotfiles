@@ -26,6 +26,7 @@
 		},
 		{
 			"type": "fixed",
+			"requires": "ditto",
 			"context": "Ditto",
 			"desc": "Use Win + Alt + D to open Ditto history at mouse cursor (default conflicts with SublimeText)",
 			"hive": "HKEY_CURRENT_USER",
@@ -35,6 +36,7 @@
 		},
 		{
 			"type": "fixed",
+			"requires": "ditto",
 			"context": "Ditto",
 			"desc": "Paste what was last copied with Control + 0",
 			"hive": "HKEY_CURRENT_USER",
@@ -44,6 +46,7 @@
 		},
 		{
 			"type": "fixed",
+			"requires": "ditto",
 			"context": "Ditto",
 			"desc": "Paste what was previously copied with Control + 1",
 			"hive": "HKEY_CURRENT_USER",
@@ -53,6 +56,7 @@
 		},
 		{
 			"type": "fixed",
+			"requires": "ditto",
 			"context": "Ditto",
 			"desc": "Paste what was 'previously previously' copied with Control + 2",
 			"hive": "HKEY_CURRENT_USER",

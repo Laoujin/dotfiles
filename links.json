@@ -14,13 +14,13 @@
 		},
 		{
 			"type": "file",
-			"requires": "wamp",
+			"requires": "wamp-server",
 			"link": "$PSScriptRoot\\shell\\conf\\httpd.conf",
 			"to": "C:\\wamp\\bin\\apache\\apache2.4.9\\conf\\httpd.conf"
 		},
 		{
 			"type": "file",
-			"requires": "wamp",
+			"requires": "wamp-server",
 			"link": "$PSScriptRoot\\shell\\conf\\php.ini",
 			"to": "C:\\wamp\\bin\\php\\php5.5.12\\php.ini"
 		},
@@ -48,7 +48,7 @@
 		},
 		{
 			"type": "dir",
-			"requires": "wamp",
+			"requires": "wamp-server",
 			"link": "C:\\wamp\\www",
 			"to": "$HOME\\Dropbox\\Personal\\Programming\\www"
 		}

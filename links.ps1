@@ -1,11 +1,17 @@
 $config = Get-Content "$PSScriptRoot\links.json" | Out-String | ConvertFrom-Json
 
+$installedSoftware = & choco list -localonly
+
 function Set-VariablePaths($path) {
 	$path = $path.Replace('$HOME', $HOME)
 	$path = $path.Replace('$PSScriptRoot', $PSScriptRoot)
 	$path = $path.Replace('$MYDOCUMENTS', [Environment]::GetFolderPath("mydocuments"))
 	$path = $path.Replace('$APPDATA_ROAMING', [Environment]::GetFolderPath("ApplicationData"))
 	return $path
+}
+
+function Is-Installed($program) {
+	return $installedSoftware -match "^$program"
 }
 
 function Create-Link($data) {
@@ -18,7 +24,12 @@ function Create-Link($data) {
 		$operation = "mklink /J $to $link"
 	}
 
-	if (-not (Test-Path ($to))) {
+	if ($data.requires -and -not (Is-Installed $data.requires)) {
+		Write-Host "Skipping $($data.requires) files" -ForegroundColor darkgray
+		return
+	}
+
+	if (-not (Test-Path $to)) {
 		cmd /c $operation
 
 	} else {
