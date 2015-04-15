@@ -19,7 +19,10 @@ Write-Host
 #& "$PSScriptRoot\Settings\explorer.ps1"
 #& "$PSScriptRoot\Settings\registry.ps1"
 
-
+# SETTINGS TO ADD
+# fileZilla, MarkdownPad2, notepadplusplus.install, SublimeText3, ultramon, utorrent, beyondcompare3 ...
+# resharper, visual studio
+# software not installed through chocolatey: webstorm, fences
 
 
 # Next steps: 
