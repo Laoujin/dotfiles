@@ -3,7 +3,8 @@ $config = Get-Content "$PSScriptRoot\links.json" | Out-String | ConvertFrom-Json
 function Set-VariablePaths($path) {
 	$path = $path.Replace('$HOME', $HOME)
 	$path = $path.Replace('$PSScriptRoot', $PSScriptRoot)
-	$path = $path.Replace('$MYDOCUMENTS', [environment]::getfolderpath("mydocuments"))
+	$path = $path.Replace('$MYDOCUMENTS', [Environment]::GetFolderPath("mydocuments"))
+	$path = $path.Replace('$APPDATA_ROAMING', [Environment]::GetFolderPath("ApplicationData"))
 	return $path
 }
 

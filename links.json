@@ -1,29 +1,38 @@
 {
 	"files": [
 		{
+			"requires": "git",
 			"link": "$PSScriptRoot\\shell\\.gitconfig",
 			"to": "$HOME\\.gitconfig"
 		},
 		{
+			"requires": "git",
 			"link": "$PSScriptRoot\\shell\\.bashrc",
 			"to": "$HOME\\.bashrc"
 		},
 		{
+			"requires": "wamp",
 			"link": "$PSScriptRoot\\shell\\conf\\httpd.conf",
 			"to": "C:\\wamp\\bin\\apache\\apache2.4.9\\conf\\httpd.conf"
 		},
 		{
+			"requires": "wamp",
 			"link": "$PSScriptRoot\\shell\\conf\\php.ini",
 			"to": "C:\\wamp\\bin\\php\\php5.5.12\\php.ini"
 		},
-		
 		{
 			"link": "$PSScriptRoot\\PowerShell\\Microsoft.PowerShell_profile.ps1",
 			"to": "$MYDOCUMENTS\\WindowsPowerShell\\Microsoft.PowerShell_profile.ps1"
 		},
 		{
+			"requires": "cmder",
 			"link": "$PSScriptRoot\\Settings\\Programs\\ConEmu.xml",
 			"to": "C:\\tools\\cmder\\config\\ConEmu.xml"
+		},
+		{
+			"requires": "greenshot",
+			"link": "$PSScriptRoot\\Settings\\Programs\\Greenshot.ini",
+			"to": "$APPDATA_ROAMING\\Greenshot\\Greenshot.ini"
 		}
 	],
 	"dirs": [
@@ -32,6 +41,7 @@
 			"to": "$HOME\\Dropbox\\Personal\\Programming\\UnixCode"
 		},
 		{
+			"requires": "wamp",
 			"link": "C:\\wamp\\www",
 			"to": "$HOME\\Dropbox\\Personal\\Programming\\www"
 		}
