@@ -18,9 +18,10 @@ function Create-Link($data) {
 	$link = Set-VariablePaths($data.link)
 	$to = Set-VariablePaths($data.to)
 
-	if ($data.type -eq "file") {
+	if ($data.type -eq "symlink") {
 		$operation = "mklink $to $link"
-	} else {
+
+	} elseif ($data.type -eq "junction") {
 		$operation = "mklink /J $to $link"
 	}
 

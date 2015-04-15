@@ -1,3 +1,6 @@
+#alias d="cd ~/Dropbox"
+#read from json and also create the aliases for powershell
+
 function sangu() {
 	cd "/c/code/TribalWars/sangupackage-source/"
 }
@@ -7,23 +10,23 @@ function sangudebug() {
 }
 
 function tactics(){
-  cd "/c/code/TribalWars/TWTactics/"
+	cd "/c/code/TribalWars/TWTactics/"
 }
 
 function autokey(){
-  cd "/c/code/Autohotkey/"
+	cd "/c/code/Autohotkey/"
 }
 
 function code(){
-  cd "/c/code/"
+	cd "/c/code/"
 }
 
 function www(){
-  cd "/C/wamp/www/"
+	cd "/C/wamp/www/"
 }
 
 function dotfiles(){
-  cd "/c/code/dotfiles/"
+	cd "/c/code/dotfiles/"
 }
 
 echo commands: sangu, sangudebug, tactics, autokey, code, www, dotfiles

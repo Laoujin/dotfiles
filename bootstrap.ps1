@@ -5,7 +5,8 @@ cls
 . .\Helpers\Console.ps1
 #Show-Colors # defined in Helpers\Console.ps1
 
-Write-Title("Boxstarter")
+Write-Title "Configure You Windows"
+Write-Host "Because registry editing is so much fun"
 Write-Host "Install all software with Boxstarter"
 Write-Host "Url: https://gist.github.com/Laoujin/12f5d2f76d51ee6c0a49"
 Write-Host
@@ -13,16 +14,23 @@ Write-Host
 & "$PSScriptRoot\links.ps1"
 
 #& "$PSScriptRoot\PowerShell\modules.ps1"
+# also move Posh-Git to json
 
 #& "$PSScriptRoot\shell\node-npm.ps1"
 
 #& "$PSScriptRoot\Settings\explorer.ps1"
 #& "$PSScriptRoot\Settings\registry.ps1"
 
+# TODO: check installed software instead of chocolatey...
+
 # SETTINGS TO ADD
 # fileZilla, MarkdownPad2, notepadplusplus.install, SublimeText3, ultramon, utorrent, beyondcompare3 ...
 # resharper, visual studio
 # software not installed through chocolatey: webstorm, fences
+
+# Use Push-Location and Pop-Location for path issues...
+
+
 
 
 # Next steps: 
@@ -39,4 +47,29 @@ Write-Host
 
 # Useful Windows dotfiles?
 # https://github.com/jayharris/dotfiles-windows/blob/master/windows.ps1 (IIS configuration etc)
+## Explorer: Show hidden files by default (1: Show Files, 2: Hide Files)
+# Set-ItemProperty "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" "Hidden" 1
 
+# # Explorer: show file extensions by default (0: Show Extensions, 1: Hide Extensions)
+# Set-ItemProperty "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" "HideFileExt" 0
+
+# # Explorer: show path in title bar
+# Set-ItemProperty "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\CabinetState" "FullPath" 1
+
+# # Explorer: Avoid creating Thumbs.db files on network volumes
+# Set-ItemProperty "HKCU:\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" "DisableThumbnailsOnNetworkFolders" 1
+
+# # Taskbar: use small icons (0: Large Icons, 1: Small Icons)
+# Set-ItemProperty "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" "TaskbarSmallIcons" 1
+
+# # Taskbar: Don't show Windows Store Apps on Taskbar
+# Set-ItemProperty "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" "StoreAppsOnTaskbar" 0
+
+# # SysTray: hide the Action Center, Network, and Volume icons
+# Set-ItemProperty "HKCU:\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" "HideSCAHealth" 1
+# Set-ItemProperty "HKCU:\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" "HideSCANetwork" 1
+# Set-ItemProperty "HKCU:\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" "HideSCAVolume" 1
+# #Set-ItemProperty "HKCU:\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" "HideSCAPower" 1
+
+# # Recycle Bin: Disable Delete Confirmation Dialog
+# Set-ItemProperty "HKCU:\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" "ConfirmFileDelete" 0
