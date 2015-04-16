@@ -1,33 +1,8 @@
 {
-	"regFiles":
-	[
-		{
-			"context": "Windows Explorer",
-			"desc": "Show the Desktop, Documents, Downloads, Music, Pictures and Videos folders below 'This PC'",
-			"fileOn": "Explorer_ThisPCFolders_Restore.reg",
-			"fileOff": "Explorer_ThisPCFolders_Remove.reg",
-			"default": "on",
-			"value": "off"
-		}
-	],
+	"cinst": "ditto",
 	"regKeys":
 	[
-		{
-			"type:": "toggle",
-			"context": "Windows Explorer",
-			"desc": "Show OneDrive icon in Navigation pane",
-			"hive": "HKEY_CLASSES_ROOT",
-			"regPathRaw": "CLSID\\{8E74D236-7F35-4720-B138-1FED0B85EA75}\\ShellFolder",
-			"regKey": "Attributes",
-			"on": "4034920525",
-			"off": "4035969101",
-			"default": "on",
-			"value": "off"
-		},
-		{
 			"type": "fixed",
-			"requires": "ditto",
-			"context": "Ditto",
 			"desc": "Use Win + Alt + D to open Ditto history at mouse cursor (default conflicts with SublimeText)",
 			"hive": "HKEY_CURRENT_USER",
 			"regPathRaw": "Software\\Ditto",
@@ -36,8 +11,6 @@
 		},
 		{
 			"type": "fixed",
-			"requires": "ditto",
-			"context": "Ditto",
 			"desc": "Paste what was last copied with Control + 0",
 			"hive": "HKEY_CURRENT_USER",
 			"regPathRaw": "Software\\Ditto",
@@ -46,8 +19,6 @@
 		},
 		{
 			"type": "fixed",
-			"requires": "ditto",
-			"context": "Ditto",
 			"desc": "Paste what was previously copied with Control + 1",
 			"hive": "HKEY_CURRENT_USER",
 			"regPathRaw": "Software\\Ditto",
@@ -56,8 +27,6 @@
 		},
 		{
 			"type": "fixed",
-			"requires": "ditto",
-			"context": "Ditto",
 			"desc": "Paste what was 'previously previously' copied with Control + 2",
 			"hive": "HKEY_CURRENT_USER",
 			"regPathRaw": "Software\\Ditto",

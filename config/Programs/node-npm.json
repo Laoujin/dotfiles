@@ -1,0 +1,9 @@
+{
+	"cinst": "nodejs.install",
+	"global_node_modules":
+	[
+		"jade",
+		"gulp",
+		"jshint"
+	]
+}

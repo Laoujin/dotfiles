@@ -1,0 +1,16 @@
+{
+	"cinst": "git",
+	"links":
+	[
+		{
+			"type": "symlink",
+			"link": "$PSScriptRoot\\shell\\.gitconfig",
+			"to": "$HOME\\.gitconfig"
+		},
+		{
+			"type": "symlink",
+			"link": "$PSScriptRoot\\shell\\.bashrc",
+			"to": "$HOME\\.bashrc"
+		}
+	]
+}

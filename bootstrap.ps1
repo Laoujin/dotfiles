@@ -11,7 +11,7 @@ Write-Host "Install all software with Boxstarter"
 Write-Host "Url: https://gist.github.com/Laoujin/12f5d2f76d51ee6c0a49"
 Write-Host
 
-& "$PSScriptRoot\links.ps1"
+& "$PSScriptRoot\modules\links.ps1"
 
 #& "$PSScriptRoot\PowerShell\modules.ps1"
 # also move Posh-Git to json
@@ -20,6 +20,12 @@ Write-Host
 
 #& "$PSScriptRoot\Settings\explorer.ps1"
 #& "$PSScriptRoot\Settings\registry.ps1"
+
+# apache2.4.9 -> be able to configure apache* or %VERSION%
+
+#alias d="cd ~/Dropbox"
+#read from json and also create the aliases for powershell
+#echo aliases: sangu, tactics, autokey, code, www, dotfiles
 
 # TODO: check installed software instead of chocolatey...
 
@@ -30,6 +36,17 @@ Write-Host
 
 # Use Push-Location and Pop-Location for path issues...
 
+# Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowProtectedOSFiles -EnableShowFileExtensions
+
+
+# aspnetmvc.install # not updated to MVC5!!!",
+# sqlserver2012express",
+# mssqlservermanagementstudio2014express ",
+# popcorntime",
+# subtitleedit",
+# webstorm6 # NEEDS MANUAL INSTALL",
+# zoomit",
+# dexpot",
 
 
 

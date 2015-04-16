@@ -1,3 +1,4 @@
+
 Push-Location (Split-Path -Path $MyInvocation.MyCommand.Definition -Parent)
 
 # Load posh-git module from current directory
@@ -5,7 +6,7 @@ Push-Location (Split-Path -Path $MyInvocation.MyCommand.Definition -Parent)
 
 # If module is installed in a default location ($env:PSModulePath),
 # use this instead (see about_Modules for more information):
-Import-Module posh-git
+Import-Module Posh-Git
 
 # Set up a simple prompt, adding the git prompt parts inside git repos
 function global:prompt {
@@ -28,6 +29,11 @@ Pop-Location
 
 Start-SshAgent -Quiet
 
-$global:GitPromptSettings.WorkingForegroundColor    = [ConsoleColor]::Yellow 
-$global:GitPromptSettings.UntrackedForegroundColor  = [ConsoleColor]::Yellow
-$global:GitPromptSettings.BranchForegroundColor  = [ConsoleColor]::Green
+# Change colors
+$global:GitPromptSettings.WorkingForegroundColor = [ConsoleColor]::Yellow
+$global:GitPromptSettings.UntrackedForegroundColor = [ConsoleColor]::Yellow
+$global:GitPromptSettings.BranchForegroundColor = [ConsoleColor]::Green
+
+$hostColors = (Get-Host).PrivateData
+$hostColors.ErrorForegroundColor = "DarkMagenta"
+#$Host.UI.RawUI.ForegroundColor = 

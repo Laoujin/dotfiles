@@ -1,0 +1,11 @@
+{
+	"cinst": "cmder",
+	"links":
+	[
+		{
+			"type": "symlink",
+			"link": "$PSScriptRoot\\Settings\\Programs\\ConEmu.xml",
+			"to": "C:\\tools\\cmder\\config\\ConEmu.xml"
+		}
+	]
+}
