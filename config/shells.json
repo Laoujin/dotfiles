@@ -1,19 +1,39 @@
 {
+	"bash":
+	{
+		"title": "BASH",
+		"modules":
+		{
+			"Create-Links":
+			[
+				{
+					"type": "symlink",
+					"link": "shells\\.bashrc",
+					"to": "$HOME\\.bashrc"
+				}
+			]
+		}
+	},
 	"powershell":
 	{
+		"title": "POWERSHELL",
 		"cinst": "PowerShell",
 		"modules":
-		[
-			"Posh-Git"
-		],
-		"profilelinks":
-		[
-			{
-				"type": "symlink",
-				"link": "$PSScriptRoot\\PowerShell\\Microsoft.PowerShell_profile.ps1",
-				"to": "$MYDOCUMENTS\\WindowsPowerShell\\Microsoft.PowerShell_profile.ps1"
-			}
-		]
+		{
+			"Install-Modules":
+			[
+				"PsGet",
+				"Posh-Git"
+			],
+			"Create-Links":
+			[
+				{
+					"type": "symlink",
+					"link": "shells\\Microsoft.PowerShell_profile.ps1",
+					"to": "$MYDOCUMENTS\\WindowsPowerShell\\Microsoft.PowerShell_profile.ps1"
+				}
+			]
+		}
 	},
 	"aliases":
 	[

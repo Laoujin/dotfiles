@@ -1,12 +1,21 @@
-Write-Title("POWERSHELL")
-
-if (-not (Get-Command 'Install-Module' -errorAction SilentlyContinue))
-{
-	(new-object Net.WebClient).DownloadString("http://psget.net/GetPsGet.ps1") | iex
-	. $PROFILE
+function Install-ModulesGetter {
+	if (-not (Check-Command 'Install-Module'))
+	{
+		Write-Output "Installing PsGet"
+		(New-Object Net.WebClient).DownloadString("http://psget.net/GetPsGet.ps1") | iex
+		. $PROFILE
+	}
 }
 
-Write-Host "Installing PS Modules"
-Install-Module posh-git
+function Install-Modules($modules) {
+	if ($modules -contains "PsGet") {
+		Install-ModulesGetter
+	}
 
-Write-Host
+	foreach ($module in $modules) {
+		if ($module -ne "PsGet") {
+			Write-Output "Installing PS Module $module"
+			Install-Module $module
+		}
+	}
+}

@@ -2,19 +2,52 @@ cls
 
 #Set-ExecutionPolicy Unrestricted
 
-. .\Helpers\Console.ps1
-#Show-Colors # defined in Helpers\Console.ps1
+Push-Location "$PSScriptRoot\modules"
+. ".\Helpers\Console.ps1"
+. ".\helpers.ps1"
+. ".\links.ps1"
+. ".\PowerShell-Modules.ps1"
+Pop-Location
 
 Write-Title "Configure You Windows"
 Write-Host "Because registry editing is so much fun"
-Write-Host "Install all software with Boxstarter"
-Write-Host "Url: https://gist.github.com/Laoujin/12f5d2f76d51ee6c0a49"
+Write-Host "Boxstarter Url: https://gist.github.com/Laoujin/12f5d2f76d51ee6c0a49"
 Write-Host
 
-& "$PSScriptRoot\modules\links.ps1"
+$config = ConvertFrom-JsonFile ".\bootstrap.json"
+
+Push-Location "$PSScriptRoot\config"
+
+function Process-Program($program) {
+	if ($program.title) {
+		Write-Title $program.title
+	}
+
+	$modules = ($program.modules | Get-Member -MemberType *Property).Name
+	foreach ($moduleName in $modules) {
+		$moduleData = $program.modules.$moduleName
+
+		if (Check-Command $moduleName) {
+			&"$moduleName" $moduleData | Write-Background
+		}
+	}
+
+	Write-Host
+}
+
+if ($config.shells) {
+	$shellConfig = ConvertFrom-JsonFile "shells.json"
+
+	Process-Program $shellConfig.bash
+
+	Process-Program $shellConfig.powershell
+	#Install-ModulesGetter | Write-Background
+	#Install-Modules $shellConfig.powershell.modules | Write-Background
+}
+
+#& "$PSScriptRoot\modules\links.ps1"
 
 #& "$PSScriptRoot\PowerShell\modules.ps1"
-# also move Posh-Git to json
 
 #& "$PSScriptRoot\shell\node-npm.ps1"
 
@@ -90,3 +123,5 @@ Write-Host
 
 # # Recycle Bin: Disable Delete Confirmation Dialog
 # Set-ItemProperty "HKCU:\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" "ConfirmFileDelete" 0
+
+Pop-Location
