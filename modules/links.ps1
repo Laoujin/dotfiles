@@ -12,10 +12,8 @@ function Replace-VariablePaths($path) {
 
 function Get-InstalledSoftware {
 	if ($script:installedSoftware -eq $null) {
-		echo "getting installed software"
 		$script:installedSoftware = & choco list -localonly
 	}
-	echo "installedSoftware got from cached"
 	return $script:installedSoftware
 }
 
@@ -27,7 +25,10 @@ function Check-Installed($program) {
 }
 
 function Create-Link($data) {
-	$link = Join-Path (Get-Location) (Replace-VariablePaths($data.link))
+	$link = Replace-VariablePaths($data.link)
+	if (-not [System.IO.Path]::IsPathRooted($link)) {
+		$link = Join-Path (Get-Location) $link
+	}
 	$to = Replace-VariablePaths($data.to)
 
 	if ($data.type -eq "symlink") {

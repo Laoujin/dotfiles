@@ -23,27 +23,35 @@ function Process-Program($program) {
 		Write-Title $program.title
 	}
 
-	$modules = ($program.modules | Get-Member -MemberType *Property).Name
-	foreach ($moduleName in $modules) {
-		$moduleData = $program.modules.$moduleName
-
-		if (Check-Command $moduleName) {
-			&"$moduleName" $moduleData | Write-Background
-		}
-	}
+	Process-Modules $program.modules
 
 	Write-Host
 }
 
+function Process-Modules($modules) {
+	$moduleNames = ($modules | Get-Member -MemberType *Property).Name
+	foreach ($moduleName in $moduleNames) {
+		$moduleData = $modules.$moduleName
+
+		if (Check-Command $moduleName) {
+			&"$moduleName" $moduleData | Write-Background
+		} else {
+			Write-Host "Couldn't find module: $moduleName"
+		}
+	}
+}
+
+Write-Title "BOOTSTRAP"
+Process-Modules $config.modules
+Write-Host
+
 if ($config.shells) {
 	$shellConfig = ConvertFrom-JsonFile "shells.json"
-
 	Process-Program $shellConfig.bash
-
 	Process-Program $shellConfig.powershell
-	#Install-ModulesGetter | Write-Background
-	#Install-Modules $shellConfig.powershell.modules | Write-Background
 }
+
+
 
 #& "$PSScriptRoot\modules\links.ps1"
 

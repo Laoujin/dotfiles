@@ -52,20 +52,23 @@
 		"dotpeek",
 		"visualstudiocommunity2013"
 	],
-	"links":
-	[
-		{
-			"type": "junction",
-			"link": "c:\\code",
-			"to": "$HOME\\Dropbox\\Personal\\Programming\\UnixCode"
-		},
-		{
-			"type": "junction",
-			"requires": "wamp-server",
-			"link": "C:\\wamp\\www",
-			"to": "$HOME\\Dropbox\\Personal\\Programming\\www"
-		}
-	],
+	"modules":
+	{
+		"Create-Links":
+		[
+			{
+				"type": "junction",
+				"link": "$HOME\\Dropbox\\Personal\\Programming\\UnixCode",
+				"to": "c:\\code"
+			},
+			{
+				"type": "junction",
+				"requires": "wamp-server",
+				"link": "$HOME\\Dropbox\\Personal\\Programming\\www",
+				"to": "C:\\wamp\\www"
+			}
+		]
+	},
 	"autoStart":
 	[
 		"c:\\code\\Autohotkey\\MiKe\\mike.ahk"
