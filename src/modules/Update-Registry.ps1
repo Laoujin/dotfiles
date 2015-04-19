@@ -1,3 +1,10 @@
+# if (-not ("AdjPriv" -as [type])) {
+# 	$processHandle = (Get-Process -id $PID).Handle
+# 	$type = Add-Type $definition -PassThru
+# 	$success = $type[0]::EnablePrivilege($processHandle, "SeTakeOwnershipPrivilege", [bool]'')
+# 	Write-Output "Enable SeTakeOwnershipPrivilege is: $success"
+# }
+
 function Update-RegistryKeys($items) {
 	foreach ($item in $items) {
 		Update-RegistryKey($item)
