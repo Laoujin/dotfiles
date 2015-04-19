@@ -37,8 +37,8 @@
 	# Find commits by commit message
 	fm = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short --grep=$1; }; f"
 
-	# Delete branches that have already been merged with current branch
-	dm = !git branch --merged | grep -v '^(*| ) (master|development)$' | xargs -n 1 git branch -d
+	# Delete merged branches but not branches called master or development
+	dm = !git branch --merged | egrep -v \"(\\*| ) (development|master)\" | xargs -n 1 git branch -d
 
 	# commit entire working directory: git ca "commit message"
 	ca = "!f() { git add -A; git commit -vm\"$1\"; }; f"
