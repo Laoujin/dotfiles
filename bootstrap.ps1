@@ -18,32 +18,8 @@ $config = ConvertFrom-JsonFile ".\bootstrap.json"
 
 Push-Location "$PSScriptRoot\config"
 
-function Process-Program($program) {
-	if ($program.title) {
-		Write-Title $program.title
-	}
-
-	Process-Modules $program.modules
-
-	Write-Host
-}
-
-function Process-Modules($modules) {
-	$moduleNames = ($modules | Get-Member -MemberType *Property).Name
-	foreach ($moduleName in $moduleNames) {
-		$moduleData = $modules.$moduleName
-
-		if (Check-Command $moduleName) {
-			&"$moduleName" $moduleData | Write-Background
-		} else {
-			Write-Host "Couldn't find module: $moduleName"
-		}
-	}
-}
-
 Write-Title "BOOTSTRAP"
 Process-Modules $config.modules
-Write-Host
 
 if ($config.shells) {
 	$shellConfig = ConvertFrom-JsonFile "shells.json"

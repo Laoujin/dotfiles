@@ -1,5 +1,8 @@
 function Install-ChocolateyPackage() {
-
+	if (-not (Check-Command "cinst")) {
+		Write-Output "Installing Chocolatey"
+		iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))
+	}
 }
 
 function Replace-VariablePaths($path) {
@@ -11,6 +14,8 @@ function Replace-VariablePaths($path) {
 }
 
 function Get-InstalledSoftware {
+	Install-ChocolateyPackage
+
 	if ($script:installedSoftware -eq $null) {
 		$script:installedSoftware = & choco list -localonly
 	}
@@ -52,35 +57,26 @@ function Create-Link($data) {
 }
 
 function Create-Links($links) {
-	for ($i = 0; $i -lt $links.length; $i++) {
-		Create-Link $links[$i]
+	foreach ($link in $links) {
+		Create-Link $link
 	}
 }
 
-##################################################################### SHORTCUTS
+##################################################################### STARTUP
 
-# $startupFolder = "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Startup\"
+function Create-Shortcut($file, $targetPath) {
+	$fileName = [System.IO.Path]::GetFileName($file)
+	$link = Join-Path $targetPath "$fileName.lnk"
 
-# Write-Title("START WITH WINDOWS")
-# Write-Host "Programs starting when Windows starts"
-# Write-Host "Dir: $startupFolder" -ForegroundColor darkgray
+	if (-not (Test-Path ($link))) {
+		$WshShell = New-Object -comObject WScript.Shell
+		$Shortcut = $WshShell.CreateShortcut($link)
+		$Shortcut.TargetPath = $file
+		$Shortcut.WorkingDirectory = Split-Path $file
+		$Shortcut.Save()
+		Write-Output "Link created: $file"
 
-# for ($i = 0; $i -lt $config.autoStart.length; $i++) {
-# 	$file = $config.autoStart[$i]
-# 	$fileName = [System.IO.Path]::GetFileName($file)
-# 	$link = "$startupFolder$fileName.lnk"
-
-# 	if (-not (Test-Path ($link))) {
-# 		$WshShell = New-Object -comObject WScript.Shell
-# 		$Shortcut = $WshShell.CreateShortcut($link)
-# 		$Shortcut.TargetPath = $file
-# 		$Shortcut.WorkingDirectory = Split-Path $file
-# 		$Shortcut.Save()
-# 		Write-Host "Link created: $file" -ForegroundColor yellow
-
-# 	} else {
-# 		Write-Host "Already autostarts: $file" -ForegroundColor darkgray
-# 	}
-# }
-
-# Write-Host
+	} else {
+		Write-Output "Already autostarts: $file"
+	}
+}

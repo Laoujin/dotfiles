@@ -67,12 +67,12 @@
 				"link": "$HOME\\Dropbox\\Personal\\Programming\\www",
 				"to": "C:\\wamp\\www"
 			}
+		],
+		"Create-StartupLinks":
+		[
+			"c:\\code\\Autohotkey\\MiKe\\mike.ahk"
 		]
 	},
-	"autoStart":
-	[
-		"c:\\code\\Autohotkey\\MiKe\\mike.ahk"
-	],
 	"explorer":
 	{
 		"registry":
