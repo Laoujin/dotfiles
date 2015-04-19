@@ -19,15 +19,30 @@
 	# Show defined aliases
 	alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\t=> \\2/' | sort
 
+	ci = commit
+	br = branch
+	co = checkout
+	df = diff
+
+	tags = tag -l
+	branches = branch -a
+	remotes = remote -v
+	stashes = stash list --date=relative
+
 	# -u: Show all untracked files (instead of just directories)
 	st = status -u
 
-	ci = commit
-	ca = !git add -A && git commit -a
-	br = branch
-	co = checkout
+	 # Find commits by source code
+	fc = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short -S$1; }; f"
+	# Find commits by commit message
+	fm = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short --grep=$1; }; f"
 
-	df = diff
+	# Delete branches that have already been merged with master
+	#dmb = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
+	dm = !git branch --merged | grep -v '^* master$' | grep -v '^  master$' | xargs -n 1 git branch -d
+
+	# commit entire working directory: git ca "commit message"
+	ca = "!f() { git add -A; git commit -m\"$1\"; }; f"
 
 	# Show commits with diff
 	lg = log -p
@@ -36,7 +51,9 @@
 	l = log --color -20 --graph --pretty=format:'%C(magenta)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
 
 	# Amend working directory
-	amend = commit -a --amend --no-edit
+	amend = !git add -A && git commit --amend --no-edit
+	 # Undo Commit; leaves files. Only for non-public commits
+	uncommit = reset --soft HEAD^
 
 	dt = difftool
 	mt = mergetool
@@ -51,16 +68,27 @@
 	autocrlf = true
 	excludesfile = ~/.gitignore_global
 	attributesfile = ~/.gitattributes_global
-	
+
 [push]
 	default = simple
 
 [credential]
 	helper = !'C:\\Users\\Wouter\\AppData\\Roaming\\GitCredStore\\git-credential-winstore.exe'
 
+# Available colors: normal, black, red, green, yellow, blue, magenta, cyan, or white
+# Second optional color param values: bold, dim, ul (underline), blink, and reverse (swap foreground and background)
+
+[color "branch"]
+	current = yellow
+	local = white
+	remote = magenta
+
 [color "status"]
+	header = white
 	changed = magenta bold
 	untracked = magenta bold
+	added = yellow
+	branch = white
 
 [color "diff"]
 	meta = blue white
