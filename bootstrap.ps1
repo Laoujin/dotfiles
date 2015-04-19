@@ -9,29 +9,26 @@ Push-Location "$PSScriptRoot\modules"
 . ".\PowerShell-Modules.ps1"
 Pop-Location
 
-Write-Title "Configure You Windows"
+Write-Title "Configure You Windows" $false
 Write-Host "Because registry editing is so much fun"
 Write-Host "Boxstarter Url: https://gist.github.com/Laoujin/12f5d2f76d51ee6c0a49"
-Write-Host
 
 $config = ConvertFrom-JsonFile ".\bootstrap.json"
 
 Push-Location "$PSScriptRoot\config"
 
-Write-Title "BOOTSTRAP"
-Process-Modules $config.modules
+# Write-Title "BOOTSTRAP"
+# Process-Modules $config.modules
 
-if ($config.shells) {
-	$shellConfig = ConvertFrom-JsonFile "shells.json"
-	Process-Program $shellConfig.bash
-	Process-Program $shellConfig.powershell
-}
+# if ($config.shells) {
+# 	$shellConfig = ConvertFrom-JsonFile "shells.json"
+# 	Process-Program $shellConfig.bash
+# 	Process-Program $shellConfig.powershell
+# }
+
+Process-Programs $config.cinst
 
 
-
-
-
-# apache2.4.9 -> be able to configure apache* or %VERSION%
 
 #alias d="cd ~/Dropbox"
 #read from json and also create the aliases for powershell
@@ -43,8 +40,6 @@ if ($config.shells) {
 # fileZilla, MarkdownPad2, notepadplusplus.install, SublimeText3, ultramon, utorrent, beyondcompare3 ...
 # resharper, visual studio
 # software not installed through chocolatey: webstorm, fences
-
-# Use Push-Location and Pop-Location for path issues...
 
 # Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowProtectedOSFiles -EnableShowFileExtensions
 

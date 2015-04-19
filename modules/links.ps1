@@ -6,14 +6,6 @@ function Install-ChocolateyPackage() {
 	}
 }
 
-function Replace-VariablePaths($path) {
-	$path = $path.Replace('$HOME', $HOME)
-	$path = $path.Replace('$PSScriptRoot', $PSScriptRoot)
-	$path = $path.Replace('$MYDOCUMENTS', [Environment]::GetFolderPath("mydocuments"))
-	$path = $path.Replace('$APPDATA_ROAMING', [Environment]::GetFolderPath("ApplicationData"))
-	return $path
-}
-
 function Get-InstalledSoftware {
 	Install-ChocolateyPackage
 
@@ -23,11 +15,20 @@ function Get-InstalledSoftware {
 	return $script:installedSoftware
 }
 
-##################################################################### LINKS
-
 function Check-Installed($program) {
 	$installed = Get-InstalledSoftware
 	return $installed -match "^$program"
+}
+
+##################################################################### LINKS
+
+function Replace-VariablePaths($path) {
+	$path = $path.Replace('<HOME>', $HOME)
+	#$path = $path.Replace('<PSScriptRoot>', $PSScriptRoot)
+	$path = $path.Replace('<MYDOCUMENTS>', [Environment]::GetFolderPath("mydocuments"))
+	$path = $path.Replace('<APPDATA_ROAMING>', [Environment]::GetFolderPath("ApplicationData"))
+
+	return $path
 }
 
 function Create-Link($data) {
@@ -56,14 +57,6 @@ function Create-Link($data) {
 		Write-Output "Already exists: $to"
 	}
 }
-
-function Create-Links($links) {
-	foreach ($link in $links) {
-		Create-Link $link
-	}
-}
-
-##################################################################### STARTUP
 
 function Create-Shortcut($file, $targetPath) {
 	$fileName = [System.IO.Path]::GetFileName($file)

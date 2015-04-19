@@ -1,11 +1,24 @@
 {
 	"cinst": "git",
-	"links":
-	[
-		{
-			"type": "symlink",
-			"link": "$PSScriptRoot\\shell\\.gitconfig",
-			"to": "$HOME\\.gitconfig"
-		}
-	]
+	"modules":
+	{
+		"Create-Links":
+		[
+			{
+				"type": "symlink",
+				"link": "Programs\\git\\.gitconfig",
+				"to": "<HOME>\\.gitconfig"
+			},
+			{
+				"type": "symlink",
+				"link": "Programs\\git\\.gitignore_global",
+				"to": "<HOME>\\.gitignore_global"
+			},
+			{
+				"type": "symlink",
+				"link": "Programs\\git\\.gitattributes_global",
+				"to": "<HOME>\\.gitattributes_global"
+			}
+		]
+	}
 }

@@ -9,7 +9,7 @@
 				{
 					"type": "symlink",
 					"link": "shells\\.bashrc",
-					"to": "$HOME\\.bashrc"
+					"to": "<HOME>\\.bashrc"
 				}
 			]
 		}
@@ -30,7 +30,7 @@
 				{
 					"type": "symlink",
 					"link": "shells\\Microsoft.PowerShell_profile.ps1",
-					"to": "$MYDOCUMENTS\\WindowsPowerShell\\Microsoft.PowerShell_profile.ps1"
+					"to": "<MYDOCUMENTS>\\WindowsPowerShell\\Microsoft.PowerShell_profile.ps1"
 				}
 			]
 		}

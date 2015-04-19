@@ -1,16 +1,19 @@
 {
 	"cinst": "wamp-server",
-	"links":
-	[
-		{
-			"type": "symlink",
-			"link": "$PSScriptRoot\\shell\\conf\\httpd.conf",
-			"to": "C:\\wamp\\bin\\apache\\apache2.4.9\\conf\\httpd.conf"
-		},
-		{
-			"type": "symlink",
-			"link": "$PSScriptRoot\\shell\\conf\\php.ini",
-			"to": "C:\\wamp\\bin\\php\\php5.5.12\\php.ini"
-		}
-	]
+	"modules":
+	{
+		"Create-Links":
+		[
+			{
+				"type": "symlink",
+				"link": "Programs\\wamp-server\\httpd.conf",
+				"to": "C:\\wamp\\bin\\apache\\apache2.4.9\\conf\\httpd.conf"
+			},
+			{
+				"type": "symlink",
+				"link": "Programs\\wamp-server\\php.ini",
+				"to": "C:\\wamp\\bin\\php\\php5.5.12\\php.ini"
+			}
+		]
+	}
 }

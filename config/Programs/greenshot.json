@@ -1,11 +1,14 @@
 {
 	"cinst": "greenshot",
-	"links":
-	[
-		{
-			"type": "symlink",
-			"link": "$PSScriptRoot\\Settings\\Programs\\Greenshot.ini",
-			"to": "$APPDATA_ROAMING\\Greenshot\\Greenshot.ini"
-		}
-	]
+	"modules":
+	{
+		"Create-Links":
+		[
+			{
+				"type": "symlink",
+				"link": "Programs\\Greenshot\\Greenshot.ini",
+				"to": "<APPDATA_ROAMING>\\Greenshot\\Greenshot.ini"
+			}
+		]
+	}
 }
