@@ -26,32 +26,33 @@ $windowsConfig = ConvertFrom-JsonFile ".\src\windows.json"
 Push-Location "$PSScriptRoot\config"
 
 Write-Title "BOOTSTRAP"
-#Process-Modules $config.modules
+Process-Modules $config.modules
 
 if ($config.shells) {
 	Write-Title "SHELLS"
 	$shellConfig = ConvertFrom-JsonFile "shells.json"
 	Process-Modules $shellConfig.modules
-	#Process-Program $shellConfig.bash
-	#Process-Program $shellConfig.powershell
+	Process-Program $shellConfig.bash
+	Process-Program $shellConfig.powershell
 }
 
-# Process-Programs $config.cinst
+Process-Programs $config.cinst
 
 
-# $explorerOptions = Get-JsonObjectKeys $config.windows.explorer.registry
-# foreach ($explorerOption in $explorerOptions) {
-# 	$explorerConfig = $windowsConfig.explorer.registry.$explorerOption
-# 	$explorerValue = $config.windows.explorer.registry.$explorerOption
+Write-Title "WINDOWS EXPLORER"
+$explorerOptions = Get-JsonObjectKeys $config.windows.explorer.registry
+foreach ($explorerOption in $explorerOptions) {
+	$explorerConfig = $windowsConfig.explorer.registry.$explorerOption
+	$explorerValue = $config.windows.explorer.registry.$explorerOption
 
-# 	if (-not $explorerConfig) {
-# 		Write-Error "No configuration found for $explorerOption"
-# 	} else {
+	if (-not $explorerConfig) {
+		Write-Error "No configuration found for $explorerOption"
+	} else {
 
-# 		$explorerConfig | Add-Member "value" $explorerValue
-# 		Update-RegistryKey $explorerConfig | Write-Background
-# 	}
-# }
+		$explorerConfig | Add-Member "value" $explorerValue
+		Update-RegistryKey $explorerConfig | Write-Background
+	}
+}
 
 
 # TODO: check installed software instead of chocolatey...
