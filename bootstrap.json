@@ -54,6 +54,17 @@
 	],
 	"modules":
 	{
+		"Manage-Services":
+		[
+			{
+				"name": "HomeGroup Listener",
+				"action": "Disabled"
+			},
+			{
+				"name": "HomeGroup Provider",
+				"action": "Disabled"
+			}
+		],
 		"Create-Links":
 		[
 			{

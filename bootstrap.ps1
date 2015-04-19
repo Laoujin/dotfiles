@@ -55,8 +55,6 @@ foreach ($explorerOption in $explorerOptions) {
 }
 
 
-# TODO: check installed software instead of chocolatey...
-
 # SETTINGS TO ADD
 # fileZilla, MarkdownPad2, notepadplusplus.install, SublimeText3, ultramon, utorrent, beyondcompare3 ...
 # resharper, visual studio
@@ -119,11 +117,6 @@ Pop-Location
 
 
 # function Update-RegistryKey($desc, $hive, $regPathRaw, $regKey, $disabledValue, $activeValue) {
-
-# OneDrive
-#Peek-RegistryKey "HKEY_CLASSES_ROOT" "CLSID\{8E74D236-7F35-4720-B138-1FED0B85EA75}\ShellFolder"
-
-#Update-RegistryKey "OneDrive icon in Navigation pane" 'HKEY_CLASSES_ROOT' 'CLSID\{8E74D236-7F35-4720-B138-1FED0B85EA75}\ShellFolder' "Attributes" 4034920525 4035969101
 
 # Homegroup
 # services.msc

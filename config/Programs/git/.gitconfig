@@ -16,15 +16,30 @@
 	path = c:/Program Files (x86)/KDiff3/kdiff3.exe
 
 [alias]
-	st = status
+	# Show defined aliases
+	alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\t=> \\2/' | sort
+
+	# -u: Show all untracked files (instead of just directories)
+	st = status -u
+
 	ci = commit
+	ca = !git add -A && git commit -a
 	br = branch
 	co = checkout
+
 	df = diff
+
+	# Show commits with diff
 	lg = log -p
+
+	# View abbreviated SHA, description, and history graph of the latest 20 commits
+	l = log --color -20 --graph --pretty=format:'%C(magenta)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
+
+	# Amend working directory
 	amend = commit -a --amend --no-edit
+
 	dt = difftool
-    mt = mergetool
+	mt = mergetool
 
 [difftool "bc3"]
 	path = C:\\Program Files (x86)\\Beyond Compare 3\\bcomp.exe
