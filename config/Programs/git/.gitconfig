@@ -37,12 +37,11 @@
 	# Find commits by commit message
 	fm = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short --grep=$1; }; f"
 
-	# Delete branches that have already been merged with master
-	#dmb = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
-	dm = !git branch --merged | grep -v '^* master$' | grep -v '^  master$' | xargs -n 1 git branch -d
+	# Delete branches that have already been merged with current branch
+	dm = !git branch --merged | grep -v '^(*| ) (master|development)$' | xargs -n 1 git branch -d
 
 	# commit entire working directory: git ca "commit message"
-	ca = "!f() { git add -A; git commit -m\"$1\"; }; f"
+	ca = "!f() { git add -A; git commit -vm\"$1\"; }; f"
 
 	# Show commits with diff
 	lg = log -p
@@ -87,6 +86,7 @@
 	header = white
 	changed = magenta bold
 	untracked = magenta bold
+	unmerged = magenta reverse
 	added = yellow
 	branch = white
 
