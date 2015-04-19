@@ -6,12 +6,12 @@
 		[
 			{
 				"type": "symlink",
-				"link": "Programs\\wamp-server\\httpd.conf",
+				"link": "Programs\\apache\\httpd.conf",
 				"to": "C:\\wamp\\bin\\apache\\apache2.4.9\\conf\\httpd.conf"
 			},
 			{
 				"type": "symlink",
-				"link": "Programs\\wamp-server\\php.ini",
+				"link": "Programs\\php\\php.ini",
 				"to": "C:\\wamp\\bin\\php\\php5.5.12\\php.ini"
 			}
 		]

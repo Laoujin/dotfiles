@@ -2,7 +2,7 @@
 	"shells": true,
 	"cinst":
 	[
-		"cmder",
+		"wamp-server",
 		"ditto"
 	],
 	"modules":
