@@ -12,11 +12,16 @@ Push-Location "$PSScriptRoot\src\modules"
 Get-ChildItem | ForEach-Object { . ".\$_" }
 Pop-Location
 
+Push-Location "$PSScriptRoot\src\lib"
+Get-ChildItem | ForEach-Object { . ".\$_" }
+Pop-Location
+
 Write-Title "Configure You Windows" $false
 Write-Host "Because registry editing is so much fun"
 Write-Host "Boxstarter Url: https://gist.github.com/Laoujin/12f5d2f76d51ee6c0a49"
 
 $config = ConvertFrom-JsonFile ".\bootstrap.json"
+$windowsConfig = ConvertFrom-JsonFile ".\src\windows.json"
 
 Push-Location "$PSScriptRoot\config"
 
@@ -31,6 +36,21 @@ if ($config.shells) {
 
 Process-Programs $config.cinst
 
+
+$explorerOptions = Get-JsonObjectKeys $config.windows.explorer.registry
+foreach ($explorerOption in $explorerOptions) {
+	$explorerConfig = $windowsConfig.explorer.registry.$explorerOption
+	$explorerValue = $config.windows.explorer.registry.$explorerOption
+
+	if (-not $explorerConfig) {
+		Write-Error "No configuration found for $explorerOption"
+	} else {
+
+		$explorerConfig | Add-Member "value" $explorerValue
+		# echo "$explorerConfig -----> $explorerValue"
+		Update-RegistryKey $explorerConfig | Write-Background
+	}
+}
 
 
 #alias d="cd ~/Dropbox"

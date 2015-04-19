@@ -1,8 +1,3 @@
-Write-Title "REGISTRY"
-
-$currentPath = Split-Path $MyInvocation.PSCommandPath
-$config = Get-Content "$currentPath\Settings\registry.json" | Out-String | ConvertFrom-Json
-
 for ($i = 0; $i -lt $config.regFiles.length; $i++) {
 	$reg = $config.regFiles[$i]
 	$color = if ($reg.value -eq $reg.default) {"white"} else {"darkmagenta"}

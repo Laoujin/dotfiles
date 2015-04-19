@@ -24,7 +24,7 @@ function Process-Program($program) {
 }
 
 function Process-Modules($modules) {
-	$moduleNames = ($modules | Get-Member -MemberType *Property).Name
+	$moduleNames = Get-JsonObjectKeys $modules
 	foreach ($moduleName in $moduleNames) {
 		$moduleData = $modules.$moduleName
 

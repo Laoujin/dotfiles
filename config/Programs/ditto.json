@@ -1,37 +1,41 @@
 {
 	"cinst": "ditto",
-	"regKeys":
-	[
-			"type": "fixed",
-			"desc": "Use Win + Alt + D to open Ditto history at mouse cursor (default conflicts with SublimeText)",
-			"hive": "HKEY_CURRENT_USER",
-			"regPathRaw": "Software\\Ditto",
-			"regKey": "DittoHotKey",
-			"value": "c44"
-		},
-		{
-			"type": "fixed",
-			"desc": "Paste what was last copied with Control + 0",
-			"hive": "HKEY_CURRENT_USER",
-			"regPathRaw": "Software\\Ditto",
-			"regKey": "Position1",
-			"value": "261" // => all hex values
-		},
-		{
-			"type": "fixed",
-			"desc": "Paste what was previously copied with Control + 1",
-			"hive": "HKEY_CURRENT_USER",
-			"regPathRaw": "Software\\Ditto",
-			"regKey": "Position2",
-			"value": "262"
-		},
-		{
-			"type": "fixed",
-			"desc": "Paste what was 'previously previously' copied with Control + 2",
-			"hive": "HKEY_CURRENT_USER",
-			"regPathRaw": "Software\\Ditto",
-			"regKey": "Position3",
-			"value": "263"
-		}
-	]
+	"modules":
+	{
+		"Update-RegistryKeys":
+		[
+			{
+				"type": "fixed",
+				"desc": "Use Win + Alt + D to open Ditto history at mouse cursor (default conflicts with SublimeText)",
+				"hive": "HKEY_CURRENT_USER",
+				"regPathRaw": "Software\\Ditto",
+				"regKey": "DittoHotKey",
+				"value": "3140"
+			},
+			{
+				"type": "fixed",
+				"desc": "Paste what was last copied with Control + 1",
+				"hive": "HKEY_CURRENT_USER",
+				"regPathRaw": "Software\\Ditto",
+				"regKey": "Position1",
+				"value": "609"
+			},
+			{
+				"type": "fixed",
+				"desc": "Paste what was previously copied with Control + 2",
+				"hive": "HKEY_CURRENT_USER",
+				"regPathRaw": "Software\\Ditto",
+				"regKey": "Position2",
+				"value": "610"
+			},
+			{
+				"type": "fixed",
+				"desc": "Paste what was 'previously previously' copied with Control + 3",
+				"hive": "HKEY_CURRENT_USER",
+				"regPathRaw": "Software\\Ditto",
+				"regKey": "Position3",
+				"value": "611"
+			}
+		]
+	}
 }

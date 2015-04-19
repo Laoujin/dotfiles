@@ -3,10 +3,7 @@
 	"cinst":
 	[
 		"cmder",
-		"git",
-		"greenshot",
-		"wamp-server",
-		"nodejs.install"
+		"ditto"
 	],
 	"modules":
 	{
@@ -29,30 +26,33 @@
 			"c:\\code\\Autohotkey\\MiKe\\mike.ahk"
 		]
 	},
-	"explorer":
+	"windows":
 	{
-		"registry":
+		"explorer":
 		{
-			"showThisPCFolders": "off",
-			"showOneDrive": false
-		},
-		"favorites": [],
-		"libraries": []
-	},
-	"contextMenus":
-	{
-		"file":
-		[
-		],
-		"folder":
-		[
-		],
-		"new":
-		[
+			"registry":
 			{
-				"ext": "txt"
+				"showThisPCFolders": "off",
+				"showOneDrive": "false"
+			},
+			"favorites": [],
+			"libraries": []
+		},
+		"contextMenus":
+		{
+			"file":
+			[
+			],
+			"folder":
+			[
+			],
+			"new":
+			[
+				{
+					"ext": "txt"
 
-			}
-		]
+				}
+			]
+		}
 	}
 }
