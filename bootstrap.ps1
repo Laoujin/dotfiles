@@ -2,11 +2,14 @@ cls
 
 #Set-ExecutionPolicy Unrestricted
 
-Push-Location "$PSScriptRoot\modules"
-. ".\Helpers\Console.ps1"
+Push-Location "$PSScriptRoot\src"
+. ".\bootstrap-functions.ps1"
 . ".\helpers.ps1"
-. ".\links.ps1"
-. ".\PowerShell-Modules.ps1"
+. ".\programs.ps1"
+Pop-Location
+
+Push-Location "$PSScriptRoot\src\modules"
+Get-ChildItem | ForEach-Object { . ".\$_" }
 Pop-Location
 
 Write-Title "Configure You Windows" $false
@@ -17,14 +20,14 @@ $config = ConvertFrom-JsonFile ".\bootstrap.json"
 
 Push-Location "$PSScriptRoot\config"
 
-# Write-Title "BOOTSTRAP"
-# Process-Modules $config.modules
+Write-Title "BOOTSTRAP"
+Process-Modules $config.modules
 
-# if ($config.shells) {
-# 	$shellConfig = ConvertFrom-JsonFile "shells.json"
-# 	Process-Program $shellConfig.bash
-# 	Process-Program $shellConfig.powershell
-# }
+if ($config.shells) {
+	$shellConfig = ConvertFrom-JsonFile "shells.json"
+	Process-Program $shellConfig.bash
+	Process-Program $shellConfig.powershell
+}
 
 Process-Programs $config.cinst
 

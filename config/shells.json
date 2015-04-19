@@ -20,7 +20,7 @@
 		"cinst": "PowerShell",
 		"modules":
 		{
-			"Install-Modules":
+			"Install-PS-Modules":
 			[
 				"PsGet",
 				"Posh-Git"

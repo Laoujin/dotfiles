@@ -1,4 +1,4 @@
-function Install-ModulesGetter {
+function Install-PS-ModulesGetter {
 	if (-not (Check-Command 'Install-Module'))
 	{
 		Write-Output "Installing PsGet"
@@ -7,9 +7,9 @@ function Install-ModulesGetter {
 	}
 }
 
-function Install-Modules($modules) {
+function Install-PS-Modules($modules) {
 	if ($modules -contains "PsGet") {
-		Install-ModulesGetter
+		Install-PS-ModulesGetter
 	}
 
 	foreach ($module in $modules) {

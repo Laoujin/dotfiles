@@ -5,7 +5,8 @@
 		"cmder",
 		"git",
 		"greenshot",
-		"wamp-server"
+		"wamp-server",
+		"nodejs.install"
 	],
 	"modules":
 	{

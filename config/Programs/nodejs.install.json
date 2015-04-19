@@ -1,0 +1,13 @@
+{
+	"cinst": "nodejs.install",
+	"title" : "NODE",
+	"modules":
+	{
+		"Install-NodePackages":
+		[
+			"jade",
+			"gulp",
+			"jshint"
+		]
+	}
+}
