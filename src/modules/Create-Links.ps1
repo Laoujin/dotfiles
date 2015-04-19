@@ -32,6 +32,11 @@ function Create-Link($data) {
 		return
 	}
 
+	if (-not (Test-Path $link)) {
+		Write-Verbose "DOES NOT EXIST: $link" -Verbose
+		return
+	}
+
 	if (-not (Test-Path $to)) {
 		cmd /c $operation
 

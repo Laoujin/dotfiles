@@ -1,6 +1,10 @@
 
 Push-Location (Split-Path -Path $MyInvocation.MyCommand.Definition -Parent)
 
+if (Test-Path ".\Microsoft.PowerShell_aliases.ps1") {
+	. ".\Microsoft.PowerShell_aliases.ps1"
+}
+
 # Load posh-git module from current directory
 #Import-Module .\posh-git
 
