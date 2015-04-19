@@ -3,7 +3,9 @@ function ConvertFrom-JsonFile($file) {
 }
 
 function Get-JsonObjectKeys($node) {
-	return ($node | Get-Member -MemberType *Property).Name
+	$keys = ($node | Get-Member -MemberType *Property).Name
+	[Array]::Reverse($keys)
+	return $keys
 }
 
 function Check-Command($commandName) {

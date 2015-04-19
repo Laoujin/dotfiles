@@ -1,6 +1,5 @@
 {
 	"cinst": "nodejs.install",
-	"title" : "NODE",
 	"modules":
 	{
 		"Install-NodePackages":
