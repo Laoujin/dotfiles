@@ -25,18 +25,18 @@ $windowsConfig = ConvertFrom-JsonFile ".\src\windows.json"
 
 Push-Location "$PSScriptRoot\config"
 
-Write-Title "BOOTSTRAP"
-Process-Modules $config.modules
+# Write-Title "BOOTSTRAP"
+# Process-Modules $config.modules
 
-if ($config.shells) {
-	Write-Title "SHELLS"
-	$shellConfig = ConvertFrom-JsonFile "shells.json"
-	Process-Modules $shellConfig.modules
-	Process-Program $shellConfig.bash
-	Process-Program $shellConfig.powershell
-}
+# if ($config.shells) {
+# 	Write-Title "SHELLS"
+# 	$shellConfig = ConvertFrom-JsonFile "shells.json"
+# 	Process-Modules $shellConfig.modules
+# 	Process-Program $shellConfig.bash
+# 	Process-Program $shellConfig.powershell
+# }
 
-Process-Programs $config.cinst
+# Process-Programs $config.cinst
 
 
 Write-Title "WINDOWS EXPLORER"

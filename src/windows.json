@@ -29,6 +29,62 @@
 					"false": "4035969101"
 				},
 				"default": "true"
+			},
+			"showHiddenFilesFoldersDrives":
+			{
+				"type": "toggle",
+				"context": "explorer",
+				"desc": "Show hidden files in Windows Explorer",
+				"hive": "HKEY_CURRENT_USER",
+				"regPathRaw": "Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced",
+				"regKey": "Hidden",
+				"values": {
+					"true": "0",
+					"false": "1"
+				},
+				"default": "false"
+			},
+			"showFileExtensions":
+			{
+				"type": "toggle",
+				"context": "explorer",
+				"desc": "Show the file extension in file names in Windows Explorer",
+				"hive": "HKEY_CURRENT_USER",
+				"regPathRaw": "Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced",
+				"regKey": "HideFileExt",
+				"values": {
+					"true": "0",
+					"false": "1"
+				},
+				"default": "false"
+			},
+			"showProtectedOSFiles":
+			{
+				"type": "toggle",
+				"context": "explorer",
+				"desc": "Show hidden Operating System files in Windows Explorer",
+				"hive": "HKEY_CURRENT_USER",
+				"regPathRaw": "Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced",
+				"regKey": "ShowSuperHidden",
+				"values": {
+					"true": "1",
+					"false": "0"
+				},
+				"default": "false"
+			},
+			"showFullPathInTitleBar":
+			{
+				"type": "toggle",
+				"context": "explorer",
+				"desc": "Show the full folder path in the Title Bar in Windows Explorer",
+				"hive": "HKEY_CURRENT_USER",
+				"regPathRaw": "Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\CabinetState",
+				"regKey": "FullPath",
+				"values": {
+					"true": "1",
+					"false": "0"
+				},
+				"default": "false"
 			}
 		}
 	}

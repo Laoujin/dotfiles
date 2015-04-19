@@ -91,7 +91,11 @@
 			"registry":
 			{
 				"showThisPCFolders": "off",
-				"showOneDrive": "false"
+				"showOneDrive": "false",
+				"showHiddenFilesFoldersDrives": "true",
+				"showFileExtensions": "true",
+				"showProtectedOSFiles": "true",
+				"showFullPathInTitleBar": "true"
 			},
 			"favorites": [],
 			"libraries": []
