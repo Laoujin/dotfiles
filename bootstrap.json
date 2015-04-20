@@ -96,7 +96,8 @@
 				"showFileExtensions": "show",
 				"showProtectedOSFiles": "show",
 				"showFullPathInTitleBar": "show",
-				"showNetworkIconInNavigationPane": "hide"
+				"showNetworkIconInNavigationPane": "hide",
+				"showLibrariesInWindowsExplorer": "show"
 			},
 			"favorites": [],
 			"libraries": []

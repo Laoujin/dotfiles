@@ -54,23 +54,15 @@ foreach ($explorerOption in $explorerOptions) {
 	}
 }
 
+# Library
+# currently not visible in open/close dialog
+
 Stop-Process -processname explorer
 
-# function Update-RegistryKey($desc, $hive, $regPathRaw, $regKey, $disabledValue, $activeValue) {
-# Network
-
-
-#Update-RegistryKey "User folder group in Windows Explorer" 'HKEY_CURRENT_USER' 'Software\Classes\CLSID\{59031a47-3f72-44a7-89c5-5595fe6b30ee}' "System.IsPinnedToNameSpaceTree" 00000001 00000000
-
-
-
 # SETTINGS TO ADD
-# fileZilla, MarkdownPad2, notepadplusplus.install, SublimeText3, ultramon, utorrent, beyondcompare3 ...
+# fileZilla, notepadplusplus.install, SublimeText3, ultramon, beyondcompare3 ...
 # resharper, visual studio
 # software not installed through chocolatey: webstorm, fences
-
-# Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowProtectedOSFiles -EnableShowFileExtensions
-
 
 # aspnetmvc.install # not updated to MVC5!!!",
 # sqlserver2012express",
@@ -105,6 +97,13 @@ Pop-Location
 # services.msc
 # Stop HomeGroup Listener and HomeGroup Provider
 # Control Panel -> Advanced Sharing Settings -> Turn off network discovery
-
-# Library
-# currently not visible in open/close dialog
+# "showHomeGroupIconInWindowsExplorer":
+# {
+# 	"type": "toggle",
+# 	"context": "explorer",
+# 	"desc": "",
+# 	"hive": "HKEY_LOCAL_MACHINE",
+# 	"regPathRaw": "SOFWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Desktop\\NameSpace\\{B4FB3F98-C1EA-428d-A78A-D1F5659CBA93}",
+# }
+# --> Delete key to remove the Homegroup icon in Windows Explorer.
+# --> But didn't save it to see how to put it back :p

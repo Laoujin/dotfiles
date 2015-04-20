@@ -50,7 +50,7 @@ function Set-RegistryKeyValue($item) {
 	$currentValue = Get-ItemProperty -Path $regPath -Name $item.regKey | Select-Object -ExpandProperty $item.regKey
 	if ($currentValue -ne $item.value) {
 		Set-ItemProperty -Path $regPath -Name $item.regKey -Value $item.value
-		Write-Output "Updated $($item.desc): $($item.value)"
+		Write-Verbose "Updated $($item.desc): $($item.value)" -Verbose
 	} else {
 		Write-Output "No change for $($item.desc) ($($item.value))"
 	}
