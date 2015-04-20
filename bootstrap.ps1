@@ -55,7 +55,10 @@ foreach ($explorerOption in $explorerOptions) {
 }
 
 # Library
-# currently not visible in open/close dialog
+# Install-Package WindowsAPICodePack-Core
+# Install-Package WindowsAPICodePack-Shell
+# Microsoft.WindowsAPICodePack.Shell.KnownFolders.Libraries
+# http://blogs.technet.com/b/heyscriptingguy/archive/2012/11/11/weekend-scripter-working-with-windows-libraries.aspx
 
 Stop-Process -processname explorer
 
