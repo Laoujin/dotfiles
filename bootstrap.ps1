@@ -56,7 +56,11 @@ foreach ($explorerOption in $explorerOptions) {
 
 Stop-Process -processname explorer
 
+# function Update-RegistryKey($desc, $hive, $regPathRaw, $regKey, $disabledValue, $activeValue) {
+# Network
 
+
+#Update-RegistryKey "User folder group in Windows Explorer" 'HKEY_CURRENT_USER' 'Software\Classes\CLSID\{59031a47-3f72-44a7-89c5-5595fe6b30ee}' "System.IsPinnedToNameSpaceTree" 00000001 00000000
 
 
 
@@ -95,18 +99,12 @@ Pop-Location
 
 
 
-# function Update-RegistryKey($desc, $hive, $regPathRaw, $regKey, $disabledValue, $activeValue) {
+
 
 # Homegroup
 # services.msc
 # Stop HomeGroup Listener and HomeGroup Provider
 # Control Panel -> Advanced Sharing Settings -> Turn off network discovery
-
-# Network
-#Update-RegistryKey "Network icon in Navigation pane" 'HKEY_CLASSES_ROOT' 'CLSID\{F02C1A0D-BE21-4350-88B0-7367FC96EF3C}\ShellFolder' "Attributes" 2953052260 2962489444
-
-#Update-RegistryKey "User folder group in Windows Explorer" 'HKEY_CURRENT_USER' 'Software\Classes\CLSID\{59031a47-3f72-44a7-89c5-5595fe6b30ee}' "System.IsPinnedToNameSpaceTree" 00000001 00000000
-
 
 # Library
 # currently not visible in open/close dialog

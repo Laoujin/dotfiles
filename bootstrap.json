@@ -90,12 +90,13 @@
 		{
 			"registry":
 			{
-				"showThisPCFolders": "off",
-				"showOneDrive": "false",
-				"showHiddenFilesFoldersDrives": "true",
-				"showFileExtensions": "true",
-				"showProtectedOSFiles": "true",
-				"showFullPathInTitleBar": "true"
+				"showThisPCFolders": "hide",
+				"showOneDrive": "hide",
+				"showHiddenFilesFoldersDrives": "show",
+				"showFileExtensions": "show",
+				"showProtectedOSFiles": "show",
+				"showFullPathInTitleBar": "show",
+				"showNetworkIconInNavigationPane": "hide"
 			},
 			"favorites": [],
 			"libraries": []
