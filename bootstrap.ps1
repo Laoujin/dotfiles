@@ -54,6 +54,11 @@ foreach ($explorerOption in $explorerOptions) {
 	}
 }
 
+Stop-Process -processname explorer
+
+
+
+
 
 # SETTINGS TO ADD
 # fileZilla, MarkdownPad2, notepadplusplus.install, SublimeText3, ultramon, utorrent, beyondcompare3 ...
@@ -85,32 +90,6 @@ foreach ($explorerOption in $explorerOptions) {
 
 # Useful Windows dotfiles?
 # https://github.com/jayharris/dotfiles-windows/blob/master/windows.ps1 (IIS configuration etc)
-## Explorer: Show hidden files by default (1: Show Files, 2: Hide Files)
-# Set-ItemProperty "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" "Hidden" 1
-
-# # Explorer: show file extensions by default (0: Show Extensions, 1: Hide Extensions)
-# Set-ItemProperty "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" "HideFileExt" 0
-
-# # Explorer: show path in title bar
-# Set-ItemProperty "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\CabinetState" "FullPath" 1
-
-# # Explorer: Avoid creating Thumbs.db files on network volumes
-# Set-ItemProperty "HKCU:\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" "DisableThumbnailsOnNetworkFolders" 1
-
-# # Taskbar: use small icons (0: Large Icons, 1: Small Icons)
-# Set-ItemProperty "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" "TaskbarSmallIcons" 1
-
-# # Taskbar: Don't show Windows Store Apps on Taskbar
-# Set-ItemProperty "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" "StoreAppsOnTaskbar" 0
-
-# # SysTray: hide the Action Center, Network, and Volume icons
-# Set-ItemProperty "HKCU:\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" "HideSCAHealth" 1
-# Set-ItemProperty "HKCU:\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" "HideSCANetwork" 1
-# Set-ItemProperty "HKCU:\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" "HideSCAVolume" 1
-# #Set-ItemProperty "HKCU:\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" "HideSCAPower" 1
-
-# # Recycle Bin: Disable Delete Confirmation Dialog
-# Set-ItemProperty "HKCU:\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" "ConfirmFileDelete" 0
 
 Pop-Location
 
@@ -131,11 +110,3 @@ Pop-Location
 
 # Library
 # currently not visible in open/close dialog
-
-
-# open/save dialogs (Windows 8.1)
-#Update-RegistryKey "OneDrive in open/save dialogs" 'HKEY_LOCAL_MACHINE' 'SOFTWARE\Wow6432Node\Classes\CLSID\{8E74D236-7F35-4720-B138-1FED0B85EA75}\ShellFolder' "Attributes" 4034920525 4035969101
-#Update-RegistryKey "Network in open/save dialogs" 'HKEY_LOCAL_MACHINE' 'SOFTWARE\Wow6432Node\Classes\CLSID\{F02C1A0D-BE21-4350-88B0-7367FC96EF3C}\ShellFolder' "Attributes" 2953052260 2962489444
-
-
-

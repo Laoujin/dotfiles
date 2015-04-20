@@ -15,13 +15,12 @@ function Update-RegistryKey($item) {
 	switch ($item.type) {
 		"fixed" {Set-RegistryKeyValue $item}
 		"files" {Execute-RegistryFile $item}
-		"toggle" {Toggle-RegistryKeyValue $item}
+		"switch" {Toggle-RegistryKeyValue $item}
 		default {Write-Error "Unknown registry type: $($item.type)"}
 	}
 }
 
 function Toggle-RegistryKeyValue($item) {
-	Write-Output "$($item.desc): $($item.value)"
 	$item.value = $item.values.$($item.value)
 	Set-RegistryKeyValue $item
 }
@@ -51,7 +50,9 @@ function Set-RegistryKeyValue($item) {
 	$currentValue = Get-ItemProperty -Path $regPath -Name $item.regKey | Select-Object -ExpandProperty $item.regKey
 	if ($currentValue -ne $item.value) {
 		Set-ItemProperty -Path $regPath -Name $item.regKey -Value $item.value
-		Write-Output "Updated $($item.desc) regKey"
+		Write-Output "Updated $($item.desc): $($item.value)"
+	} else {
+		Write-Output "No change for $($item.desc) ($($item.value))"
 	}
 }
 

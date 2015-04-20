@@ -17,7 +17,7 @@
 			},
 			"showOneDrive":
 			{
-				"type": "toggle",
+				"type": "switch",
 				"context": "explorer",
 				"requires": "onedrive",
 				"desc": "Show OneDrive icon in Navigation pane",
@@ -32,21 +32,21 @@
 			},
 			"showHiddenFilesFoldersDrives":
 			{
-				"type": "toggle",
+				"type": "switch",
 				"context": "explorer",
 				"desc": "Show hidden files in Windows Explorer",
 				"hive": "HKEY_CURRENT_USER",
 				"regPathRaw": "Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced",
 				"regKey": "Hidden",
 				"values": {
-					"true": "0",
-					"false": "1"
+					"true": "1",
+					"false": "2"
 				},
 				"default": "false"
 			},
 			"showFileExtensions":
 			{
-				"type": "toggle",
+				"type": "switch",
 				"context": "explorer",
 				"desc": "Show the file extension in file names in Windows Explorer",
 				"hive": "HKEY_CURRENT_USER",
@@ -60,7 +60,7 @@
 			},
 			"showProtectedOSFiles":
 			{
-				"type": "toggle",
+				"type": "switch",
 				"context": "explorer",
 				"desc": "Show hidden Operating System files in Windows Explorer",
 				"hive": "HKEY_CURRENT_USER",
@@ -74,7 +74,7 @@
 			},
 			"showFullPathInTitleBar":
 			{
-				"type": "toggle",
+				"type": "switch",
 				"context": "explorer",
 				"desc": "Show the full folder path in the Title Bar in Windows Explorer",
 				"hive": "HKEY_CURRENT_USER",
