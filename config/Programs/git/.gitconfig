@@ -71,7 +71,7 @@
 	attributesfile = ~/.gitattributes_global
 #	pager = more
 #	editor = emacs
-	editor = "C:\\Program Files\\Sublime Text 3\\subl.exe -n -w"
+#	editor = "\"C:\\Program Files\\Sublime Text 3\\subl.exe\" -n -w"
 
 [push]
 	default = simple
