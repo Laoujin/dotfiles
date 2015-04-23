@@ -1,33 +1,27 @@
 [user]
 	name = Laoujin
 	email = woutervs@hotmail.com
+#	signingkey = <gpg-key-id>
 
 [merge]
+	prompt = false
 	tool = bc3
-
-[mergetool "kdiff3"]
-	path = c:/Program Files (x86)/KDiff3/kdiff3.exe
+#	guitool = winmerge
 
 [diff]
+	prompt = false
 	tool = bc3
-	guitool = kdiff3
+#	guitool = winmerge
 
-[difftool "kdiff3"]
-	path = c:/Program Files (x86)/KDiff3/kdiff3.exe
+[difftool "bc3"]
+	path = C:\\Program Files (x86)\\Beyond Compare 3\\bcomp.exe
+#	cmd = \"c:/program files (x86)/beyond compare 3/bcomp.exe\" \"$LOCAL\" \"$REMOTE\"
 
-# WORK SETTINGS:
-# [difftool]
-#     prompt = false
-# [difftool "bc3"]
-#     cmd = \"c:/program files (x86)/beyond compare 3/bcomp.exe\" \"$LOCAL\" \"$REMOTE\"
-# [merge]
-#     tool = bc3
-# [mergetool]
-#     prompt = false
-# 	keepBackup = false
-# [mergetool "bc3"]
-#     cmd = \"c:/program files (x86)/beyond compare 3/bcomp.exe\" \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
-#     trustExitCode = true
+[mergetool "bc3"]
+	path = C:\\Program Files (x86)\\Beyond Compare 3\\bcomp.exe
+#	cmd = \"c:/program files (x86)/beyond compare 3/bcomp.exe\" \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
+	trustExitCode = true
+	keepBackup = false
 
 [alias]
 	# Show defined aliases
@@ -71,16 +65,13 @@
 	dt = difftool
 	mt = mergetool
 
-[difftool "bc3"]
-	path = C:\\Program Files (x86)\\Beyond Compare 3\\bcomp.exe
-
-[mergetool "bc3"]
-	path = C:\\Program Files (x86)\\Beyond Compare 3\\bcomp.exe
-
 [core]
 	autocrlf = true
 	excludesfile = ~/.gitignore_global
 	attributesfile = ~/.gitattributes_global
+#	pager = more
+#	editor = emacs
+	editor = "C:\\Program Files\\Sublime Text 3\\subl.exe -n -w"
 
 [push]
 	default = simple
@@ -109,3 +100,14 @@
 	frag = normal bold
 	old = magenta bold
 	new = green bold
+
+# [include]
+# 	path = /path/to/foo.inc ; include by absolute path
+# 	path = foo ; expand "foo" relative to the current file
+# 	path = ~/foo ; expand "foo" in your $HOME directory
+
+# help.autocorrect = 1
+# WARNING: You called a Git command named 'chekcout', which does not exist.
+# Continuing under the assumption that you meant 'checkout'
+
+# commit.template = ~/.gitmessage.txt
