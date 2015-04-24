@@ -65,6 +65,9 @@
 	dt = difftool
 	mt = mergetool
 
+	# For more interesting aliases:
+	# Git Bash/cygwin: https://github.com/tj/git-extras/wiki/Commands#git-extras
+
 [core]
 	autocrlf = true
 	excludesfile = ~/.gitignore_global
@@ -111,3 +114,4 @@
 # Continuing under the assumption that you meant 'checkout'
 
 # commit.template = ~/.gitmessage.txt
+# fetch.prune = true
