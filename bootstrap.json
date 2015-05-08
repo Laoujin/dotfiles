@@ -97,7 +97,8 @@
 				"showProtectedOSFiles": "show",
 				"showFullPathInTitleBar": "show",
 				"showNetworkIconInNavigationPane": "hide",
-				"showLibrariesInWindowsExplorer": "show"
+				"showLibrariesInWindowsExplorer": "show",
+				"enableAeroWindowsShake": "disabled"
 			},
 			"favorites": [],
 			"libraries": []

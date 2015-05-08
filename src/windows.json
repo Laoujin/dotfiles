@@ -113,6 +113,25 @@
 					"hide": "0"
 				},
 				"default": "hide"
+			},
+			"enableAeroWindowsShake":
+			{
+				"type": "toggle",
+				"context": "aero",
+				"desc": "Enable Windows Shake to hide all windows",
+				"hive": "HKEY_CURRENT_USER",
+				"regPathRaw": "Software\\Policies\\Microsoft\\Windows\\Explorer",
+				"regKey": "System.IsPinnedToNameSpaceTree",
+				"newValue": {
+					"type": "DWORD (32-bit)",
+					"name": "NoWindowMinimizingShortcuts",
+					"value": "1"
+				},
+				"values": {
+					"enabled": "deleted",
+					"disabled": "created"
+				},
+				"default": "enabled"
 			}
 		}
 	}
