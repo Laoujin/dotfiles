@@ -4,9 +4,11 @@
 	{
 		"Install-NodePackages":
 		[
-			"jade",
 			"gulp",
-			"jshint"
+			"jade",
+			"jasmine-node",
+			"jshint",
+			"licenser"
 		]
 	}
 }
