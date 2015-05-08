@@ -54,6 +54,12 @@ foreach ($explorerOption in $explorerOptions) {
 	}
 }
 
+# git alias: clone and enter dir
+# ps: cd..... -> also in bash
+# autohotkey: open and set most often used folder / open in explorer / in cmder new tab?
+#(http://www.techunboxed.com/2013/09/how-to-disable-aero-shake-in-windows-8.html)
+#~/.bash_aliases
+
 # Library
 # Install-Package WindowsAPICodePack-Core
 # Install-Package WindowsAPICodePack-Shell
