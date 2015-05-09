@@ -21,7 +21,8 @@
 			"Install-PS-Modules":
 			[
 				"PsGet",
-				"Posh-Git"
+				"Posh-Git",
+				"PSReadLine"
 			],
 			"Create-Links":
 			[

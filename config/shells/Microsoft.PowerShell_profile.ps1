@@ -10,6 +10,18 @@ ${function:....} = { Set-Location ..\..\.. }
 ${function:.....} = { Set-Location ..\..\..\.. }
 ${function:......} = { Set-Location ..\..\..\..\.. }
 
+# Instead of aliases:
+# Original: https://github.com/joelthelion/autojump (experimental CLink support)
+# PS Specific: https://github.com/tkellogg/Jump-Location
+# z is the new j, yo: https://github.com/rupa/z
+# z PS: https://github.com/vincpa/z
+
+# Download stuff:
+# https://github.com/chaliy/psurl/
+
+# Use TFS from CLI:
+# https://bitbucket.org/Sumo/tfdash/overview
+
 function CreateAndSet-Directory([String] $path) { New-Item $path -ItemType Directory -ErrorAction SilentlyContinue; Set-Location $path}
 
 function Convert-ToDiskSize {
@@ -35,6 +47,20 @@ function Get-DiskUsage([string] $path=(Get-Location).Path) {
 
 Set-Alias mkd CreateAndSet-Directory
 Set-Alias fs Get-DiskUsage
+
+if ($host.Name -eq 'ConsoleHost') {
+	# https://rkeithhill.wordpress.com/2013/10/18/psreadline-a-better-line-editing-experience-for-the-powershell-console/
+	# https://github.com/lzybkr/PSReadLine
+	Import-Module PSReadline
+
+	Set-PSReadlineKeyHandler -Key 'UpArrow' -Function 'HistorySearchBackward'
+	Set-PSReadlineKeyHandler -Key 'DownArrow' -Function 'HistorySearchForward'
+
+	# Updating?
+	# cmd.exe
+	# powershell -noprofile
+	# Update-Module PSReadLine
+}
 
 
 Push-Location (Split-Path -Path $MyInvocation.MyCommand.Definition -Parent)

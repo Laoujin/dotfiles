@@ -37,7 +37,6 @@ function Process-Modules($modules) {
 }
 
 function Process-Programs($programs) {
-	Write-Title "PROGRAMS"
 	foreach ($program in $programs) {
 		if (Test-Path "Programs\$program.json") {
 			$data = ConvertFrom-JsonFile "Programs\$program.json"

@@ -36,6 +36,7 @@ if ($config.shells) {
 	Process-Program $shellConfig.powershell
 }
 
+Write-Title "PROGRAMS"
 Process-Programs $config.cinst
 
 
@@ -53,6 +54,15 @@ foreach ($explorerOption in $explorerOptions) {
 		Update-RegistryKey $explorerConfig | Write-Background
 	}
 }
+
+# Desired State configuration
+# https://gallery.technet.microsoft.com/scriptcenter/DSC-Resource-Kit-All-c449312d
+
+# Interesting:
+# https://gallery.technet.microsoft.com/scriptcenter/Get-RemoteProgram-Get-list-de9fd2b4
+
+# File System Security PowerShell Module
+# https://gallery.technet.microsoft.com/scriptcenter/1abd77a5-9c0b-4a2b-acef-90dbb2b84e85
 
 # git alias: clone and enter dir
 # ps: cd..... -> also in bash
