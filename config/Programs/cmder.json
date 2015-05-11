@@ -1,5 +1,5 @@
 {
-	"cinst": "cmder",
+	"requires": "cmder",
 	"modules":
 	{
 		"Create-Links":

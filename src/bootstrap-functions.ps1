@@ -45,6 +45,11 @@ function Combine-Configs($commonConfig, $extraConfig) {
 }
 
 function Process-Program($program) {
+	if ($program.requires -and -not (Check-Installed $program.requires)) {
+		Write-Output "Skipping program $($program.requires)"
+		return
+	}
+
 	if ($program.title) {
 		Write-Title $program.title
 	}

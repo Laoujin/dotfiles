@@ -1,5 +1,5 @@
 {
-	"cinst": "ditto",
+	"requires": "ditto",
 	"modules":
 	{
 		"Update-RegistryKeys":

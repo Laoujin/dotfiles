@@ -1,5 +1,5 @@
 {
-	"cinst": "git",
+	"requires": "git",
 	"modules":
 	{
 		"Create-Links":

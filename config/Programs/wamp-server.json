@@ -1,5 +1,5 @@
 {
-	"cinst": "wamp-server",
+	"requires": "wamp-server",
 	"modules":
 	{
 		"Create-Links":
