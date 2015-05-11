@@ -41,6 +41,6 @@ function Create-Link($data) {
 		cmd /c $operation
 
 	} else {
-		Write-Output "Already exists: $to"
+		Write-Output "Symlink already exists: $to"
 	}
 }

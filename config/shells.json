@@ -41,24 +41,12 @@
 			"aliases":
 			[
 				{
-					"alias": "sangu",
-					"cd": "c:\\code\\TribalWars\\sangupackage-source"
-				},
-				{
-					"alias": "tactics",
-					"cd": "c:\\code\\TribalWars\\TWTactics"
-				},
-				{
 					"alias": "mike",
 					"cd": "c:\\code\\Autohotkey\\MiKe"
 				},
 				{
 					"alias": "code",
 					"cd": "c:\\code\\"
-				},
-				{
-					"alias": "www",
-					"cd": "c:\\wamp\\www"
 				},
 				{
 					"alias": "dotfiles",
@@ -81,10 +69,10 @@
 				"to": "<MYDOCUMENTS>\\WindowsPowerShell\\Microsoft.PowerShell_aliases.ps1"
 			},
 			{
-					"type": "symlink",
-					"link": "shells\\bash_aliases.sh",
-					"to": "<HOME>\\bash_aliases.sh"
-				}
+				"type": "symlink",
+				"link": "shells\\bash_aliases.sh",
+				"to": "<HOME>\\bash_aliases.sh"
+			}
 		]
 	}
 }

@@ -15,6 +15,35 @@ function Write-Background {
 	}
 }
 
+function Combine-Configs($commonConfig, $extraConfig) {
+	$commonConfig = ConvertFrom-JsonFile $commonConfig
+	$extraConfig = ConvertFrom-JsonFile $extraConfig
+
+	# Some stuff needs to be done on certain DOMAINS\USERS only:
+	$domain = [Environment]::UserDomainName
+	$user = [Environment]::UserName
+	if ($extraConfig.$domain.$user) {
+		$userModules = Get-JsonObjectKeys $extraConfig.$domain.$user
+		foreach ($moduleName in $userModules) {
+			$module = $extraConfig.$domain.$user.$moduleName
+			if ($commonConfig.modules.$moduleName) {
+				if ($commonConfig.modules.$moduleName -is [System.Array]) {
+					$commonConfig.modules.$moduleName += $module
+				} else {
+					if ($commonConfig.modules.$moduleName."aliases" -isNot [system.array]) {
+						throw "not yet implemented :p" # they say this can be solved using recursion
+						# implementation done for shells-domain.json only
+					}
+					$commonConfig.modules.$moduleName."aliases" += $module."aliases"
+				}
+			} else {
+				$commonConfig.modules | Add-Member $moduleName $module
+			}
+		}
+	}
+	return $commonConfig
+}
+
 function Process-Program($program) {
 	if ($program.title) {
 		Write-Title $program.title
