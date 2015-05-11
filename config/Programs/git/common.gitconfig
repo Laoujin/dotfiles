@@ -1,11 +1,3 @@
-[user]
-	name = Laoujin
-	email = woutervs@hotmail.com
-#	signingkey = <gpg-key-id>
-
-[credential]
-	helper = !'C:\\Users\\Wouter\\AppData\\Roaming\\GitCredStore\\git-credential-winstore.exe'
-
 [merge]
 	prompt = false
 	tool = bc3
@@ -85,6 +77,7 @@
 [push]
 	default = simple
 
+
 # Available colors: normal, black, red, green, yellow, blue, magenta, cyan, or white
 # Second optional color param values: bold, dim, ul (underline), blink, and reverse (swap foreground and background)
 
@@ -106,12 +99,7 @@
 	frag = normal bold
 	old = magenta bold
 	new = green bold
-
-# [include]
-# 	path = /path/to/foo.inc ; include by absolute path
-# 	path = foo ; expand "foo" relative to the current file
-# 	path = ~/foo ; expand "foo" in your $HOME directory
-
+	
 # help.autocorrect = 1
 # WARNING: You called a Git command named 'chekcout', which does not exist.
 # Continuing under the assumption that you meant 'checkout'

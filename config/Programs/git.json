@@ -6,8 +6,8 @@
 		[
 			{
 				"type": "symlink",
-				"link": "Programs\\git\\.gitconfig",
-				"to": "<HOME>\\.gitconfig"
+				"link": "Programs\\git\\common.gitconfig",
+				"to": "<HOME>\\common.gitconfig"
 			},
 			{
 				"type": "symlink",
