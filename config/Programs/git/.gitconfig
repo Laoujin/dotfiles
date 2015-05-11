@@ -3,6 +3,9 @@
 	email = woutervs@hotmail.com
 #	signingkey = <gpg-key-id>
 
+[credential]
+	helper = !'C:\\Users\\Wouter\\AppData\\Roaming\\GitCredStore\\git-credential-winstore.exe'
+
 [merge]
 	prompt = false
 	tool = bc3
@@ -24,6 +27,9 @@
 	keepBackup = false
 
 [alias]
+	# List aliases
+	fam = !git checkout development && git fetch && git merge origin/development && git dm
+
 	# Show defined aliases
 	alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\t=> \\2/' | sort
 
@@ -54,8 +60,8 @@
 	# Show commits with diff
 	lg = log -p
 
-	# View abbreviated SHA, description, and history graph of the latest 20 commits
-	l = log --color -20 --graph --pretty=format:'%C(magenta)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
+	# View abbreviated SHA, description, and history graph
+	l = log --color --graph --pretty=format:'%C(magenta)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
 
 	# Amend working directory
 	amend = !git add -A && git commit --amend --no-edit
@@ -78,9 +84,6 @@
 
 [push]
 	default = simple
-
-[credential]
-	helper = !'C:\\Users\\Wouter\\AppData\\Roaming\\GitCredStore\\git-credential-winstore.exe'
 
 # Available colors: normal, black, red, green, yellow, blue, magenta, cyan, or white
 # Second optional color param values: bold, dim, ul (underline), blink, and reverse (swap foreground and background)
