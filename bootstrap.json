@@ -71,6 +71,16 @@
 				"type": "junction",
 				"link": "<HOME>\\Desktop",
 				"to": "C:\\Zesktop"
+			},
+			{
+				"type": "symlink",
+				"link": "Programs\\IDE\\.jshintrc",
+				"to": "<HOME>\\.jshintrc"
+			},
+			{
+				"type": "symlink",
+				"link": "Programs\\IDE\\.jscsrc",
+				"to": "<HOME>\\.jscsrc"
 			}
 		],
 		"Create-StartupLinks":
