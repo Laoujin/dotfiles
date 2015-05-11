@@ -1,0 +1,19 @@
+{
+	"Silent-Tower":
+	{
+		"Wouter":
+		{
+			"Manage-Services":
+			[
+				{
+					"name": "HomeGroup Listener",
+					"action": "Disabled"
+				},
+				{
+					"name": "HomeGroup Provider",
+					"action": "Disabled"
+				}
+			]
+		}
+	}
+}

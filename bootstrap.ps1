@@ -20,7 +20,28 @@ Write-Title "Configure You Windows" $false
 Write-Host "Because registry editing is so much fun"
 Write-Host "Boxstarter Url: https://gist.github.com/Laoujin/12f5d2f76d51ee6c0a49"
 
-$config = ConvertFrom-JsonFile ".\bootstrap.json"
+function Get-Config() {
+	$globalConfig = ConvertFrom-JsonFile ".\bootstrap.json"
+	$userConfig = ConvertFrom-JsonFile ".\bootstrap-domain.json"
+
+	# Some stuff needs to be done on certain DOMAINS\USERS only:
+	$domain = [Environment]::UserDomainName
+	$user = [Environment]::UserName
+	if ($userConfig.$domain.$user) {
+		$userModules = Get-JsonObjectKeys $userConfig.$domain.$user
+		foreach ($moduleName in $userModules) {
+			$module = $userConfig.$domain.$user.$moduleName
+			if ($globalConfig.modules.$moduleName) {
+				$globalConfig.modules.$moduleName += $module
+			} else {
+				$globalConfig.modules | Add-Member $moduleName $module
+			}
+		}
+	}
+	return $globalConfig
+}
+
+$config = Get-Config
 $windowsConfig = ConvertFrom-JsonFile ".\src\windows.json"
 
 Push-Location "$PSScriptRoot\config"
