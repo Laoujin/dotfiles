@@ -66,6 +66,11 @@
 				"requires": "wamp-server",
 				"link": "<HOME>\\Dropbox\\Personal\\Programming\\www",
 				"to": "C:\\wamp\\www"
+			},
+			{
+				"type": "junction",
+				"link": "<HOME>\\Desktop",
+				"to": "C:\\Zesktop"
 			}
 		],
 		"Create-StartupLinks":
