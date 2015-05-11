@@ -7,7 +7,10 @@
 			"gulp",
 			"jade",
 			"jasmine-node",
+			"jscs",
 			"jshint",
+			"jsxhint",
+			"npm",
 			"licenser"
 		]
 	}
