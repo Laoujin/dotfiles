@@ -1,0 +1,19 @@
+{
+	"requires": "sublimetext3",
+	"modules":
+	{
+		"Create-Links":
+		[
+			{
+				"type": "junction",
+				"link": "Programs\\SublimeText3\\Installed Packages",
+				"to": "<APPDATA_ROAMING>\\Sublime Text 3\\Installed Packages"
+			},
+			{
+				"type": "junction",
+				"link": "Programs\\SublimeText3\\Packages",
+				"to": "<APPDATA_ROAMING>\\Sublime Text 3\\Packages"
+			}
+		]
+	}
+}

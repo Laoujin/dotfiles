@@ -1,0 +1,34 @@
+{
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"ApplySyntax",
+		"AutoHotkey",
+		"BracketHighlighter",
+		"ColorPicker",
+		"DocBlockr",
+		"Git Config",
+		"GitGutter",
+		"Handlebars",
+		"IntelliDocs",
+		"Jade",
+		"JsFormat",
+		"JSONLint",
+		"JSX",
+		"Package Control",
+		"PackageResourceViewer",
+		"PowerShell",
+		"Pretty JSON",
+		"ReactJS",
+		"Sass",
+		"SideBarEnhancements",
+		"SublimeCodeIntel",
+		"SublimeLinter",
+		"SublimeLinter-jscs",
+		"SublimeLinter-jshint",
+		"SublimeLinter-json",
+		"SublimeLinter-jsxhint"
+	]
+}

@@ -1,0 +1,1 @@
+{"platforms": ["*"], "url": "https://github.com/shortcutme/Sublime-IntelliDocs", "dependencies": [], "sublime_text": ">=3000", "version": "1.1.6", "description": "Quick function parameter hint for Sublime 3.x."}

@@ -1,0 +1,8 @@
+{
+    "quote_scope" : "bracket.quote",
+    "curly_scope" : "bracket.curly",
+    "round_scope" : "bracket.round",
+    "square_scope": "bracket.square",
+    "angle_scope" : "bracket.angle",
+    "tag_scope"   : "bracket.tag"
+}

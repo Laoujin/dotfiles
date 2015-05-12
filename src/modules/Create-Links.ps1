@@ -21,10 +21,10 @@ function Create-Link($data) {
 	$to = Replace-VariablePaths($data.to)
 
 	if ($data.type -eq "symlink") {
-		$operation = "mklink $to $link"
+		$operation = "mklink `"$to`" `"$link`""
 
 	} elseif ($data.type -eq "junction") {
-		$operation = "mklink /J $to $link"
+		$operation = "mklink /J `"$to`" `"$link`""
 	}
 
 	if ($data.requires -and -not (Check-Installed $data.requires)) {
