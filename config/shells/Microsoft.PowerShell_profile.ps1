@@ -26,7 +26,10 @@ ${function:......} = { Set-Location ..\..\..\..\.. }
 # http://pscx.codeplex.com/
 # See also: C:\Program Files (x86)\PowerShell Community Extensions\Pscx3\Pscx
 
-function CreateAndSet-Directory([String] $path) { New-Item $path -ItemType Directory -ErrorAction SilentlyContinue; Set-Location $path}
+function CreateAndSet-Directory([String] $path) { 
+	New-Item $path -ItemType Directory -ErrorAction SilentlyContinue
+	Set-Location $path
+}
 
 function Convert-ToDiskSize {
 	param ( $bytes, $precision='0' )
