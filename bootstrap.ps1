@@ -55,6 +55,9 @@ foreach ($explorerOption in $explorerOptions) {
 	}
 }
 
+# http://www.hanselman.com/blog/SyncingWindowsLiveWriterDraftsToTheCloudDropboxAndOtherBugFixes.aspx
+# for windows live writer
+
 # Desired State configuration
 # https://gallery.technet.microsoft.com/scriptcenter/DSC-Resource-Kit-All-c449312d
 
