@@ -64,6 +64,11 @@
 		[
 			{
 				"type": "symlink",
+				"link": "shells\\Microsoft.PowerShell_functions.ps1",
+				"to": "<MYDOCUMENTS>\\WindowsPowerShell\\Microsoft.PowerShell_functions.ps1"
+			},
+			{
+				"type": "symlink",
 				"link": "shells\\Microsoft.PowerShell_aliases.ps1",
 				"to": "<MYDOCUMENTS>\\WindowsPowerShell\\Microsoft.PowerShell_aliases.ps1"
 			},

@@ -1,15 +1,3 @@
-
-Set-Alias vgrt vagrant
-
-# Easier Navigation: .., ..., ...., ....., and ~
-${function:~} = { Set-Location ~ }
-# PoSh won't allow ${function:..} because of an invalid path error, so...
-${function:Set-ParentLocation} = { Set-Location .. }; Set-Alias ".." Set-ParentLocation
-${function:...} = { Set-Location ..\.. }
-${function:....} = { Set-Location ..\..\.. }
-${function:.....} = { Set-Location ..\..\..\.. }
-${function:......} = { Set-Location ..\..\..\..\.. }
-
 # Instead of aliases:
 # Original: https://github.com/joelthelion/autojump (experimental CLink support)
 # PS Specific: https://github.com/tkellogg/Jump-Location
@@ -26,35 +14,7 @@ ${function:......} = { Set-Location ..\..\..\..\.. }
 # http://pscx.codeplex.com/
 # See also: C:\Program Files (x86)\PowerShell Community Extensions\Pscx3\Pscx
 
-function CreateAndSet-Directory([String] $path) { 
-	New-Item $path -ItemType Directory -ErrorAction SilentlyContinue
-	Set-Location $path
-}
-
-function Convert-ToDiskSize {
-	param ( $bytes, $precision='0' )
-	foreach ($size in ("B","K","M","G","T")) {
-		if (($bytes -lt 1000) -or ($size -eq "T")){
-				$bytes = ($bytes).tostring("F0" + "$precision")
-				return "${bytes}${size}"
-		}
-		else { $bytes /= 1KB }
-	}
-}
-
-# Determine size of a file or total size of a directory
-function Get-DiskUsage([string] $path=(Get-Location).Path) {
-	Convert-ToDiskSize `
-		( `
-			Get-ChildItem $path -recurse -ErrorAction SilentlyContinue `
-			| Measure-Object -property length -sum -ErrorAction SilentlyContinue
-		).Sum `
-	1
-}
-
-Set-Alias mkd CreateAndSet-Directory
-Set-Alias fs Get-DiskUsage
-
+# PSReadLine
 if ($host.Name -eq 'ConsoleHost') {
 	# https://rkeithhill.wordpress.com/2013/10/18/psreadline-a-better-line-editing-experience-for-the-powershell-console/
 	# https://github.com/lzybkr/PSReadLine
@@ -69,12 +29,26 @@ if ($host.Name -eq 'ConsoleHost') {
 	# Update-Module PSReadLine
 }
 
-
 Push-Location (Split-Path -Path $MyInvocation.MyCommand.Definition -Parent)
+
+. ".\Microsoft.PowerShell_functions.ps1"
 
 if (Test-Path ".\Microsoft.PowerShell_aliases.ps1") {
 	. ".\Microsoft.PowerShell_aliases.ps1"
 }
+
+Set-Alias vgrt vagrant
+Set-Alias mkd CreateAndSet-Directory
+Set-Alias fs Get-DiskUsage
+
+# Easier Navigation: .., ..., ...., ....., and ~
+${function:~} = { Set-Location ~ }
+# PoSh won't allow ${function:..} because of an invalid path error, so...
+${function:Set-ParentLocation} = { Set-Location .. }; Set-Alias ".." Set-ParentLocation
+${function:...} = { Set-Location ..\.. }
+${function:....} = { Set-Location ..\..\.. }
+${function:.....} = { Set-Location ..\..\..\.. }
+${function:......} = { Set-Location ..\..\..\..\.. }
 
 # Load posh-git module from current directory
 #Import-Module .\posh-git
