@@ -37,6 +37,8 @@ if (Test-Path ".\Microsoft.PowerShell_aliases.ps1") {
 	. ".\Microsoft.PowerShell_aliases.ps1"
 }
 
+Append-EnvPath "C:\Program Files\Sublime Text 3"
+
 Set-Alias vgrt vagrant
 Set-Alias mkd CreateAndSet-Directory
 Set-Alias fs Get-DiskUsage
