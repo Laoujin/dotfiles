@@ -102,6 +102,9 @@ function Set-Environment([String] $variable, [String] $value) {
 }
 
 # Add a folder to $env:Path
+# TODO: check if not yet in path. don't do ;;. and keep check that path has to exist
+# also create a List-EnvPath (pretty print) and a Fix-Path (kill doubles/unexisting paths)
+# rename EnvPath to Path?
 function Prepend-EnvPath([String]$path) { $env:PATH = $env:PATH + ";$path" }
 function Prepend-EnvPathIfExists([String]$path) { if (Test-Path $path) { Prepend-EnvPath $path } }
 function Append-EnvPath([String]$path) { $env:PATH = $env:PATH + ";$path" }
