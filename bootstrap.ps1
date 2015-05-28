@@ -55,6 +55,9 @@ foreach ($explorerOption in $explorerOptions) {
 	}
 }
 
+# Says "Symlink already exists" while it should: rename the existing file, create symlink
+# ie: check if symlink already exists or that destination file already exists
+
 # http://www.hanselman.com/blog/SyncingWindowsLiveWriterDraftsToTheCloudDropboxAndOtherBugFixes.aspx
 # for windows live writer
 
