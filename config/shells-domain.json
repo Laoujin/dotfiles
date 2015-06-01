@@ -61,7 +61,7 @@
 					},
 					{
 						"alias": "wtms",
-						"cd": "c:\\projects\\Digipolis\\Wtm\\Tfs\\Dev"
+						"cd": "c:\\projects\\Digipolis\\Wtm\\TfsService\\Dev"
 					}
 				]
 			}
