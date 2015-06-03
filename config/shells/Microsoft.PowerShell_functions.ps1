@@ -1,5 +1,10 @@
 # Taken from: https://github.com/jayharris/dotfiles-windows/blob/master/functions.ps1
 
+# function mklink { cmd /c mklink $args }
+# { cmd /c mklink /D "toDir" fromDir }
+# /H for a hard link
+# https://gist.github.com/jpoehls/2891103
+
 # Basic commands
 # function which($name) { Get-Command $name -ErrorAction SilentlyContinue | Select-Object Definition }
 # function touch($file) { "" | Out-File $file -Encoding ASCII }
@@ -68,6 +73,8 @@ function CreateAndSet-Directory([String] $path) {
 }
 
 # Determine size of a file or total size of a directory
+# TODO: print the directory
+# TODO: fs dirName still gives info on ./ dir...
 function Get-DiskUsage([string] $path=(Get-Location).Path) {
 	Convert-ToDiskSize `
 		( `
