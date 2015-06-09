@@ -60,6 +60,9 @@
 	amend = !git add -A && git commit --amend --no-edit
 	 # Undo Commit; leaves files. Only for non-public commits
 	uncommit = reset --soft HEAD^
+	
+	# push origin
+	po = "!git push --set-upstream origin \"$(git rev-parse --abbrev-ref HEAD)\""
 
 	dt = difftool
 	mt = mergetool
