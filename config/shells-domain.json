@@ -62,7 +62,15 @@
 					{
 						"alias": "wtms",
 						"cd": "c:\\projects\\Digipolis\\Wtm\\TfsService\\Dev"
-					}
+					},
+          {
+            "alias": "nota",
+            "cd": "c:\\projects\\Digipolis\\Nota\\App"
+          },
+          {
+            "alias": "notas",
+            "cd": "c:\\projects\\Digipolis\\Nota\\Service"
+          }
 				]
 			}
 		}
