@@ -65,11 +65,11 @@
 					},
           {
             "alias": "nota",
-            "cd": "c:\\projects\\Digipolis\\Nota\\App"
+            "cd": "c:\\projects\\Digipolis\\Note\\App"
           },
           {
             "alias": "notas",
-            "cd": "c:\\projects\\Digipolis\\Nota\\Service"
+            "cd": "c:\\projects\\Digipolis\\Note\\Service"
           }
 				]
 			}
