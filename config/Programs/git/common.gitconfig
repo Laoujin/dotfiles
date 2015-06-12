@@ -1,22 +1,21 @@
-[merge]
-	prompt = false
-	tool = bc3
-#	guitool = winmerge
-
 [diff]
-	prompt = false
-	tool = bc3
-#	guitool = winmerge
+	tool = bc3 # difftool doesn't work?
 
 [difftool "bc3"]
 	path = C:\\Program Files (x86)\\Beyond Compare 3\\bcomp.exe
 #	cmd = \"c:/program files (x86)/beyond compare 3/bcomp.exe\" \"$LOCAL\" \"$REMOTE\"
 
+[merge]
+	tool = bc3
+
+[mergetool]
+	prompt = false
+	keepBackup = false
+
 [mergetool "bc3"]
 	path = C:\\Program Files (x86)\\Beyond Compare 3\\bcomp.exe
 #	cmd = \"c:/program files (x86)/beyond compare 3/bcomp.exe\" \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
 	trustExitCode = true
-	keepBackup = false
 
 [alias]
 	# List aliases
