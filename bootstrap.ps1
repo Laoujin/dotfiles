@@ -55,6 +55,11 @@ foreach ($explorerOption in $explorerOptions) {
 	}
 }
 
+# Git Aliases:
+# git clone + enter directory
+# git (un)assume-unchanged
+# git pr -> pull-request = git po + check out the pull-request url + start url - check ruby gem for stash pull requests
+
 # Says "Symlink already exists" while it should: rename the existing file, create symlink
 # ie: check if symlink already exists or that destination file already exists
 
