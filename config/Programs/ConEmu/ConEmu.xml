@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <key name="Software">
 	<key name="ConEmu">
-		<key name=".Vanilla" modified="2015-05-12 00:51:05" build="140707">
+		<key name=".Vanilla" modified="2015-06-24 10:41:41" build="140707">
 			<value name="ColorTable00" type="dword" data="00222827"/>
 			<value name="ColorTable01" type="dword" data="009e5401"/>
 			<value name="ColorTable02" type="dword" data="0004aa74"/>
@@ -127,8 +127,8 @@
 			<value name="ConWnd Width" type="dword" data="0000008f"/>
 			<value name="ConWnd Height" type="dword" data="00000025"/>
 			<value name="Cascaded" type="hex" data="01"/>
-			<value name="ConWnd X" type="dword" data="00000090"/>
-			<value name="ConWnd Y" type="dword" data="000000be"/>
+			<value name="ConWnd X" type="dword" data="00000084"/>
+			<value name="ConWnd Y" type="dword" data="000000b5"/>
 			<value name="16bit Height" type="dword" data="00000000"/>
 			<value name="AutoSaveSizePos" type="hex" data="00"/>
 			<value name="IntegralSize" type="hex" data="00"/>
@@ -483,9 +483,9 @@
 			<value name="DndLKey" type="hex" data="00"/>
 			<value name="DndRKey" type="hex" data="a2"/>
 			<value name="WndDragKey" type="dword" data="00121101"/>
-				<key name="Tasks" modified="2015-05-12 00:51:05" build="140707">
+				<key name="Tasks" modified="2015-06-24 10:41:41" build="140707">
 				<value name="Count" type="dword" data="00000007"/>
-						<key name="Task1" modified="2015-05-12 00:51:05" build="140707">
+						<key name="Task1" modified="2015-06-24 10:41:41" build="140707">
 					<value name="Name" type="string" data="{PowerShell}"/>
 					<value name="GuiArgs" type="string" data="/dir &quot;c:\code\dotfiles&quot;"/>
 					<value name="Cmd1" type="string" data="powershell"/>
@@ -493,7 +493,7 @@
 					<value name="Count" type="dword" data="00000001"/>
 					<value name="Hotkey" type="dword" data="00001250"/>
 				</key>
-						<key name="Task2" modified="2015-05-12 00:51:05" build="140707">
+						<key name="Task2" modified="2015-06-24 10:41:41" build="140707">
 					<value name="Name" type="string" data="{cmd}"/>
 					<value name="GuiArgs" type="string" data=" /icon &quot;%CMDER_ROOT%\cmder.exe&quot;"/>
 					<value name="Cmd1" type="string" data="cmd /k &quot;%ConEmuDir%\..\init.bat&quot;  -new_console:d:C:\code"/>
@@ -501,7 +501,7 @@
 					<value name="Count" type="dword" data="00000001"/>
 					<value name="Hotkey" type="dword" data="00001243"/>
 				</key>
-						<key name="Task3" modified="2015-05-12 00:51:05" build="140707">
+						<key name="Task3" modified="2015-06-24 10:41:41" build="140707">
 					<value name="Name" type="string" data="{cmd (Admin)}"/>
 					<value name="Hotkey" type="dword" data="00121143"/>
 					<value name="GuiArgs" type="string" data=""/>
@@ -509,7 +509,7 @@
 					<value name="Active" type="dword" data="00000000"/>
 					<value name="Count" type="dword" data="00000001"/>
 				</key>
-						<key name="Task4" modified="2015-05-12 00:51:05" build="140707">
+						<key name="Task4" modified="2015-06-24 10:41:41" build="140707">
 					<value name="Name" type="string" data="{PowerShell (Admin)}"/>
 					<value name="Hotkey" type="dword" data="00121150"/>
 					<value name="GuiArgs" type="string" data="/dir &quot;c:\code\dotfiles&quot;"/>
@@ -517,7 +517,7 @@
 					<value name="Active" type="dword" data="00000000"/>
 					<value name="Count" type="dword" data="00000001"/>
 				</key>
-						<key name="Task5" modified="2015-05-12 00:51:05" build="140707">
+						<key name="Task5" modified="2015-06-24 10:41:41" build="140707">
 					<value name="Name" type="string" data="{Git bash}"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="GuiArgs" type="string" data=""/>
@@ -525,18 +525,19 @@
 					<value name="Active" type="dword" data="00000000"/>
 					<value name="Count" type="dword" data="00000001"/>
 				</key>
-						<key name="Task6" modified="2015-05-12 00:51:05" build="140707">
+						<key name="Task6" modified="2015-06-24 10:41:41" build="140707">
 					<value name="Name" type="string" data="{digipolis-focus}"/>
 					<value name="Hotkey" type="dword" data="00115b44"/>
 					<value name="GuiArgs" type="string" data=" /icon &quot;C:\projects\Digipolis\digipolis.ico&quot;"/>
-					<value name="Cmd1" type="string" data="&gt;cmd /k &quot;&quot;%ConEmuDir%\..\init.bat&quot; &amp; nodemon&quot; -cur_console:n:d:&quot;C:\projects\Digipolis\Container&quot;:t:&quot;Focus-Nodemon&quot;"/>
+					<value name="Cmd1" type="string" data="&gt;powershell &quot;nodemon&quot; -cur_console:n:d:&quot;C:\projects\Digipolis\Container&quot;:t:&quot;Focus-Nodemon&quot;"/>
 					<value name="Active" type="dword" data="00000001"/>
-					<value name="Count" type="dword" data="00000004"/>
-					<value name="Cmd2" type="string" data="cmd /k &quot;&quot;%ConEmuDir%\..\init.bat&quot; &amp; gulp&quot; -cur_console:s1TVn:d:&quot;C:\projects\Digipolis\Container&quot;:t:&quot;Focus-gulp&quot;"/>
-					<value name="Cmd3" type="string" data="cmd /k &quot;&quot;%ConEmuDir%\..\init.bat&quot; &amp; gulp&quot; -cur_console:s1THn:d:&quot;C:\projects\Digipolis\Wtm\App\Focus.Wtm.App&quot;:t:&quot;Wtm-gulp&quot;"/>
-					<value name="Cmd4" type="string" data="cmd /k &quot;&quot;%ConEmuDir%\..\init.bat&quot; &amp; gulp&quot; -cur_console:s2THn:d:&quot;C:\projects\Digipolis\FedPol\App\Focus.FedPol.App&quot;:t:&quot;FedPol-gulp&quot;"/>
+					<value name="Count" type="dword" data="00000005"/>
+					<value name="Cmd2" type="string" data="powershell &quot;gulp&quot; -cur_console:s1TVn:d:&quot;C:\projects\Digipolis\Container&quot;:t:&quot;Focus-gulp&quot;"/>
+					<value name="Cmd3" type="string" data="powershell &quot;gulp&quot; -cur_console:s1THn:d:&quot;C:\projects\Digipolis\Wtm\App\Focus.Wtm.App&quot;:t:&quot;Wtm-gulp&quot;"/>
+					<value name="Cmd4" type="string" data="powershell &quot;gulp&quot; -cur_console:s2THn:d:&quot;C:\projects\Digipolis\FedPol\App\Focus.FedPol.App&quot;:t:&quot;FedPol-gulp&quot;"/>
+					<value name="Cmd5" type="string" data="powershell &quot;gulp&quot; -cur_console:s2THn:d:&quot;C:\projects\Digipolis\Note\App\Focus.Note.App&quot;:t:&quot;Note-gulp&quot;"/>
 				</key>
-						<key name="Task7" modified="2015-05-12 00:51:05" build="140707">
+						<key name="Task7" modified="2015-06-24 10:41:41" build="140707">
 					<value name="Name" type="string" data="{digipolis-git}"/>
 					<value name="Hotkey" type="dword" data="00121144"/>
 					<value name="GuiArgs" type="string" data=" /icon &quot;C:\projects\Digipolis\digipolis.ico&quot;"/>
@@ -593,11 +594,11 @@
 					<value name="Cmd7" type="string" data="powershell -new_console:d:&quot;C:\projects\Digipolis\FedPol\Service&quot;:t:&quot;FedPol.Service&quot;"/>
 				</key>
 			</key>
-				<key name="Apps" modified="2015-05-12 00:51:05" build="140707">
+				<key name="Apps" modified="2015-06-24 10:41:41" build="140707">
 				<value name="Count" type="dword" data="00000000"/>
 			</key>
-			<key name="Colors" modified="2015-05-12 00:51:05" build="140707">
-			<key name="Palette1" modified="2015-05-12 00:51:05" build="140707">
+			<key name="Colors" modified="2015-06-24 10:41:41" build="140707">
+			<key name="Palette1" modified="2015-06-24 10:41:41" build="140707">
 					<value name="Name" type="string" data="Monokai"/>
 					<value name="ExtendColors" type="hex" data="00"/>
 					<value name="ExtendColorIdx" type="hex" data="0e"/>
