@@ -1,7 +1,7 @@
 {
 	"extensions":
 	[
-		"jsx",
-		"js"
+		"js",
+		"jsx"
 	]
 }

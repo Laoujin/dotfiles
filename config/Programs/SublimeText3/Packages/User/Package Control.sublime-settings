@@ -32,9 +32,8 @@
 		"StringEncode",
 		"SublimeCodeIntel",
 		"SublimeLinter",
+		"SublimeLinter-contrib-eslint",
 		"SublimeLinter-jscs",
-		"SublimeLinter-jshint",
-		"SublimeLinter-json",
-		"SublimeLinter-jsxhint"
+		"SublimeLinter-json"
 	]
 }
