@@ -29,7 +29,8 @@
 	# --> use powershell function for this
 	#ce = "!f() { git clone $1 $2; cd $2; }; f"
 
-	# Basic ones
+	### Basic aliases
+	# Very common ones
 	ci = commit
 	br = branch
 	co = checkout
@@ -37,6 +38,7 @@
 	st = status # -u: Show all untracked files (instead of just directories)
 	dt = difftool
 	mt = mergetool
+	lg = log -p # Show commits with diff
 
 	# List stuff
 	tags = tag -l
@@ -46,10 +48,13 @@
 	aliases = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\t=> \\2/' | sort
 
 	# Slightly more advanced
-	lg = log -p # Show commits with diff
+	cod = checkout development
+	dfc = diff --cached
 
 	# Amending
+	unci = reset --soft HEAD^
 	amend = !git add -A && git commit --amend --no-edit
+	ciamend = commit --amend --no-edit
 
 	### Very useful stuff
 	# View history graph with abbreviated SHA and description
@@ -74,6 +79,9 @@
 	# Find commits by commit message
 	fm = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short --grep=$1; }; f"
 
+	# Ignore changes to a file
+	assume = "!f() { git update-index --assume-unchanged $1; }; f"
+	noassume = "!f() { git update-index --no-assume-unchanged $1; }; f"
 
 [core]
 	autocrlf = true
