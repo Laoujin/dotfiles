@@ -18,58 +18,62 @@
 	trustExitCode = true
 
 [alias]
-	# List aliases
+	# TODO:
+	# git pr -> pull-request = git po + check out the pull-request url + start url - check ruby gem for stash pull requests
 	fam = !git checkout development && git fetch && git merge origin/development && git dm
+	# For more interesting aliases:
+	# Git Bash/cygwin: https://github.com/tj/git-extras/wiki/Commands#git-extras
+	# Check out these: https://gist.github.com/robmiller/6018582
 
-	# Show defined aliases
-	alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\t=> \\2/' | sort
+	# clone and enter directory
+	# --> use powershell function for this
+	#ce = "!f() { git clone $1 $2; cd $2; }; f"
 
+	# Basic ones
 	ci = commit
 	br = branch
 	co = checkout
 	df = diff
-	dfc = diff --cached
+	st = status # -u: Show all untracked files (instead of just directories)
+	dt = difftool
+	mt = mergetool
 
+	# List stuff
 	tags = tag -l
 	branches = branch -a
 	remotes = remote -v
 	stashes = stash list --date=relative
+	aliases = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\t=> \\2/' | sort
 
-	# -u: Show all untracked files (instead of just directories)
-	#st = status -u
-	st = status
+	# Slightly more advanced
+	lg = log -p # Show commits with diff
 
-	 # Find commits by source code
+	# Amending
+	amend = !git add -A && git commit --amend --no-edit
+
+	### Very useful stuff
+	# View history graph with abbreviated SHA and description
+	#   Add -10 to view only last 10 commits
+	l = log --color --graph --pretty=format:'%C(magenta)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
+
+	# commit entire working directory. usage: git ca "commit message"
+	ca = "!f() { git add -A; git commit -vm\"$1\"; }; f"
+
+	### Collaborating
+	# push origin
+	po = "!git push --set-upstream origin \"$(git rev-parse --abbrev-ref HEAD)\""
+
+	# Delete merged branches but not branches called master or development
+	# Sort of works in PowerShell (but best call this from development branch)
+	dm = !git branch --merged | egrep -v \"(\\*| ) (development|master)\" | xargs -n 1 git branch -d
+
+
+	### The rest
+	# Find commits by source code
 	fc = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short -S$1; }; f"
 	# Find commits by commit message
 	fm = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short --grep=$1; }; f"
 
-	# Delete merged branches but not branches called master or development
-	dm = !git branch --merged | egrep -v \"(\\*| ) (development|master)\" | xargs -n 1 git branch -d
-
-	# commit entire working directory: git ca "commit message"
-	ca = "!f() { git add -A; git commit -vm\"$1\"; }; f"
-
-	# Show commits with diff
-	lg = log -p
-
-	# View abbreviated SHA, description, and history graph
-	l = log --color --graph --pretty=format:'%C(magenta)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
-
-	# Amend working directory
-	amend = !git add -A && git commit --amend --no-edit
-	 # Undo Commit; leaves files. Only for non-public commits
-	uncommit = reset --soft HEAD^
-	
-	# push origin
-	po = "!git push --set-upstream origin \"$(git rev-parse --abbrev-ref HEAD)\""
-
-	dt = difftool
-	mt = mergetool
-
-	# For more interesting aliases:
-	# Git Bash/cygwin: https://github.com/tj/git-extras/wiki/Commands#git-extras
-	# Check out these: https://gist.github.com/robmiller/6018582
 
 [core]
 	autocrlf = true
