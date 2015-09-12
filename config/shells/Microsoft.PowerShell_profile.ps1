@@ -4,6 +4,15 @@
 # z is the new j, yo: https://github.com/rupa/z
 # z PS: https://github.com/vincpa/z
 
+#http://stackoverflow.com/questions/32539250/how-to-do-a-git-clone-and-enter-the-created-directory/32539370#32539370
+# function Invoke-GitClone($url) {
+# 	$name = $url.Split('/')[-1].Replace('.git', '')
+# 	& git clone $url $name | Out-Null
+# 	cd $name
+# }
+# -> Doesn't work... 
+
+
 # Download stuff:
 # https://github.com/chaliy/psurl/
 
@@ -41,17 +50,21 @@ Append-EnvPath "C:\Program Files\Sublime Text 3"
 Append-EnvPath "C:\Program Files (x86)\MarkdownPad 2"
 
 Set-Alias vgrt vagrant
+
 Set-Alias mkd CreateAndSet-Directory
+${function:rmd} = { Remove-Item -Force -Recurse $args[0] }
+
 Set-Alias fs Get-DiskUsage
 
-# Easier Navigation: .., ..., ...., ....., and ~
+# Easier Navigation
 ${function:~} = { Set-Location ~ }
-# PoSh won't allow ${function:..} because of an invalid path error, so...
-${function:Set-ParentLocation} = { Set-Location .. }; Set-Alias ".." Set-ParentLocation
+${function:Set-ParentLocation} = { Set-Location .. } # PoSh won't allow ${function:..} because of an invalid path error, so...
+Set-Alias ".." Set-ParentLocation
 ${function:...} = { Set-Location ..\.. }
 ${function:....} = { Set-Location ..\..\.. }
 ${function:.....} = { Set-Location ..\..\..\.. }
 ${function:......} = { Set-Location ..\..\..\..\.. }
+
 
 # Load posh-git module from current directory
 #Import-Module .\posh-git

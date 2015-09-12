@@ -38,6 +38,7 @@
 	# clone and enter directory
 	# --> use powershell function for this
 	#ce = "!f() { git clone $1 $2; cd $2; }; f"
+	#ce = "!f() { Invoke-GitClone $1 $2; }; f"
 
 	### Basic aliases
 	# Very common ones

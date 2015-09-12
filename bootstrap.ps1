@@ -63,14 +63,11 @@ foreach ($explorerOption in $explorerOptions) {
 	}
 }
 
-# Set-Alias rmd Remove-Item -Force -Recursive $0
-
 # ST3 shortcut to add folder instead of open folder
 
 # check for 2 profiles: one without PoshGit because it slows things down
 
 # figure out how Cmder/ConEmu split screen works
-# figure out how Hotstrings work exactly
 
 # Get this in a VS Package Manager Console
 # Set-Alias ip Install-Package
@@ -94,7 +91,6 @@ foreach ($explorerOption in $explorerOptions) {
 # https://gallery.technet.microsoft.com/scriptcenter/1abd77a5-9c0b-4a2b-acef-90dbb2b84e85
 
 # git alias: clone and enter dir
-# ps: cd..... -> also in bash
 # autohotkey: open and set most often used folder / open in explorer / in cmder new tab?
 #(http://www.techunboxed.com/2013/09/how-to-disable-aero-shake-in-windows-8.html)
 #~/.bash_aliases
