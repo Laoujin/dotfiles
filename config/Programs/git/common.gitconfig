@@ -28,6 +28,7 @@
 	br = branch
 	co = checkout
 	df = diff
+	dfc = diff --cached
 
 	tags = tag -l
 	branches = branch -a
