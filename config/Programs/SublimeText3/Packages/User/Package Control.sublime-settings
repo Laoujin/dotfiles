@@ -7,9 +7,12 @@
 		"ApplySyntax",
 		"AutoHotkey",
 		"Babel",
+		"Babel Snippets",
 		"BracketHighlighter",
 		"ColorPicker",
 		"DocBlockr",
+		"Emmet",
+		"Git",
 		"Git Config",
 		"GitGutter",
 		"Handlebars",
@@ -29,9 +32,8 @@
 		"StringEncode",
 		"SublimeCodeIntel",
 		"SublimeLinter",
+		"SublimeLinter-contrib-eslint",
 		"SublimeLinter-jscs",
-		"SublimeLinter-jshint",
-		"SublimeLinter-json",
-		"SublimeLinter-jsxhint"
+		"SublimeLinter-json"
 	]
 }
