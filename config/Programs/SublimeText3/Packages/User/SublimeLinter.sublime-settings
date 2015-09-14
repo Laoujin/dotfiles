@@ -11,9 +11,19 @@
 		"lint_mode": "load/save",
 		"linters":
 		{
-			"jscs":
+			"eslint":
 			{
 				"@disable": false,
+				"args":
+				[
+				],
+				"excludes":
+				[
+				]
+			},
+			"jscs":
+			{
+				"@disable": true,
 				"args":
 				[
 				],
@@ -33,7 +43,7 @@
 			},
 			"json":
 			{
-				"@disable": false,
+				"@disable": true,
 				"args":
 				[
 				],
