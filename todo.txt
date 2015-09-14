@@ -1,0 +1,4 @@
+Git Aliases:
+Checkout ours/theirs
+http://stackoverflow.com/a/11843922/540352
+
