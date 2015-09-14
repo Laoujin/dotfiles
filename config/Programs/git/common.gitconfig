@@ -107,6 +107,7 @@
 
 [push]
 	default = simple
+	followTags = true
 
 
 # Available colors: normal, black, red, green, yellow, blue, magenta, cyan, or white
