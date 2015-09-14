@@ -1,3 +1,6 @@
+# Passing Python Path on install:
+# npm install --python=c:\bin\python2
+
 function Install-NodePackages($packages) {
 	foreach ($package in $packages) {
 		Update-NodePackage $package

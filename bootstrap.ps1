@@ -1,5 +1,13 @@
 cls
 
+# ASP.NET 5 vNext, EF 6
+# dnvm use default -p
+# http://www.sblackler.net/2015/05/02/Up-And-Running-With-DNX-DNVM-DNU/
+
+# H1B
+# H1B	Speciality Occupation Worker	For individuals having the equivalent of a US bachelor degree (Foreign degrees and/or work experiencemay be found to be equivalent to a US bachelor degree).	6 Years
+# http://www.workpermit.com/us/employer_intro.htm
+
 #Set-ExecutionPolicy Unrestricted
 
 Push-Location "$PSScriptRoot\src"
@@ -55,6 +63,16 @@ foreach ($explorerOption in $explorerOptions) {
 	}
 }
 
+# ST3 shortcut to add folder instead of open folder
+
+# check for 2 profiles: one without PoshGit because it slows things down
+
+# figure out how Cmder/ConEmu split screen works
+
+# Get this in a VS Package Manager Console
+# Set-Alias ip Install-Package
+# Set-Alias nip Uninstall-Package
+
 # Says "Symlink already exists" while it should: rename the existing file, create symlink
 # ie: check if symlink already exists or that destination file already exists
 
@@ -73,7 +91,6 @@ foreach ($explorerOption in $explorerOptions) {
 # https://gallery.technet.microsoft.com/scriptcenter/1abd77a5-9c0b-4a2b-acef-90dbb2b84e85
 
 # git alias: clone and enter dir
-# ps: cd..... -> also in bash
 # autohotkey: open and set most often used folder / open in explorer / in cmder new tab?
 #(http://www.techunboxed.com/2013/09/how-to-disable-aero-shake-in-windows-8.html)
 #~/.bash_aliases
