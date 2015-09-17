@@ -1,5 +1,5 @@
 [diff]
-	tool = bc3 # difftool doesn't work?
+	tool = bc3
 
 [difftool "bc3"]
 	path = C:\\Program Files (x86)\\Beyond Compare 3\\bcomp.exe
@@ -60,6 +60,7 @@
 
 	# Slightly more advanced
 	cod = checkout development
+	com = checkout master
 	dfc = diff --cached # Show staged changes
 
 	# Amending
@@ -76,6 +77,8 @@
 	ca = "!f() { git add -A; git commit -vm\"$1\"; }; f"
 
 	### Collaborating
+	sha = rev-parse HEAD
+
 	# push/delete origin
 	branch-name = "!git rev-parse --abbrev-ref HEAD"
 	po = "!git push -u origin $(git branch-name)"
