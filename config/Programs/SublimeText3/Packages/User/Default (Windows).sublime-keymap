@@ -1,6 +1,7 @@
 [
   { "keys": ["shift+alt+l"], "command": "reveal_in_side_bar"},
   { "keys": ["ctrl+shift+o"], "command": "prompt_open_folder" },
+  { "keys": ["ctrl+shift+a"], "command": "prompt_add_folder" },
   { "keys": ["super+ctrl+b"], "command": "base64_encode" },
   { "keys": ["super+shift+b"], "command": "base64_decode" }
 ]
