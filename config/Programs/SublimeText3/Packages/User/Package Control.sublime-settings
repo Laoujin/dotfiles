@@ -1,4 +1,5 @@
 {
+	"bootstrapped": true,
 	"in_process_packages":
 	[
 	],
@@ -12,7 +13,6 @@
 		"ColorPicker",
 		"DocBlockr",
 		"Emmet",
-		"Git",
 		"Git Config",
 		"GitGutter",
 		"Handlebars",
