@@ -4,5 +4,6 @@
   { "keys": ["ctrl+shift+a"], "command": "prompt_add_folder" },
   { "keys": ["super+ctrl+b"], "command": "base64_encode" },
   { "keys": ["super+shift+b"], "command": "base64_decode" },
-  { "keys": ["ctrl+shift+s"], "command": "save_all" }
+  { "keys": ["ctrl+shift+s"], "command": "save_all" },
+  { "keys": ["ctrl+t", "ctrl+w"], "command": "toggle_setting", "args": {"setting": "word_wrap"}}
 ]
