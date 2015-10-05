@@ -50,6 +50,10 @@
 				{
 					"alias": "dotfiles",
 					"cd": "c:\\code\\dotfiles"
+				},
+				{
+					"alias": "tuts",
+					"cd": "C:\\code\\Tutorials\\Tuts"
 				}
 			],
 			"drives":
