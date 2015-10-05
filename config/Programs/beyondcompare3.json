@@ -1,0 +1,19 @@
+{
+	"requires": "beyondcompare3",
+	"modules":
+	{
+		"Create-Links":
+		[
+			{
+				"type": "symlink",
+				"link": "Programs\\BeyondCompare3\\BCCommands.xml",
+				"to": "<APPDATA_ROAMING>\\Scooter Software\\Beyond Compare 3\\BCCommands.xml"
+			},
+			{
+				"type": "symlink",
+				"link": "Programs\\BeyondCompare3\\BCPreferences.xml",
+				"to": "<APPDATA_ROAMING>\\Scooter Software\\Beyond Compare 3\\BCPreferences.xml"
+			}
+		]
+	}
+}
