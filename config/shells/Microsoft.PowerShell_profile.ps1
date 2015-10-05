@@ -1,28 +1,3 @@
-# Instead of aliases:
-# Original: https://github.com/joelthelion/autojump (experimental CLink support)
-# PS Specific: https://github.com/tkellogg/Jump-Location
-# z is the new j, yo: https://github.com/rupa/z
-# z PS: https://github.com/vincpa/z
-
-#http://stackoverflow.com/questions/32539250/how-to-do-a-git-clone-and-enter-the-created-directory/32539370#32539370
-# function Invoke-GitClone($url) {
-# 	$name = $url.Split('/')[-1].Replace('.git', '')
-# 	& git clone $url $name | Out-Null
-# 	cd $name
-# }
-# -> Doesn't work... 
-
-
-# Download stuff:
-# https://github.com/chaliy/psurl/
-
-# Use TFS from CLI:
-# https://bitbucket.org/Sumo/tfdash/overview
-
-# PSCX source: (download source, has some interesting functions)
-# http://pscx.codeplex.com/
-# See also: C:\Program Files (x86)\PowerShell Community Extensions\Pscx3\Pscx
-
 # PSReadLine
 if ($host.Name -eq 'ConsoleHost') {
 	# https://rkeithhill.wordpress.com/2013/10/18/psreadline-a-better-line-editing-experience-for-the-powershell-console/
@@ -31,11 +6,6 @@ if ($host.Name -eq 'ConsoleHost') {
 
 	Set-PSReadlineKeyHandler -Key 'UpArrow' -Function 'HistorySearchBackward'
 	Set-PSReadlineKeyHandler -Key 'DownArrow' -Function 'HistorySearchForward'
-
-	# Updating?
-	# cmd.exe
-	# powershell -noprofile
-	# Update-Module PSReadLine
 }
 
 Push-Location (Split-Path -Path $MyInvocation.MyCommand.Definition -Parent)
