@@ -58,14 +58,14 @@
 				},
 				{
 					"type": "symlink",
-					"link": "shells\\PowerShell\\prompt.ps1",
-					"to": "<MYDOCUMENTS>\\WindowsPowerShell\\PowerShell\\prompt.ps1"
+					"link": "shells\\PowerShell\\prompt_git.ps1",
+					"to": "<MYDOCUMENTS>\\WindowsPowerShell\\PowerShell\\prompt_git.ps1"
 				},
-				{
-					"type": "symlink",
-					"link": "shells\\PowerShell\\psreadline.ps1",
-					"to": "<MYDOCUMENTS>\\WindowsPowerShell\\PowerShell\\psreadline.ps1"
-				}
+        {
+          "type": "symlink",
+          "link": "shells\\PowerShell\\prompt_readline.ps1",
+          "to": "<MYDOCUMENTS>\\WindowsPowerShell\\PowerShell\\prompt_readline.ps1"
+        }
 			]
 		}
 	},
