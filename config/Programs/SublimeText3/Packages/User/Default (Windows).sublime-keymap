@@ -4,5 +4,7 @@
   { "keys": ["ctrl+shift+a"], "command": "prompt_add_folder" },
   { "keys": ["super+ctrl+b"], "command": "base64_encode" },
   { "keys": ["super+shift+b"], "command": "base64_decode" },
-  { "keys": ["ctrl+t", "ctrl+w"], "command": "toggle_setting", "args": {"setting": "word_wrap"}}
+  { "keys": ["ctrl+shift+s"], "command": "save_all" },
+  { "keys": ["ctrl+t", "ctrl+w"], "command": "toggle_setting", "args": {"setting": "word_wrap"}},
+  { "keys": ["f2"], "command": "side_bar_move" }
 ]

@@ -9,6 +9,11 @@
 					"type": "symlink",
 					"link": "shells\\.bashrc",
 					"to": "<HOME>\\.bashrc"
+				},
+				{
+					"type": "symlink",
+					"link": "shells\\bash_aliases.sh",
+					"to": "<HOME>\\bash_aliases.sh"
 				}
 			]
 		}
@@ -21,7 +26,8 @@
 			[
 				"PsGet",
 				"Posh-Git",
-				"PSReadLine"
+				"PSReadLine",
+				"Jump.Location"
 			],
 			"Create-Links":
 			[
@@ -29,7 +35,37 @@
 					"type": "symlink",
 					"link": "shells\\Microsoft.PowerShell_profile.ps1",
 					"to": "<MYDOCUMENTS>\\WindowsPowerShell\\Microsoft.PowerShell_profile.ps1"
-				}
+				},
+				{
+					"type": "symlink",
+					"link": "shells\\Microsoft.PowerShell_aliases.ps1",
+					"to": "<MYDOCUMENTS>\\WindowsPowerShell\\Microsoft.PowerShell_aliases.ps1"
+				},
+				{
+					"type": "symlink",
+					"link": "shells\\PowerShell\\envpath.ps1",
+					"to": "<MYDOCUMENTS>\\WindowsPowerShell\\PowerShell\\envpath.ps1"
+				},
+				{
+					"type": "symlink",
+					"link": "shells\\PowerShell\\envpath_mod.ps1",
+					"to": "<MYDOCUMENTS>\\WindowsPowerShell\\PowerShell\\envpath_mod.ps1"
+				},
+				{
+					"type": "symlink",
+					"link": "shells\\PowerShell\\filesystem.ps1",
+					"to": "<MYDOCUMENTS>\\WindowsPowerShell\\PowerShell\\filesystem.ps1"
+				},
+				{
+					"type": "symlink",
+					"link": "shells\\PowerShell\\prompt_git.ps1",
+					"to": "<MYDOCUMENTS>\\WindowsPowerShell\\PowerShell\\prompt_git.ps1"
+				},
+        {
+          "type": "symlink",
+          "link": "shells\\PowerShell\\prompt_readline.ps1",
+          "to": "<MYDOCUMENTS>\\WindowsPowerShell\\PowerShell\\prompt_readline.ps1"
+        }
 			]
 		}
 	},
@@ -50,6 +86,10 @@
 				{
 					"alias": "dotfiles",
 					"cd": "c:\\code\\dotfiles"
+				},
+				{
+					"alias": "tuts",
+					"cd": "C:\\code\\Tutorials\\Tuts"
 				}
 			],
 			"drives":
@@ -62,21 +102,6 @@
 		},
 		"Create-Links":
 		[
-			{
-				"type": "symlink",
-				"link": "shells\\Microsoft.PowerShell_functions.ps1",
-				"to": "<MYDOCUMENTS>\\WindowsPowerShell\\Microsoft.PowerShell_functions.ps1"
-			},
-			{
-				"type": "symlink",
-				"link": "shells\\Microsoft.PowerShell_aliases.ps1",
-				"to": "<MYDOCUMENTS>\\WindowsPowerShell\\Microsoft.PowerShell_aliases.ps1"
-			},
-			{
-				"type": "symlink",
-				"link": "shells\\bash_aliases.sh",
-				"to": "<HOME>\\bash_aliases.sh"
-			}
 		]
 	}
 }

@@ -8,10 +8,6 @@
 				"aliases":
 				[
 					{
-						"alias": "licer",
-						"cd": "c:\\code\\JavaScript\\licenser"
-					},
-					{
 						"alias": "sangu",
 						"cd": "c:\\code\\TribalWars\\sangupackage-source"
 					},

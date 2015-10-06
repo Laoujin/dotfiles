@@ -1,5 +1,0 @@
-Git Aliases:
-Checkout ours/theirs
-http://stackoverflow.com/a/11843922/540352
-
-git sstash 1 --> git shash show "stash@{1}" -p

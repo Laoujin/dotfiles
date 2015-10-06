@@ -8,8 +8,10 @@
 			"jade",
 			"jasmine-node",
 			"jscs",
-			"jshint",
-			"jsxhint",
+			"eslint",
+			"babel-eslint",
+			"eslint-plugin-react",
+			"eslint_d",
 			"npm",
 			"licenser"
 		]
