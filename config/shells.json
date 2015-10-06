@@ -9,6 +9,11 @@
 					"type": "symlink",
 					"link": "shells\\.bashrc",
 					"to": "<HOME>\\.bashrc"
+				},
+				{
+					"type": "symlink",
+					"link": "shells\\bash_aliases.sh",
+					"to": "<HOME>\\bash_aliases.sh"
 				}
 			]
 		}
@@ -29,6 +34,16 @@
 					"type": "symlink",
 					"link": "shells\\Microsoft.PowerShell_profile.ps1",
 					"to": "<MYDOCUMENTS>\\WindowsPowerShell\\Microsoft.PowerShell_profile.ps1"
+				},
+				{
+					"type": "symlink",
+					"link": "shells\\Microsoft.PowerShell_aliases.ps1",
+					"to": "<MYDOCUMENTS>\\WindowsPowerShell\\Microsoft.PowerShell_aliases.ps1"
+				},
+				{
+					"type": "symlink",
+					"link": "shells\\PowerShell\\functions.ps1",
+					"to": "<MYDOCUMENTS>\\WindowsPowerShell\\Microsoft.PowerShell_functions.ps1"
 				}
 			]
 		}
@@ -66,21 +81,6 @@
 		},
 		"Create-Links":
 		[
-			{
-				"type": "symlink",
-				"link": "shells\\Microsoft.PowerShell_functions.ps1",
-				"to": "<MYDOCUMENTS>\\WindowsPowerShell\\Microsoft.PowerShell_functions.ps1"
-			},
-			{
-				"type": "symlink",
-				"link": "shells\\Microsoft.PowerShell_aliases.ps1",
-				"to": "<MYDOCUMENTS>\\WindowsPowerShell\\Microsoft.PowerShell_aliases.ps1"
-			},
-			{
-				"type": "symlink",
-				"link": "shells\\bash_aliases.sh",
-				"to": "<HOME>\\bash_aliases.sh"
-			}
 		]
 	}
 }
