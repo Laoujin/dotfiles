@@ -47,6 +47,11 @@
 				},
 				{
 					"type": "symlink",
+					"link": "shells\\PowerShell\\envpath_mod.ps1",
+					"to": "<MYDOCUMENTS>\\WindowsPowerShell\\PowerShell\\envpath_mod.ps1"
+				},
+				{
+					"type": "symlink",
 					"link": "shells\\PowerShell\\filesystem.ps1",
 					"to": "<MYDOCUMENTS>\\WindowsPowerShell\\PowerShell\\filesystem.ps1"
 				},
