@@ -7,6 +7,8 @@ ${function:....} = { Set-Location ..\..\.. }
 ${function:.....} = { Set-Location ..\..\..\.. }
 ${function:......} = { Set-Location ..\..\..\..\.. }
 
+${function:Unblock-Dir} = { Get-ChildItem * -Recursive | Unblock-File }
+
 Set-Alias fs Get-DiskUsage
 Set-Alias mkd CreateAndSet-Directory
 ${function:rmd} = { Remove-Item -Force -Recurse $args[0] }
