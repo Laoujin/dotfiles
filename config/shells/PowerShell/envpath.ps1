@@ -1,25 +1,8 @@
-### File System functions
-### ----------------------------
-# Create a new directory and enter it
-function CreateAndSet-Directory([String] $path) { 
-	New-Item $path -ItemType Directory -ErrorAction SilentlyContinue
-	Set-Location $path
-}
+Append-EnvPath "C:\Program Files\Sublime Text 3"
+Append-EnvPath "C:\Program Files (x86)\MarkdownPad 2"
 
-# Determine size of a file or total size of a directory
-# TODO: print the directory
-# TODO: fs dirName still gives info on ./ dir...
-function Get-DiskUsage([string] $path=(Get-Location).Path) {
-	Convert-ToDiskSize `
-		( `
-			Get-ChildItem .\ -recurse -ErrorAction SilentlyContinue `
-			| Measure-Object -property length -sum -ErrorAction SilentlyContinue
-		).Sum `
-		1
-}
+Set-Alias vgrt vagrant
 
-### Environment functions
-### ----------------------------
 
 # Reload the $env object from the registry
 # function Refresh-Environment {
@@ -56,19 +39,3 @@ function Prepend-EnvPath([String]$path) { $env:PATH = $env:PATH + ";$path" }
 function Prepend-EnvPathIfExists([String]$path) { if (Test-Path $path) { Prepend-EnvPath $path } }
 function Append-EnvPath([String]$path) { $env:PATH = $env:PATH + ";$path" }
 function Append-EnvPathIfExists([String]$path) { if (Test-Path $path) { Append-EnvPath $path } }
-
-
-### Utilities
-### ----------------------------
-
-# Convert a number to a disk size (12.4K or 5M)
-function Convert-ToDiskSize {
-	param ( $bytes, $precision='0' )
-	foreach ($size in ("B","K","M","G","T")) {
-		if (($bytes -lt 1000) -or ($size -eq "T")){
-			$bytes = ($bytes).tostring("F0" + "$precision")
-			return "${bytes}${size}"
-		}
-		else { $bytes /= 1KB }
-	}
-}

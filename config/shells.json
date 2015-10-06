@@ -42,8 +42,23 @@
 				},
 				{
 					"type": "symlink",
-					"link": "shells\\PowerShell\\functions.ps1",
-					"to": "<MYDOCUMENTS>\\WindowsPowerShell\\Microsoft.PowerShell_functions.ps1"
+					"link": "shells\\PowerShell\\envpath.ps1",
+					"to": "<MYDOCUMENTS>\\WindowsPowerShell\\PowerShell\\envpath.ps1"
+				},
+				{
+					"type": "symlink",
+					"link": "shells\\PowerShell\\filesystem.ps1",
+					"to": "<MYDOCUMENTS>\\WindowsPowerShell\\PowerShell\\filesystem.ps1"
+				},
+				{
+					"type": "symlink",
+					"link": "shells\\PowerShell\\prompt.ps1",
+					"to": "<MYDOCUMENTS>\\WindowsPowerShell\\PowerShell\\prompt.ps1"
+				},
+				{
+					"type": "symlink",
+					"link": "shells\\PowerShell\\psreadline.ps1",
+					"to": "<MYDOCUMENTS>\\WindowsPowerShell\\PowerShell\\psreadline.ps1"
 				}
 			]
 		}
