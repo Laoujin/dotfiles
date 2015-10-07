@@ -55,8 +55,13 @@
 	tags = tag -l
 	branches = branch -a
 	remotes = remote -v
-	stashes = stash list --date=relative
 	aliases = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\t=> \\2/' | sort
+
+	# Stashing
+	stashes = stash list --date=relative
+	sl = stash list
+	ss = "!f() { git show \"stash@{$1}\"; }; f"
+	sp = stash pop
 
 	# Slightly more advanced
 	cod = checkout development
@@ -72,6 +77,9 @@
 	# View history graph with abbreviated SHA and description
 	#   Add -10 to view only last 10 commits
 	l = log --color --graph --pretty=format:'%C(magenta)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
+
+	# View history with changed files
+	ll = log --pretty=format:'%C(magenta)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --decorate --numstat
 
 	# commit entire working directory. usage: git ca "commit message"
 	ca = "!f() { git add -A; git commit -vm\"$1\"; }; f"
