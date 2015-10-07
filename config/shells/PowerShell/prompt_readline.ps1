@@ -3,7 +3,7 @@
 
 # TODO: Default shortcuts:
 # https://github.com/lzybkr/PSReadLine/blob/master/PSReadLine/en-US/about_PSReadline.help.txt
-
+# [PsConsoleUtilities.PSConsoleReadLine]::GetKeyHandlers($true, $false)
 
 
 if ($host.Name -ne 'ConsoleHost') {
@@ -17,35 +17,38 @@ Import-Module PSReadline
 # To enable bash style completion without using Emacs mode, you can use:
 #Set-PSReadLineOption -EditMode Emacs
 
-#Set-PSReadLineOption -HistorySearchCursorMovesToEnd 
+#Set-PSReadLineOption -HistorySearchCursorMovesToEnd
 Set-PSReadlineKeyHandler -Key 'UpArrow' -Function 'HistorySearchBackward'
 Set-PSReadlineKeyHandler -Key 'DownArrow' -Function 'HistorySearchForward'
 
+Set-PSReadlineKeyHandler -Key 'Ctrl+^' -Function 'GotoBrace'
 
+# TODO: Yanking... Probably better to just switch to Emacs mode...
 
+# More interesting Functions:
+# AcceptLine               (Cmd: <Enter>              Emacs: <Enter> or <Ctrl+M>)
 
-Set-PSReadlineKeyHandler -Key '"',"'" `
-								 -BriefDescription SmartInsertQuote `
-								 -LongDescription "Insert paired quotes if not already on a quote" `
-								 -ScriptBlock {
-	param($key, $arg)
+#         Attempt to execute the current input.  If the current input is incomplete (for
+#         example there is a missing closing parenthesis, bracket, or quote, then the
+#         continuation prompt is displayed on the next line and PSReadline waits for
+#         keys to edit the current input.
 
-	$line = $null
-	$cursor = $null
-	[PSConsoleUtilities.PSConsoleReadline]::GetBufferState([ref]$line, [ref]$cursor)
+#     AcceptAndGetNext         (Cmd: unbound              Emacs: <Ctrl+O>)
 
-	if ($line[$cursor] -eq $key.KeyChar) {
-		# Just move the cursor
-		[PSConsoleUtilities.PSConsoleReadline]::SetCursorPosition($cursor + 1)
-	}
-	else {
-		# Insert matching quotes, move cursor to be in between the quotes
-		[PSConsoleUtilities.PSConsoleReadline]::Insert("$($key.KeyChar)" * 2)
-		[PSConsoleUtilities.PSConsoleReadline]::GetBufferState([ref]$line, [ref]$cursor)
-		[PSConsoleUtilities.PSConsoleReadline]::SetCursorPosition($cursor - 1)
-	}
-}
+#         Like AcceptLine, but after the line completes, start editing the next line
+#         from history.
 
+#     ValidateAndAcceptLine    (Cmd: unbound              Emacs: unbound)
+
+#         Like AcceptLine but performs additional validation including:
+
+#             * Check for additional parse errors
+#             * Validate command names are all found
+#             * If using PowerShell V4 or greater, validate the parameters and arguments
+
+#         If there are any errors, the error message is displayed and not accepted nor added
+#         to the history unless you either correct the command line or execute AcceptLine or
+#         ValidateAndAcceptLine again while the error message is displayed.
 
 
 
@@ -118,6 +121,7 @@ Set-PSReadlineKeyHandler -Key "Ctrl+j" `
 	if ($global:PSReadlineMarkedDir) {
 		cd $global:PSReadlineMarkedDir
 		[PSConsoleUtilities.PSConsoleReadLine]::InvokePrompt()
+		# TODO: Wrong cursor placement :(
 	}
 }
 
@@ -139,6 +143,43 @@ Set-PSReadlineKeyHandler -Key Alt+w `
 
 
 
+
+Set-PSReadlineKeyHandler -Key '"',"'" `
+								 -BriefDescription SmartInsertQuote `
+								 -LongDescription "Insert paired quotes if not already on a quote" `
+								 -ScriptBlock {
+	param($key, $arg)
+
+	$line = $null
+	$cursor = $null
+	[PSConsoleUtilities.PSConsoleReadline]::GetBufferState([ref]$line, [ref]$cursor)
+
+	if ($line[$cursor] -eq $key.KeyChar) {
+		# Just move the cursor
+		[PSConsoleUtilities.PSConsoleReadline]::SetCursorPosition($cursor + 1)
+	}
+	else {
+		# Insert matching quotes, move cursor to be in between the quotes
+		[PSConsoleUtilities.PSConsoleReadline]::Insert("$($key.KeyChar)" * 2)
+		[PSConsoleUtilities.PSConsoleReadline]::GetBufferState([ref]$line, [ref]$cursor)
+		[PSConsoleUtilities.PSConsoleReadline]::SetCursorPosition($cursor - 1)
+	}
+}
+
+# Set-PSReadlineKeyHandler -Chord Ctrl+\ `
+#                          -BriefDescription SearchForwardPipeChar `
+#                          -Description &quot;Searches forward for the next pipeline character&quot; `
+#                          -ScriptBlock {
+#     param($key, $arg)
+#     [PSConsoleUtilities.PSConsoleReadLine]::CharacterSearch($key, '|')
+# }
+# Set-PSReadlineKeyHandler -Chord Ctrl+Shift+\ `
+#                          -BriefDescription SearchBackwardPipeChar `
+#                          -Description &quot;Searches backward for the next pipeline character&quot; `
+#                          -ScriptBlock {
+#     param($key, $arg)
+#     [PSConsoleUtilities.PSConsoleReadLine]::CharacterSearchBackward($key, '|')
+# }
 
 
 # Set-PSReadlineKeyHandler -Key '(','{','[' `
@@ -269,7 +310,7 @@ Set-PSReadlineKeyHandler -Key Alt+w `
 # 		if ($token.TokenFlags -band [System.Management.Automation.Language.TokenFlags]::CommandName) {
 # 			$alias = $ExecutionContext.InvokeCommand.GetCommand($token.Extent.Text, 'Alias')
 # 			if ($alias -ne $null) {
-# 				$resolvedCommand = $alias.ResolvedCommandName 
+# 				$resolvedCommand = $alias.ResolvedCommandName
 # 				if ($resolvedCommand -ne $null) {
 # 					$extent = $token.Extent
 # 					$length = $extent.EndOffset - $extent.StartOffset

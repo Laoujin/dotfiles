@@ -61,11 +61,16 @@
 					"link": "shells\\PowerShell\\prompt_git.ps1",
 					"to": "<MYDOCUMENTS>\\WindowsPowerShell\\PowerShell\\prompt_git.ps1"
 				},
-        {
-          "type": "symlink",
-          "link": "shells\\PowerShell\\prompt_readline.ps1",
-          "to": "<MYDOCUMENTS>\\WindowsPowerShell\\PowerShell\\prompt_readline.ps1"
-        }
+				{
+					"type": "symlink",
+					"link": "shells\\PowerShell\\prompt_readline.ps1",
+					"to": "<MYDOCUMENTS>\\WindowsPowerShell\\PowerShell\\prompt_readline.ps1"
+				},
+				{
+					"type": "symlink",
+					"link": "shells\\PowerShell\\_learnthis.txt",
+					"to": "<MYDOCUMENTS>\\WindowsPowerShell\\PowerShell\\_learnthis.txt"
+				}
 			]
 		}
 	},
