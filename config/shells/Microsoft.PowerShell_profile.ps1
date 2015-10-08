@@ -4,6 +4,8 @@ if (Test-Path ".\Microsoft.PowerShell_aliases.ps1") {
 	. ".\Microsoft.PowerShell_aliases.ps1"
 }
 
+Write-Output (Get-Content ".\PowerShell\_learnthis.txt")
+
 . ".\PowerShell\envpath.ps1"
 . ".\PowerShell\envpath_mod.ps1"
 . ".\PowerShell\filesystem.ps1"

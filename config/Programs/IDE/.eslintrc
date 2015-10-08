@@ -1,0 +1,103 @@
+{
+	"extends": "eslint:recommended",
+	"ecmaFeatures": {
+		"arrowFunctions": true,
+		"binaryLiterals": true,
+		"blockBindings": true,
+		"classes": true,
+		"defaultParams": true,
+		"destructuring": true,
+		"forOf": true,
+		"generators": true,
+		"modules": true,
+		"objectLiteralComputedProperties": true,
+		"objectLiteralDuplicateProperties": true,
+		"objectLiteralShorthandMethods": true,
+		"objectLiteralShorthandProperties": true,
+		"octalLiterals": true,
+		"regexUFlag": true,
+		"regexYFlag": true,
+		"restParams": true,
+		"spread": true,
+		"superInFunctions": true,
+		"templateStrings": true,
+		"unicodeCodePointEscapes": true,
+		"globalReturn": true,
+		"jsx": true
+	},
+
+	"env": {
+		"browser": true,
+		"node": true,
+		"jasmine": true
+	},
+
+	"plugins": [
+		"react"
+	],
+
+	"globals": {
+		"React": true
+	},
+
+	"rules": {
+		"semi": [2, "always"],
+		"comma-dangle": 0,
+		"quotes": [1, "single"],
+		"no-console": 1,
+		"no-alert": 2,
+		"curly": [2, "all"],
+		"dot-notation": 2,
+		"eqeqeq": 2,
+		"guard-for-in": 2,
+		"no-eval": 2,
+		"no-implied-eval": 2,
+		"no-extra-bind": 2,
+		"no-loop-func": 2,
+		"no-multi-spaces": 1,
+		"no-native-reassign": 2,
+		"no-octal": 2,
+		"no-return-assign": 2,
+		"no-self-compare": 2,
+		"no-sequences": 2,
+		"no-unused-expressions": 2,
+		"no-useless-call": 2,
+		"no-void": 2,
+		"no-with": 2,
+		"radix": 2,
+		"no-shadow-restricted-names": 2,
+		"no-shadow": 1,
+		"no-undef-init": 2,
+		"no-use-before-define": 2,
+
+		"max-len": [1, 150, 2],
+		"max-params": [1, 7],
+		"max-statements": [1, 100],
+		"no-bitwise": 1,
+
+		"brace-style": [1, "1tbs"],
+		"indent": [2, 2],
+		"no-lonely-if": 1,
+		"no-trailing-spaces": 1,
+
+		"react/display-name": 1,
+		"react/jsx-boolean-value": 2,
+		"react/jsx-no-undef": 2,
+		"react/jsx-quotes": [1, "double"],
+		"react/jsx-no-duplicate-props": 2,
+		"react/jsx-sort-prop-types": 0,
+		"react/jsx-sort-props": 0,
+		"react/jsx-uses-react": 2,
+		"react/jsx-uses-vars": 2,
+		"react/jsx-no-literals": 0,
+		"react/no-did-mount-set-state": 1,
+		"react/no-did-update-set-state": 2,
+		"react/no-multi-comp": 0,
+		"react/no-unknown-property": 2,
+		"react/prop-types": 2,
+		"react/react-in-jsx-scope": 0,
+		"react/self-closing-comp": 2,
+		"react/sort-comp": 0,
+		"react/wrap-multilines": 1
+	}
+}

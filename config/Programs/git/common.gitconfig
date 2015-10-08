@@ -18,12 +18,17 @@
 	trustExitCode = true
 
 [alias]
-	# TODO:
+	### TODO:
 	# git pr -> pull-request = git po + check out the pull-request url + start url - check ruby gem for stash pull requests
 	fam = !git checkout development && git fetch && git merge origin/development && git dm
+
 	# For more interesting aliases:
 	# Git Bash/cygwin: https://github.com/tj/git-extras/blob/master/Commands.md
 	# Check out these: https://gist.github.com/robmiller/6018582
+	#
+	# Checkout ours/theirs
+	# http://stackoverflow.com/a/11843922/540352
+
 	# Given a merge commit, find the span of commits that exist(ed) on that
 	# branch. Again, not so useful in itself, but used by other aliases.
 	merge-span = "!f() { echo $(git log -1 $2 --merges --pretty=format:%P | cut -d' ' -f1)$1$(git log -1 $2 --merges --pretty=format:%P | cut -d' ' -f2); }; f"
@@ -40,41 +45,59 @@
 	#ce = "!f() { git clone $1 $2; cd $2; }; f"
 	#ce = "!f() { Invoke-GitClone $1 $2; }; f"
 
-	### Basic aliases
-	# Very common ones
-	ci = commit
-	br = branch
-	co = checkout
-	df = diff
+
+
+	### Status
 	st = status # -u: Show all untracked files (instead of just directories)
+
+	### Diffing
+	df = diff
+	dfw = diff --word-diff
+	dfc = diff --cached # Show staged changes
 	dt = difftool
 	mt = mergetool
-	lg = log -p # Show commits with diff
 
-	# List stuff
-	tags = tag -l
-	branches = branch -a
+	### List stuff
 	remotes = remote -v
-	stashes = stash list --date=relative
 	aliases = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\t=> \\2/' | sort
 
-	# Slightly more advanced
+	### Tagging
+	tags = tag -l
+	tl = describe --tags --abbrev=0 # Print the last tag
+
+	### Stashing
+	stashes = stash list --date=relative
+	sl = stash list
+	ss = "!f() { git show \"stash@{$1}\"; }; f"
+	sn = "!f() { git stash save \"$1\"; }; f" # sn = stash name
+	sp = stash pop
+	sa = stash apply
+
+	### Branching
+	branches = branch -a
+	br = branch
+	co = checkout
 	cod = checkout development
 	com = checkout master
-	dfc = diff --cached # Show staged changes
 
-	# Amending
+	### Committing & Amending
+	ci = commit
 	unci = reset --soft HEAD^
 	amend = !git add -A && git commit --amend --no-edit
 	ciamend = commit --amend --no-edit
 
-	### Very useful stuff
-	# View history graph with abbreviated SHA and description
-	#   Add -10 to view only last 10 commits
-	l = log --color --graph --pretty=format:'%C(magenta)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
-
 	# commit entire working directory. usage: git ca "commit message"
 	ca = "!f() { git add -A; git commit -vm\"$1\"; }; f"
+
+	### Logging
+	lg = log -p # Show commits with diff
+
+	# View history graph with abbreviated SHA and description
+	#   Add -10 to view only last 10 commits
+	l = log --color --graph --abbrev-commit --pretty=format:'%C(magenta)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset'
+
+	# View history with changed files
+	ll = log --decorate --numstat --pretty=format:'%C(magenta)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset'
 
 	### Collaborating
 	sha = rev-parse HEAD
@@ -135,7 +158,7 @@
 	frag = normal bold
 	old = magenta bold
 	new = green bold
-	
+
 # help.autocorrect = 1
 # WARNING: You called a Git command named 'chekcout', which does not exist.
 # Continuing under the assumption that you meant 'checkout'

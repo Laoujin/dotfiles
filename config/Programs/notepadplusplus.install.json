@@ -1,0 +1,29 @@
+{
+	"requires": "notepadplusplus.install",
+	"modules":
+	{
+		"Create-Links":
+		[
+			{
+				"type": "symlink",
+				"link": "Programs\\notepadplusplus\\config.xml",
+				"to": "<APPDATA_ROAMING>\\Notepad++\\config.xml"
+			},
+			{
+				"type": "symlink",
+				"link": "Programs\\notepadplusplus\\shortcuts.xml",
+				"to": "<APPDATA_ROAMING>\\Notepad++\\shortcuts.xml"
+			},
+			{
+				"type": "symlink",
+				"link": "Programs\\notepadplusplus\\langs.xml",
+				"to": "<APPDATA_ROAMING>\\Notepad++\\langs.xml"
+			},
+			{
+				"type": "symlink",
+				"link": "Programs\\notepadplusplus\\contextMenu.xml",
+				"to": "<APPDATA_ROAMING>\\Notepad++\\contextMenu.xml"
+			}
+		]
+	}
+}
