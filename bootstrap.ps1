@@ -1,5 +1,3 @@
-cls
-
 #Set-ExecutionPolicy Unrestricted
 
 Push-Location "$PSScriptRoot\src"
@@ -7,6 +5,13 @@ Push-Location "$PSScriptRoot\src"
 . ".\helpers.ps1"
 . ".\programs.ps1"
 Pop-Location
+
+if (!(Is-Admin)) {
+	Write-Host "RunAs Administrator..."
+	Exit
+}
+
+Clear-Host
 
 Push-Location "$PSScriptRoot\src\modules"
 Get-ChildItem | ForEach-Object { . ".\$_" }
@@ -55,6 +60,6 @@ foreach ($explorerOption in $explorerOptions) {
 	}
 }
 
-Stop-Process -processname explorer
+#Stop-Process -processname explorer
 
 Pop-Location
