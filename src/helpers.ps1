@@ -20,3 +20,10 @@ function Is-Admin {
 	# Check to see if we are currently running "as Administrator"
 	return $myPrincipal.IsInRole([System.Security.Principal.WindowsBuiltInRole]::Administrator)
 }
+
+function Restart-AsAdmin {
+	$newProcess = New-Object System.Diagnostics.ProcessStartInfo "PowerShell"
+	$newProcess.Arguments = $myInvocation.MyCommand.Definition
+	$newProcess.Verb = "runas"
+	[System.Diagnostics.Process]::Start($newProcess)
+}
