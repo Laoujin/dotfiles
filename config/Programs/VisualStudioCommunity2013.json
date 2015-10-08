@@ -1,0 +1,14 @@
+{
+	"requires": "VisualStudioCommunity2013",
+	"modules":
+	{
+		"Create-Links":
+		[
+			{
+				"type": "junction",
+				"link": "Programs\\VisualStudio\\2013",
+				"to": "<MYDOCUMENTS>\\Visual Studio 2013"
+			}
+		]
+	}
+}
