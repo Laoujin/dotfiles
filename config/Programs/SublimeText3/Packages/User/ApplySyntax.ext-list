@@ -11,7 +11,8 @@
 	[
 		".csslintrc",
 		".jscsrc",
-		".jshintrc"
+		".jshintrc",
+		".eslintrc"
 	],
 	"PHP":
 	[
