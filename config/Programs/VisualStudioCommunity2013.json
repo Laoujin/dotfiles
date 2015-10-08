@@ -8,6 +8,11 @@
 				"type": "junction",
 				"link": "Programs\\VisualStudio\\2013",
 				"to": "<MYDOCUMENTS>\\Visual Studio 2013"
+			},
+			{
+				"type": "symlink",
+				"link": "Programs\\VisualStudio\\ReSharper\\GlobalSettingsStorage.DotSettings",
+				"to": "<APPDATA_ROAMING>\\JetBrains\\Shared\\vAny\\GlobalSettingsStorage.DotSettings"
 			}
 		]
 	}
