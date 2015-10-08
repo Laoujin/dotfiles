@@ -79,6 +79,11 @@
 			},
 			{
 				"type": "symlink",
+				"link": "Programs\\IDE\\.eslintrc",
+				"to": "<HOME>\\.eslintrc"
+			},
+			{
+				"type": "symlink",
 				"link": "Programs\\IDE\\.jscsrc",
 				"to": "<HOME>\\.jscsrc"
 			}
