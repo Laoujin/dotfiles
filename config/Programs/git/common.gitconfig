@@ -82,6 +82,7 @@
 
 	### Committing & Amending
 	ci = commit
+	cim = commit --no-edit # ci merge
 	unci = reset --soft HEAD^
 	amend = !git add -A && git commit --amend --no-edit
 	ciamend = commit --amend --no-edit
