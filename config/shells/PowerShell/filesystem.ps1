@@ -43,6 +43,12 @@ function Convert-ToDiskSize {
 	}
 }
 
+# Empty the Recycle Bin on all drives
+function Empty-RecycleBin {
+	$RecBin = (New-Object -ComObject Shell.Application).Namespace(0xA)
+	$RecBin.Items() | %{Remove-Item $_.Path -Recurse -Confirm:$false}
+}
+
 # TODO Extract a .zip file
 # function Unzip-File {
 # 	<#
@@ -124,10 +130,4 @@ function Convert-ToDiskSize {
 # 	(new-object net.webclient).DownloadFile($url, $path)
 
 # 	return new-object io.fileinfo $path
-# }
-
-# Empty the Recycle Bin on all drives
-# function Empty-RecycleBin {
-# 	$RecBin = (New-Object -ComObject Shell.Application).Namespace(0xA)
-# 	$RecBin.Items() | %{Remove-Item $_.Path -Recurse -Confirm:$false}
 # }
