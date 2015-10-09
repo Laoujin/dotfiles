@@ -14,3 +14,23 @@ Learn This:
 # Ctrl+Shift+j: Mark directory
 # Ctrl+j: Goto marked directory
 # Alt+w: Put line in history and clear
+
+
+# SublimeText3
+# Multiple Cursors:
+# Ctrl+Alt+Arrow: Add cursor up/down
+# Ctrl+Shift+l: Split all selected lines into cursor
+# Alt+F3: Select all
+# Ctrl+d: select next word
+# Ctrl+k Ctrl+d: Skip current selected
+# Ctrl+u: Deselect current (ATTN: does not work for some odd reason?)
+
+# Select Block: Shift + Right Mouse Button
+### Select block in Visual Studio: Alt + Left Mouse Button
+# Add to Selection: Shift + Ctrl + Right Mouse Button
+# Remove from Selection: Shift + Alt + Right Mouse Button
+
+# Selection:
+# Ctrl+l: select entire line
+# Ctrl+Shift+M: Expand selection to brackets
+# Ctrl+Shift+J: Expand selection to indentation
