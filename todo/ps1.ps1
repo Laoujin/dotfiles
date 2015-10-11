@@ -5,7 +5,14 @@
 # Remove context menu items
 #HKEY_CLASSES_ROOT\*\shellex\ContextMenuHandlers
 
+net user Administrator /active:yes
 
+To automatically login:
+netplwiz
+
+
+Mi-Ke: quick editor for changing environment variables (PATH most notably)
+http://rix0rrr.github.io/WindowsPathEditor/
 
 # Homegroup
 # services.msc
@@ -43,6 +50,10 @@
 # See also: C:\Program Files (x86)\PowerShell Community Extensions\Pscx3\Pscx
 
 ---------------------------------------------------------------------------------------
+
+UI for configuring Git colors?
+https://www.kernel.org/pub/software/scm/git/docs/git-config.html
+color.diff.<slot>
 
 
 # check for 2 profiles: one without PoshGit because it slows things down
