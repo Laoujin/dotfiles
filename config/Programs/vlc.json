@@ -1,0 +1,14 @@
+{
+	"requires": "vlc",
+	"modules":
+	{
+		"Create-Links":
+		[
+			{
+				"type": "symlink",
+				"link": "Programs\\vlc\\vlcrc",
+				"to": "<APPDATA_ROAMING>\\vlc\\vlcrc"
+			}
+		]
+	}
+}
