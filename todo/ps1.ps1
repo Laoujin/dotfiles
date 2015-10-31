@@ -1,9 +1,17 @@
+PowerShell:
+- search and display fa icons
+-
+
+
 # New context menu
 # HKEY_CLASSES_ROOT -> find extension and delete ShellNew key
 # To add: Add ShellNew key and add New String Value "NullFile" (with no value)
 
 # Remove context menu items
 #HKEY_CLASSES_ROOT\*\shellex\ContextMenuHandlers
+
+download "Everything": https://en.wikipedia.org/wiki/Everything_(software)
+https://github.com/denolfe/AutoHotkey/blob/master/AppSpecific/WindowsExplorer.ahk
 
 net user Administrator /active:yes
 
