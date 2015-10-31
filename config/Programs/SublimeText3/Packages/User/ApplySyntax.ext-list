@@ -9,10 +9,11 @@
 	],
 	"JSON":
 	[
+		".bowerrc",
 		".csslintrc",
+		".eslintrc",
 		".jscsrc",
-		".jshintrc",
-		".eslintrc"
+		".jshintrc"
 	],
 	"PHP":
 	[

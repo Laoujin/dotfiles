@@ -21,7 +21,7 @@
 		"node_modules/*"
 	],
 	"bold_folder_labels": true,
-	"color_scheme": "Packages/User/SublimeLinter/Monokai (SL).tmTheme",
+	"color_scheme": "Packages/User/SublimeLinter/Monokai Bright (SL).tmTheme",
 	"detect_indentation": false,
 	"draw_white_space": "all",
 	"folder_exclude_patterns":
