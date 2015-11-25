@@ -1,0 +1,64 @@
+[
+	{
+	 "caption": "Tools",
+	 "mnemonic": "T",
+	 "id": "tools",
+	 "children":
+		[
+			{ "caption": "-", "id": "packagecommands" },
+			{ "command": "ahkrun", "caption": "AutoHotkey - Run"},
+			{ "command": "ahkcompile", "caption": "AutoHotkey - Compile"},
+			{ "command": "ahkrunpiped", "caption": "AutoHotkey - Run As Piped Buffer", "mnemonic": "P"}
+		]
+	},
+	{
+		"caption": "Preferences",
+		"id": "preferences",
+		"children":
+		[
+			{
+				"caption": "Package Settings",
+				"mnemonic": "P",
+				"id": "package-settings",
+				"children":
+				[
+					{
+						"caption": "AutoHotkey",
+						"children":
+						[
+							{
+								"command": "open_file",
+								"args": {"file": "${packages}/AutoHotkey/AutoHotkey.sublime-settings"},
+								"caption": "AutoHotkey Settings - Default"
+							},
+							{
+								"command": "open_file",
+								"args": {"file": "${packages}/User/AutoHotkey.sublime-settings"},
+								"caption": "AutoHotkey Settings - User"
+							},
+							{	
+								"caption": "-"
+							},
+							{
+								"command": "open_file",
+								"args": {
+									"file": "${packages}/AutoHotkey/Default (Windows).sublime-keymap",
+									"platform": "Windows"
+								},
+								"caption": "Key Bindings - Default"
+							},
+							{
+								"command": "open_file",
+								"args": {
+									"file": "${packages}/User/Default (Windows).sublime-keymap",
+									"platform": "Windows"
+								},
+								"caption": "Key Bindings - User"
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+]

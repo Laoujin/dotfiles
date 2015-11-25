@@ -1,0 +1,12 @@
+{
+	"selector": "source.ahk",
+	"target": "ahkrun",
+
+	"variants": [
+		{
+			"name": "Run",
+			"target": "ahkcompile",
+		}
+	]
+
+}

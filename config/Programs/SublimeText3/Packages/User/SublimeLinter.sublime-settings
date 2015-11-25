@@ -11,6 +11,19 @@
 		"lint_mode": "background",
 		"linters":
 		{
+			"csslint":
+			{
+				"@disable": false,
+				"args":
+				[
+				],
+				"errors": "",
+				"excludes":
+				[
+				],
+				"ignore": "",
+				"warnings": ""
+			},
 			"eslint":
 			{
 				"@disable": true,
@@ -23,7 +36,7 @@
 			},
 			"eslint_d":
 			{
-				"@disable": false,
+				"@disable": true,
 				"args":
 				[
 				],
@@ -33,7 +46,7 @@
 			},
 			"jscs":
 			{
-				"@disable": true,
+				"@disable": false,
 				"args":
 				[
 				],

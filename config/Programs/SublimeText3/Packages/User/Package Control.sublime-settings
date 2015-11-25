@@ -11,6 +11,7 @@
 		"Babel Snippets",
 		"BracketHighlighter",
 		"ColorPicker",
+		"CSScomb",
 		"DocBlockr",
 		"EditorConfig",
 		"Emmet",
@@ -35,7 +36,9 @@
 		"SublimeLinter",
 		"SublimeLinter-contrib-eslint",
 		"SublimeLinter-contrib-eslint_d",
+		"SublimeLinter-csslint",
 		"SublimeLinter-jscs",
-		"SublimeLinter-json"
+		"SublimeLinter-json",
+		"Syntax Highlighting for PostCSS"
 	]
 }
