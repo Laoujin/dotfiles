@@ -4,6 +4,7 @@
 	{
 		"Install-NodePackages":
 		[
+			"grunt",
 			"gulp",
 			"jade",
 			"jasmine-node",
@@ -13,7 +14,15 @@
 			"eslint-plugin-react",
 			"eslint_d",
 			"npm",
-			"licenser"
+			"licenser",
+			"csslint",
+			"csscomb",
+			"bower",
+			"browserify",
+			"browser-sync",
+			"http-server",
+			"rimraf",
+			"yo"
 		]
 	}
 }
