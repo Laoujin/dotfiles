@@ -6,4 +6,5 @@ config/Programs/SublimeText3/Packages/User/Package Control.last-run
 
 config/Programs/VisualStudio/2013/Settings/Windows Azure Subscriptions.xml
 
-config/Programs/FileZilla
+config/Programs/FileZilla/
+config/Programs/filezilla.json
