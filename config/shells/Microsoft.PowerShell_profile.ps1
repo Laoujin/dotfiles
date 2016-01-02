@@ -12,6 +12,8 @@ Write-Output (Get-Content ".\PowerShell\_learnthis.txt")
 
 . ".\PowerShell\prompt_git.ps1"
 . ".\PowerShell\prompt_readline.ps1"
+. ".\PowerShell\other.ps1"
+
 Import-Module '.\Modules\Jump.Location\Jump.Location.psd1'
 
 Pop-Location

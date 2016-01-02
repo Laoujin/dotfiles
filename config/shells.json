@@ -68,6 +68,11 @@
 				},
 				{
 					"type": "symlink",
+					"link": "shells\\PowerShell\\other.ps1",
+					"to": "<MYDOCUMENTS>\\WindowsPowerShell\\PowerShell\\other.ps1"
+				},
+				{
+					"type": "symlink",
 					"link": "shells\\PowerShell\\_learnthis.txt",
 					"to": "<MYDOCUMENTS>\\WindowsPowerShell\\PowerShell\\_learnthis.txt"
 				}

@@ -31,6 +31,8 @@
 	#
 	# Checkout ours/theirs
 	# http://stackoverflow.com/a/11843922/540352
+	#
+	# https://github.com/AlexZeitler/posh-git-alias/blob/master/posh-git-alias.ps1
 
 	# Given a merge commit, find the span of commits that exist(ed) on that
 	# branch. Again, not so useful in itself, but used by other aliases.
@@ -89,6 +91,7 @@
 	unci = reset --soft HEAD^
 	amend = !git add -A && git commit --amend --no-edit
 	ciamend = commit --amend --no-edit
+	cp = cherry-pick
 
 	# commit entire working directory. usage: git ca "commit message"
 	ca = "!f() { git add -A; git commit -vm\"$1\"; }; f"
@@ -99,6 +102,33 @@
 	# View history graph with abbreviated SHA and description
 	#   Add -10 to view only last 10 commits
 	l = log --color --graph --abbrev-commit --pretty=format:'%C(magenta)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset'
+	l1 = !git l -1
+	l2 = !git l -2
+	l3 = !git l -3
+	l4 = !git l -4
+	l5 = !git l -5
+	l6 = !git l -6
+	l7 = !git l -7
+	l8 = !git l -8
+	l9 = !git l -9
+	l10 = !git l -10
+	l15 = !git l -15
+	l20 = !git l -20
+	l25 = !git l -25
+	la = !git l --all
+	la1 = !git l -1 --all
+	la2 = !git l -2 --all
+	la3 = !git l -3 --all
+	la4 = !git l -4 --all
+	la5 = !git l -5 --all
+	la6 = !git l -6 --all
+	la7 = !git l -7 --all
+	la8 = !git l -8 --all
+	la9 = !git l -9 --all
+	la10 = !git l -10 --all
+	la15 = !git l -15 --all
+	la20 = !git l -20 --all
+	la25 = !git l -25 --all
 
 	# View history with changed files
 	ll = log --decorate --numstat --pretty=format:'%C(magenta)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset'
