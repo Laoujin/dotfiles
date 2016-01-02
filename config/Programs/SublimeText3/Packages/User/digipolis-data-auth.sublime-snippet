@@ -1,0 +1,6 @@
+<snippet>
+	<content><![CDATA[
+ data-aut="note-$1"
+]]></content>
+	<tabTrigger>da</tabTrigger>
+</snippet>
