@@ -86,7 +86,7 @@
 	com = checkout master
 
 	### Committing & Amending
-	ci = commit
+	ci = "!f() { git commit -m"$1"; }; f"
 	cim = commit --no-edit # ci merge
 	unci = reset --soft HEAD^
 	amend = !git add -A && git commit --amend --no-edit
