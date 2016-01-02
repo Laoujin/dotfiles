@@ -7,28 +7,39 @@ Learn This:
 # BackwardDeleteLine        (Cmd: <Ctrl+Home>)
 # ForwardDeleteLine         (Cmd: <Ctrl+End>)
 # ReverseSearchHistory      (Cmd: <Ctrl+R>)
-# Jump to character on line (Cmd: <F3>)
+# Jump to character on line (Cmd: <F3>+any key)
 
 # User-Defined Functions
 # F7: Show command history
-# Ctrl+Shift+j: Mark directory
+# Ctrl+Shift+j: Mark directory # this needs improving: jumpstat?
 # Ctrl+j: Goto marked directory
 # Alt+w: Put line in history and clear
 
 
 # SublimeText3
+# lorem###: with # a number
+# Ctrl+up: increase number
+# Ctrl+Shift+u: New abbreviation
+# Ctrl+ù: Open console
+
+Macro:
+Ctrl+q: Start/stop
+Ctrl+Shift+q: Replay
+
 # Multiple Cursors:
 # Ctrl+Alt+Arrow: Add cursor up/down
 # Ctrl+Shift+l: Split all selected lines into cursor
 # Alt+F3: Select all
 # Ctrl+d: select next word
 # Ctrl+k Ctrl+d: Skip current selected
-# Ctrl+u: Deselect current (ATTN: does not work for some odd reason?)
+# Ctrl+u: Deselect current
 
 # Select Block: Shift + Right Mouse Button
-### Select block in Visual Studio: Alt + Left Mouse Button
 # Add to Selection: Shift + Ctrl + Right Mouse Button
 # Remove from Selection: Shift + Alt + Right Mouse Button
+
+Confusing with
+### Select block in Visual Studio: Alt + Left Mouse Button
 
 # Selection:
 # Ctrl+l: select entire line
