@@ -13,7 +13,7 @@
 		{
 			"csslint":
 			{
-				"@disable": false,
+				"@disable": true,
 				"args":
 				[
 				],
@@ -36,7 +36,7 @@
 			},
 			"eslint_d":
 			{
-				"@disable": true,
+				"@disable": false,
 				"args":
 				[
 				],
@@ -46,7 +46,7 @@
 			},
 			"jscs":
 			{
-				"@disable": false,
+				"@disable": true,
 				"args":
 				[
 				],
