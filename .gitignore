@@ -4,4 +4,6 @@ config/shells/bash_aliases.sh
 config/Programs/SublimeText3/Packages/User/Package Control.cache
 config/Programs/SublimeText3/Packages/User/Package Control.last-run
 
+config/Programs/VisualStudio/2013/Settings/Windows Azure Subscriptions.xml
+
 config/Programs/FileZilla
