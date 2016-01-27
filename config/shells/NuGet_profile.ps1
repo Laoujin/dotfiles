@@ -1,0 +1,1 @@
+Set-Alias am Add-Migration

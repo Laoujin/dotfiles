@@ -43,6 +43,11 @@
 				},
 				{
 					"type": "symlink",
+					"link": "shells\\NuGet_profile.ps1",
+					"to": "<MYDOCUMENTS>\\WindowsPowerShell\\NuGet_profile.ps1"
+				},
+				{
+					"type": "symlink",
 					"link": "shells\\PowerShell\\envpath.ps1",
 					"to": "<MYDOCUMENTS>\\WindowsPowerShell\\PowerShell\\envpath.ps1"
 				},

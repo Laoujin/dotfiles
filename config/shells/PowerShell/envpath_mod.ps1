@@ -1,4 +1,27 @@
-Append-EnvPath "C:\Program Files\Sublime Text 3"
-Append-EnvPath "C:\Program Files (x86)\MarkdownPad 2"
+function Start-SublimeText {
+	# Fix for GitGutter not working when starting ST3 from the commandline
+	START "C:\Program Files\Sublime Text 3\sublime_text.exe" $args
+}
+Set-Alias subl Start-SublimeText
+
+
+Set-Alias mdp "C:\Program Files (x86)\MarkdownPad 2\MarkdownPad2.exe"
+
+function Vagrant-Up {
+	vagrant up
+}
+function Vagrant-Status {
+	vagrant status
+}
+function Vagrant-Destroy {
+	vagrant destroy -f
+}
+function Vagrant-Halt {
+	vagrant halt
+}
 
 Set-Alias vgrt vagrant
+Set-Alias vgrtu Vagrant-Up
+Set-Alias vgrts Vagrant-Status
+Set-Alias vgrtd Vagrant-Destroy
+Set-Alias vgrth Vagrant-Halt

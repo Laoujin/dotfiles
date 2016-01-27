@@ -13,8 +13,12 @@
 # 	}
 # }
 
+function Find-EnvPath([String]$needle) {
+	$env:PATH.split(";") | Where-Object { $_ -match $needle }
+}
+
 # Set a permanent Environment variable, and reload it into $env
-function Set-Environment([String] $variable, [String] $value) {
+function Set-Environment([String]$variable, [String]$value) {
 	[System.Environment]::SetEnvironmentVariable("$variable", "$value","User")
 	Invoke-Expression "`$env:${variable} = `"$value`""
 }
@@ -22,7 +26,6 @@ function Set-Environment([String] $variable, [String] $value) {
 # Add a folder to $env:Path
 # TODO: check if not yet in path. don't do ;;. and keep check that path has to exist
 # also create a List-EnvPath (pretty print) and a Fix-Path (kill doubles/unexisting paths)
-# rename EnvPath to Path?
 # Not persisted... :)
 ### Modify system environment variable ###
 #[Environment]::SetEnvironmentVariable( "Path", $env:Path, [System.EnvironmentVariableTarget]::Machine )
