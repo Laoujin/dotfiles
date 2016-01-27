@@ -18,6 +18,8 @@
 	trustExitCode = true
 
 [alias]
+	# CLI Syntax: git config --global alias.ci commit
+
 	### TODO:
 	# git pr -> pull-request = git po + check out the pull-request url + start url - check ruby gem for stash pull requests
 	fam = !git checkout development && git fetch && git merge origin/development && git dm
@@ -86,7 +88,8 @@
 	com = checkout master
 
 	### Committing & Amending
-	ci = "!f() { git commit -m"$1"; }; f"
+	#ci = "!f() { git commit -m"$1"; }; f"
+	ci = commit
 	cim = commit --no-edit # ci merge
 	unci = reset --soft HEAD^
 	amend = !git add -A && git commit --amend --no-edit
