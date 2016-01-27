@@ -6,6 +6,7 @@
 	"installed_packages":
 	[
 		"ApplySyntax",
+		"AutoFileName",
 		"AutoHotkey",
 		"Babel",
 		"Babel Snippets",

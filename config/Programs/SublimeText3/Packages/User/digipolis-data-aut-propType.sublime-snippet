@@ -1,0 +1,4 @@
+<snippet>
+	<content><![CDATA['data-aut': React.PropTypes.string.isRequired]]></content>
+	<tabTrigger>daprop</tabTrigger>
+</snippet>

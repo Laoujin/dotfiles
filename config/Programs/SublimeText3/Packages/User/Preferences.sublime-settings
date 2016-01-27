@@ -17,9 +17,13 @@
 	[
 		"node_modules/*",
 		"bower_components/*",
-		"images/*"
+		"images/*",
+		"app.js",
+		"main.js",
+		"build/"
 	],
 	"bold_folder_labels": true,
+	"close_windows_when_empty": true,
 	"color_scheme": "Packages/User/SublimeLinter/Monokai Bright (SL).tmTheme",
 	"detect_indentation": false,
 	"draw_white_space": "all",
@@ -31,14 +35,15 @@
 		"CVS",
 		"node_modules"
 	],
-	"font_size": 10,
+	"font_size": 9,
 	"ignored_packages":
 	[
 		"Vintage"
 	],
 	"rulers":
 	[
-		120
+		120,
+		180
 	],
 	"shift_tab_unindent": true,
 	"show_encoding": true,

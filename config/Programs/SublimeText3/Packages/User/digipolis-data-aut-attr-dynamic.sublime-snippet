@@ -1,0 +1,4 @@
+<snippet>
+	<content><![CDATA[data-aut={this.props['data-aut']$1}]]></content>
+	<tabTrigger>datr</tabTrigger>
+</snippet>
