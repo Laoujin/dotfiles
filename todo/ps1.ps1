@@ -1,6 +1,10 @@
 PowerShell:
-- search and display fa icons
+- search and display fa icons on cli?
 -
+
+st3: macro: selected text, put ``` around (md syntax)
+
+ctrl + alt + enter or something to open the seleted file in Notepad++; other key to open directory in sublimetext
 
 
 # New context menu
