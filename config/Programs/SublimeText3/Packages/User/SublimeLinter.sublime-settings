@@ -26,7 +26,7 @@
 			},
 			"eslint":
 			{
-				"@disable": true,
+				"@disable": false,
 				"args":
 				[
 				],
@@ -36,7 +36,7 @@
 			},
 			"eslint_d":
 			{
-				"@disable": false,
+				"@disable": true,
 				"args":
 				[
 				],
@@ -46,7 +46,7 @@
 			},
 			"jscs":
 			{
-				"@disable": true,
+				"@disable": false,
 				"args":
 				[
 				],
