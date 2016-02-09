@@ -1,4 +1,5 @@
 {
+	"parser": "babel-eslint",
 	"extends": "eslint:recommended",
 	"ecmaFeatures": {
 		"arrowFunctions": true,
@@ -61,6 +62,7 @@
 		"no-self-compare": 2,
 		"no-sequences": 2,
 		"no-unused-expressions": 2,
+		"no-unused-vars": 1,
 		"no-useless-call": 2,
 		"no-void": 2,
 		"no-with": 2,
@@ -80,10 +82,10 @@
 		"no-lonely-if": 1,
 		"no-trailing-spaces": 1,
 
-		"react/display-name": 1,
-		"react/jsx-boolean-value": 2,
+		"react/display-name": 0,
+		"react/jsx-boolean-value": 0,
 		"react/jsx-no-undef": 2,
-		"react/jsx-quotes": [1, "double"],
+		"jsx-quotes": [1, "prefer-double"],
 		"react/jsx-no-duplicate-props": 2,
 		"react/jsx-sort-prop-types": 0,
 		"react/jsx-sort-props": 0,
