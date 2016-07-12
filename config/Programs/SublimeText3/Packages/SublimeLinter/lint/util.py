@@ -50,6 +50,8 @@ MARK_COLOR_RE = (
     r'(\s*<string>sublimelinter\.{}</string>\s*\r?\n'
     r'\s*<key>settings</key>\s*\r?\n'
     r'\s*<dict>\s*\r?\n'
+    r'(?:\s*<key>(?:background|fontStyle)</key>\s*\r?\n'
+    r'\s*<string>.*?</string>\r?\n)*'
     r'\s*<key>foreground</key>\s*\r?\n'
     r'\s*<string>)#.+?(</string>\s*\r?\n)'
 )
@@ -913,7 +915,10 @@ def find_windows_python(version):
         # with the <major><minor> version number, so for matching with the version
         # passed in, strip any decimal points.
         stripped_version = version.replace('.', '')
-        prefix = os.path.abspath('\\Python')
+        prefix = os.path.abspath(os.path.join(
+            os.environ.get("SYSTEMROOT", "\\")[:2],
+            'Python'
+        ))
         prefix_len = len(prefix)
         dirs = sorted(glob(prefix + '*'), reverse=True)
         from . import persist
@@ -942,7 +947,8 @@ def find_python_script(python_path, script):
     if sublime.platform() in ('osx', 'linux'):
         pyenv = which('pyenv')
         if pyenv:
-            out = run_shell_cmd((pyenv, 'which', script)).strip().decode()
+            out = run_shell_cmd((os.environ['SHELL'], '-l', '-c',
+                                 'echo ""; {} which {}'.format(pyenv, script))).strip().decode().split('\n')[-1]
             if os.path.isfile(out):
                 return out
         return which(script)

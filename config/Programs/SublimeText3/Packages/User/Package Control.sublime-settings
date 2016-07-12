@@ -42,6 +42,7 @@
 		"SublimeLinter-csslint",
 		"SublimeLinter-jscs",
 		"SublimeLinter-json",
-		"Syntax Highlighting for PostCSS"
+		"Syntax Highlighting for PostCSS",
+		"VBDotNet"
 	]
 }

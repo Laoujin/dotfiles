@@ -13,7 +13,8 @@
 		".csslintrc",
 		".eslintrc",
 		".jscsrc",
-		".jshintrc"
+		".jshintrc",
+		"geojson"
 	],
 	"PHP":
 	[

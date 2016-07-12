@@ -33,11 +33,25 @@
 		"CVS",
 		"node_modules"
 	],
-	"font_size": 9,
+	"font_size": 10,
 	"ignored_packages":
 	[
+		"ApplySyntax (Exemplaar met conflict van Wouter-Laptop 2016-02-12)",
+		"CSScomb",
+		"DocBlockr",
+		"Emmet",
+		"Handlebars (Exemplaar met conflict van Wouter-Laptop 2016-02-12)",
+		"IntelliDocs",
+		"SublimeCodeIntel",
+		"SublimeLinter",
+		"SublimeLinter-contrib-eslint",
+		"SublimeLinter-contrib-eslint_d",
+		"SublimeLinter-csslint",
+		"SublimeLinter-jscs",
+		"SublimeLinter-json",
 		"Vintage"
 	],
+	"index_files": false,
 	"rulers":
 	[
 		120,

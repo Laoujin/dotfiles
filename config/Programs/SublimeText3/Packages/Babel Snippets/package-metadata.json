@@ -1,1 +1,1 @@
-{"version": "1.0.4", "description": "Next generation JavaScript and React snippets for Sublime", "dependencies": [], "url": "https://babeljs.io", "sublime_text": "*", "platforms": ["*"]}
+{"sublime_text": "*", "dependencies": [], "platforms": ["*"], "description": "Next generation JavaScript and React snippets for Sublime", "version": "1.0.6", "url": "https://babeljs.io"}
