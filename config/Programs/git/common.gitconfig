@@ -84,6 +84,7 @@
 	branches = branch -a
 	br = branch
 	co = checkout
+	cob = checkout -b
 	cod = checkout development
 	com = checkout master
 
@@ -142,6 +143,7 @@
 	# push/delete origin
 	branch-name = "!git rev-parse --abbrev-ref HEAD"
 	po = "!git push -u origin $(git branch-name)"
+	pot = "!git push -u origin $(git branch-name) --tags"
 	do = "!git push origin :$(git branch-name)"
 
 	# Delete merged branches but not branches called master or development
