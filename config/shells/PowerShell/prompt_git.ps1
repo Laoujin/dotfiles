@@ -48,4 +48,6 @@ function Create-PullRequest() {
 
 Set-Alias gt git
 Set-Alias gut git
+Set-Alias gti git
+Set-Alias got git
 Set-Alias pr Create-PullRequest
