@@ -166,6 +166,27 @@ Set-PSReadlineKeyHandler -Key '"',"'" `
 	}
 }
 
+# cmder: Rename current tab based on current directory
+Set-PSReadlineKeyHandler -Key Alt+r `
+								 -BriefDescription RenameTabToDir `
+								 -LongDescription "Rename the current Cmder tab to the directory name" `
+								 -ScriptBlock {
+	param($key, $arg)
+
+	[PSConsoleUtilities.PSConsoleReadline]::Insert("RenameTab '" + (Get-Item -Path ".\" -Verbose).Name + "'")
+	[PSConsoleUtilities.PSConsoleReadLine]::ValidateAndAcceptLine()
+}
+Set-PSReadlineKeyHandler -Key Ctrl+Alt+r `
+								 -BriefDescription RenameTabToTwoDirs `
+								 -LongDescription "Rename the current Cmder tab to the parent directory name dash directory name" `
+								 -ScriptBlock {
+	param($key, $arg)
+
+	$currentDir = (Get-Item -Path ".\" -Verbose)
+	[PSConsoleUtilities.PSConsoleReadline]::Insert("RenameTab '" + $currentDir.Parent.Name + "-" + $currentDir.Name + "'")
+	[PSConsoleUtilities.PSConsoleReadLine]::ValidateAndAcceptLine()
+}
+
 # Set-PSReadlineKeyHandler -Chord Ctrl+\ `
 #                          -BriefDescription SearchForwardPipeChar `
 #                          -Description &quot;Searches forward for the next pipeline character&quot; `
