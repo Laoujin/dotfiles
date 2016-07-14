@@ -31,7 +31,12 @@ $hostColors = (Get-Host).PrivateData
 $hostColors.ErrorForegroundColor = "DarkMagenta"
 #$Host.UI.RawUI.ForegroundColor =
 
-
+function Pull-FocusId($branchName) {
+	if ($branchName.StartsWith("FOCUS-")) {
+		return $branchName.Substring(0, "FOCUS-XXXX".Length)
+	}
+	return "FOCUS-"
+}
 
 function Create-PullRequest() {
 	$baseUrl = "https://stash.antwerpen.be/projects/FOCUS/repos"
