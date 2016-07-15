@@ -144,7 +144,8 @@ Set-PSReadlineKeyHandler -Key Alt+w `
 
 
 
-Set-PSReadlineKeyHandler -Key '"',"'" `
+#Set-PSReadlineKeyHandler -Key '"',"'" ` --> ' is more used in text and not so much for strings (on the PS shell)
+Set-PSReadlineKeyHandler -Key '"' `
 								 -BriefDescription SmartInsertQuote `
 								 -LongDescription "Insert paired quotes if not already on a quote" `
 								 -ScriptBlock {
