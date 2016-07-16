@@ -155,7 +155,12 @@ Set-PSReadlineKeyHandler -Key '"' `
 	$cursor = $null
 	[PSConsoleUtilities.PSConsoleReadline]::GetBufferState([ref]$line, [ref]$cursor)
 
-	if ($line[$cursor] -eq $key.KeyChar) {
+	$quoteNumber = Select-String -InputObject $line -Pattern $key.KeyChar -AllMatches
+	if ($quoteNumber.Matches.Count % 2 -eq 1) {
+		# oneven amount of quotes, put just one quote
+		[PSConsoleUtilities.PSConsoleReadline]::Insert($key.KeyChar)
+	}
+	elseif ($line[$cursor] -eq $key.KeyChar) {
 		# Just move the cursor
 		[PSConsoleUtilities.PSConsoleReadline]::SetCursorPosition($cursor + 1)
 	}
