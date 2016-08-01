@@ -143,33 +143,43 @@ Set-PSReadlineKeyHandler -Key Alt+w `
 
 
 
+Set-PSReadlineKeyHandler -Key '"',"'" `
+                         -BriefDescription SmartInsertQuote `
+                         -LongDescription "Insert paired quotes if not already on a quote" `
+                         -ScriptBlock {
+    param($key, $arg)
 
-#Set-PSReadlineKeyHandler -Key '"',"'" ` --> ' is more used in text and not so much for strings (on the PS shell)
-Set-PSReadlineKeyHandler -Key '"' `
-								 -BriefDescription SmartInsertQuote `
-								 -LongDescription "Insert paired quotes if not already on a quote" `
-								 -ScriptBlock {
-	param($key, $arg)
+    $line = $null
+    $cursor = $null
+    [PSConsoleUtilities.PSConsoleReadLine]::GetBufferState([ref]$line, [ref]$cursor)
 
-	$line = $null
-	$cursor = $null
-	[PSConsoleUtilities.PSConsoleReadline]::GetBufferState([ref]$line, [ref]$cursor)
+    $quotesAmount = (Select-String -InputObject $line -Pattern $key.KeyChar -AllMatches).Matches.Count
+    if ($quotesAmount % 2 -eq 1) {
+        # Oneven amount of quotes, put just one quote
+        [PSConsoleUtilities.PSConsoleReadLine]::Insert($key.KeyChar)
+    }
+    elseif ($line[$cursor] -eq $key.KeyChar) {
+        # Just move the cursor
+        [PSConsoleUtilities.PSConsoleReadLine]::SetCursorPosition($cursor + 1)
+    }
+    else {
+        $otherQuote = if ($key.KeyChar -eq "'") {'"'} Else {"'"}
+        $lineBeforeCursor = $line.Substring(0, $cursor)
+        $quotesBeforeAmount = (Select-String -InputObject $lineBeforeCursor -Pattern $otherQuote -AllMatches).Matches.Count
+        $lineAfterCursor = $line.Substring($cursor)
+        $quotesAfterAmount = (Select-String -InputObject $lineAfterCursor -Pattern $otherQuote -AllMatches).Matches.Count
 
-	$quoteNumber = Select-String -InputObject $line -Pattern $key.KeyChar -AllMatches
-	if ($quoteNumber.Matches.Count % 2 -eq 1) {
-		# oneven amount of quotes, put just one quote
-		[PSConsoleUtilities.PSConsoleReadline]::Insert($key.KeyChar)
-	}
-	elseif ($line[$cursor] -eq $key.KeyChar) {
-		# Just move the cursor
-		[PSConsoleUtilities.PSConsoleReadline]::SetCursorPosition($cursor + 1)
-	}
-	else {
-		# Insert matching quotes, move cursor to be in between the quotes
-		[PSConsoleUtilities.PSConsoleReadline]::Insert("$($key.KeyChar)" * 2)
-		[PSConsoleUtilities.PSConsoleReadline]::GetBufferState([ref]$line, [ref]$cursor)
-		[PSConsoleUtilities.PSConsoleReadline]::SetCursorPosition($cursor - 1)
-	}
+        if ($quotesBeforeAmount % 2 -eq 1 -and $quotesAfterAmount % 2 -eq 1) {
+            # Insert one quote if inside the other quotes
+            [PSConsoleUtilities.PSConsoleReadLine]::Insert($key.KeyChar)
+        }
+        else {
+            # Insert matching quotes, move cursor to be in between the quotes
+            [PSConsoleUtilities.PSConsoleReadLine]::Insert("$($key.KeyChar)" * 2)
+            [PSConsoleUtilities.PSConsoleReadLine]::GetBufferState([ref]$line, [ref]$cursor)
+            [PSConsoleUtilities.PSConsoleReadLine]::SetCursorPosition($cursor - 1)
+        }
+    }
 }
 
 # cmder: Rename current tab based on current directory
