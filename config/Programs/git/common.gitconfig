@@ -147,6 +147,10 @@
 	pot = "!git push -u origin $(git branch-name) --tags"
 	do = "!git push origin :$(git branch-name)"
 
+	# remote mine
+	mr = remote add mine
+	pm = "!git push -u mine $(git branch-name)"
+
 	# Delete merged branches but not branches called master or development
 	# Sort of works in PowerShell (but best call this from development branch)
 	dm = !git branch --merged | egrep -v \"(\\*| ) (development|master)\" | xargs -n 1 git branch -d
