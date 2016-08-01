@@ -87,6 +87,7 @@
 	cob = checkout -b
 	cod = checkout development
 	com = checkout master
+	cot = checkout test
 
 	### Committing & Amending
 	#ci = "!f() { git commit -m"$1"; }; f"
