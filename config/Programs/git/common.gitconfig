@@ -26,6 +26,9 @@
 
 	# wipe = !git add -A && git commit -qm 'WIPE SAVEPOINT' && git reset HEAD~1 --hard
 	# http://haacked.com/archive/2014/07/28/github-flow-aliases/
+	#
+	# On undoing, fixing, or removing commits in git‏:
+	# https://sethrobertson.github.io/GitFixUm/fixup.html
 
 	# For more interesting aliases:
 	# Git Bash/cygwin: https://github.com/tj/git-extras/blob/master/Commands.md
