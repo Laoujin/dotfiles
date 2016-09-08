@@ -17,8 +17,8 @@
 	[
 		"node_modules/*",
 		"bower_components/*",
-		"images/*",
-		"build/"
+		"build/",
+		"main.js.map"
 	],
 	"bold_folder_labels": true,
 	"close_windows_when_empty": true,
@@ -36,19 +36,11 @@
 	"font_size": 10,
 	"ignored_packages":
 	[
-		"ApplySyntax (Exemplaar met conflict van Wouter-Laptop 2016-02-12)",
 		"CSScomb",
 		"DocBlockr",
 		"Emmet",
-		"Handlebars (Exemplaar met conflict van Wouter-Laptop 2016-02-12)",
 		"IntelliDocs",
 		"SublimeCodeIntel",
-		"SublimeLinter",
-		"SublimeLinter-contrib-eslint",
-		"SublimeLinter-contrib-eslint_d",
-		"SublimeLinter-csslint",
-		"SublimeLinter-jscs",
-		"SublimeLinter-json",
 		"Vintage"
 	],
 	"index_files": false,
