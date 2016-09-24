@@ -10,3 +10,8 @@ function Update-DatabaseVerbosely {
 	Update-Database -Verbose
 }
 Set-Alias udv Update-DatabaseVerbosely
+
+# TODO: id -1 --> Go to previous migration
+# ud 1, ...
+#
+# ud -TargetMigration:xxx
