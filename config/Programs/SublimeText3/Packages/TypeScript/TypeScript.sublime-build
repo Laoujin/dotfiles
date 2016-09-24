@@ -1,4 +1,0 @@
-{
-    "target": "typescript_build",
-    "selector": "source.ts, source.tsx"
-}
