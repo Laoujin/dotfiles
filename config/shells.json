@@ -105,6 +105,18 @@
 				{
 					"alias": "tuts",
 					"cd": "C:\\code\\Tutorials\\Tuts"
+				},
+				{
+					"alias": "ttcv",
+					"cd": "C:\\wamp\\www\\ttc\\vagrant"
+				},
+				{
+					"alias": "ttc",
+					"cd": "C:\\wamp\\www\\ttc\\react-redux\\frontend"
+				},
+				{
+					"alias": "jan",
+					"cd": "C:\\code\\projects\\jan-crm"
 				}
 			],
 			"drives":
