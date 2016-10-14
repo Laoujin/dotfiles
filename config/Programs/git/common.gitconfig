@@ -113,7 +113,8 @@
 
 	# View history graph with abbreviated SHA and description
 	#   Add -10 to view only last 10 commits
-	l = log --color --graph --abbrev-commit --pretty=format:'%C(magenta)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset'
+	ld = log --color --date=short --graph --abbrev-commit --pretty=format:'%C(magenta)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd)%C(bold blue)<%an>%Creset'
+	l = log --color --date=relative --graph --abbrev-commit --pretty=format:'%C(magenta)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd)%C(bold blue)<%an>%Creset'
 	l1 = !git l -1
 	l2 = !git l -2
 	l3 = !git l -3
@@ -143,7 +144,7 @@
 	la25 = !git l -25 --all
 
 	# View history with changed files
-	ll = log --decorate --numstat --pretty=format:'%C(magenta)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset'
+	ll = log --decorate --date=relative --numstat --pretty=format:'%C(magenta)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd)%C(bold blue)<%an>%Creset'
 
 	### Collaborating
 	sha = rev-parse HEAD
