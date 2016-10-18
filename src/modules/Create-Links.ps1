@@ -1,6 +1,15 @@
 function Create-Links($links) {
 	foreach ($link in $links) {
-		Create-Link $link
+		if ($data.requires -and -not (Check-Installed $data.requires)) {
+			Write-Output "Skipping $($data.requires) files"
+			continue
+		}
+	
+		if ($link.match) {
+			Create-Symlinks $link
+		} else {
+			Create-Symlink $link.link $link.to $link.type
+		}
 	}
 }
 
@@ -10,26 +19,32 @@ function Replace-VariablePaths($path) {
 	$path = $path.Replace('<MYDOCUMENTS>', [Environment]::GetFolderPath("mydocuments"))
 	$path = $path.Replace('<APPDATA_ROAMING>', [Environment]::GetFolderPath("ApplicationData"))
 
+	if (-not [System.IO.Path]::IsPathRooted($path)) {
+		$path = Join-Path (Get-Location) $path
+	}
+	
 	return $path
 }
 
-function Create-Link($data) {
+function Create-Symlinks($data) {
 	$link = Replace-VariablePaths($data.link)
-	if (-not [System.IO.Path]::IsPathRooted($link)) {
-		$link = Join-Path (Get-Location) $link
+	
+	$files = Get-ChildItem $link -Filter $data.match
+	foreach ($file in $files) {
+		Create-Symlink $file.FullName (Join-Path $data.to $file.Name) $data.type
 	}
-	$to = Replace-VariablePaths($data.to)
+}
 
-	if ($data.type -eq "symlink") {
+function Create-Symlink($link, $to, $type) {
+	$link = Replace-VariablePaths($link)
+	$to = Replace-VariablePaths($to)
+	
+	if ($type -eq "symlink") {
 		$operation = "mklink `"$to`" `"$link`""
-
-	} elseif ($data.type -eq "junction") {
+ 
+	} elseif ($type -eq "junction") {
 		$operation = "mklink /J `"$to`" `"$link`""
-	}
-
-	if ($data.requires -and -not (Check-Installed $data.requires)) {
-		Write-Output "Skipping $($data.requires) files"
-		return
+		
 	}
 
 	if (-not (Test-Path $link)) {
