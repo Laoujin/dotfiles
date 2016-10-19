@@ -8,6 +8,11 @@
 				"type": "symlink",
 				"link": "Programs\\ConEmu\\ConEmu.xml",
 				"to": "C:\\bin\\cmder\\vendor\\conemu-maximus5\\ConEmu.xml"
+			},
+			{
+				"type": "symlink",
+				"link": "Programs\\ConEmu\\ConEmu.xml",
+				"to": "C:\\tools\\cmder\\vendor\\conemu-maximus5\\ConEmu.xml"
 			}
 		]
 	}
