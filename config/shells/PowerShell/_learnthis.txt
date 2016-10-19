@@ -71,3 +71,12 @@ Ctrl+K, Ctrl+Shift+Arrow: Move current file to pane
 
 sublime.log_commands(True)
 sublime.log_input(True)
+
+# Visual Studio 2015:
+Ctrl+S, Ctrl+P: Set As Startup project (Project.SetasStartUpProject)
+Ctrl+D, Ctrl+S: Debug start project (ClassViewContextMenus.ClassViewProject.Debug.Startnewinstance)
+Ctrl+R, Ctrl+T: Run custom tool (Project.RunCustomTool)
+Ctrl+O, Ctrl+F: Open folder containing file (File.OpenContainingFolder)
+Ctrl+O, Ctrl+D: Open containing folder (ProjectandSolutionContextMenus.Project.OpenFolderinFileExplorer)
+
+Full Screen: Shift + Alt + Enter

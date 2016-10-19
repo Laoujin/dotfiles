@@ -5,14 +5,28 @@
 		"Create-Links":
 		[
 			{
-				"type": "junction",
-				"link": "Programs\\SublimeText3\\Installed Packages",
-				"to": "<APPDATA_ROAMING>\\Sublime Text 3\\Installed Packages"
+				"type": "symlink",
+				"link": "Programs\\SublimeText3",
+				"match": "*.sublime-snippet",
+				"to": "<APPDATA_ROAMING>\\Sublime Text 3\\Packages\\User"
 			},
 			{
-				"type": "junction",
-				"link": "Programs\\SublimeText3\\Packages",
-				"to": "<APPDATA_ROAMING>\\Sublime Text 3\\Packages"
+				"type": "symlink",
+				"link": "Programs\\SublimeText3",
+				"match": "*.sublime-settings",
+				"to": "<APPDATA_ROAMING>\\Sublime Text 3\\Packages\\User"
+			},
+			{
+				"type": "symlink",
+				"link": "Programs\\SublimeText3",
+				"match": "*.sublime-keymap",
+				"to": "<APPDATA_ROAMING>\\Sublime Text 3\\Packages\\User"
+			},
+			{
+				"type": "symlink",
+				"link": "Programs\\SublimeText3",
+				"match": "*.ext-list",
+				"to": "<APPDATA_ROAMING>\\Sublime Text 3\\Packages\\User"
 			}
 		]
 	}

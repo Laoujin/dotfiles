@@ -7,66 +7,6 @@
 			{
 				"aliases":
 				[
-					{
-						"alias": "sangu",
-						"cd": "c:\\code\\TribalWars\\sangupackage-source"
-					},
-					{
-						"alias": "tactics",
-						"cd": "c:\\code\\TribalWars\\TWTactics"
-					},
-					{
-						"alias": "www",
-						"cd": "c:\\wamp\\www"
-					}
-				]
-			}
-		}
-	},
-	"ICA":
-	{
-		"EX02262":
-		{
-			"Create-Shell-Aliases":
-			{
-				"aliases":
-				[
-					{
-						"alias": "focus",
-						"cd": "c:\\projects\\Digipolis"
-					},
-					{
-						"alias": "debian",
-						"cd": "c:\\projects\\Digipolis\\debian"
-					},
-					{
-						"alias": "container",
-						"cd": "c:\\projects\\Digipolis\\Container"
-					},
-					{
-						"alias": "fedpola",
-						"cd": "c:\\projects\\Digipolis\\FedPol\\App"
-					},
-					{
-						"alias": "fedpols",
-						"cd": "c:\\projects\\Digipolis\\FedPol\\Service"
-					},
-					{
-						"alias": "wtma",
-						"cd": "c:\\projects\\Digipolis\\Wtm\\App"
-					},
-					{
-						"alias": "wtms",
-						"cd": "c:\\projects\\Digipolis\\Wtm\\TfsService\\Dev"
-					},
-          {
-            "alias": "nota",
-            "cd": "c:\\projects\\Digipolis\\Note\\App"
-          },
-          {
-            "alias": "notas",
-            "cd": "c:\\projects\\Digipolis\\Note\\Service"
-          }
 				]
 			}
 		}

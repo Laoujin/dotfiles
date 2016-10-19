@@ -14,3 +14,6 @@ Configure `bootstrap.json` files.
 **Step 3:**  
 Run `.\bootstrap.ps1` from an Administrator PowerShell.
 
+Manual Actions
+==============
+Chrome: Set AdBlock Filters: `###hot-network-questions`
