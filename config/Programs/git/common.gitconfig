@@ -84,6 +84,7 @@
 	sl = stash list
 	ss = "!f() { git show \"stash@{$1}\"; }; f"
 	sn = "!f() { git stash save \"$1\"; }; f" # sn = stash name
+	snp = "!f() { git stash save -p \"$1\"; }; f"
 	sp = stash pop
 	sa = stash apply
 
