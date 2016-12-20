@@ -1,4 +1,8 @@
 function Start-SublimeText {
+	if ($args[0] -eq $null) {
+		START "C:\Program Files\Sublime Text 3\sublime_text.exe"
+	}
+
 	# Fix for GitGutter not working when starting ST3 from the commandline
 	START "C:\Program Files\Sublime Text 3\sublime_text.exe" $args
 }
