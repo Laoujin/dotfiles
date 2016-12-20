@@ -78,5 +78,6 @@ Ctrl+D, Ctrl+S: Debug start project (ClassViewContextMenus.ClassViewProject.Debu
 Ctrl+R, Ctrl+T: Run custom tool (Project.RunCustomTool)
 Ctrl+O, Ctrl+F: Open folder containing file (File.OpenContainingFolder)
 Ctrl+O, Ctrl+D: Open containing folder (ProjectandSolutionContextMenus.Project.OpenFolderinFileExplorer)
+Ctrl+G, Ctrl+H: View Git History (Team.Git.ViewHistory)
 
 Full Screen: Shift + Alt + Enter
