@@ -114,7 +114,8 @@
 
 	# View history graph with abbreviated SHA and description
 	#   Add -10 to view only last 10 commits
-	ld = log --color --date=short --graph --abbrev-commit --pretty=format:'%C(magenta)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd)%C(bold blue)<%an>%Creset'
+	ld = log --color --date=iso8601 --graph --abbrev-commit --pretty=format:'%C(magenta)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd)%C(bold blue)<%an>%Creset'
+	lda = !git ld --author=$(git config user.name)
 	l = log --color --date=relative --graph --abbrev-commit --pretty=format:'%C(magenta)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd)%C(bold blue)<%an>%Creset'
 	l1 = !git l -1
 	l2 = !git l -2
