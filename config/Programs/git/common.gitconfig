@@ -72,7 +72,6 @@
 	mt = mergetool
 
 	### List stuff
-	remotes = remote -v
 	aliases = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\t=> \\2/' | sort
 
 	### Tagging
@@ -157,7 +156,9 @@
 	pot = "!git push -u origin $(git branch-name) --tags"
 	do = "!git push origin :$(git branch-name)"
 
-	# remote mine
+	# Remotes
+	remotes = remote -v
+	open = !explorer `git config remote.origin.url`
 	mr = remote add mine
 	pm = "!git push -u mine $(git branch-name)"
 
