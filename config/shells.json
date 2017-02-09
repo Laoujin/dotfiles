@@ -117,6 +117,14 @@
 				{
 					"alias": "jan",
 					"cd": "C:\\code\\projects\\jan-crm"
+				},
+				{
+					"alias": "confac",
+					"cd": "C:\\code\\JavaScript\\confac"
+				},
+				{
+					"alias": "eli",
+					"cd": "C:\\code\\projects\\stockoma"
 				}
 			],
 			"drives":
