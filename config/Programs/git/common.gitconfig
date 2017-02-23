@@ -153,6 +153,8 @@
 	fm = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short -i --grep=$1; }; f"
 
 	# Ignore changes to a file
+	# TODO: "assume" is not ideal. Compare with --skip-worktree
+	# Also see: http://stackoverflow.com/questions/29549318/not-possible-to-switch-branch-after-skip-worktree
 	assume = update-index --assume-unchanged
 	noassume = update-index --no-assume-unchanged
 	unassume = !git noassume
