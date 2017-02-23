@@ -25,6 +25,7 @@
 	"color_scheme": "Packages/User/SublimeLinter/Monokai Bright (SL).tmTheme",
 	"detect_indentation": false,
 	"draw_white_space": "all",
+	"word_wrap": "false",
 	"folder_exclude_patterns":
 	[
 		".svn",
