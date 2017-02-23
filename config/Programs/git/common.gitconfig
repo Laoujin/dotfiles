@@ -116,9 +116,10 @@
 
 	# View history graph with abbreviated SHA and description
 	#   Add -10 to view only last 10 commits
-	ld = log --color --date=iso8601 --graph --abbrev-commit --pretty=format:'%C(magenta)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd)%C(bold blue)<%an>%Creset'
-	lda = !git ld --author=$(git config user.name)
-	l = log --color --date=relative --graph --abbrev-commit --pretty=format:'%C(magenta)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd)%C(bold blue)<%an>%Creset'
+	lbasic = log --color --abbrev-commit
+	ld = !git lbasic --graph --date=iso8601 --pretty=format:'%C(magenta)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd)%C(bold blue)<%an>%Creset'
+	lda = !git lbasic --date=iso8601 --author=$(git config user.name) --pretty=format:'%C(magenta)%h%Creset - %Cgreen(%cd)%Creset - %C(yellow)%d%Creset%s %C(bold blue)<%an>%Creset'
+	l = !git lbasic --graph --date=relative --pretty=format:'%C(magenta)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd)%C(bold blue)<%an>%Creset'
 
 	# View history with changed files
 	ll = log --decorate --date=relative --numstat --pretty=format:'%C(magenta)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd)%C(bold blue)<%an>%Creset'
