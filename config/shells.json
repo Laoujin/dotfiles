@@ -125,6 +125,10 @@
 				{
 					"alias": "eli",
 					"cd": "C:\\code\\projects\\stockoma"
+				},
+				{
+					"alias": "www",
+					"cd": "C:\\wamp\\www"
 				}
 			],
 			"drives":
