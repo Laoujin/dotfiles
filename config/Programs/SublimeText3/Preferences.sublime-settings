@@ -25,7 +25,6 @@
 	"color_scheme": "Packages/User/SublimeLinter/Monokai Bright (SL).tmTheme",
 	"detect_indentation": false,
 	"draw_white_space": "all",
-	"word_wrap": "false",
 	"folder_exclude_patterns":
 	[
 		".svn",
@@ -54,5 +53,6 @@
 	"show_encoding": true,
 	"tab_size": 3,
 	"translate_tabs_to_spaces": false,
-	"trim_trailing_white_space_on_save": true
+	"trim_trailing_white_space_on_save": true,
+	"word_wrap": "false"
 }
