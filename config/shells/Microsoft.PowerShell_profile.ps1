@@ -4,6 +4,14 @@ if (Test-Path ".\Microsoft.PowerShell_aliases.ps1") {
 	. ".\Microsoft.PowerShell_aliases.ps1"
 }
 
+# Fix: more/less only pageup/down works?
+
+
+# --> transed / transde: also get synonyms
+# --> npm open package-name --> open Github in browser
+# .. confac/... -> allow to go to somewhere directly as argument
+
+
 # More colorblindness fun:
 $host.PrivateData.ErrorBackgroundColor = 'Red'
 $host.PrivateData.ErrorForegroundColor = 'Yellow'
@@ -29,6 +37,7 @@ Write-Output (Get-Content ".\PowerShell\_learnthis.txt")
 . ".\PowerShell\prompt_readline.ps1"
 . ".\PowerShell\other.ps1"
 
+# Fix: PS startup error...
 Import-Module '.\Modules\Jump.Location\Jump.Location.psd1'
 
 Pop-Location
