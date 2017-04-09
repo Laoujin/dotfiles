@@ -1,12 +1,3 @@
-PowerShell:
-- search and display fa icons on cli?
--
-
-st3: macro: selected text, put ``` around (md syntax)
-
-ctrl + alt + enter or something to open the seleted file in Notepad++; other key to open directory in sublimetext
-
-
 # New context menu
 # HKEY_CLASSES_ROOT -> find extension and delete ShellNew key
 # To add: Add ShellNew key and add New String Value "NullFile" (with no value)
@@ -63,18 +54,7 @@ http://rix0rrr.github.io/WindowsPathEditor/
 
 ---------------------------------------------------------------------------------------
 
-UI for configuring Git colors?
-https://www.kernel.org/pub/software/scm/git/docs/git-config.html
-color.diff.<slot>
-
-
-# check for 2 profiles: one without PoshGit because it slows things down
-
 # figure out how Cmder/ConEmu split screen works
-
-# Get this in a VS Package Manager Console
-# Set-Alias ip Install-Package
-# Set-Alias nip Uninstall-Package
 
 # Says "Symlink already exists" while it should: rename the existing file, create symlink
 # ie: check if symlink already exists or that destination file already exists
@@ -102,19 +82,6 @@ color.diff.<slot>
 # http://blogs.technet.com/b/heyscriptingguy/archive/2012/11/11/weekend-scripter-working-with-windows-libraries.aspx
 
 ---------------------------------------------------------------------------------------
-
-
-
-
-
-
-
-
-
-
-# ASP.NET 5 vNext, EF 6
-# dnvm use default -p
-# http://www.sblackler.net/2015/05/02/Up-And-Running-With-DNX-DNVM-DNU/
 
 # H1B
 # H1B Speciality Occupation Worker  For individuals having the equivalent of a US bachelor degree (Foreign degrees and/or work experiencemay be found to be equivalent to a US bachelor degree).  6 Years
