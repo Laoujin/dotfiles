@@ -13,7 +13,7 @@ Set-Alias unip Uninstall-Package
 # Update-Package, Sync-Package, Open-PackagePage
 
 
-# Entity Framework 6
+# Entity Framework
 # https://docs.microsoft.com/en-us/ef/core/miscellaneous/cli/powershell
 Set-Alias em Enable-RealMigrations
 Set-Alias am Add-RealMigration
