@@ -20,18 +20,32 @@ Set-Alias am Add-RealMigration
 Set-Alias ad Add-RealMigration
 Set-Alias ud Update-RealDatabase
 Set-Alias udv Update-RealDatabaseVerbosely
+Set-Alias gam Get-AppliedMigrations
+Set-Alias lm List-Migrations # List last $listMigrationsCount
+Set-Alias lam List-AllMigrations
 
 # Execute commands against first ProjectName to end with one of these:
 $isLikelyDbContextProject = ".DataAccess", ".Back"
+$listMigrationsCount = 5
 
 
 # Other commands:
+# EF 6:
+# https://coding.abel.nu/2012/03/ef-migrations-command-reference/
+# Add-EFProvider, Add-EFDefaultConnectionFactory, Initialize-EFConfiguration
+
+# EF Core:
 # Remove-Migration, Scaffold-DbContext, Script-Migration, Drop-Database
 
 
 function Enable-RealMigrations {
 	$project = Get-DbContextProjectName
 	Enable-Migration -Project $project
+}
+
+function Get-AppliedMigrations {
+	$project = Get-DbContextProjectName
+	Get-Migrations -Project $project
 }
 
 function Add-RealMigration($name = "test") {
@@ -44,32 +58,46 @@ function Update-RealDatabase([int]$targetMigration = 0) {
 	if ($targetMigration -eq 0) {
 		Update-Database -Project $project.ProjectName
 	} else {
-		$projectPath = Split-Path -Path (Get-Project).FullName
-		$migrations = List-Migrations
+		$migration = Get-MigrationsTable | Where-Object {$_.Index -eq $targetMigration}
+		echo "Migrating to last migration $targetMigration => $($migration.name)"
+		Update-Database -Project $project.ProjectName -TargetMigration $migration.name
+	}
+}
 
-		# How to make ctrl+space list all available migrations and allow selection with arrow keys?
+function Get-MigrationsTable {
+	$project = Get-DbContextProject
+	$projectPath = Split-Path -Path $project.FullName
 
-		$migrationName = "MatchShouldBePlayed"
-		# Update-Database -Project $project.ProjectName -TargetMigration $migrationName
+	$migrations = Get-ChildItem "$projectPath\Migrations" | Where-Object { Test-MigrationName $_.Name }
+	$migrations = $migrations | Sort-Object Name -Descending
+
+	return $migrations | ForEach-Object -Begin {$idx = 0} -Process {
+		$withoutExt = $_.Name.Substring(0, $_.Name.LastIndexOf("."))
+		$migrationName = $withoutExt.Substring($withoutExt.IndexOf("_") + 1)
+		$dateStr = $_.Name.Substring(0, $_.Name.IndexOf("_"))
+		$date = [DateTime]::ParseExact($dateStr.Substring(0, 12), "yyyyMMddHHmm", $null).ToString("g")
+
+		$_ | Select-Object -Property @{l='Index';e={"$idx"}},@{l='Name'; e={$migrationName}},@{l='Created'; e={$date}},@{l='FullName'; e={$_.Name}}
+
+		$idx -= 1
 	}
 }
 
 function List-Migrations {
-	# List of migrations in descending order:
-	# -1    date     name
-	# -2    date     name
-	$migrations = Get-ChildItem "$projectPath\Migrations" | Where-Object { Test-MigrationName $_.Name }
+	$migrations = Get-MigrationsTable
+	$migrations | Select-Object -First $listMigrationsCount | Format-Table -AutoSize
+}
 
-	# TODO: we zaten hier:
-	# Select the date created & migrationname and filename
-	# sort them descending on filename
-	# take last 10
-
-	return $migrations
+function List-AllMigrations {
+	Get-MigrationsTable | Sort-Object FullName | Format-Table -AutoSize
 }
 
 function Test-MigrationName($fileName) {
-	return $fileName -match "^(\d[^.]+)\.cs$"
+	return $fileName -match "^(\d[^.]+)\.(cs|vb)$"
+}
+
+function Get-ConnectionStrings {
+
 }
 
 function Get-MigrationName($fileName) {
@@ -90,14 +118,3 @@ function Get-DbContextProjectName {
 	$project = Get-DbContextProject
 	return $project.ProjectName
 }
-
-
-
-
-# Add these Visual Studio shortcuts:
-# - Add existing file
-# - Add new file
-# - Add existing project
-# - Add new project
-# - Close solution
-# - Open recent solutions
