@@ -24,6 +24,9 @@ Set-Alias gam Get-AppliedMigrations
 Set-Alias lm List-Migrations # List last $listMigrationsCount
 Set-Alias lam List-AllMigrations
 
+# Other aliases
+Set-Alias cs Get-ConnectionStrings
+
 # Execute commands against first ProjectName to end with one of these:
 $isLikelyDbContextProject = ".DataAccess", ".Back"
 $listMigrationsCount = 5
@@ -115,4 +118,19 @@ function Get-DbContextProject {
 function Get-DbContextProjectName {
 	$project = Get-DbContextProject
 	return $project.ProjectName
+}
+
+function Get-ConnectionStrings {
+	$project = Get-DbContextProject
+	$projectPath = Split-Path -Path $project.FullName
+
+	$configPath = "$projectPath\Web.config"
+	if (-not (Test-Path $configPath)) {
+		$configPath = "$projectPath\App.config"
+	}
+
+	echo "Configuration file: $configPath"
+
+	$xdoc = [xml](Get-Content $configPath)
+	$xdoc.configuration.connectionStrings.SelectNodes("add") | Format-Table -AutoSize
 }
