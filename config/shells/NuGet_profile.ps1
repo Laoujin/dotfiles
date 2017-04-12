@@ -68,16 +68,21 @@ function Get-MigrationsTable {
 	$project = Get-DbContextProject
 	$projectPath = Split-Path -Path $project.FullName
 
-	$migrations = Get-ChildItem "$projectPath\Migrations" | Where-Object { Test-MigrationName $_.Name }
-	$migrations = $migrations | Sort-Object Name -Descending
+	$migrations = Get-ChildItem "$projectPath\Migrations" |
+		Where-Object { Test-MigrationName $_.Name } |
+		Sort-Object Name -Descending
 
 	return $migrations | ForEach-Object -Begin {$idx = 0} -Process {
 		$withoutExt = $_.Name.Substring(0, $_.Name.LastIndexOf("."))
 		$migrationName = $withoutExt.Substring($withoutExt.IndexOf("_") + 1)
 		$dateStr = $_.Name.Substring(0, $_.Name.IndexOf("_"))
-		$date = [DateTime]::ParseExact($dateStr.Substring(0, 12), "yyyyMMddHHmm", $null).ToString("g")
+		$date = [DateTime]::ParseExact($dateStr.Substring(0, 12), "yyyyMMddHHmm", $null)
 
-		$_ | Select-Object -Property @{l='Index';e={"$idx"}},@{l='Name'; e={$migrationName}},@{l='Created'; e={$date}},@{l='FullName'; e={$_.Name}}
+		$_ | Select-Object -Property `
+			@{l='Index';e={"$idx"}}, `
+			@{l='Name'; e={$migrationName}}, `
+			@{l='Created'; e={$date.ToString("g")}}, `
+			@{l='FullName'; e={$_.Name}}
 
 		$idx -= 1
 	}
@@ -96,21 +101,14 @@ function Test-MigrationName($fileName) {
 	return $fileName -match "^(\d[^.]+)\.(cs|vb)$"
 }
 
-function Get-ConnectionStrings {
-
-}
-
-function Get-MigrationName($fileName) {
-	$fileName -match "([^.]+)\.cs$"
-	return $Matches[0]
-}
-
 function Update-RealDatabaseVerbosely {
 	Update-RealDatabase -Verbose
 }
 
 function Get-DbContextProject {
-	$dbContextProjects = Get-Project -All | Where-Object { $isLikelyDbContextProject -match $_.ProjectName.Substring($_.ProjectName.LastIndexOf(".")) }
+	$dbContextProjects = Get-Project -All | Where-Object { `
+		$isLikelyDbContextProject -match $_.ProjectName.Substring($_.ProjectName.LastIndexOf(".")) `
+	}
 	return $dbContextProjects[0]
 }
 
