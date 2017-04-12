@@ -1,38 +1,88 @@
-# Reload the $env object from the registry
-# function Refresh-Environment {
-# 	$locations = 'HKLM:\SYSTEM\CurrentControlSet\Control\Session Manager\Environment',
-# 				 'HKCU:\Environment'
+# Environment Variables
+Set-Alias se Set-Environment
+Set-Alias re Refresh-Environment
 
-# 	$locations | ForEach-Object {
-# 		$k = Get-Item $_
-# 		$k.GetValueNames() | ForEach-Object {
-# 			$name  = $_
-# 			$value = $k.GetValue($_)
-# 			Set-Item -Path Env:\$name -Value $value
-# 		}
-# 	}
-# }
+# $env:PATH
+Set-Alias fp Find-EnvironmentPath
+Set-Alias ap Append-EnvironmentPath
+Set-Alias delp Remove-EnvironmentPath
 
-function Find-EnvPath([String]$needle) {
-	$env:PATH.split(";") | Where-Object { $_ -match $needle }
-}
+# TODO: List-Environment: Key, Value, Scope
+# TODO: List-EnvironmentPath: Directory, Exists, Scope
 
 # Set a permanent Environment variable, and reload it into $env
-function Set-Environment([String]$variable, [String]$value) {
-	[System.Environment]::SetEnvironmentVariable("$variable", "$value","User")
-	Invoke-Expression "`$env:${variable} = `"$value`""
+function Set-Environment([String]$key, [String]$value) {
+	[System.Environment]::SetEnvironmentVariable("$key", "$value", "User")
+	Set-Item -Path Env:$key -Value $value
 }
 
-# Add a folder to $env:Path
-# TODO: check if not yet in path. don't do ;;. and keep check that path has to exist
-# also create a List-EnvPath (pretty print) and a Fix-Path (kill doubles/unexisting paths)
-# Not persisted... :)
-### Modify system environment variable ###
-#[Environment]::SetEnvironmentVariable( "Path", $env:Path, [System.EnvironmentVariableTarget]::Machine )
 
-### Modify user environment variable ###
-#[Environment]::SetEnvironmentVariable( "INCLUDE", $env:INCLUDE, [System.EnvironmentVariableTarget]::User )
-function Prepend-EnvPath([String]$path) { $env:PATH = $env:PATH + ";$path" }
-function Prepend-EnvPathIfExists([String]$path) { if (Test-Path $path) { Prepend-EnvPath $path } }
-function Append-EnvPath([String]$path) { $env:PATH = $env:PATH + ";$path" }
-function Append-EnvPathIfExists([String]$path) { if (Test-Path $path) { Append-EnvPath $path } }
+# Reload $env from registry
+function Refresh-Environment {
+	$locations = 'HKLM:\SYSTEM\CurrentControlSet\Control\Session Manager\Environment', 'HKCU:\Environment'
+	$locations | ForEach-Object {
+		$k = Get-Item $_
+		$k.GetValueNames() | ForEach-Object {
+			$name = $_
+			$value = $k.GetValue($_)
+			Set-Item -Path Env:$name -Value $value
+		}
+	}
+
+	# Put Machine and User $env:PATH together
+	$machinePath = [Environment]::GetEnvironmentVariable("PATH", "Machine")
+	$userPath = [Environment]::GetEnvironmentVariable("PATH", "User")
+	$Env:PATH = "$machinePath;$userPath"
+}
+
+
+
+
+function Find-EnvironmentPath([String]$needle) {
+	$env:PATH.split(";") |
+		Where-Object { $_ -match $needle.Trim("\") } |
+		Sort-Object |
+		Get-Unique -AsString
+}
+
+
+function Append-EnvironmentPath([String]$path) {
+	if (-not (Test-Path $path)) {
+		echo "Path doesn't exist..."
+		echo $path
+		return
+	}
+	$env:PATH = $env:PATH + ";$path"
+	$userPath = [Environment]::GetEnvironmentVariable("PATH", "User")
+	[Environment]::SetEnvironmentVariable("PATH", "$userPath;$path", "User")
+}
+
+
+function Remove-EnvironmentPath([String]$path) {
+	# TODO: parse a path with spaces properly
+
+	$path = $path.TrimEnd("\")
+
+	$userPath = [Environment]::GetEnvironmentVariable("PATH", "User")
+	$changedUserPath = $userPath.Split(";") |
+		ForEach-Object { $_.TrimEnd("\") } |
+		Where-Object { $_ -ne $path }
+
+	$changedUserPath = $changedUserPath -Join ";"
+
+	if ($userPath -ne $changedUserPath) {
+		Set-Environment PATH $changedUserPath
+		return
+	}
+
+	echo "Not removed"
+
+	$machinePath = [Environment]::GetEnvironmentVariable("PATH", "Machine")
+	$isInMachine = $machinePath.split(";") | Where-Object { $_.Trim("\") -eq $path }
+	if ($isInMachine) {
+		echo "Is present in Machine scope"
+	}
+
+	# TODO: should we try to remove from Machine?
+	# Probably need a Test-Admin first
+}
