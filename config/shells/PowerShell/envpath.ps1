@@ -36,49 +36,51 @@ function Refresh-Environment {
 }
 
 
+function Find-EnvironmentPath {
+	$needle = ($args -join " ").TrimEnd("\")
+	$needle = [Regex]::Escape($needle)
 
-
-function Find-EnvironmentPath([String]$needle) {
 	$env:PATH.split(";") |
-		Where-Object { $_ -match $needle.Trim("\") } |
+		Where-Object { $_.TrimEnd("\") -match $needle } |
 		Sort-Object |
 		Get-Unique -AsString
 }
 
 
-function Append-EnvironmentPath([String]$path) {
-	if (-not (Test-Path $path)) {
+function Append-EnvironmentPath {
+	$toAppend = ($args -join " ").TrimEnd("\")
+	if (-not (Test-Path $toAppend)) {
 		echo "Path doesn't exist..."
-		echo $path
+		echo $toAppend
 		return
 	}
-	$env:PATH = $env:PATH + ";$path"
+	$env:PATH = $env:PATH + ";$toAppend"
 	$userPath = [Environment]::GetEnvironmentVariable("PATH", "User")
-	[Environment]::SetEnvironmentVariable("PATH", "$userPath;$path", "User")
+	[Environment]::SetEnvironmentVariable("PATH", "$userPath;$toAppend", "User")
 }
 
 
-function Remove-EnvironmentPath([String]$path) {
-	# TODO: parse a path with spaces properly
-
-	$path = $path.TrimEnd("\")
+function Remove-EnvironmentPath {
+	$toRemove = ($args -join " ").TrimEnd("\")
 
 	$userPath = [Environment]::GetEnvironmentVariable("PATH", "User")
 	$changedUserPath = $userPath.Split(";") |
 		ForEach-Object { $_.TrimEnd("\") } |
-		Where-Object { $_ -ne $path }
+		Where-Object { $_ -ne $toRemove }
 
 	$changedUserPath = $changedUserPath -Join ";"
 
 	if ($userPath -ne $changedUserPath) {
-		Set-Environment PATH $changedUserPath
+		[Environment]::SetEnvironmentVariable("PATH", "$changedUserPath", "User")
+		$env:PATH = [Environment]::GetEnvironmentVariable("PATH", "Machine")
+		$env:PATH += ";$changedUserPath"
 		return
 	}
 
 	echo "Not removed"
 
 	$machinePath = [Environment]::GetEnvironmentVariable("PATH", "Machine")
-	$isInMachine = $machinePath.split(";") | Where-Object { $_.Trim("\") -eq $path }
+	$isInMachine = $machinePath.split(";") | Where-Object { $_.Trim("\") -eq $toRemove }
 	if ($isInMachine) {
 		echo "Is present in Machine scope"
 	}
