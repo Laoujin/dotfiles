@@ -111,6 +111,7 @@
 
 	# commit entire working directory. usage: git ca "commit message"
 	ca = "!f() { git add -A; git commit -vm\"$1\"; }; f"
+	# TODO: git cat 2017.5.3 --> Commit all + create tag
 
 	### Logging
 	lg = log -p # Show commits with diff
@@ -136,6 +137,7 @@
 	do = "!git push origin :$(git branch-name)"
 
 	# remote mine
+	# TODO: set-url: git remote set-url origin https://github.com/USERNAME/OTHERREPOSITORY.git
 	remotes = remote -v
 	open = !explorer `git config remote.origin.url`
 	mr = remote add mine
