@@ -131,3 +131,31 @@ function Empty-RecycleBin {
 
 # 	return new-object io.fileinfo $path
 # }
+
+# Retrieve size of recycle bin: https://gist.github.com/maul-esel/1808118
+#include <SHQueryRecycleBin>
+# SHQueryRecycleBin("C:\", bytes, items)
+# MsgBox % "The recycle bin on drive C:\ contains " . items . " items (" . bytes . " bytes)."
+
+# /*
+# Function: SHQueryRecycleBin
+# Retrieves the size of the Recycle Bin and the number of items in it, for a specified drive.
+# Parameters:
+# 	STR path - the path of the root drive on which the Recycle Bin is located. This parameter can contain a string formatted with the drive, folder, and subfolder names (C:\Windows\System...).
+# 	[byRef] INT64 outSize - receives the total size of all the objects in the specified Recycle Bin, in bytes.
+# 	[byRef] INT64 outNumber - receives the total number of items in the specified Recycle Bin.
+# Returns:
+# 	BOOL success - true on success, false otherwise
+# Requirements:
+# 	OS - Windows 2000 Professional, Windows XP / Windows 2000 Server or higher
+# 	AutoHotkey - any AutoHotkey version (classic, _L, v2)
+# */
+# SHQueryRecycleBin(path, ByRef outSize, ByRef outNumber)
+# {
+# 	VarSetCapacity(SHQUERYRBINFO, 20, 0) ; create SHQUERYRBINFO structure
+# 	, NumPut(20, SHQUERYRBINFO, 00, "UInt") ; fill cbSize member
+# 	, hr := DllCall("Shell32\SHQueryRecycleBin" . (A_IsUnicode ? "W" : "A"), "Str", path, A_PtrSize ? "Ptr" : "UInt", &SHQUERYRBINFO, "Int") ; call function
+# 	, outSize := NumGet(SHQUERYRBINFO, 4, "Int64") ; retrieve data (bytes)
+# 	, outNumber := NumGet(SHQUERYRBINFO, 12, "Int64") ; retrieve item count
+# 	return hr >= 0x00 ; return BOOL
+# }
