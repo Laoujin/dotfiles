@@ -24,12 +24,9 @@ function global:prompt {
 
 # Change colors
 $global:GitPromptSettings.WorkingForegroundColor = [ConsoleColor]::Yellow
-#$global:GitPromptSettings.UntrackedForegroundColor = [ConsoleColor]::Yellow
 $global:GitPromptSettings.BranchForegroundColor = [ConsoleColor]::Green
 
-$hostColors = (Get-Host).PrivateData
-$hostColors.ErrorForegroundColor = "DarkMagenta"
-#$Host.UI.RawUI.ForegroundColor =
+
 
 function Pull-FocusId($branchName) {
 	if ($branchName.StartsWith("FOCUS-")) {

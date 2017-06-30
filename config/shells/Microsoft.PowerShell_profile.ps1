@@ -13,8 +13,10 @@ if (Test-Path ".\Microsoft.PowerShell_aliases.ps1") {
 
 
 # More colorblindness fun:
+# or Get-Host or $Host.UI.RawUI
 $host.PrivateData.ErrorBackgroundColor = 'Red'
-$host.PrivateData.ErrorForegroundColor = 'Yellow'
+$host.PrivateData.ErrorForegroundColor = 'Yellow' # or: "DarkMagenta"
+
 
 # ErrorForegroundColor    : Red
 # ErrorBackgroundColor    : Black
