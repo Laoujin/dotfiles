@@ -8,5 +8,6 @@
   { "keys": ["ctrl+t", "ctrl+w"], "command": "toggle_setting", "args": {"setting": "word_wrap"}},
   { "keys": ["f2"], "command": "side_bar_move" },
   { "keys": ["ctrl+f10"], "command": "open_project_folder" },
-  { "keys": ["f10"], "command": "open_file_folder" }
+  { "keys": ["f10"], "command": "open_file_folder" },
+  { "keys": ["ctrl+shift+g"], "command": "git_blame" }
 ]
