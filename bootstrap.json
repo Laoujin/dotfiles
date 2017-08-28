@@ -51,7 +51,8 @@
 		"ilspy",
 		"dotpeek",
 		"visualstudiocommunity2013",
-		"VisualStudio2015Community"
+		"VisualStudio2015Community",
+		"VisualStudio2017Community"
 	],
 	"modules":
 	{

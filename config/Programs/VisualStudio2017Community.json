@@ -1,0 +1,13 @@
+{
+	"modules":
+	{
+		"Create-Links":
+		[
+			{
+				"type": "junction",
+				"link": "Programs\\VisualStudio\\2017",
+				"to": "<MYDOCUMENTS>\\Visual Studio 2017"
+			}
+		]
+	}
+}
