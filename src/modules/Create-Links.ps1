@@ -4,7 +4,7 @@ function Create-Links($links) {
 			Write-Output "Skipping $($data.requires) files"
 			continue
 		}
-	
+
 		if ($link.match) {
 			Create-Symlinks $link
 		} else {
@@ -18,17 +18,18 @@ function Replace-VariablePaths($path) {
 	#$path = $path.Replace('<PSScriptRoot>', $PSScriptRoot)
 	$path = $path.Replace('<MYDOCUMENTS>', [Environment]::GetFolderPath("mydocuments"))
 	$path = $path.Replace('<APPDATA_ROAMING>', [Environment]::GetFolderPath("ApplicationData"))
+	$path = $path.Replace('<LocalApplicationData>', [Environment]::GetFolderPath("LocalApplicationData"))
 
 	if (-not [System.IO.Path]::IsPathRooted($path)) {
 		$path = Join-Path (Get-Location) $path
 	}
-	
+
 	return $path
 }
 
 function Create-Symlinks($data) {
 	$link = Replace-VariablePaths($data.link)
-	
+
 	$files = Get-ChildItem $link -Filter $data.match
 	foreach ($file in $files) {
 		Create-Symlink $file.FullName (Join-Path $data.to $file.Name) $data.type
@@ -38,13 +39,13 @@ function Create-Symlinks($data) {
 function Create-Symlink($link, $to, $type) {
 	$link = Replace-VariablePaths($link)
 	$to = Replace-VariablePaths($to)
-	
+
 	if ($type -eq "symlink") {
 		$operation = "mklink `"$to`" `"$link`""
- 
+
 	} elseif ($type -eq "junction") {
 		$operation = "mklink /J `"$to`" `"$link`""
-		
+
 	}
 
 	if (-not (Test-Path $link)) {
