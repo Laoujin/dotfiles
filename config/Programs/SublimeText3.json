@@ -27,6 +27,12 @@
 				"link": "Programs\\SublimeText3",
 				"match": "*.ext-list",
 				"to": "<APPDATA_ROAMING>\\Sublime Text 3\\Packages\\User"
+			},
+			{
+				"type": "symlink",
+				"link": "Programs\\SublimeText3\\SublimeLinter",
+				"match": "*.tmTheme",
+				"to": "<APPDATA_ROAMING>\\Sublime Text 3\\Packages\\User\\SublimeLinter"
 			}
 		]
 	}
