@@ -1,7 +1,0 @@
-<snippet>
-	<content><![CDATA[it("$1", function() {
-	$2
-});]]></content>
-	<tabTrigger>jestit</tabTrigger>
-	<scope>source.js</scope>
-</snippet>
