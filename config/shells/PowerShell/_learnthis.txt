@@ -1,7 +1,3 @@
-
-
-Learn This:
-
 # PSReadLine:
 # Default Shortcuts:
 # BackwardDeleteLine        (Cmd: <Ctrl+Home>)
@@ -17,8 +13,6 @@ Learn This:
 
 
 # SublimeText3
-Ctrl+K, Ctrl+B: Toggle side bar
-
 # lorem###: with # a number
 # Ctrl+up: increase number
 # Ctrl+Shift+u: New abbreviation
@@ -69,15 +63,46 @@ Ctrl+K, Ctrl+Up/Down: Create/close pane
 Ctrl+K, Ctrl+Left/Right: Move cursor
 Ctrl+K, Ctrl+Shift+Arrow: Move current file to pane
 
+New snippet: F8
+--> Then move it to here and rerun bootstrap.ps1...
+
 sublime.log_commands(True)
 sublime.log_input(True)
 
-# Visual Studio 2015:
-Ctrl+S, Ctrl+P: Set As Startup project (Project.SetasStartUpProject)
-Ctrl+D, Ctrl+S: Debug start project (ClassViewContextMenus.ClassViewProject.Debug.Startnewinstance)
-Ctrl+R, Ctrl+T: Run custom tool (Project.RunCustomTool)
-Ctrl+O, Ctrl+F: Open folder containing file (File.OpenContainingFolder)
-Ctrl+O, Ctrl+D: Open containing folder (ProjectandSolutionContextMenus.Project.OpenFolderinFileExplorer)
-Ctrl+G, Ctrl+H: View Git History (Team.Git.ViewHistory)
+# Visual Studio 2015/2017:
+Tools > Options > Environment > Keyboard
 
-Full Screen: Shift + Alt + Enter
+Ctrl+P, Ctrl+S: Project.SetasStartUpProject
+Ctrl+P, Ctrl+D: Debug start new instance (ClassViewContextMenus.ClassViewProject.Debug.Startnewinstance)
+Ctrl+P, Ctrl+C: File.CloseSolution
+
+Ctrl+Shift+N: File.NewProject (~New solution)
+Ctrl+P, Ctrl+N: File.AddNewProject
+Ctrl+P, Ctrl+E: File.AddExistingProject
+Ctrl+P, Ctrl+X: Project.ExcludeFromProject
+Ctrl+P, Ctrl+I: Project.IncludeInProject
+Ctrl+P, Ctrl+H: Project.ShowAllFiles
+Shift+Alt+A: Project.AddExistingItem
+
+Ctrl+F, Ctrl+O: View.OpenWith
+Ctrl+N: Project.AddNewItem
+- Used to be bound to File.NewFile (but who uses that)
+- Resharper: Alt+Ins to add class, enum, ...
+
+Explorer:
+Ctrl+O, Ctrl+F: File.OpenContainingFolder
+Ctrl+O, Ctrl+D: ProjectandSolutionContextMenus.Project.OpenFolderinFileExplorer
+
+Git:
+Ctrl+G, Ctrl+H: Team.Git.ViewHistory
+Ctrl+G, Ctrl+B: Team.Git.Annotate
+Ctrl+G, Ctrl+U: Team.Git.CompareWithUnmodified
+
+Ctrl+R, Ctrl+T: Project.RunCustomTool
+Shift+Alt+Enter: View.FullScreen
+
+Testing
+Ctrl+U, Ctrl+L: All tests in solution
+Ctrl+U, Ctrl+R: Run tests in scope
+Ctrl+U, Ctrl+D: Debug tests in scope
+Ctrl+U, Ctrl+U: Repeat previous run
