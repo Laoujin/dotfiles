@@ -137,6 +137,10 @@
 				{
 					"alias": "bliki",
 					"cd": "C:\\code\\projects\\bliki"
+				},
+				{
+					"alias": "tw",
+					"cd": "C:\\code\\TribalWars\\sangupackage-source"
 				}
 			],
 			"drives":
