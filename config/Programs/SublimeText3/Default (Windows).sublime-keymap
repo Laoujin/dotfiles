@@ -9,5 +9,6 @@
   { "keys": ["f2"], "command": "side_bar_move" },
   { "keys": ["ctrl+f10"], "command": "open_project_folder" },
   { "keys": ["f10"], "command": "open_file_folder" },
-  { "keys": ["ctrl+shift+g"], "command": "git_blame" }
+  { "keys": ["ctrl+shift+g"], "command": "git_blame" },
+  { "keys": ["f8"], "command": "new_snippet" }
 ]
