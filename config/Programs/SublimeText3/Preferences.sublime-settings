@@ -18,7 +18,8 @@
 		"node_modules/*",
 		"bower_components/*",
 		"build/",
-		"main.js.map"
+		"main.js.map",
+		"dist/*"
 	],
 	"bold_folder_labels": true,
 	"close_windows_when_empty": true,
@@ -53,8 +54,10 @@
 	],
 	"shift_tab_unindent": true,
 	"show_encoding": true,
+	"show_line_endings": true,
 	"tab_size": 3,
 	"translate_tabs_to_spaces": false,
 	"trim_trailing_white_space_on_save": true,
+	"ensure_newline_at_eof_on_save": true,
 	"word_wrap": "false"
 }
