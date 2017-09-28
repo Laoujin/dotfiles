@@ -4,25 +4,18 @@
 	{
 		"Install-NodePackages":
 		[
-			"grunt",
+			"yo",
 			"gulp",
-			"jade",
-			"jasmine-node",
-			"jscs",
+			"pug",
 			"eslint",
-			"babel-eslint",
-			"eslint-plugin-react",
 			"eslint_d",
-			"npm",
+			"eslint-plugin-react",
+			"babel-eslint",
+			"react-create-app",
 			"licenser",
-			"csslint",
-			"csscomb",
-			"bower",
-			"browserify",
-			"browser-sync",
 			"http-server",
 			"rimraf",
-			"yo"
+			"@angular/cli"
 		]
 	}
 }
