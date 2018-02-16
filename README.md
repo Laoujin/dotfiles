@@ -14,6 +14,15 @@ Configure `bootstrap.json` files.
 **Step 3:**  
 Run `.\bootstrap.ps1` from an Administrator PowerShell.
 
+Boxstarter
+==========
+
+```
+iex ((New-Object System.Net.WebClient).DownloadString('http://boxstarter.org/bootstrapper.ps1')); get-boxstarter -Force
+
+Install-BoxstarterPackage -PackageName https://gist.githubusercontent.com/Laoujin/{raw} -DisableReboots
+```
+
 Manual Actions
 ==============
 Chrome: Set AdBlock Filters: `###hot-network-questions`

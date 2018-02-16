@@ -1,4 +1,8 @@
 {
+	"Angular2HTML":
+	[
+		"component.html"
+	],
 	"Git Config":
 	[
 		"gitconfig"

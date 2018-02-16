@@ -13,6 +13,10 @@
 	    {
 	        "syntax": "Git Config/Git Config",
 	        "extensions": ["gitconfig"]
+	    },
+	    {
+	        "syntax": "Angular2 HTML Syntax/Angular2HTML",
+	        "extensions": ["component.html"],
 	    }
     ]
 }
