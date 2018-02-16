@@ -99,6 +99,7 @@
 	cod = checkout development
 	com = checkout master
 	cot = checkout test
+	cop = checkout gh-pages
 
 	### Committing & Amending
 	#ci = "!f() { git commit -m"$1"; }; f"
