@@ -65,9 +65,8 @@
 			},
 			{
 				"type": "junction",
-				"requires": "wamp-server",
 				"link": "<HOME>\\Dropbox\\Personal\\Programming\\www",
-				"to": "C:\\wamp\\www"
+				"to": "C:\\www"
 			},
 			{
 				"type": "junction",
@@ -92,7 +91,7 @@
 		],
 		"Create-StartupLinks":
 		[
-			"c:\\code\\Autohotkey\\MiKe\\mike.ahk"
+			"c:\\code\\Autohotkey\\Mi-Ke\\mike.ahk"
 		]
 	},
 	"windows":

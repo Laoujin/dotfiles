@@ -92,7 +92,7 @@
 			[
 				{
 					"alias": "mike",
-					"cd": "c:\\code\\Autohotkey\\MiKe"
+					"cd": "c:\\code\\Autohotkey\\Mi-Ke"
 				},
 				{
 					"alias": "code",
@@ -108,15 +108,15 @@
 				},
 				{
 					"alias": "ttcv",
-					"cd": "C:\\wamp\\www\\ttc\\vagrant"
+					"cd": "C:\\code\\ttc\\vagrant"
 				},
 				{
 					"alias": "ttcb",
-					"cd": "C:\\wamp\\www\\ttc\\react-redux\\backend"
+					"cd": "C:\\code\\ttc\\react-redux\\backend"
 				},
 				{
 					"alias": "ttc",
-					"cd": "C:\\wamp\\www\\ttc\\react-redux\\frontend"
+					"cd": "C:\\code\\ttc\\react-redux\\frontend"
 				},
 				{
 					"alias": "jan",
@@ -131,16 +131,16 @@
 					"cd": "C:\\code\\projects\\stockoma"
 				},
 				{
-					"alias": "www",
-					"cd": "C:\\wamp\\www"
-				},
-				{
 					"alias": "bliki",
-					"cd": "C:\\code\\projects\\bliki"
+					"cd": "C:\\code\\projects\\bliki-posts"
 				},
 				{
 					"alias": "tw",
 					"cd": "C:\\code\\TribalWars\\sangupackage-source"
+				},
+				{
+					"alias": "itenium",
+					"cd": "C:\\code\\projects\\itenium"
 				}
 			],
 			"drives":
