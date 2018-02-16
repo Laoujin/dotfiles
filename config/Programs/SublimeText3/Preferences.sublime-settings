@@ -19,13 +19,15 @@
 		"bower_components/*",
 		"build/",
 		"main.js.map",
-		"dist/*"
+		"dist/*",
+		"package-lock.json"
 	],
 	"bold_folder_labels": true,
 	"close_windows_when_empty": true,
-	"color_scheme": "Packages/User/SublimeLinter/Monokai Bright (SL).tmTheme",
+	"color_scheme": "Packages/User/SublimeLinter/Monokai (SL).tmTheme",
 	"detect_indentation": false,
 	"draw_white_space": "all",
+	"ensure_newline_at_eof_on_save": true,
 	"folder_exclude_patterns":
 	[
 		".svn",
@@ -37,6 +39,7 @@
 		".sass-cache"
 	],
 	"font_size": 10,
+	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
 		"CSScomb",
@@ -56,8 +59,8 @@
 	"show_encoding": true,
 	"show_line_endings": true,
 	"tab_size": 3,
+	"theme": "Material-Theme.sublime-theme",
 	"translate_tabs_to_spaces": false,
 	"trim_trailing_white_space_on_save": true,
-	"ensure_newline_at_eof_on_save": true,
 	"word_wrap": "false"
 }

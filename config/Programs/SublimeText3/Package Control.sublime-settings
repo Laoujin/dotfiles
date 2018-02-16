@@ -5,7 +5,8 @@
 	],
 	"installed_packages":
 	[
-		"Angular2 HTML Syntax",
+		"1337 Color Scheme",
+		"A File Icon",
 		"ApplySyntax",
 		"AutoFileName",
 		"AutoHotkey",
@@ -32,6 +33,8 @@
 		"JSON Reindent",
 		"JSONLint",
 		"JSX",
+		"Material Theme",
+		"Ngx HTML",
 		"OpenPath",
 		"Package Control",
 		"PackageResourceViewer",
@@ -44,12 +47,15 @@
 		"StringEncode",
 		"SublimeCodeIntel",
 		"SublimeLinter",
-		"SublimeLinter-contrib-eslint",
-		"SublimeLinter-contrib-eslint_d",
 		"SublimeLinter-csslint",
+		"SublimeLinter-eslint",
+		"SublimeLinter-flow",
 		"SublimeLinter-jscs",
 		"SublimeLinter-json",
 		"Syntax Highlighting for PostCSS",
+		"Theme - Lanzhou",
+		"Theme - Monokai+",
+		"Theme - Soda",
 		"TypeScript",
 		"VBDotNet"
 	]

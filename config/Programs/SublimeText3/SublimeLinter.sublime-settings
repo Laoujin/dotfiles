@@ -119,12 +119,44 @@
 		"show_marks_in_minimap": true,
 		"syntax_map":
 		{
+			"coffeescript (gulpfile)": "coffeescript",
 			"html (django)": "html",
 			"html (rails)": "html",
 			"html 5": "html",
+			"javascript (eslint)": "javascript",
+			"javascript (gruntfile)": "javascript",
+			"javascript (gulpfile)": "javascript",
+			"javascript (postcss)": "javascript",
+			"javascript (stylelint)": "javascript",
+			"javascript (webpack)": "javascript",
+			"json (babel)": "json",
+			"json (bower)": "json",
+			"json (composer)": "json",
+			"json (eslint)": "json",
+			"json (npm)": "json",
+			"json (postcss)": "json",
+			"json (settings)": "json",
+			"json (stylelint)": "json",
+			"json (sublime)": "json",
+			"json (tern js)": "json",
 			"php": "html",
-			"python django": "python"
+			"python django": "python",
+			"xml (config)": "xml",
+			"xml (svg)": "xml",
+			"yaml (circleci)": "yaml",
+			"yaml (docker)": "yaml",
+			"yaml (eslint)": "yaml",
+			"yaml (lock)": "yaml",
+			"yaml (procfile)": "yaml",
+			"yaml (stylelint)": "yaml",
+			"yaml (yarn)": "yaml"
 		},
+		"tooltip_fontsize": "1rem",
+		"tooltip_theme": "Packages/SublimeLinter/tooltip-themes/Default/Default.tooltip-theme",
+		"tooltip_theme_excludes":
+		[
+		],
+		"tooltips": false,
 		"warning_color": "DDB700",
 		"wrap_find": true
 	}
