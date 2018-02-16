@@ -1,5 +1,5 @@
 function Start-SublimeText {
-	if ($args[0] -eq $null) {
+	if ($args.length -eq 0 -or $args[0] -eq $null) {
 		START "C:\Program Files\Sublime Text 3\sublime_text.exe"
 	}
 
