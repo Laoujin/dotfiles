@@ -15,6 +15,9 @@
 			"licenser",
 			"http-server",
 			"rimraf",
+			"npm-check-updates",
+			"flow-bin",
+			"prettier",
 			"@angular/cli"
 		]
 	}
