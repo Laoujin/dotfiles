@@ -11,6 +11,18 @@ Set-Alias subl Start-SublimeText
 
 Set-Alias mdp "C:\Program Files (x86)\MarkdownPad 2\MarkdownPad2.exe"
 
+
+function Start-Jekyll {
+	bundle exec jekyll serve
+}
+function Start-JekyllWithDrafts {
+	bundle exec jekyll serve --drafts
+}
+
+Set-Alias bejs Start-Jekyll
+Set-Alias bejsd Start-JekyllWithDrafts
+
+
 function Vagrant-Up {
 	vagrant up
 }
