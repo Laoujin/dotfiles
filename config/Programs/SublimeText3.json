@@ -32,7 +32,7 @@
 				"type": "symlink",
 				"link": "Programs\\SublimeText3\\SublimeLinter",
 				"match": "*.tmTheme",
-				"to": "<APPDATA_ROAMING>\\Sublime Text 3\\Packages\\User\\SublimeLinter"
+				"to": "<APPDATA_ROAMING>\\Sublime Text 3\\Packages\\SublimeLinter"
 			}
 		]
 	}
