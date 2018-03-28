@@ -109,10 +109,14 @@ function Update-RealDatabaseVerbosely {
 }
 
 function Get-DbContextProject {
-	$dbContextProjects = Get-Project -All | Where-Object { `
-		$isLikelyDbContextProject -match $_.ProjectName.Substring($_.ProjectName.LastIndexOf(".")) `
-	}
-	return $dbContextProjects[0]
+	return Get-Project -All |
+		Where-Object {
+			if ($_.ProjectName.LastIndexOf(".") -gt -1) {
+				return $isLikelyDbContextProject -match $_.ProjectName.Substring($_.ProjectName.LastIndexOf("."))
+			} else {
+				return $false
+			}
+		} | Select -First 1
 }
 
 function Get-DbContextProjectName {
