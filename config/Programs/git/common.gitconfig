@@ -56,6 +56,7 @@
 	merge-diff = "!git diff `git merge-span ... $1`"
 	# As above, but in your difftool
 	merge-dt = "!git difftool `git merge-span ... $1`"
+	mm = merge master
 
 	# clone and enter directory
 	# --> use powershell function for this
@@ -100,6 +101,7 @@
 	com = checkout master
 	cot = checkout test
 	cop = checkout gh-pages
+	col = checkout laoujin
 
 	### Committing & Amending
 	#ci = "!f() { git commit -m"$1"; }; f"
@@ -227,6 +229,7 @@
 
 [color "diff"]
 	meta = blue white
+	# meta = blue reverse # for synology
 	frag = normal bold
 	old = magenta bold
 	new = green bold
