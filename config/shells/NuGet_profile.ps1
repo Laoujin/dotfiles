@@ -28,7 +28,7 @@ Set-Alias lam List-AllMigrations
 Set-Alias cs Get-ConnectionStrings
 
 # Execute commands against first ProjectName to end with one of these:
-$isLikelyDbContextProject = ".DataAccess", ".Back"
+$isLikelyDbContextProject = ".DataAccess", ".Back", ".Migrations"
 $listMigrationsCount = 5
 
 
@@ -43,7 +43,7 @@ $listMigrationsCount = 5
 
 function Enable-RealMigrations {
 	$project = Get-DbContextProjectName
-	Enable-Migration -Project $project
+	Enable-Migrations -Project $project
 }
 
 function Get-AppliedMigrations {
