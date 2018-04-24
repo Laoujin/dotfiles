@@ -1,5 +1,7 @@
 Push-Location (Split-Path -Path $MyInvocation.MyCommand.Definition -Parent)
 
+Write-Output (Get-Content ".\PowerShell\_learnthis.txt")
+
 if (Test-Path ".\Microsoft.PowerShell_aliases.ps1") {
 	. ".\Microsoft.PowerShell_aliases.ps1"
 }
@@ -29,8 +31,6 @@ $host.PrivateData.ErrorForegroundColor = 'Yellow' # or: "DarkMagenta"
 # ProgressForegroundColor : Yellow
 # ProgressBackgroundColor : DarkCyan
 
-Write-Output (Get-Content ".\PowerShell\_learnthis.txt")
-
 . ".\PowerShell\envpath.ps1"
 . ".\PowerShell\envpath_mod.ps1"
 . ".\PowerShell\filesystem.ps1"
@@ -40,7 +40,8 @@ Write-Output (Get-Content ".\PowerShell\_learnthis.txt")
 . ".\PowerShell\other.ps1"
 
 # Fix: PS startup error...
-Import-Module '.\Modules\Jump.Location\Jump.Location.psd1'
+# Import-Module '.\Modules\Jump.Location\Jump.Location.psd1'
+# TODO: need better jump.location...
 
 Pop-Location
 
