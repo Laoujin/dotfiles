@@ -6,14 +6,6 @@ if (Test-Path ".\Microsoft.PowerShell_aliases.ps1") {
 	. ".\Microsoft.PowerShell_aliases.ps1"
 }
 
-# Fix: more/less only pageup/down works?
-
-
-# --> transed / transde: also get synonyms
-# --> npm open package-name --> open Github in browser
-# .. confac/... -> allow to go to somewhere directly as argument
-
-
 # More colorblindness fun:
 # or Get-Host or $Host.UI.RawUI
 $host.PrivateData.ErrorBackgroundColor = 'Red'
@@ -42,6 +34,12 @@ $host.PrivateData.ErrorForegroundColor = 'Yellow' # or: "DarkMagenta"
 # Fix: PS startup error...
 # Import-Module '.\Modules\Jump.Location\Jump.Location.psd1'
 # TODO: need better jump.location...
+
+# Fix: more/less only pageup/down works?
+
+# --> transed / transde: also get synonyms
+# --> npm open package-name --> open Github in browser
+# .. confac/... -> allow to go to somewhere directly as argument
 
 Pop-Location
 
