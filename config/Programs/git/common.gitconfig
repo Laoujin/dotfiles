@@ -143,6 +143,7 @@
 	# TODO: set-url: git remote set-url origin https://github.com/USERNAME/OTHERREPOSITORY.git
 	remotes = remote -v
 	open = !explorer `git config remote.origin.url`
+	issues = !explorer `git config remote.origin.url`/issues
 	mr = remote add mine
 	pm = "!git push -u mine $(git branch-name)"
 
