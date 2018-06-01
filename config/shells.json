@@ -147,6 +147,10 @@
 					"cd": "C:\\www"
 				},
 				{
+					"alias": "reald",
+					"cd": "C:\\RealDolmen"
+				},
+				{
 					"alias": "rezinal",
 					"cd": "C:\\RealDolmen\\Rezinal"
 				},
