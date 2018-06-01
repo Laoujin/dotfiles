@@ -141,6 +141,18 @@
 				{
 					"alias": "itenium",
 					"cd": "C:\\code\\projects\\itenium"
+				},
+				{
+					"alias": "www",
+					"cd": "C:\\www"
+				},
+				{
+					"alias": "rezinal",
+					"cd": "C:\\RealDolmen\\Rezinal"
+				},
+				{
+					"alias": "rezinalw",
+					"cd": "C:\\RealDolmen\\Rezinal\\src\\3.Hosts\\Rezinal.Erp.Web.Host"
 				}
 			],
 			"drives":

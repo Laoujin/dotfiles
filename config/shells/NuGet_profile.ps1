@@ -8,9 +8,6 @@ function Update-RezinalDatabases {
 	Update-Database -Project Bromo.StorageService.Migrations -Context StorageServiceContext
 }
 
-if ($host.Name -eq "ConsoleHost") {
-	Update-RezinalDatabases
-}
 
 
 # NuGet:
