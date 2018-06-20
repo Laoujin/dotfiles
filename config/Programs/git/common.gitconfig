@@ -149,7 +149,7 @@
 
 	# Delete merged branches but not branches called master or development
 	# Sort of works in PowerShell (but best call this from development branch)
-	dm = !git branch --merged | egrep -v \"(\\*| ) (development|master)\" | xargs -n 1 git branch -d
+	dm = !git branch --merged | egrep -v \"(\\*| ) (development|master|develop)\" | xargs -n 1 git branch -d
 
 
 	### The rest
