@@ -70,6 +70,9 @@
 
 	### Diffing
 	df = diff
+	df1 = diff HEAD~
+	df2 = diff HEAD~~
+	df3 = diff HEAD~~~
 	dfw = diff --word-diff
 	dfc = diff --cached # Show staged changes
 	dt = difftool
