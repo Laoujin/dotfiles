@@ -20,7 +20,8 @@
 		"build/",
 		"main.js.map",
 		"dist/*",
-		"package-lock.json"
+		"package-lock.json",
+		"yarn.lock"
 	],
 	"bold_folder_labels": true,
 	"close_windows_when_empty": true,
