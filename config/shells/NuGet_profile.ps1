@@ -1,5 +1,15 @@
 # Location: %USERPROFILE%\Documents\WindowsPowerShell ($profile)
 
+Set-Alias urd Update-RezinalDatabases
+
+function Update-RezinalDatabases {
+	Update-Database -Project Rezinal.Erp.Migrations -Context MigrationsContext
+	Update-Database -Project Bromo.Logbook.Migrations -Context LogbookContext
+	Update-Database -Project Bromo.StorageService.Migrations -Context StorageServiceContext
+}
+
+
+
 # NuGet:
 # https://docs.microsoft.com/en-us/nuget/tools/powershell-reference
 Set-Alias ip Install-Package
