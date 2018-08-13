@@ -29,10 +29,12 @@
 		"IntelliDocs",
 		"Jade",
 		"Jasmine JS",
+		"Jekyll",
 		"JsFormat",
 		"JSON Reindent",
 		"JSONLint",
 		"JSX",
+		"Markdown Extended",
 		"Material Theme",
 		"Ngx HTML",
 		"OpenPath",
@@ -41,6 +43,7 @@
 		"PowerShell",
 		"Pretty JSON",
 		"Pug",
+		"RawLineEdit",
 		"Sass",
 		"SassBeautify",
 		"SideBarEnhancements",
@@ -57,6 +60,7 @@
 		"Theme - Monokai+",
 		"Theme - Soda",
 		"TypeScript",
-		"VBDotNet"
+		"VBDotNet",
+		"Xdebug Client"
 	]
 }

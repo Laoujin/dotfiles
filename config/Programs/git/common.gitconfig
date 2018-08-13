@@ -70,6 +70,9 @@
 
 	### Diffing
 	df = diff
+	df1 = diff HEAD~
+	df2 = diff HEAD~~
+	df3 = diff HEAD~~~
 	dfw = diff --word-diff
 	dfc = diff --cached # Show staged changes
 	dt = difftool
@@ -98,6 +101,7 @@
 	co = checkout
 	cob = checkout -b
 	cod = checkout development
+	cods = checkout develop
 	com = checkout master
 	cot = checkout test
 	cop = checkout gh-pages
@@ -138,6 +142,7 @@
 	po = "!git push -u origin $(git branch-name)"
 	pot = "!git push -u origin $(git branch-name) --tags"
 	do = "!git push origin :$(git branch-name)"
+	remote-del = "!f() { git push origin :$1; }; f"
 
 	# remote mine
 	# TODO: set-url: git remote set-url origin https://github.com/USERNAME/OTHERREPOSITORY.git
