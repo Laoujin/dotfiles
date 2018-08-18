@@ -23,23 +23,8 @@ $host.PrivateData.ErrorForegroundColor = 'Yellow' # or: "DarkMagenta"
 # ProgressForegroundColor : Yellow
 # ProgressBackgroundColor : DarkCyan
 
-. ".\PowerShell\envpath.ps1"
-. ".\PowerShell\envpath_mod.ps1"
-. ".\PowerShell\filesystem.ps1"
 
-. ".\PowerShell\prompt_git.ps1"
-. ".\PowerShell\prompt_readline.ps1"
-. ".\PowerShell\other.ps1"
-
-# Fix: PS startup error...
-# Import-Module '.\Modules\Jump.Location\Jump.Location.psd1'
-# TODO: need better jump.location...
-
-# Fix: more/less only pageup/down works?
-
-# --> transed / transde: also get synonyms
-# --> npm open package-name --> open Github in browser
-# .. confac/... -> allow to go to somewhere directly as argument
+Get-Childitem .\PowerShell -Filter *.ps1 -Recurse | Foreach-Object { . $_.FullName }
 
 Pop-Location
 

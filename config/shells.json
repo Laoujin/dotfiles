@@ -33,53 +33,15 @@
 			[
 				{
 					"type": "symlink",
-					"link": "shells\\Microsoft.PowerShell_profile.ps1",
-					"to": "<MYDOCUMENTS>\\WindowsPowerShell\\Microsoft.PowerShell_profile.ps1"
+					"link": "shells",
+					"match": "*.ps1",
+					"to": "<MYDOCUMENTS>\\WindowsPowerShell\\"
 				},
 				{
 					"type": "symlink",
-					"link": "shells\\Microsoft.PowerShell_aliases.ps1",
-					"to": "<MYDOCUMENTS>\\WindowsPowerShell\\Microsoft.PowerShell_aliases.ps1"
-				},
-				{
-					"type": "symlink",
-					"link": "shells\\NuGet_profile.ps1",
-					"to": "<MYDOCUMENTS>\\WindowsPowerShell\\NuGet_profile.ps1"
-				},
-				{
-					"type": "symlink",
-					"link": "shells\\PowerShell\\envpath.ps1",
-					"to": "<MYDOCUMENTS>\\WindowsPowerShell\\PowerShell\\envpath.ps1"
-				},
-				{
-					"type": "symlink",
-					"link": "shells\\PowerShell\\envpath_mod.ps1",
-					"to": "<MYDOCUMENTS>\\WindowsPowerShell\\PowerShell\\envpath_mod.ps1"
-				},
-				{
-					"type": "symlink",
-					"link": "shells\\PowerShell\\filesystem.ps1",
-					"to": "<MYDOCUMENTS>\\WindowsPowerShell\\PowerShell\\filesystem.ps1"
-				},
-				{
-					"type": "symlink",
-					"link": "shells\\PowerShell\\prompt_git.ps1",
-					"to": "<MYDOCUMENTS>\\WindowsPowerShell\\PowerShell\\prompt_git.ps1"
-				},
-				{
-					"type": "symlink",
-					"link": "shells\\PowerShell\\prompt_readline.ps1",
-					"to": "<MYDOCUMENTS>\\WindowsPowerShell\\PowerShell\\prompt_readline.ps1"
-				},
-				{
-					"type": "symlink",
-					"link": "shells\\PowerShell\\other.ps1",
-					"to": "<MYDOCUMENTS>\\WindowsPowerShell\\PowerShell\\other.ps1"
-				},
-				{
-					"type": "symlink",
-					"link": "shells\\PowerShell\\_learnthis.txt",
-					"to": "<MYDOCUMENTS>\\WindowsPowerShell\\PowerShell\\_learnthis.txt"
+					"link": "shells\\PowerShell",
+					"match": "*.ps1",
+					"to": "<MYDOCUMENTS>\\WindowsPowerShell\\PowerShell"
 				}
 			]
 		}
