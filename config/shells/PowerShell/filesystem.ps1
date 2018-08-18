@@ -1,3 +1,13 @@
+# Basic commands
+function touch($file) {
+	$Utf8NoBomEncoding = New-Object System.Text.UTF8Encoding $False
+	$path = Get-Location
+	$path = Join-Path -Path $path -ChildPath $file
+	[System.IO.File]::WriteAllText($path, "", $Utf8NoBomEncoding)
+}
+# Append: Add-Content fileName "content"
+
+
 # Easier Navigation
 ${function:~} = { Set-Location ~ }
 ${function:Set-ParentLocation} = { Set-Location .. } # PoSh won't allow ${function:..} because of an invalid path error, so...
@@ -32,6 +42,7 @@ function Get-DiskUsage([string] $path=(Get-Location).Path) {
 }
 
 # Convert a number to a disk size (12.4K or 5M)
+# TODO: This is builtin in PS?
 function Convert-ToDiskSize {
 	param ( $bytes, $precision='0' )
 	foreach ($size in ("B","K","M","G","T")) {
@@ -44,12 +55,14 @@ function Convert-ToDiskSize {
 }
 
 # Empty the Recycle Bin on all drives
-function Empty-RecycleBin {
+function Empty-RecycleBins {
 	$RecBin = (New-Object -ComObject Shell.Application).Namespace(0xA)
 	$RecBin.Items() | %{Remove-Item $_.Path -Recurse -Confirm:$false}
 }
 
-# TODO Extract a .zip file
+# TODO Extract a .zip file is now in PowerShell X?
+# https://gist.github.com/stefanteixeira/0428e8ade6be09d94b90
+# https://stackoverflow.com/questions/1153126/how-to-create-a-zip-archive-with-powershell
 # function Unzip-File {
 # 	<#
 # 	.SYNOPSIS
