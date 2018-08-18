@@ -140,8 +140,8 @@
 	# push/delete origin
 	branch-name = "!git rev-parse --abbrev-ref HEAD"
 	po = "!git push -u origin $(git branch-name)"
+	unpo = "!git push origin :$(git branch-name)"
 	pot = "!git push -u origin $(git branch-name) --tags"
-	do = "!git push origin :$(git branch-name)"
 	remote-del = "!f() { git push origin :$1; }; f"
 
 	# remote mine
