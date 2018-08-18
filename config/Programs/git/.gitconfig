@@ -1,0 +1,8 @@
+# This file is not synced
+
+[user]
+	email =
+	name =
+
+[include]
+	path = ~/.common.gitconfig
