@@ -42,6 +42,12 @@
 					"link": "shells\\PowerShell",
 					"match": "*.ps1",
 					"to": "<MYDOCUMENTS>\\WindowsPowerShell\\PowerShell"
+				},
+				{
+					"type": "symlink",
+					"link": "shells\\PowerShell\\tools",
+					"match": "*.ps1",
+					"to": "<MYDOCUMENTS>\\WindowsPowerShell\\PowerShell\\tools"
 				}
 			]
 		}
