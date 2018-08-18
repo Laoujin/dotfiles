@@ -53,6 +53,11 @@ function Create-Symlink($link, $to, $type) {
 		return
 	}
 
+	$toPath = Split-Path -Path $to
+	if(!(Test-Path -Path $toPath )){
+		New-Item -ItemType directory -Path $toPath
+	}
+
 	if (-not (Test-Path $to)) {
 		cmd /c $operation
 
