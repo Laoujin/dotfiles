@@ -49,8 +49,13 @@ function Create-PullRequest() {
 	start "$baseUrl/$repo/pull-requests?create&targetBranch=refs/heads/$targetBranch&sourceBranch=refs/heads/$branch&$reviewers"
 }
 
+Set-Alias pr Create-PullRequest
+
+
+# I can't type
 Set-Alias gt git
 Set-Alias gut git
 Set-Alias gti git
 Set-Alias got git
-Set-Alias pr Create-PullRequest
+Set-Alias guit git
+Set-Alias giut git
