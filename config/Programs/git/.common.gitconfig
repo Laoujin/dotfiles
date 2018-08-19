@@ -180,7 +180,9 @@
 	autocrlf = true
 	excludesfile = ~/.gitignore_global
 	attributesfile = ~/.gitattributes_global
-	pager = less -x2
+	pager = less -eFiJ -j3 -M -~
+
+
 #	editor = emacs
 #	editor = "\"C:\\Program Files\\Sublime Text 3\\subl.exe\" -n -w"
 
