@@ -1,4 +1,28 @@
 {
+	"git":
+	{
+		"modules":
+		{
+			"Create-Links":
+			[
+				{
+					"type": "symlink",
+					"link": "git\\.common.gitconfig",
+					"to": "<HOME>\\.common.gitconfig"
+				},
+				{
+					"type": "symlink",
+					"link": "git\\.gitignore_global",
+					"to": "<HOME>\\.gitignore_global"
+				},
+				{
+					"type": "symlink",
+					"link": "git\\.gitattributes_global",
+					"to": "<HOME>\\.gitattributes_global"
+				}
+			]
+		}
+	},
 	"bash":
 	{
 		"modules":
@@ -7,13 +31,8 @@
 			[
 				{
 					"type": "symlink",
-					"link": "shells\\.bashrc",
+					"link": "bash\\.bashrc",
 					"to": "<HOME>\\.bashrc"
-				},
-				{
-					"type": "symlink",
-					"link": "shells\\bash_aliases.sh",
-					"to": "<HOME>\\bash_aliases.sh"
 				}
 			]
 		}
@@ -33,19 +52,19 @@
 			[
 				{
 					"type": "symlink",
-					"link": "shells",
+					"link": "PowerShell\\profiles",
 					"match": "*.ps1",
 					"to": "<MYDOCUMENTS>\\WindowsPowerShell\\"
 				},
 				{
 					"type": "symlink",
-					"link": "shells\\PowerShell",
+					"link": "PowerShell",
 					"match": "*.ps1",
 					"to": "<MYDOCUMENTS>\\WindowsPowerShell\\PowerShell"
 				},
 				{
 					"type": "symlink",
-					"link": "shells\\PowerShell\\tools",
+					"link": "PowerShell\\tools",
 					"match": "*.ps1",
 					"to": "<MYDOCUMENTS>\\WindowsPowerShell\\PowerShell\\tools"
 				}

@@ -24,6 +24,7 @@ $host.PrivateData.ErrorForegroundColor = 'Yellow' # or: "DarkMagenta"
 # ProgressBackgroundColor : DarkCyan
 
 
+# Load all ps1 in .\PowerShell
 Get-Childitem .\PowerShell -Filter *.ps1 -Recurse | Foreach-Object { . $_.FullName }
 
 Pop-Location

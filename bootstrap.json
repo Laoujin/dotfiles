@@ -76,18 +76,8 @@
 			},
 			{
 				"type": "symlink",
-				"link": "Programs\\IDE\\.jshintrc",
-				"to": "<HOME>\\.jshintrc"
-			},
-			{
-				"type": "symlink",
-				"link": "Programs\\IDE\\.eslintrc",
+				"link": ".eslintrc",
 				"to": "<HOME>\\.eslintrc"
-			},
-			{
-				"type": "symlink",
-				"link": "Programs\\IDE\\.jscsrc",
-				"to": "<HOME>\\.jscsrc"
 			}
 		],
 		"Create-StartupLinks":

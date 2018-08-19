@@ -39,7 +39,13 @@ if ($config.shells) {
 	Process-Modules $shellConfig.modules
 	Process-Program $shellConfig.bash
 	Process-Program $shellConfig.powershell
+	Process-Program $shellConfig.git
 }
+
+
+Pop-Location
+return
+
 
 Write-Title "PROGRAMS"
 Process-Programs $config.cinst
