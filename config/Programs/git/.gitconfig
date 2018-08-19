@@ -1,5 +1,13 @@
 # This file is not synced
 
+# Copy it manually to %USERPROFILE%
+# (or beter yet, configure dotfiles to do this...)
+
+# Or run these:
+# git config --global user.name ""
+# git config --global user.email ""
+# git config --global include.path "~/.common.gitconfig"
+
 [user]
 	email =
 	name =
