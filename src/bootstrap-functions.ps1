@@ -9,11 +9,13 @@ function Write-Title($title, $addSpace = $true) {
 	Write-Host $titleHeader -ForegroundColor darkgreen
 }
 
+
 function Write-Background {
 	process {
 		Write-Host $_ -ForegroundColor darkgray
 	}
 }
+
 
 function Combine-Configs($commonConfig, $extraConfig) {
 	$commonConfig = ConvertFrom-JsonFile $commonConfig
@@ -44,6 +46,7 @@ function Combine-Configs($commonConfig, $extraConfig) {
 	return $commonConfig
 }
 
+
 function Process-Program($program) {
 	if ($program.requires -and -not (Check-Installed $program.requires)) {
 		Write-Output "Skipping program $($program.requires)"
@@ -57,8 +60,16 @@ function Process-Program($program) {
 	Process-Modules $program.modules
 }
 
-function Process-Modules($modules) {
-	$moduleNames = Get-JsonObjectKeys $modules
+
+function Process-Modules($modules, $fromYaml = $false) {
+	if ($fromYaml) {
+		# Yaml input
+		$moduleNames = $modules.GetEnumerator() | Select-Object -Expand Name
+	} else {
+		# Json input
+		$moduleNames = Get-JsonObjectKeys $modules
+	}
+
 	foreach ($moduleName in $moduleNames) {
 		$moduleData = $modules.$moduleName
 
@@ -69,6 +80,7 @@ function Process-Modules($modules) {
 		}
 	}
 }
+
 
 function Process-Programs($programs) {
 	foreach ($program in $programs) {

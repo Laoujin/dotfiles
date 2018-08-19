@@ -79,10 +79,6 @@
 				"link": ".eslintrc",
 				"to": "<HOME>\\.eslintrc"
 			}
-		],
-		"Create-StartupLinks":
-		[
-			"c:\\code\\Autohotkey\\Mi-Ke\\mike.ahk"
 		]
 	},
 	"windows":

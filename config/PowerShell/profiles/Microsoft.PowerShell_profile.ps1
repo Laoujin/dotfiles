@@ -1,10 +1,10 @@
 Push-Location (Split-Path -Path $MyInvocation.MyCommand.Definition -Parent)
 
-Write-Output (Get-Content ".\PowerShell\_learnthis.txt")
 
-if (Test-Path ".\Microsoft.PowerShell_aliases.ps1") {
-	. ".\Microsoft.PowerShell_aliases.ps1"
+if (Test-Path ".\auto-print.txt") {
+	Write-Output (Get-Content ".\auto-print.txt")
 }
+
 
 # More colorblindness fun:
 # or Get-Host or $Host.UI.RawUI
@@ -24,8 +24,8 @@ $host.PrivateData.ErrorForegroundColor = 'Yellow' # or: "DarkMagenta"
 # ProgressBackgroundColor : DarkCyan
 
 
-# Load all ps1 in .\PowerShell
-Get-Childitem .\PowerShell -Filter *.ps1 -Recurse | Foreach-Object { . $_.FullName }
+# Load all ps1
+Get-Childitem .\dotfiles -Filter *.ps1 -Recurse | Foreach-Object { . $_.FullName }
 
 Pop-Location
 

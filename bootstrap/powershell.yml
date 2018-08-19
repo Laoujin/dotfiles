@@ -1,0 +1,26 @@
+Install-PS-Modules:
+- PsGet
+- Posh-Git
+- PSReadLine
+- Jump.Location
+- PSYaml
+
+
+Create-Links:
+- type: symlink
+  link: PowerShell\profiles
+  match: "*.ps1"
+  to: <MYDOCUMENTS>\WindowsPowerShell
+
+- type: junction
+  link: PowerShell\scripts
+  to: <MYDOCUMENTS>\WindowsPowerShell\dotfiles
+
+
+- type: symlink
+  link: PowerShell\cd-aliases.yml
+  to: <MYDOCUMENTS>\WindowsPowerShell\cd-aliases.yml
+
+- type: symlink
+  link: PowerShell\auto-print.txt
+  to: <MYDOCUMENTS>\WindowsPowerShell\auto-print.txt

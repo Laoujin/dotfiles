@@ -1,0 +1,65 @@
+Create-Shell-Aliases:
+- alias: code
+  cd: c:\code\
+
+- alias: projects
+  cd: c:\code\projects
+
+- alias: itenium
+  cd: C:\code\projects\itenium
+
+
+# Everlasting projects
+- alias: mike
+  cd: c:\code\Autohotkey\Mi-Ke
+
+- alias: dotfiles
+  cd: c:\code\dotfiles
+
+- alias: tuts
+  cd: C:\code\Tutorials\Tuts
+
+- alias: bliki
+  cd: C:\code\projects\itenium\_posts
+
+
+
+# Active projects
+- alias: jan
+  cd: C:\code\projects\jan-crm
+
+- alias: confac
+  cd: C:\code\JavaScript\confac
+
+- alias: eli
+  cd: C:\code\projects\stockoma
+
+
+
+# TTC Erembodegem
+- alias: ttcb
+  cd: C:\code\ttc\react-redux\backend
+
+- alias: ttc
+  cd: C:\code\ttc\react-redux\frontend
+
+
+
+# Old projects
+- alias: tw
+  cd: C:\code\TribalWars
+
+- alias: www
+  cd: C:\www
+
+
+
+# Work
+- alias: reald
+  cd: C:\RealDolmen
+
+- alias: rezinal
+  cd: C:\RealDolmen\Rezinal
+
+- alias: rezinalw
+  cd: C:\RealDolmen\Rezinal\src\3.Hosts\Rezinal.Erp.Web.Host

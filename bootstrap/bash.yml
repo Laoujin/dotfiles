@@ -1,0 +1,4 @@
+Create-Links:
+- type: symlink
+  link: bash\.bashrc
+  to: <HOME>\.bashrc

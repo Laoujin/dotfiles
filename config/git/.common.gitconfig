@@ -1,25 +1,15 @@
-[diff]
-	tool = bc3
+# CLI Syntax
+# git config --get user.name
 
-[difftool "bc3"]
-	path = C:\\Program Files (x86)\\Beyond Compare 3\\bcomp.exe
-#	cmd = \"c:/program files (x86)/beyond compare 3/bcomp.exe\" \"$LOCAL\" \"$REMOTE\"
+# Initial setup
+# git config --global user.name ""
+# git config --global user.email ""
+# git config --global include.path "~/.common.gitconfig"
 
-[merge]
-	tool = bc3
-
-[mergetool]
-	prompt = false
-	keepBackup = false
-
-[mergetool "bc3"]
-	path = C:\\Program Files (x86)\\Beyond Compare 3\\bcomp.exe
-#	cmd = \"c:/program files (x86)/beyond compare 3/bcomp.exe\" \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
-	trustExitCode = true
+# Create alias
+# git config --global alias.ci commit
 
 [alias]
-	# CLI Syntax: git config --global alias.ci commit
-
 	fam = !git checkout development && git fetch && git merge origin/development && git dm
 
 	# Given a merge commit, find the span of commits that exist(ed) on that
@@ -145,6 +135,8 @@
 	unassume = !git noassume
 	assumed = "!git ls-files -v | grep ^h | cut -c 3-"
 
+	la = !git l --all
+
 	# A loop you say?
 	l1 = !git l -1
 	l2 = !git l -2
@@ -160,7 +152,7 @@
 	l20 = !git l -20
 	l25 = !git l -25
 	l50 = !git l -50
-	la = !git l --all
+
 	la1 = !git l -1 --all
 	la2 = !git l -2 --all
 	la3 = !git l -3 --all
@@ -176,26 +168,68 @@
 	la25 = !git l -25 --all
 	la50 = !git l -50 --all
 
+
+### Settings
+
 [core]
 	autocrlf = true
 	excludesfile = ~/.gitignore_global
 	attributesfile = ~/.gitattributes_global
 
-	# Pager used for diffs, logs, ...
+	## -- Pager used for diffs, logs, ...
 	# Short version:
 	# pager = less -eFiJM~ -j3 --tabs=3
 	# Verbose version:
 	pager = less --LONG-PROMPT --tabs=3 --quit-at-eof --quit-if-one-screen --tilde --jump-target=3 --ignore-case --status-column
 	# Find out more about configuring and using less:
-	# https://itenium.be/blog/productivity/git-core-pager-less-pager/
+	# https://itenium.be/blog/productivity/git-core-pager-less-pager
 
-#	editor = emacs
-#	editor = "\"C:\\Program Files\\Sublime Text 3\\subl.exe\" -n -w"
 
 [push]
 	default = simple
 	followTags = true
 
+
+
+### Not in use
+
+# help.autocorrect = 1
+# WARNING: You called a Git command named 'chekcout', which does not exist.
+# Continuing under the assumption that you meant 'checkout'
+
+# commit.template = ~/.gitmessage.txt
+# fetch.prune = true
+
+# core.editor = emacs
+# core.editor = "\"C:\\Program Files\\Sublime Text 3\\subl.exe\" -n -w"
+
+
+
+### Diff tooling
+
+[diff]
+	tool = bc3
+
+[difftool "bc3"]
+	path = C:\\Program Files (x86)\\Beyond Compare 3\\bcomp.exe
+#	cmd = \"c:/program files (x86)/beyond compare 3/bcomp.exe\" \"$LOCAL\" \"$REMOTE\"
+
+[merge]
+	tool = bc3
+
+[mergetool]
+	prompt = false
+	keepBackup = false
+
+[mergetool "bc3"]
+	path = C:\\Program Files (x86)\\Beyond Compare 3\\bcomp.exe
+#	cmd = \"c:/program files (x86)/beyond compare 3/bcomp.exe\" \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
+	trustExitCode = true
+
+
+
+### Colors
+# https://itenium.be/blog/productivity/powershell-and-git-for-the-colorblind
 
 # Available colors: normal, black, red, green, yellow, blue, magenta, cyan, or white
 # Second optional color param values: bold, dim, ul (underline), blink, and reverse (swap foreground and background)
@@ -219,10 +253,3 @@
 	frag = normal bold
 	old = magenta bold
 	new = green bold
-
-# help.autocorrect = 1
-# WARNING: You called a Git command named 'chekcout', which does not exist.
-# Continuing under the assumption that you meant 'checkout'
-
-# commit.template = ~/.gitmessage.txt
-# fetch.prune = true

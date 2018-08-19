@@ -1,0 +1,12 @@
+Create-Links:
+- type: symlink
+  link: git\.common.gitconfig
+  to: <HOME>\.common.gitconfig
+
+- type: symlink
+  link: git\.gitignore_global
+  to: <HOME>\.gitignore_global
+
+- type: symlink
+  link: git\.gitattributes_global
+  to: <HOME>\.gitattributes_global
