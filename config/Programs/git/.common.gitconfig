@@ -180,8 +180,14 @@
 	autocrlf = true
 	excludesfile = ~/.gitignore_global
 	attributesfile = ~/.gitattributes_global
-	pager = less -eFiJ -j3 -M -~
 
+	# Pager used for diffs, logs, ...
+	# Short version:
+	# pager = less -eFiJM~ -j3 --tabs=3
+	# Verbose version:
+	pager = less --LONG-PROMPT --tabs=3 --quit-at-eof --quit-if-one-screen --tilde --jump-target=3 --ignore-case --status-column
+	# Find out more about configuring and using less:
+	# https://itenium.be/blog/productivity/git-core-pager-less-pager/
 
 #	editor = emacs
 #	editor = "\"C:\\Program Files\\Sublime Text 3\\subl.exe\" -n -w"
