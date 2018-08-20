@@ -4,8 +4,13 @@ Write-Host "Running $Profile" -ForegroundColor Blue
 Write-Host ""
 Write-Host ""
 
-# Load all ps1
-Get-Childitem .\dotfiles -Filter *.ps1 -Recurse | Foreach-Object { . $_.FullName }
+# Load all ps1 (except those for the PMC/nuget profile)
+Get-Childitem .\dotfiles -Filter *.ps1 -Recurse | Foreach-Object {
+	$containingDirName = Split-Path (Split-Path $_.FullName -Parent) -Leaf
+	if ($containingDirName -ne "nuget") {
+		. $_.FullName
+	}
+}
 
 
 # Quick reference stuff
