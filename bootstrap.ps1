@@ -1,10 +1,5 @@
 #Set-ExecutionPolicy Unrestricted
-
-if (!(Is-Admin)) {
-	Write-Host "RunAs Administrator..."
-	Exit
-}
-
+Clear-Host
 
 # Load scripts
 Push-Location "$PSScriptRoot\src"
@@ -24,8 +19,12 @@ Pop-Location
 Import-Module "$PSScriptRoot\src\lib\PSYaml"
 
 
+if (!(Is-Admin)) {
+	Write-Host "RunAs Administrator..."
+	Exit
+}
 
-Clear-Host
+
 Write-Title "Configure You Windows" $false
 Write-Host "Because registry editing is so much fun"
 Write-Host "Boxstarter Url: https://gist.github.com/Laoujin/12f5d2f76d51ee6c0a49"
