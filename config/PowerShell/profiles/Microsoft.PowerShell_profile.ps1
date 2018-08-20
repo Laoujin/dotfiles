@@ -33,18 +33,29 @@ if (Test-Path $autoPrintFile) {
 $aliasesPath = "$PSScriptRoot\cd-aliases.ini"
 Write-Host "Creating Set-Location aliases as defined in:" -ForegroundColor White
 Write-Host $aliasesPath -ForegroundColor White
+Write-Host ""
 if (Test-Path $aliasesPath) {
-	$aliases = Get-IniContent .\cd-aliases.ini
-
-	$echo = ""
-	foreach ($alias in $aliases["No-Section"].keys) {
-		$cd = $aliases["No-Section"].$alias
-		Invoke-Expression "`${function:$alias} = { Set-Location `"$cd`" }"
-		$echo += ", $alias"
+	$sections = Get-IniContent .\cd-aliases.ini
+	$index = 0
+	Write-Host "Set-Location Aliases" -ForegroundColor Blue
+	foreach ($section in $sections.keys) {
+		$index = 0
+		Write-Host "$($section): " -NoNewline -ForegroundColor White
+		foreach ($alias in $sections.$section.keys) {
+			$cd = $sections.$section.$alias
+			Invoke-Expression "`${function:$alias} = { Set-Location `"$cd`" }"
+			if ($index -gt 0) {
+				Write-Host ", " -NoNewline -ForegroundColor White
+			}
+			Write-Host $alias -NoNewline -ForegroundColor Green
+			$index++
+			# $aliases += ", $alias"
+		}
+		Write-Host ""
+		# Write-Host "" -NoNewline -ForegroundColor White
+		# Write-Host "$($aliases.Substring(2))" -ForegroundColor Green
 	}
-
-	$echo = "Aliases: $($echo.Substring(2))`n`n"
-	Write-Host $echo -ForegroundColor Green
+	Write-Host "`n"
 }
 
 
