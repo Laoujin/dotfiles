@@ -1,0 +1,12 @@
+Create-Links:
+- type: junction
+  link: <HOME>\Dropbox\Personal\Programming\UnixCode
+  to: c:\code
+
+- type: junction
+  link: <HOME>\Dropbox\Personal\Programming\www
+  to: C:\www
+
+- type: junction
+  link: <HOME>\Desktop
+  to: C:\Zesktop

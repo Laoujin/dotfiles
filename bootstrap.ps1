@@ -55,10 +55,6 @@ $windowsConfig = ConvertFrom-JsonFile "$PSScriptRoot\src\windows.json"
 
 Process-Modules $config.modules
 
-# TODO: remove this:
-Pop-Location
-return
-
 
 
 

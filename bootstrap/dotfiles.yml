@@ -1,4 +1,8 @@
 Create-Links:
 - type: symlink
+  link: ".eslintrc"
+  to: <HOME>\.eslintrc
+
+- type: symlink
   link: bash\.bashrc
   to: <HOME>\.bashrc
