@@ -1,8 +1,8 @@
 Push-Location $PSScriptRoot
 
 Write-Host "Running $Profile" -ForegroundColor Blue
-echo ""
-echo ""
+Write-Host ""
+Write-Host ""
 
 # Load all ps1
 Get-Childitem .\dotfiles -Filter *.ps1 -Recurse | Foreach-Object { . $_.FullName }
@@ -13,9 +13,11 @@ $autoPrintFile = "$PSScriptRoot\auto-print.md"
 if (Test-Path $autoPrintFile) {
 	Write-Host "Printing things to remember as defined in:" -ForegroundColor White
 	Write-Host $autoPrintFile -ForegroundColor White
-	Get-Content $autoPrintFile | Write-Host -ForegroundColor DarkGray
-	echo ""
-	echo ""
+	foreach ($line in (Get-Content $autoPrintFile)) {
+		Write-Host $line -ForegroundColor DarkGray
+	}
+	Write-Host ""
+	Write-Host ""
 }
 
 
