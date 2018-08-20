@@ -1,5 +1,6 @@
 {
 	"requires": "sublimetext3",
+	"title": "SublimeText",
 	"modules":
 	{
 		"Create-Links":

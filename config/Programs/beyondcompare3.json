@@ -1,5 +1,6 @@
 {
 	"requires": "beyondcompare3",
+	"title": "Beyond Compare",
 	"modules":
 	{
 		"Create-Links":

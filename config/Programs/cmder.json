@@ -1,5 +1,6 @@
 {
 	"requires": "cmder",
+	"title": "Cmder",
 	"modules":
 	{
 		"Create-Links":

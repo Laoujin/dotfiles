@@ -1,5 +1,6 @@
 {
 	"requires": "greenshot",
+	"title": "Greenshot",
 	"modules":
 	{
 		"Create-Links":

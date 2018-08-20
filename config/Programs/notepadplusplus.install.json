@@ -1,5 +1,6 @@
 {
 	"requires": "notepadplusplus.install",
+	"title": "Notepad++",
 	"modules":
 	{
 		"Create-Links":

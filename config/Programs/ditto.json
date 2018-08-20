@@ -1,5 +1,6 @@
 {
 	"requires": "ditto",
+	"title": "Ditto",
 	"modules":
 	{
 		"Update-RegistryKeys":

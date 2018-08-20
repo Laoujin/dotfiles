@@ -1,5 +1,6 @@
 {
 	"requires": "filezilla",
+	"title": "FileZilla",
 	"modules":
 	{
 		"Create-Links":

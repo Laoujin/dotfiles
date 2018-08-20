@@ -44,25 +44,23 @@ Get-Childitem "$PSScriptRoot\bootstrap" -Filter *.yml -Recurse | Foreach-Object 
 }
 
 
+
+Write-Title "PROGRAMS"
+$chocoNames = Get-Content "$PSScriptRoot\config\chocolatey.txt"
+Process-Programs $chocoNames
+
+
 Pop-Location
 return
 
 
-
 # Read configuration
-$config = Combine-Configs "$PSScriptRoot\bootstrap.json" "$PSScriptRoot\bootstrap-domain.json"
-$windowsConfig = ConvertFrom-JsonFile "$PSScriptRoot\src\windows.json"
+$config = ConvertFrom-JsonFile "$PSScriptRoot\bootstrap.json"
 
-Process-Modules $config.modules
-
-
-
-
-Write-Title "PROGRAMS"
-Process-Programs $config.cinst
 
 
 Write-Title "WINDOWS EXPLORER"
+$windowsConfig = ConvertFrom-JsonFile "$PSScriptRoot\src\windows.json"
 $explorerOptions = Get-JsonObjectKeys $config.windows.explorer.registry
 foreach ($explorerOption in $explorerOptions) {
 	$explorerConfig = $windowsConfig.explorer.registry.$explorerOption

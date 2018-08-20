@@ -1,5 +1,6 @@
 {
 	"requires": "nodejs.install",
+	"title": "Node",
 	"modules":
 	{
 		"Install-NodePackages":
