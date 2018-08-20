@@ -33,6 +33,10 @@ Write-Host "Boxstarter Url: https://gist.github.com/Laoujin/12f5d2f76d51ee6c0a49
 Push-Location "$PSScriptRoot\config\"
 
 
+# Turn features on/off
+$globalConfig = ConvertFrom-JsonFile "$PSScriptRoot\modules.json"
+
+
 # Start bootstrapping
 Write-Title "BOOTSTRAP"
 Get-Childitem "$PSScriptRoot\bootstrap" -Filter *.yml -Recurse | Foreach-Object {
@@ -45,8 +49,13 @@ Get-Childitem "$PSScriptRoot\bootstrap" -Filter *.yml -Recurse | Foreach-Object 
 
 
 Write-Title "PROGRAMS"
-$chocoNames = Get-Content "$PSScriptRoot\config\chocolatey.txt"
-Process-Programs $chocoNames
+if ($globalConfig."Process-Programs") {
+	$chocoNames = Get-Content "$PSScriptRoot\config\chocolatey.txt"
+	Process-Programs $chocoNames
+} else {
+	Write-Host "Skipping programs per config" -ForegroundColor Red
+}
+
 
 
 

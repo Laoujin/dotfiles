@@ -15,7 +15,7 @@ function Install-PS-Modules($modules) {
 	foreach ($module in $modules) {
 		if ($module -ne "PsGet") {
 			Write-Output "Installing PS Module $module"
-			Install-Module $module
+			Install-Module $module -Force
 		}
 	}
 }

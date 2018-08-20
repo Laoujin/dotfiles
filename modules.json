@@ -1,0 +1,9 @@
+{
+	"Create-Links": true,
+	"Create-StartupLinks": true,
+	"Install-NodePackages": false,
+	"Install-PS-Modules": false,
+	"Manage-Services": true,
+	"Update-Registry": false,
+	"Process-Programs": true
+}

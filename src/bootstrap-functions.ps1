@@ -8,6 +8,11 @@ function Process-Modules($modules, $fromYaml = $false) {
 	}
 
 	foreach ($moduleName in $moduleNames) {
+		if ($globalConfig.$moduleName -eq $False) {
+			Write-Host "Skipping $moduleName as per config" -ForegroundColor Red
+			continue
+		}
+
 		$moduleData = $modules.$moduleName
 
 		if (Check-Command $moduleName) {
@@ -37,7 +42,7 @@ function Process-Program($program) {
 	}
 
 	if ($program.requires -and -not (Check-Installed $program.requires)) {
-		Write-Host "Skipping program $($program.requires)" -ForegroundColor Red
+		Write-Host "Skipping program $($program.requires) because it is not installed" -ForegroundColor Red
 		return
 	}
 
