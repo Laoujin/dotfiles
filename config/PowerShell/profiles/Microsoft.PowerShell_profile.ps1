@@ -18,9 +18,12 @@ $autoPrintFile = "$PSScriptRoot\auto-print.md"
 if (Test-Path $autoPrintFile) {
 	Write-Host "Printing things to remember as defined in:" -ForegroundColor White
 	Write-Host $autoPrintFile -ForegroundColor White
-	foreach ($line in (Get-Content $autoPrintFile)) {
-		Write-Host $line -ForegroundColor DarkGray
-	}
+
+	$tempColor = [console]::ForegroundColor
+	[console]::ForegroundColor = "DarkGray"
+	Write-Output (Get-Content $autoPrintFile)
+	[console]::ForegroundColor = $tempColor
+
 	Write-Host ""
 	Write-Host ""
 }
