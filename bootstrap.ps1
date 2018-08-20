@@ -50,12 +50,38 @@ $chocoNames = Get-Content "$PSScriptRoot\config\chocolatey.txt"
 Process-Programs $chocoNames
 
 
+
+# TODO: Check DSC instead of this ...
+
 Pop-Location
 return
 
 
+
+
 # Read configuration
 $config = ConvertFrom-JsonFile "$PSScriptRoot\bootstrap.json"
+# Content of file:
+# {
+# 	"windows":
+# 	{
+# 		"explorer":
+# 		{
+# 			"registry":
+# 			{
+# 				"showThisPCFolders": "hide",
+# 				"showOneDrive": "hide",
+# 				"showHiddenFilesFoldersDrives": "show",
+# 				"showFileExtensions": "show",
+# 				"showProtectedOSFiles": "show",
+# 				"showFullPathInTitleBar": "show",
+# 				"showNetworkIconInNavigationPane": "hide",
+# 				"showLibrariesInWindowsExplorer": "show",
+# 				"enableAeroWindowsShake": "disabled"
+# 			}
+# 		}
+# 	}
+# }
 
 
 
@@ -75,6 +101,6 @@ foreach ($explorerOption in $explorerOptions) {
 	}
 }
 
-#Stop-Process -processname explorer
+
 
 Pop-Location
