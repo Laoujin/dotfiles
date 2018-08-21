@@ -22,5 +22,9 @@ Create-Links:
   to: <MYDOCUMENTS>\WindowsPowerShell\cd-aliases.ini
 
 - type: symlink
+  link: PowerShell\prompt-aliases.ini
+  to: <MYDOCUMENTS>\WindowsPowerShell\prompt-aliases.ini
+
+- type: symlink
   link: PowerShell\auto-print.md
   to: <MYDOCUMENTS>\WindowsPowerShell\auto-print.md

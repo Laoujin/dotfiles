@@ -23,6 +23,22 @@ Set-PSReadlineKeyHandler -Key 'DownArrow' -Function 'HistorySearchForward'
 
 Set-PSReadlineKeyHandler -Key 'Ctrl+^' -Function 'GotoBrace'
 
+
+# Prompt Shrinkers
+$shrinkersPath = Join-Path $PSScriptRoot "..\prompt-aliases.ini"
+Write-Host "Creating prompt shrinkers as defined in:" -ForegroundColor Blue
+Write-Host ([System.IO.Path]::GetFullPath($shrinkersPath)) -ForegroundColor White
+Write-Host ""
+$shrinkers = Get-IniContent $shrinkersPath
+foreach ($shrinkTo in $shrinkers["Prompt-Shrinkers"].Keys) {
+	$shrinkPath = $shrinkers["Prompt-Shrinkers"].$shrinkTo
+	echo "$shrinker -> $shrinkPath"
+
+}
+Write-Host ""
+Write-Host ""
+
+
 # TODO: Yanking... Probably better to just switch to Emacs mode...
 
 # More interesting Functions:
