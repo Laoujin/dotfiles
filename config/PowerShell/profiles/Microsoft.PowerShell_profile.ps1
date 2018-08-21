@@ -16,7 +16,7 @@ Get-Childitem .\dotfiles -Filter *.ps1 -Recurse | Foreach-Object {
 # Quick reference stuff
 $autoPrintFile = "$PSScriptRoot\auto-print.md"
 if (Test-Path $autoPrintFile) {
-	Write-Host "Printing things to remember as defined in:" -ForegroundColor White
+	Write-Host "Printing things to remember as defined in:" -ForegroundColor Blue
 	Write-Host $autoPrintFile -ForegroundColor White
 
 	$tempColor = [console]::ForegroundColor
@@ -31,13 +31,12 @@ if (Test-Path $autoPrintFile) {
 
 # Set-Location Aliases
 $aliasesPath = "$PSScriptRoot\cd-aliases.ini"
-Write-Host "Creating Set-Location aliases as defined in:" -ForegroundColor White
+Write-Host "Creating Set-Location aliases as defined in:" -ForegroundColor Blue
 Write-Host $aliasesPath -ForegroundColor White
 Write-Host ""
 if (Test-Path $aliasesPath) {
 	$sections = Get-IniContent .\cd-aliases.ini
 	$index = 0
-	Write-Host "Set-Location Aliases" -ForegroundColor Blue
 	foreach ($section in $sections.keys) {
 		$index = 0
 		Write-Host "$($section): " -NoNewline -ForegroundColor White
