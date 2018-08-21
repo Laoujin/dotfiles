@@ -1,4 +1,5 @@
-# Location: %USERPROFILE%\Documents\WindowsPowerShell ($profile)
+# Location OLD: %USERPROFILE%\Documents\WindowsPowerShell ($profile)
+# Location NEW: %USERPROFILE%\Documents\PowerShell ($profile)
 
 # NuGet:
 # https://docs.microsoft.com/en-us/nuget/tools/powershell-reference

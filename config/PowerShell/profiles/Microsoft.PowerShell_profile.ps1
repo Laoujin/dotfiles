@@ -9,7 +9,7 @@ Get-Childitem .\dotfiles\lib -Filter *.ps1 -Recurse | Foreach-Object {
 	. $_.FullName
 }
 
-# Load all ps1 (except those for the PMC/nuget profile)
+# Load all custom ps1 (except those for the PMC/nuget profile)
 Get-Childitem .\dotfiles -Filter *.ps1 -Recurse | Foreach-Object {
 	$containingDirName = Split-Path (Split-Path $_.FullName -Parent) -Leaf
 	if ($containingDirName -ne "nuget" -and $containingDirName -ne "lib") {

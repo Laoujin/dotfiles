@@ -22,7 +22,7 @@ function Is-Admin {
 }
 
 function Restart-AsAdmin {
-	$newProcess = New-Object System.Diagnostics.ProcessStartInfo "PowerShell"
+	$newProcess = New-Object System.Diagnostics.ProcessStartInfo "pwsh.exe"
 	$newProcess.Arguments = $myInvocation.MyCommand.Definition
 	$newProcess.Verb = "runas"
 	[System.Diagnostics.Process]::Start($newProcess)

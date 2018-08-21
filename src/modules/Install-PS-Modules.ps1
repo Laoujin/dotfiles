@@ -7,6 +7,8 @@ function Install-PS-ModulesGetter {
 	}
 }
 
+# (Get-Module -ListAvailable *).path
+
 function Install-PS-Modules($modules) {
 	if ($modules -contains "PsGet") {
 		Install-PS-ModulesGetter

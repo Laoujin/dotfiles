@@ -10,21 +10,21 @@ Create-Links:
 - type: symlink
   link: PowerShell\profiles
   match: "*.ps1"
-  to: <MYDOCUMENTS>\WindowsPowerShell
+  to: <MYDOCUMENTS>\PowerShell
 
 - type: junction
   link: PowerShell\scripts
-  to: <MYDOCUMENTS>\WindowsPowerShell\dotfiles
+  to: <MYDOCUMENTS>\PowerShell\dotfiles
 
 
 - type: symlink
   link: PowerShell\cd-aliases.ini
-  to: <MYDOCUMENTS>\WindowsPowerShell\cd-aliases.ini
+  to: <MYDOCUMENTS>\PowerShell\cd-aliases.ini
 
 - type: symlink
   link: PowerShell\prompt-aliases.ini
-  to: <MYDOCUMENTS>\WindowsPowerShell\prompt-aliases.ini
+  to: <MYDOCUMENTS>\PowerShell\prompt-aliases.ini
 
 - type: symlink
   link: PowerShell\auto-print.md
-  to: <MYDOCUMENTS>\WindowsPowerShell\auto-print.md
+  to: <MYDOCUMENTS>\PowerShell\auto-print.md
