@@ -16,8 +16,11 @@ Import-Module Posh-Git
 # Gray, Blue, Green, Cyan, Red, Magenta, Yellow, White
 $GitPromptSettings.DefaultPromptPath.ForegroundColor = 'White'
 
-$GitPromptSettings.LocalWorkingStatusSymbol.ForegroundColor = 'DarkMagenta'
-$GitPromptSettings.WorkingColor.ForegroundColor = 'DarkMagenta'
+$GitPromptSettings.LocalWorkingStatusSymbol.ForegroundColor = 'Green'
+$GitPromptSettings.WorkingColor.ForegroundColor = 'Green'
+$GitPromptSettings.BranchAheadStatusSymbol.ForegroundColor = 'Green'
+$GitPromptSettings.BranchBehindStatusSymbol.ForegroundColor = 'DarkMagenta'
+$GitPromptSettings.BranchBehindAndAheadStatusSymbol.ForegroundColor = 'Yellow'
 
 
 # Prompt Shrinkers
