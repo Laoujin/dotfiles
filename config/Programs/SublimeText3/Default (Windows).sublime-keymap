@@ -10,5 +10,7 @@
   { "keys": ["f10"], "command": "open_file_folder" },
   { "keys": ["ctrl+shift+g"], "command": "git_blame" },
   { "keys": ["f8"], "command": "new_snippet" },
-  { "keys": ["ctrl+shift+q"], "command": "show_panel", "args": {"panel": "console", "toggle": true} }
+  { "keys": ["ctrl+shift+q"], "command": "show_panel", "args": {"panel": "console", "toggle": true} },
+  { "keys": ["ctrl+k", "ctrl+m"], "command": "toggle_minimap" },
+  { "keys": ["f2"], "command": "side_bar_move" },
 ]
