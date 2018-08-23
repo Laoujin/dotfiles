@@ -4,5 +4,9 @@
     "round_scope" : "bracket.round",
     "square_scope": "bracket.square",
     "angle_scope" : "bracket.angle",
-    "tag_scope"   : "bracket.tag"
+    "tag_scope"   : "bracket.tag",
+    "high_visibility_enabled_by_default": false,
+    "content_highlight_bar": true,
+    "popup_bracket_emphasis": "blue",
+    "search_threshold": 10000
 }
