@@ -1,0 +1,10 @@
+// GitGutter Settings - User
+// Themes:
+// https://github.com/jisaacks/GitGutter/tree/master/themes
+// Bars.gitgutter-theme
+// Bars Thin.gitgutter-theme
+// Default.gitgutter-theme
+// Default HIDPI.gitgutter-theme
+{
+	"theme": "Bars.gitgutter-theme"
+}
