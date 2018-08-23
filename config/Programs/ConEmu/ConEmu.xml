@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <key name="Software">
 	<key name="ConEmu">
-		<key name=".Vanilla" modified="2018-08-23 04:17:19" build="161206">
+		<key name=".Vanilla" modified="2018-08-23 10:53:59" build="180206">
 			<value name="ColorTable00" type="dword" data="00222827"/>
 			<value name="ColorTable01" type="dword" data="009e5401"/>
 			<value name="ColorTable02" type="dword" data="0004aa74"/>
@@ -35,15 +35,15 @@
 			<value name="ColorTable30" type="dword" data="0081cccc"/>
 			<value name="ColorTable31" type="dword" data="00ffffff"/>
 			<value name="ExtendColors" type="hex" data="00"/>
-			<value name="ExtendColorIdx" type="hex" data="0e"/>
+			<value name="ExtendColorIdx" type="hex" data="0E"/>
 			<value name="TextColorIdx" type="hex" data="10"/>
 			<value name="BackColorIdx" type="hex" data="10"/>
 			<value name="PopTextColorIdx" type="hex" data="10"/>
 			<value name="PopBackColorIdx" type="hex" data="10"/>
 			<value name="ExtendFonts" type="hex" data="00"/>
 			<value name="ExtendFontNormalIdx" type="hex" data="01"/>
-			<value name="ExtendFontBoldIdx" type="hex" data="0c"/>
-			<value name="ExtendFontItalicIdx" type="hex" data="0d"/>
+			<value name="ExtendFontBoldIdx" type="hex" data="0C"/>
+			<value name="ExtendFontItalicIdx" type="hex" data="0D"/>
 			<value name="CursorTypeActive" type="dword" data="000232c1"/>
 			<value name="CursorTypeInactive" type="dword" data="00823282"/>
 			<value name="ClipboardDetectLineEnd" type="hex" data="01"/>
@@ -58,7 +58,7 @@
 			<value name="TrueColorerSupport" type="hex" data="01"/>
 			<value name="FadeInactive" type="hex" data="01"/>
 			<value name="FadeInactiveLow" type="hex" data="00"/>
-			<value name="FadeInactiveHigh" type="hex" data="c8"/>
+			<value name="FadeInactiveHigh" type="hex" data="C8"/>
 			<value name="ConVisible" type="hex" data="00"/>
 			<value name="ConInMode" type="dword" data="ffffffff"/>
 			<value name="UseInjects" type="hex" data="01"/>
@@ -77,7 +77,9 @@
 			<value name="StartFarEditors" type="hex" data="00"/>
 			<value name="StoreTaskbarkTasks" type="hex" data="00"/>
 			<value name="StoreTaskbarCommands" type="hex" data="00"/>
-			<value name="CmdLineHistory" type="multi"><line data=";C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\"/></value>
+			<value name="CmdLineHistory" type="multi">
+				<line data=";C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\"/>
+			</value>
 			<value name="SingleInstance" type="hex" data="00"/>
 			<value name="ShowHelpTooltips" type="hex" data="01"/>
 			<value name="Multi" type="hex" data="01"/>
@@ -112,22 +114,22 @@
 			<value name="Monospace" type="hex" data="01"/>
 			<value name="BackGround Image show" type="hex" data="00"/>
 			<value name="BackGround Image" type="string" data="c:\back.bmp"/>
-			<value name="bgImageDarker" type="hex" data="ff"/>
+			<value name="bgImageDarker" type="hex" data="FF"/>
 			<value name="bgImageColors" type="dword" data="ffffffff"/>
 			<value name="bgOperation" type="hex" data="00"/>
 			<value name="bgPluginAllowed" type="hex" data="01"/>
-			<value name="AlphaValue" type="hex" data="f8"/>
+			<value name="AlphaValue" type="hex" data="F8"/>
 			<value name="AlphaValueSeparate" type="hex" data="01"/>
-			<value name="AlphaValueInactive" type="hex" data="ee"/>
+			<value name="AlphaValueInactive" type="hex" data="EE"/>
 			<value name="UserScreenTransparent" type="hex" data="00"/>
 			<value name="ColorKeyTransparent" type="hex" data="00"/>
 			<value name="ColorKeyValue" type="dword" data="00010101"/>
 			<value name="UseCurrentSizePos" type="hex" data="01"/>
 			<value name="WindowMode" type="dword" data="0000051f"/>
-			<value name="ConWnd Width" type="dword" data="000000ce"/>
+			<value name="ConWnd Width" type="dword" data="000000cd"/>
 			<value name="ConWnd Height" type="dword" data="00000039"/>
 			<value name="Cascaded" type="hex" data="01"/>
-			<value name="ConWnd X" type="long" data="92"/>
+			<value name="ConWnd X" type="long" data="-1828"/>
 			<value name="ConWnd Y" type="long" data="20"/>
 			<value name="16bit Height" type="ulong" data="0"/>
 			<value name="AutoSaveSizePos" type="hex" data="00"/>
@@ -138,7 +140,7 @@
 			<value name="HideChildCaption" type="hex" data="01"/>
 			<value name="FocusInChildWindows" type="hex" data="01"/>
 			<value name="HideCaptionAlways" type="hex" data="00"/>
-			<value name="HideCaptionAlwaysFrame" type="hex" data="ff"/>
+			<value name="HideCaptionAlwaysFrame" type="hex" data="FF"/>
 			<value name="HideCaptionAlwaysDelay" type="ulong" data="2000"/>
 			<value name="HideCaptionAlwaysDisappear" type="ulong" data="2000"/>
 			<value name="DownShowHiddenMessage" type="hex" data="00"/>
@@ -165,19 +167,19 @@
 			<value name="CTS.ActMode" type="hex" data="02"/>
 			<value name="CTS.RBtnAction" type="hex" data="03"/>
 			<value name="CTS.MBtnAction" type="hex" data="00"/>
-			<value name="CTS.ColorIndex" type="hex" data="e0"/>
+			<value name="CTS.ColorIndex" type="hex" data="E0"/>
 			<value name="ClipboardConfirmEnter" type="hex" data="01"/>
 			<value name="ClipboardConfirmLonger" type="ulong" data="500"/>
 			<value name="FarGotoEditorOpt" type="hex" data="01"/>
-			<value name="FarGotoEditorPath" type="string" data="far.exe /e%1:%2 &quot;%3&quot;"/>
+			<value name="FarGotoEditorPath" type="string" data='far.exe /e%1:%2 "%3"'/>
 			<value name="FixFarBorders" type="hex" data="01"/>
 			<value name="FixFarBordersRanges" type="string" data="2013-25C4;"/>
 			<value name="ExtendUCharMap" type="hex" data="01"/>
 			<value name="EnhanceGraphics" type="hex" data="01"/>
 			<value name="EnhanceButtons" type="hex" data="00"/>
-			<value name="PartBrush75" type="hex" data="c8"/>
+			<value name="PartBrush75" type="hex" data="C8"/>
 			<value name="PartBrush50" type="hex" data="96"/>
-			<value name="PartBrush25" type="hex" data="5a"/>
+			<value name="PartBrush25" type="hex" data="5A"/>
 			<value name="PartBrushBlack" type="hex" data="20"/>
 			<value name="RightClick opens context menu" type="hex" data="02"/>
 			<value name="RightClickMacro2" type="string" data=""/>
@@ -412,9 +414,9 @@
 			<value name="Key.TileToLeft" type="dword" data="80808000"/>
 			<value name="Key.TileToRIght" type="dword" data="80808000"/>
 			<value name="KeyMacro01" type="dword" data="0012a031"/>
-			<value name="KeyMacro01.Text" type="string" data="Task(&quot;cmd&quot;)"/>
+			<value name="KeyMacro01.Text" type="string" data='Task("cmd")'/>
 			<value name="KeyMacro02" type="dword" data="0012a032"/>
-			<value name="KeyMacro02.Text" type="string" data="Task(&quot;PowerShell&quot;)"/>
+			<value name="KeyMacro02.Text" type="string" data='Task("PowerShell")'/>
 			<value name="KeyMacro03" type="dword" data="000011d0"/>
 			<value name="KeyMacro03.Text" type="string" data="FontSetSize(1,2)"/>
 			<value name="KeyMacro04" type="dword" data="000011d1"/>
@@ -483,136 +485,139 @@
 			<value name="DndLKey" type="hex" data="00"/>
 			<value name="DndRKey" type="hex" data="a2"/>
 			<value name="WndDragKey" type="dword" data="00121101"/>
-				<key name="Tasks" modified="2018-08-23 04:17:19" build="161206">
-				<value name="Count" type="long" data="7"/>
-						<key name="Task1" modified="2018-08-23 04:17:19" build="161206">
+			<key name="Tasks" modified="2018-08-23 11:00:43" build="180206">
+				<value name="Count" type="long" data="9"/>
+				<key name="Task1" modified="2018-08-23 04:17:19" build="161206">
 					<value name="Name" type="string" data="{PowerShell}"/>
-					<value name="GuiArgs" type="string" data="/dir &quot;c:\&quot;"/>
+					<value name="GuiArgs" type="string" data='/dir "c:\"'/>
 					<value name="Cmd1" type="string" data="pwsh.exe"/>
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
 					<value name="Hotkey" type="dword" data="00001250"/>
 					<value name="Flags" type="dword" data="00000000"/>
 				</key>
-						<key name="Task2" modified="2018-08-23 04:17:19" build="161206">
+				<key name="Task2" modified="2018-08-23 04:17:19" build="161206">
 					<value name="Name" type="string" data="{PowerShell50}"/>
-					<value name="GuiArgs" type="string" data="/dir &quot;c:\&quot;"/>
+					<value name="GuiArgs" type="string" data='/dir "c:\"'/>
 					<value name="Cmd1" type="string" data="pwsh.exe -new_console:s50H"/>
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
 					<value name="Hotkey" type="dword" data="00101250"/>
 					<value name="Flags" type="dword" data="00000004"/>
 				</key>
-						<key name="Task3" modified="2018-08-23 04:17:19" build="161206">
+				<key name="Task3" modified="2018-08-23 04:17:19" build="161206">
 					<value name="Name" type="string" data="{PowerShell (Admin)}"/>
 					<value name="Hotkey" type="dword" data="00121150"/>
-					<value name="GuiArgs" type="string" data="/dir &quot;c:\&quot;"/>
+					<value name="GuiArgs" type="string" data='/dir "c:\"'/>
 					<value name="Cmd1" type="string" data="pwsh.exe -new_console:a"/>
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
 					<value name="Flags" type="dword" data="00000000"/>
 				</key>
-						<key name="Task4" modified="2018-08-23 04:17:19" build="161206">
+				<key name="Task4" modified="2018-08-23 04:17:19" build="161206">
 					<value name="Name" type="string" data="{PowerShell50 (Admin)}"/>
 					<value name="Hotkey" type="dword" data="10121150"/>
-					<value name="GuiArgs" type="string" data="/dir &quot;c:\&quot;"/>
+					<value name="GuiArgs" type="string" data='/dir "c:\"'/>
 					<value name="Cmd1" type="string" data="pwsh.exe -new_console:s50H:a"/>
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
 					<value name="Flags" type="dword" data="00000004"/>
 				</key>
-						<key name="Task5" modified="2018-08-23 04:17:19" build="161206">
+				<key name="Task5" modified="2018-08-23 04:17:19" build="161206">
 					<value name="Name" type="string" data="{confac}"/>
 					<value name="Hotkey" type="dword" data="00101143"/>
-					<value name="GuiArgs" type="string" data=" /icon &quot;C:\Code\projects\confac\confac.ico&quot;"/>
-					<value name="Cmd1" type="string" data="pwsh.exe -NoExit -Command &quot;npm start&quot; -new_console:d:&quot;C:\code\projects\confac\back&quot;:t:&quot;confac-back&quot;"/>
+					<value name="GuiArgs" type="string" data=' /icon "C:\Code\projects\confac\confac.ico"'/>
+					<value name="Cmd1" type="string" data='pwsh.exe -NoExit -Command "npm start" -new_console:d:"C:\code\projects\confac\back":t:"confac-back"'/>
 					<value name="Active" type="long" data="2"/>
 					<value name="Count" type="long" data="3"/>
 					<value name="Flags" type="dword" data="00000000"/>
-					<value name="Cmd2" type="string" data="&gt;pwsh.exe -new_console:s1THn:d:&quot;C:\code\projects\confac\front&quot;:t:&quot;confac-cli&quot;"/>
-					<value name="Cmd3" type="string" data="pwsh.exe -NoExit -Command &quot;npm start&quot; -new_console:s1TVn:d:&quot;C:\code\projects\confac\front&quot;:t:&quot;confac-front&quot;"/>
-					<value name="Cmd4" type="string" data="cmd /k &quot;&quot;%ConEmuDir%\..\init.bat&quot; &amp; gulp&quot; -cur_console:s2THn:d:&quot;C:\projects\Digipolis\FedPol\App\Focus.FedPol.App&quot;:t:&quot;FedPol-gulp&quot;"/>
+					<value name="Cmd2" type="string" data='&gt;pwsh.exe -new_console:s1THn:d:"C:\code\projects\confac\front":t:"confac-cli"'/>
+					<value name="Cmd3" type="string" data='pwsh.exe -NoExit -Command "npm start" -new_console:s1TVn:d:"C:\code\projects\confac\front":t:"confac-front"'/>
+					<value name="Cmd4" type="string" data='cmd /k ""%ConEmuDir%\..\init.bat" &amp; gulp" -cur_console:s2THn:d:"C:\projects\Digipolis\FedPol\App\Focus.FedPol.App":t:"FedPol-gulp"'/>
 				</key>
-						<key name="Task6" modified="2018-08-23 04:17:19" build="161206">
+				<key name="Task6" modified="2018-08-23 04:17:19" build="161206">
 					<value name="Name" type="string" data="{bliki}"/>
 					<value name="Hotkey" type="dword" data="00101142"/>
-					<value name="GuiArgs" type="string" data=" /icon &quot;C:\Code\itenium\favicon.ico&quot;"/>
-					<value name="Cmd1" type="string" data="pwsh.exe -NoExit -Command &quot;bundle exec jekyll serve&quot; -new_console:d:&quot;C:\code\itenium\site&quot;:t:&quot;bliki-jekyll&quot;"/>
+					<value name="GuiArgs" type="string" data=' /icon "C:\Code\itenium\favicon.ico"'/>
+					<value name="Cmd1" type="string" data='pwsh.exe -NoExit -Command "bundle exec jekyll serve" -new_console:d:"C:\code\itenium\site":t:"bliki-jekyll"'/>
 					<value name="Active" type="long" data="2"/>
 					<value name="Count" type="long" data="3"/>
-					<value name="Cmd2" type="string" data="&gt;pwsh.exe -new_console:s1THn:d:&quot;C:\code\itenium\site\_posts&quot;:t:&quot;bliki_posts&quot;"/>
-					<value name="Cmd3" type="string" data="pwsh.exe -new_console:s1TVn:d:&quot;C:\code\itenium\site&quot;:t:&quot;bliki-site&quot;"/>
-					<value name="Cmd4" type="string" data="powershell -new_console:d:&quot;C:\projects\Digipolis\Note\App&quot;:t:&quot;Note.App&quot;"/>
-					<value name="Cmd5" type="string" data="powershell -new_console:d:&quot;C:\projects\Digipolis\Note\Service&quot;:t:&quot;Note.Service&quot;"/>
+					<value name="Cmd2" type="string" data='&gt;pwsh.exe -new_console:s1THn:d:"C:\code\itenium\site\_posts":t:"bliki_posts"'/>
+					<value name="Cmd3" type="string" data='pwsh.exe -new_console:s1TVn:d:"C:\code\itenium\site":t:"bliki-site"'/>
+					<value name="Cmd4" type="string" data='powershell -new_console:d:"C:\projects\Digipolis\Note\App":t:"Note.App"'/>
+					<value name="Cmd5" type="string" data='powershell -new_console:d:"C:\projects\Digipolis\Note\Service":t:"Note.Service"'/>
 					<value name="Flags" type="dword" data="00000000"/>
 				</key>
-						<key name="Task7" modified="2018-08-23 04:18:07" build="161206">
+				<key name="Task7" modified="2018-08-23 04:18:07" build="161206">
 					<value name="Name" type="string" data="{stockoma}"/>
 					<value name="Hotkey" type="dword" data="00101145"/>
-					<value name="GuiArgs" type="string" data="/icon &quot;C:\Code\projects\stockoma\favicon.ico&quot;"/>
-					<value name="Cmd1" type="string" data="pwsh.exe -new_console:d:&quot;C:\code\projects\stockoma\site&quot;:t:&quot;eli-cli&quot;"/>
-					<value name="Cmd2" type="string" data="&gt;pwsh.exe -NoExit -Command &quot;dotnet run&quot; -new_console:s1THn:d:&quot;C:\code\projects\stockoma\site\back\Stockoma.WebApi&quot;:t:&quot;eli-back&quot;"/>
+					<value name="GuiArgs" type="string" data='/icon "C:\Code\projects\stockoma\favicon.ico"'/>
+					<value name="Cmd1" type="string" data='pwsh.exe -new_console:d:"C:\code\projects\stockoma\site":t:"eli-cli"'/>
+					<value name="Cmd2" type="string" data='&gt;pwsh.exe -NoExit -Command "dotnet run" -new_console:s1THn:d:"C:\code\projects\stockoma\site\back\Stockoma.WebApi":t:"eli-back"'/>
 					<value name="Active" type="long" data="2"/>
 					<value name="Count" type="long" data="5"/>
-					<value name="Cmd3" type="string" data="pwsh.exe -NoExit -Command &quot;npm start&quot; -new_console:s33V:d:&quot;C:\code\projects\stockoma\site\front&quot;:t:&quot;eli-front&quot;"/>
-					<value name="Cmd4" type="string" data="pwsh.exe -NoExit -Command &quot;npm run watch-css&quot; -new_console:s33V:d:&quot;C:\code\projects\stockoma\site\front&quot;:t:&quot;eli-front-css&quot;"/>
-					<value name="Cmd5" type="string" data="pwsh.exe -NoExit -Command &quot;npm start&quot; -new_console:s50V:d:&quot;C:\code\projects\stockoma\site\front-admin&quot;:t:&quot;eli-admin&quot;"/>
-					<value name="Cmd6" type="string" data="powershell -new_console:d:&quot;C:\projects\Digipolis\FedPol\App&quot;:t:&quot;FedPol.App&quot;"/>
-					<value name="Cmd7" type="string" data="powershell -new_console:d:&quot;C:\projects\Digipolis\FedPol\Service&quot;:t:&quot;FedPol.Service&quot;"/>
+					<value name="Cmd3" type="string" data='pwsh.exe -NoExit -Command "npm start" -new_console:s33V:d:"C:\code\projects\stockoma\site\front":t:"eli-front"'/>
+					<value name="Cmd4" type="string" data='pwsh.exe -NoExit -Command "npm run watch-css" -new_console:s33V:d:"C:\code\projects\stockoma\site\front":t:"eli-front-css"'/>
+					<value name="Cmd5" type="string" data='pwsh.exe -NoExit -Command "npm start" -new_console:s50V:d:"C:\code\projects\stockoma\site\front-admin":t:"eli-admin"'/>
+					<value name="Cmd6" type="string" data='powershell -new_console:d:"C:\projects\Digipolis\FedPol\App":t:"FedPol.App"'/>
+					<value name="Cmd7" type="string" data='powershell -new_console:d:"C:\projects\Digipolis\FedPol\Service":t:"FedPol.Service"'/>
 					<value name="Flags" type="dword" data="00000004"/>
 				</key>
-						<key name="Task8" modified="2018-08-23 00:08:39" build="161206">
-					<value name="Name" type="string" data="{PowerShell50}"/>
+				<key name="Task8" modified="2018-08-23 10:53:59" build="180206">
+					<value name="Name" type="string" data="{basf-cleaning}"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
-					<value name="GuiArgs" type="string" data=""/>
-					<value name="Cmd1" type="string" data="pwsh.exe -new_console:s50H"/>
-					<value name="Active" type="long" data="0"/>
-					<value name="Count" type="long" data="1"/>
+					<value name="GuiArgs" type="string" data='/icon "C:\realdolmen\basf.ico"'/>
+					<value name="Cmd1" type="string" data='pwsh.exe -NoExit -Command "ng serve" -new_console:d:"C:\RealDolmen\BASFCleaning\backend\3.Hosts\Basf.Cleaning.Web.Host":t:"basf-front"'/>
+					<value name="Active" type="long" data="2"/>
+					<value name="Count" type="long" data="2"/>
 					<value name="Flags" type="dword" data="00000004"/>
+					<value name="Cmd2" type="string" data='&gt;pwsh.exe -new_console:s1THn:d:"C:\RealDolmen\BASFCleaning":t:basf-cli"'/>
 				</key>
-						<key name="Task9" modified="2015-04-14 01:40:52" build="140707">
-					<value name="Name" type="string" data="{Chocolatey (Admin)}"/>
-					<value name="Hotkey" type="dword" data="00000000"/>
-					<value name="GuiArgs" type="string" data=""/>
-					<value name="Cmd1" type="string" data="*cmd /k Title Chocolatey &amp; &quot;%ConEmuBaseDir%\Addons\ChocolateyAbout.cmd&quot;"/>
-					<value name="Active" type="dword" data="00000000"/>
-					<value name="Count" type="dword" data="00000001"/>
+				<key name="Task9" modified="2018-08-23 11:00:43" build="180206">
+					<value name="Name" type="string" data="{rezinal}"/>
+					<value name="Hotkey" type="dword" data="00101152"/>
+					<value name="GuiArgs" type="string" data='/icon "C:\realdolmen\rezinal.ico"'/>
+					<value name="Cmd1" type="string" data='pwsh.exe -NoExit -Command "ng serve" -new_console:d:"C:\RealDolmen\Rezinal\src\3.Hosts\Rezinal.Erp.Web.Host":t:"rezinal-front"'/>
+					<value name="Active" type="long" data="2"/>
+					<value name="Count" type="long" data="2"/>
+					<value name="Flags" type="dword" data="00000004"/>
+					<value name="Cmd2" type="string" data='&gt;pwsh.exe -new_console:s1THn:d:"C:\RealDolmen\Rezinal":t:rezinal-cli"'/>
 				</key>
-						<key name="Task10" modified="2015-05-06 11:04:35" build="140707">
+				<key name="Task10" modified="2015-05-06 11:04:35" build="140707">
 					<value name="Name" type="string" data="{digipolis-focus}"/>
 					<value name="Hotkey" type="dword" data="00115b44"/>
-					<value name="GuiArgs" type="string" data=" /icon &quot;C:\projects\Digipolis\digipolis.ico&quot;"/>
-					<value name="Cmd1" type="string" data="&gt;cmd /k &quot;&quot;%ConEmuDir%\..\init.bat&quot; &amp; nodemon&quot; -cur_console:n:d:&quot;C:\projects\Digipolis\Container&quot;:t:&quot;Focus-Nodemon&quot;"/>
-					<value name="Cmd2" type="string" data="cmd /k &quot;&quot;%ConEmuDir%\..\init.bat&quot; &amp; gulp&quot; -cur_console:s1TVn:d:&quot;C:\projects\Digipolis\Container&quot;:t:&quot;Focus-gulp&quot;"/>
+					<value name="GuiArgs" type="string" data=' /icon "C:\projects\Digipolis\digipolis.ico"'/>
+					<value name="Cmd1" type="string" data='&gt;cmd /k ""%ConEmuDir%\..\init.bat" &amp; nodemon" -cur_console:n:d:"C:\projects\Digipolis\Container":t:"Focus-Nodemon"'/>
+					<value name="Cmd2" type="string" data='cmd /k ""%ConEmuDir%\..\init.bat" &amp; gulp" -cur_console:s1TVn:d:"C:\projects\Digipolis\Container":t:"Focus-gulp"'/>
 					<value name="Active" type="dword" data="00000001"/>
 					<value name="Count" type="dword" data="00000004"/>
-					<value name="Cmd3" type="string" data="cmd /k &quot;&quot;%ConEmuDir%\..\init.bat&quot; &amp; gulp&quot; -cur_console:s1THn:d:&quot;C:\projects\Digipolis\Wtm\App\Focus.Wtm.App&quot;:t:&quot;Wtm-gulp&quot;"/>
-					<value name="Cmd4" type="string" data="cmd /k &quot;&quot;%ConEmuDir%\..\init.bat&quot; &amp; gulp&quot; -cur_console:s2THn:d:&quot;C:\projects\Digipolis\FedPol\App\Focus.FedPol.App&quot;:t:&quot;FedPol-gulp&quot;"/>
-					<value name="Cmd5" type="string" data="cmd /k &quot;%ConEmuDir%\..\init.bat&quot;  -new_console:d:C:\projects\Digipolis"/>
+					<value name="Cmd3" type="string" data='cmd /k ""%ConEmuDir%\..\init.bat" &amp; gulp" -cur_console:s1THn:d:"C:\projects\Digipolis\Wtm\App\Focus.Wtm.App":t:"Wtm-gulp"'/>
+					<value name="Cmd4" type="string" data='cmd /k ""%ConEmuDir%\..\init.bat" &amp; gulp" -cur_console:s2THn:d:"C:\projects\Digipolis\FedPol\App\Focus.FedPol.App":t:"FedPol-gulp"'/>
+					<value name="Cmd5" type="string" data='cmd /k "%ConEmuDir%\..\init.bat"  -new_console:d:C:\projects\Digipolis'/>
 				</key>
-						<key name="Task11" modified="2015-05-06 11:04:35" build="140707">
+				<key name="Task11" modified="2015-05-06 11:04:35" build="140707">
 					<value name="Name" type="string" data="{digipolis-git}"/>
 					<value name="Hotkey" type="dword" data="00121144"/>
-					<value name="GuiArgs" type="string" data=" /icon &quot;C:\projects\Digipolis\digipolis.ico&quot;"/>
-					<value name="Cmd1" type="string" data="&gt;powershell -new_console:d:&quot;C:\projects\Digipolis\Container&quot;:t:&quot;Container&quot;"/>
+					<value name="GuiArgs" type="string" data=' /icon "C:\projects\Digipolis\digipolis.ico"'/>
+					<value name="Cmd1" type="string" data='&gt;powershell -new_console:d:"C:\projects\Digipolis\Container":t:"Container"'/>
 					<value name="Active" type="dword" data="00000001"/>
 					<value name="Count" type="dword" data="00000007"/>
-					<value name="Cmd2" type="string" data="powershell -new_console:d:&quot;C:\projects\Digipolis\Shared&quot;:t:&quot;Shared&quot;"/>
-					<value name="Cmd3" type="string" data="powershell -new_console:d:&quot;C:\projects\Digipolis\Debian&quot;:t:&quot;Debian&quot;"/>
-					<value name="Cmd4" type="string" data="powershell -new_console:d:&quot;C:\projects\Digipolis\Wtm\App&quot;:t:&quot;Wtm.App&quot;"/>
-					<value name="Cmd5" type="string" data="powershell -new_console:d:&quot;C:\projects\Digipolis\Wtm\TfsService\Dev&quot;:t:&quot;Wtm.Service&quot;"/>
-					<value name="Cmd6" type="string" data="powershell -new_console:d:&quot;C:\projects\Digipolis\FedPol\App&quot;:t:&quot;FedPol.App&quot;"/>
-					<value name="Cmd7" type="string" data="powershell -new_console:d:&quot;C:\projects\Digipolis\FedPol\Service&quot;:t:&quot;FedPol.Service&quot;"/>
+					<value name="Cmd2" type="string" data='powershell -new_console:d:"C:\projects\Digipolis\Shared":t:"Shared"'/>
+					<value name="Cmd3" type="string" data='powershell -new_console:d:"C:\projects\Digipolis\Debian":t:"Debian"'/>
+					<value name="Cmd4" type="string" data='powershell -new_console:d:"C:\projects\Digipolis\Wtm\App":t:"Wtm.App"'/>
+					<value name="Cmd5" type="string" data='powershell -new_console:d:"C:\projects\Digipolis\Wtm\TfsService\Dev":t:"Wtm.Service"'/>
+					<value name="Cmd6" type="string" data='powershell -new_console:d:"C:\projects\Digipolis\FedPol\App":t:"FedPol.App"'/>
+					<value name="Cmd7" type="string" data='powershell -new_console:d:"C:\projects\Digipolis\FedPol\Service":t:"FedPol.Service"'/>
 				</key>
 			</key>
-				<key name="Apps" modified="2018-08-23 04:18:07" build="161206">
+			<key name="Apps" modified="2018-08-23 04:18:07" build="161206">
 				<value name="Count" type="long" data="0"/>
 			</key>
 			<key name="Colors" modified="2018-08-23 04:18:07" build="161206">
-			<key name="Palette1" modified="2018-08-23 04:18:07" build="161206">
+				<key name="Palette1" modified="2018-08-23 10:53:59" build="180206">
 					<value name="Name" type="string" data="Monokai"/>
 					<value name="ExtendColors" type="hex" data="00"/>
-					<value name="ExtendColorIdx" type="hex" data="0e"/>
+					<value name="ExtendColorIdx" type="hex" data="0E"/>
 					<value name="TextColorIdx" type="hex" data="10"/>
 					<value name="BackColorIdx" type="hex" data="10"/>
 					<value name="PopTextColorIdx" type="hex" data="10"/>
@@ -712,7 +717,7 @@
 			<value name="FontUseDpi" type="hex" data="01"/>
 			<value name="FontUseUnits" type="hex" data="00"/>
 			<value name="CompressLongStrings" type="hex" data="01"/>
-			<value name="LastMonitor" type="string" data="0,0,1920,1040"/>
+			<value name="LastMonitor" type="string" data="-1920,0,0,1040"/>
 			<value name="Restore2ActiveMon" type="hex" data="00"/>
 			<value name="DownShowExOnTopMessage" type="hex" data="00"/>
 			<value name="UseScrollLock" type="hex" data="01"/>
@@ -738,7 +743,7 @@
 			<value name="TabModifiedSuffix" type="string" data="[*]"/>
 			<value name="Update.InetTool" type="hex" data="00"/>
 			<value name="Update.InetToolCmd" type="string" data=""/>
-			<key name="HotKeys" modified="2018-08-23 04:17:19" build="161206">
+			<key name="HotKeys" modified="2018-08-23 10:53:59" build="180206">
 				<value name="KeyMacroVersion" type="hex" data="02"/>
 				<value name="Multi.Modifier" type="dword" data="00000011"/>
 				<value name="Multi.ArrowsModifier" type="dword" data="0000005b"/>
@@ -851,9 +856,9 @@
 				<value name="PastePathKey" type="dword" data="00101144"/>
 				<value name="PasteCygwinKey" type="dword" data="00005d2d"/>
 				<value name="KeyMacro01" type="dword" data="00a01231"/>
-				<value name="KeyMacro01.Text" type="string" data="Task(&quot;cmd&quot;)"/>
+				<value name="KeyMacro01.Text" type="string" data='Task("cmd")'/>
 				<value name="KeyMacro02" type="dword" data="00a01232"/>
-				<value name="KeyMacro02.Text" type="string" data="Task(&quot;PowerShell&quot;)"/>
+				<value name="KeyMacro02.Text" type="string" data='Task("PowerShell")'/>
 				<value name="KeyMacro03" type="dword" data="000011d0"/>
 				<value name="KeyMacro03.Text" type="string" data="FontSetSize(1,2)"/>
 				<value name="KeyMacro04" type="dword" data="000011d1"/>
@@ -914,16 +919,31 @@
 				<value name="KeyMacro31.Text" type="string" data=""/>
 				<value name="KeyMacro32" type="dword" data="00000000"/>
 				<value name="KeyMacro32.Text" type="string" data=""/>
-				<value name="CTS.VkBlock" type="hex" data="a4"/>
-				<value name="CTS.VkText" type="hex" data="a0"/>
+				<value name="CTS.VkBlock" type="hex" data="A4"/>
+				<value name="CTS.VkText" type="hex" data="A0"/>
 				<value name="CTS.VkAct" type="hex" data="00"/>
 				<value name="CTS.VkPrompt" type="hex" data="00"/>
-				<value name="FarGotoEditorVk" type="hex" data="a2"/>
+				<value name="FarGotoEditorVk" type="hex" data="A2"/>
 				<value name="DndLKey" type="hex" data="00"/>
-				<value name="DndRKey" type="hex" data="a2"/>
+				<value name="DndRKey" type="hex" data="A2"/>
 				<value name="WndDragKey" type="dword" data="00121101"/>
+				<value name="Multi.SplitSwap" type="dword" data="00125d58"/>
+				<value name="Multi.SplitSwapU" type="dword" data="00125d26"/>
+				<value name="Multi.SplitSwapD" type="dword" data="00125d28"/>
+				<value name="Multi.SplitSwapL" type="dword" data="00125d25"/>
+				<value name="Multi.SplitSwapR" type="dword" data="00125d27"/>
+				<value name="Multi.GroupInputAll" type="dword" data="00105d47"/>
+				<value name="Multi.GroupInputKey" type="dword" data="00125d47"/>
+				<value name="CloseToRightKey" type="dword" data="00000000"/>
+				<value name="Key.BufPrUp" type="dword" data="00121121"/>
+				<value name="Key.BufPrDn" type="dword" data="00121122"/>
 			</key>
 			<value name="StatusBar.Hide.CellI" type="hex" data="01"/>
+			<value name="ClipboardAllLinesPosix" type="hex" data="00"/>
+			<value name="ClipboardFirstLinePosix" type="hex" data="00"/>
+			<value name="DynamicBufferHeight" type="hex" data="01"/>
+			<value name="StatusBar.Hide.WMode" type="hex" data="01"/>
 		</key>
 	</key>
 </key>
+
