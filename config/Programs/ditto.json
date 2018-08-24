@@ -7,11 +7,11 @@
 		[
 			{
 				"type": "fixed",
-				"desc": "Use Win + Alt + D to open Ditto history at mouse cursor (default conflicts with SublimeText)",
+				"desc": "Use Control + µ to open Ditto history at mouse cursor",
 				"hive": "HKEY_CURRENT_USER",
 				"regPathRaw": "Software\\Ditto",
 				"regKey": "DittoHotKey",
-				"value": "3140"
+				"value": "732"
 			},
 			{
 				"type": "fixed",
