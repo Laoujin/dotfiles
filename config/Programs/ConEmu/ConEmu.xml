@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <key name="Software">
 	<key name="ConEmu">
-		<key name=".Vanilla" modified="2018-08-23 23:58:45" build="161206">
+		<key name=".Vanilla" modified="2018-08-28 23:36:34" build="161206">
 			<value name="ColorTable00" type="dword" data="00222827"/>
 			<value name="ColorTable01" type="dword" data="009e5401"/>
 			<value name="ColorTable02" type="dword" data="0004aa74"/>
@@ -129,8 +129,8 @@
 			<value name="ConWnd Width" type="dword" data="000000cd"/>
 			<value name="ConWnd Height" type="dword" data="00000039"/>
 			<value name="Cascaded" type="hex" data="01"/>
-			<value name="ConWnd X" type="long" data="54"/>
-			<value name="ConWnd Y" type="long" data="35"/>
+			<value name="ConWnd X" type="long" data="84"/>
+			<value name="ConWnd Y" type="long" data="27"/>
 			<value name="16bit Height" type="ulong" data="0"/>
 			<value name="AutoSaveSizePos" type="hex" data="00"/>
 			<value name="IntegralSize" type="hex" data="00"/>
@@ -188,7 +188,7 @@
 			<value name="SendAltPrintScrn" type="hex" data="00"/>
 			<value name="SendPrintScrn" type="hex" data="00"/>
 			<value name="SendCtrlEsc" type="hex" data="00"/>
-			<value name="Min2Tray" type="hex" data="01"/>
+			<value name="Min2Tray" type="hex" data="00"/>
 			<value name="AlwaysShowTrayIcon" type="hex" data="00"/>
 			<value name="SafeFarClose" type="hex" data="01"/>
 			<value name="SafeFarCloseMacro" type="string" data=""/>
@@ -294,7 +294,7 @@
 			<value name="MinimizeOnLoseFocus" type="hex" data="00"/>
 			<value name="DisableFarFlashing" type="hex" data="00"/>
 			<value name="DisableAllFlashing" type="hex" data="00"/>
-			<value name="FindText" type="string" data="remotes"/>
+			<value name="FindText" type="string" data="jekyll"/>
 			<value name="FindMatchCase" type="hex" data="00"/>
 			<value name="FindMatchWholeWords" type="hex" data="00"/>
 			<value name="FindTransparent" type="hex" data="01"/>
@@ -485,9 +485,9 @@
 			<value name="DndLKey" type="hex" data="00"/>
 			<value name="DndRKey" type="hex" data="a2"/>
 			<value name="WndDragKey" type="dword" data="00121101"/>
-			<key name="Tasks" modified="2018-08-23 23:58:45" build="161206">
+			<key name="Tasks" modified="2018-08-28 23:36:34" build="161206">
 				<value name="Count" type="long" data="9"/>
-				<key name="Task1" modified="2018-08-23 23:58:45" build="161206">
+				<key name="Task1" modified="2018-08-28 23:36:34" build="161206">
 					<value name="Name" type="string" data="{PowerShell}"/>
 					<value name="GuiArgs" type="string" data="/dir &quot;c:\&quot;"/>
 					<value name="Cmd1" type="string" data="pwsh.exe"/>
@@ -496,7 +496,7 @@
 					<value name="Hotkey" type="dword" data="00001250"/>
 					<value name="Flags" type="dword" data="00000000"/>
 				</key>
-				<key name="Task2" modified="2018-08-23 23:58:45" build="161206">
+				<key name="Task2" modified="2018-08-28 23:36:34" build="161206">
 					<value name="Name" type="string" data="{PowerShell50}"/>
 					<value name="GuiArgs" type="string" data="/dir &quot;c:\&quot;"/>
 					<value name="Cmd1" type="string" data="pwsh.exe -new_console:s50H"/>
@@ -505,7 +505,7 @@
 					<value name="Hotkey" type="dword" data="00101250"/>
 					<value name="Flags" type="dword" data="00000004"/>
 				</key>
-				<key name="Task3" modified="2018-08-23 23:58:45" build="161206">
+				<key name="Task3" modified="2018-08-28 23:36:34" build="161206">
 					<value name="Name" type="string" data="{PowerShell (Admin)}"/>
 					<value name="Hotkey" type="dword" data="00121150"/>
 					<value name="GuiArgs" type="string" data="/dir &quot;c:\&quot;"/>
@@ -514,7 +514,7 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Flags" type="dword" data="00000000"/>
 				</key>
-				<key name="Task4" modified="2018-08-23 23:58:45" build="161206">
+				<key name="Task4" modified="2018-08-28 23:36:34" build="161206">
 					<value name="Name" type="string" data="{PowerShell50 (Admin)}"/>
 					<value name="Hotkey" type="dword" data="10121150"/>
 					<value name="GuiArgs" type="string" data="/dir &quot;c:\&quot;"/>
@@ -523,7 +523,7 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Flags" type="dword" data="00000004"/>
 				</key>
-				<key name="Task5" modified="2018-08-23 23:58:45" build="161206">
+				<key name="Task5" modified="2018-08-28 23:36:34" build="161206">
 					<value name="Name" type="string" data="{confac}"/>
 					<value name="Hotkey" type="dword" data="00101143"/>
 					<value name="GuiArgs" type="string" data=" /icon &quot;C:\Code\projects\confac\confac.ico&quot;"/>
@@ -535,7 +535,7 @@
 					<value name="Cmd3" type="string" data="pwsh.exe -NoExit -Command &quot;npm start&quot; -new_console:s1TVn:d:&quot;C:\code\projects\confac\front&quot;:t:&quot;confac-front&quot;"/>
 					<value name="Cmd4" type="string" data="cmd /k &quot;&quot;%ConEmuDir%\..\init.bat&quot; &amp; gulp&quot; -cur_console:s2THn:d:&quot;C:\projects\Digipolis\FedPol\App\Focus.FedPol.App&quot;:t:&quot;FedPol-gulp&quot;"/>
 				</key>
-				<key name="Task6" modified="2018-08-23 23:58:45" build="161206">
+				<key name="Task6" modified="2018-08-28 23:36:34" build="161206">
 					<value name="Name" type="string" data="{bliki}"/>
 					<value name="Hotkey" type="dword" data="00101142"/>
 					<value name="GuiArgs" type="string" data=" /icon &quot;C:\Code\itenium\favicon.ico&quot;"/>
@@ -548,7 +548,7 @@
 					<value name="Cmd5" type="string" data="powershell -new_console:d:&quot;C:\projects\Digipolis\Note\Service&quot;:t:&quot;Note.Service&quot;"/>
 					<value name="Flags" type="dword" data="00000000"/>
 				</key>
-				<key name="Task7" modified="2018-08-23 23:58:45" build="161206">
+				<key name="Task7" modified="2018-08-28 23:36:34" build="161206">
 					<value name="Name" type="string" data="{stockoma}"/>
 					<value name="Hotkey" type="dword" data="00101145"/>
 					<value name="GuiArgs" type="string" data="/icon &quot;C:\Code\projects\stockoma\favicon.ico&quot;"/>
@@ -563,7 +563,7 @@
 					<value name="Cmd7" type="string" data="powershell -new_console:d:&quot;C:\projects\Digipolis\FedPol\Service&quot;:t:&quot;FedPol.Service&quot;"/>
 					<value name="Flags" type="dword" data="00000004"/>
 				</key>
-				<key name="Task8" modified="2018-08-23 23:58:45" build="161206">
+				<key name="Task8" modified="2018-08-28 23:36:34" build="161206">
 					<value name="Name" type="string" data="{basf-cleaning}"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="GuiArgs" type="string" data="/icon &quot;C:\realdolmen\basf.ico&quot;"/>
@@ -573,7 +573,7 @@
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Cmd2" type="string" data="&gt;pwsh.exe -new_console:s1THn:d:&quot;C:\RealDolmen\BASFCleaning&quot;:t:basf-cli&quot;"/>
 				</key>
-				<key name="Task9" modified="2018-08-23 23:58:45" build="161206">
+				<key name="Task9" modified="2018-08-28 23:36:34" build="161206">
 					<value name="Name" type="string" data="{rezinal}"/>
 					<value name="Hotkey" type="dword" data="00101152"/>
 					<value name="GuiArgs" type="string" data="/icon &quot;C:\realdolmen\rezinal.ico&quot;"/>
@@ -610,11 +610,11 @@
 					<value name="Cmd7" type="string" data="powershell -new_console:d:&quot;C:\projects\Digipolis\FedPol\Service&quot;:t:&quot;FedPol.Service&quot;"/>
 				</key>
 			</key>
-			<key name="Apps" modified="2018-08-23 23:58:45" build="161206">
+			<key name="Apps" modified="2018-08-28 23:36:34" build="161206">
 				<value name="Count" type="long" data="0"/>
 			</key>
-			<key name="Colors" modified="2018-08-23 23:58:45" build="161206">
-				<key name="Palette1" modified="2018-08-23 23:58:45" build="161206">
+			<key name="Colors" modified="2018-08-28 23:36:34" build="161206">
+				<key name="Palette1" modified="2018-08-28 23:36:34" build="161206">
 					<value name="Name" type="string" data="Monokai"/>
 					<value name="ExtendColors" type="hex" data="00"/>
 					<value name="ExtendColorIdx" type="hex" data="0e"/>
@@ -743,7 +743,7 @@
 			<value name="TabModifiedSuffix" type="string" data="[*]"/>
 			<value name="Update.InetTool" type="hex" data="00"/>
 			<value name="Update.InetToolCmd" type="string" data=""/>
-			<key name="HotKeys" modified="2018-08-23 23:58:45" build="161206">
+			<key name="HotKeys" modified="2018-08-28 23:36:34" build="161206">
 				<value name="KeyMacroVersion" type="hex" data="02"/>
 				<value name="Multi.Modifier" type="dword" data="00000011"/>
 				<value name="Multi.ArrowsModifier" type="dword" data="0000005b"/>
