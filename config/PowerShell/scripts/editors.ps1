@@ -16,6 +16,7 @@ function Edit-Profile {
 function Start-SublimeText {
 	if ($args.length -eq 0 -or $args[0] -eq $null) {
 		START $ide
+		return
 	}
 
 	# Fix for GitGutter not working when starting ST3 from the commandline
