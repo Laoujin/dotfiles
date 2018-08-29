@@ -6,8 +6,15 @@ Set-Alias ga Git-NumberedAdd
 Set-Alias gd Git-NumberedDiff
 Set-Alias grs Git-NumberedReset
 
+$global:gitStatusNumbersConfig = @{
+	stagedColor='green';
+	addedColor='Blue';
+	modifiedColor='Yellow';
+	deletedColor='DarkMagenta';
+	renamedColor='Yellow';
+}
+
 # TODO: incorporate git diff --numstat?  +62/-15
-# TODO: put colors etc in variable, default to ps / posh-git values? (or not with breaking changes v1?)
 
 function Git-NumberedStatus() {
 	$global:gitStatusNumbers = git status -s | % {
@@ -31,11 +38,13 @@ function Git-NumberedStatus() {
 
 	# $global:gitStatusNumbers
 
+	$config = $global:gitStatusNumbersConfig
+
 	$stagedFiles = $global:gitStatusNumbers | Where staged
 	if ($stagedFiles.length) {
 		Write-Host "Staged files:"
 		$stagedFiles | % {
-			Write-Host "    $($_.state) $($_.file)" -ForegroundColor green
+			Write-Host "    $($_.state) $($_.file)" -ForegroundColor $config.stagedColor
 		}
 		Write-Host ""
 	}
@@ -47,12 +56,13 @@ function Git-NumberedStatus() {
 			$index++
 
 			$color = switch($_.state) {
-				'A' {'Blue'; break}
-				'M' {'Yellow'; break}
-				'D' {'DarkMagenta'; break}
-				'R' {'Yellow'; break}
+				'A' {$config.addedColor; break}
+				'M' {$config.modifiedColor; break}
+				'D' {$config.deletedColor; break}
+				'R' {$config.renamedColor; break}
 				default {'White'}
 			}
+
 			Write-Host "$index   $($_.state) $($_.file)" -ForegroundColor $color
 		}
 	}
