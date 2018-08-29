@@ -3,19 +3,33 @@ $global:gitStatusNumbers
 
 Set-Alias gs Git-NumberedStatus
 Set-Alias ga Git-NumberedAdd
+# Set-Alias gd Git-NumberedDiff
+# Set-Alias grs Git-NumberedReset
 
+# TODO: incorporate git diff --numstat?  +62/-15
 
-# TODO: write article about usage (with some pretty pictures:)
 
 function Git-NumberedStatus() {
 	$global:gitStatusNumbers = git status -s | % {
 		$file = $_.Substring(3)
 
-		$staged = $_[1] -eq " "
-		$state = If ($staged) {$_[0]} Else {$_[1]}
-		$state = If ($state -eq "?") {"A"} Else {$state}
-		return @{state=$state;file=$file;staged=$staged}
-	}
+		$returns = @()
+
+		$staged = $_[0] -ne " " -and $_[0] -ne "?"
+		if ($staged) {
+			$returns + @{state=$_[0];file=$file;staged=$true}
+		}
+
+		$workingDir = $_[1] -ne " "
+		if ($workingDir) {
+			$state = If ($_[1] -eq "?") {"A"} Else {$_[1]}
+			$returns += @{state=$state;file=$file;staged=$false}
+		}
+		return $returns
+
+	} | % {$_}
+
+	# $global:gitStatusNumbers
 
 	$stagedFiles = $global:gitStatusNumbers | Where staged
 	if ($stagedFiles.length) {
@@ -44,12 +58,48 @@ function Git-NumberedStatus() {
 }
 
 
-function Git-NumberedAdd($index) {
-	# TODO: need to accept 0-3
-	# TODO: need to accept 0 1 5 4 7
-	# TODO: need to accept <4 and >8 ?
-	# TODO: need to quote files
-	$info = $global:gitStatusNumbers[$index]
-	git add $info.file
-	Write-Host "Added $index $($info.file)"
+function Git-NumberedAdd {
+	if (-not $global:gitStatusNumbers) {
+		Write-Host "First run Git-NumberedStatus"
+		return
+	}
+	if ($args.length -eq 0 -or $args[0] -eq $null) {
+		Write-Host "No arguments? Usage:"
+		Write-Host "Add the first file: 'Git-NumberedAdd 0'"
+		Write-Host "Add the first 3 files: 'Git-NumberedAdd 0 1 2' or 'Git-NumberedAdd 0-2' or 'Git-NumberedAdd -3'"
+		Write-Host "Add all files starting from 2: 'Git-NumberedAdd +1'"
+		return
+	}
+
+	foreach ($arg in $args) {
+		if ($arg -is [int]) {
+			# Add by index
+			$indexes = @($arg)
+
+		} elseif ($arg -match '\d+-\d+') {
+			# Add by range
+			$begin = ($arg -split '-')[0]
+			$end = ($arg -split '-')[1]
+			$indexes = $begin..$end
+
+		} elseif ($arg[0] -eq '-') {
+			# Add all before
+			$allBefore = $args.Substring(1) - 1
+			$indexes = 0..$allBefore
+
+		} elseif ($arg[0] -eq '+') {
+			# Add all after
+			$allAfter = $args.Substring(1) + 1
+			$indexes = $allAfter..($global:gitStatusNumbers.length - 1)
+		}
+
+		foreach ($index in $indexes) {
+			if ($index -ge $global:gitStatusNumbers.length) {
+				Write-Host "$index is outside of the boundaries of Git-NumberedStatus (Length: $($global:gitStatusNumbers.length))"
+				continue
+			}
+			$info = $global:gitStatusNumbers[$index]
+			git add $info.file -v
+		}
+	}
 }
