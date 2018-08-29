@@ -1,12 +1,7 @@
-$global:gitStatusNumbers = $null
+$global:gitStatusNumbers = @{
+	stagedFiles=$null;
+	workingDir=$null;
 
-
-Set-Alias gs Git-NumberedStatus
-Set-Alias ga Git-NumberedAdd
-Set-Alias gd Git-NumberedDiff
-Set-Alias grs Git-NumberedReset
-
-$global:gitStatusNumbersConfig = @{
 	stagedColor='green';
 	addedColor='Blue';
 	modifiedColor='Yellow';
@@ -14,10 +9,20 @@ $global:gitStatusNumbersConfig = @{
 	renamedColor='Yellow';
 }
 
+
+Set-Alias gs Git-NumberedStatus
+Set-Alias ga Git-NumberedAdd
+Set-Alias gd Git-NumberedDiff
+Set-Alias grs Git-NumberedReset
+
 # TODO: incorporate git diff --numstat?  +62/-15
 
+# Let's keep things simple and don't do the following:
+# - Keep track of added/reset files and use diff --cached to keep gd working
+# - Staged file can be added again after a grs ('ga -3' !! collides with existing usage)
+
 function Git-NumberedStatus() {
-	$global:gitStatusNumbers = git status -s | % {
+	$allFiles = git status -s | % {
 		$file = $_.Substring(3)
 
 		$returns = @()
@@ -36,23 +41,24 @@ function Git-NumberedStatus() {
 
 	} | % {$_}
 
-	# $global:gitStatusNumbers
 
-	$config = $global:gitStatusNumbersConfig
+	$config = $global:gitStatusNumbers
 
-	$stagedFiles = $global:gitStatusNumbers | Where staged
-	if ($stagedFiles.length) {
+
+	$config.stagedFiles = $allFiles | Where staged
+	if ($config.stagedFiles.length) {
 		Write-Host "Staged files:"
-		$stagedFiles | % {
+		$config.stagedFiles | % {
 			Write-Host "    $($_.state) $($_.file)" -ForegroundColor $config.stagedColor
 		}
 		Write-Host ""
 	}
 
-	$global:gitStatusNumbers = @($global:gitStatusNumbers | Where {$_.staged -eq $false})
-	if ($global:gitStatusNumbers.length) {
+
+	$config.workingDir = @($allFiles | Where {$_.staged -eq $false})
+	if ($config.workingDir.length) {
 		Write-Host "Working directory:"
-		$global:gitStatusNumbers | % {$index = -1}{
+		$config.workingDir | % {$index = -1}{
 			$index++
 
 			$color = switch($_.state) {
@@ -70,7 +76,7 @@ function Git-NumberedStatus() {
 
 
 function Validate-GitIndexes($indexes) {
-	if (-not $global:gitStatusNumbers) {
+	if (-not $global:gitStatusNumbers.workingDir) {
 		Write-Host "First run Git-NumberedStatus"
 		return $false
 	}
@@ -92,6 +98,8 @@ function Parse-GitIndexes($argIndexes) {
 		return
 	}
 
+	$allFiles = $global:gitStatusNumbers.workingDir
+
 	$indexes = @()
 	foreach ($arg in $argIndexes) {
 		if ($arg -is [int]) {
@@ -112,19 +120,19 @@ function Parse-GitIndexes($argIndexes) {
 		} elseif ($arg[0] -eq '+') {
 			# Add all after
 			$allAfter = $arg.Substring(1) + 1
-			$indexes += $allAfter..($global:gitStatusNumbers.length - 1)
+			$indexes += $allAfter..($allFiles.length - 1)
 		} else {
 			Write-Host "Unparseable argument '$arg'" -ForegroundColor DarkMagenta
 		}
 	}
 
 	return $indexes | % {$_} | ? {
-		if ($_ -ge $global:gitStatusNumbers.length) {
-			Write-Host "$_ is outside of the boundaries of Git-NumberedStatus (Length: $($global:gitStatusNumbers.length))" -ForegroundColor DarkMagenta
+		if ($_ -ge $allFiles.length) {
+			Write-Host "$_ is outside of the boundaries of Git-NumberedStatus (Length: $($allFiles.length))" -ForegroundColor DarkMagenta
 			return $false
 		}
 		return $true
-	} | % { $global:gitStatusNumbers[$_] }
+	} | % { $allFiles[$_] }
 }
 
 
@@ -143,7 +151,7 @@ function Git-NumberedAdd {
 
 function Git-NumberedDiff {
 	if ($args.length -eq 0 -or $args[0] -eq $null) {
-		$args = @("0-$($global:gitStatusNumbers.length - 1)")
+		$args = @("0-$($global:gitStatusNumbers.workingDir.length - 1)")
 	}
 
 	$fileInfos = Parse-GitIndexes $args
