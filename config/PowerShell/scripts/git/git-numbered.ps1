@@ -1,4 +1,4 @@
-$global:gitStatusNumbers
+$global:gitStatusNumbers = $null
 
 
 Set-Alias gs Git-NumberedStatus
@@ -7,7 +7,7 @@ Set-Alias gd Git-NumberedDiff
 Set-Alias grs Git-NumberedReset
 
 # TODO: incorporate git diff --numstat?  +62/-15
-
+# TODO: put colors etc in variable, default to ps / posh-git values? (or not with breaking changes v1?)
 
 function Git-NumberedStatus() {
 	$global:gitStatusNumbers = git status -s | % {
@@ -50,6 +50,7 @@ function Git-NumberedStatus() {
 				'A' {'Blue'; break}
 				'M' {'Yellow'; break}
 				'D' {'DarkMagenta'; break}
+				'R' {'Yellow'; break}
 				default {'White'}
 			}
 			Write-Host "$index   $($_.state) $($_.file)" -ForegroundColor $color
@@ -109,7 +110,7 @@ function Parse-GitIndexes($argIndexes) {
 
 	return $indexes | % {$_} | ? {
 		if ($_ -ge $global:gitStatusNumbers.length) {
-			Write-Host "$_ is outside of the boundaries of Git-NumberedStatus (Length: $($global:gitStatusNumbers.length))"
+			Write-Host "$_ is outside of the boundaries of Git-NumberedStatus (Length: $($global:gitStatusNumbers.length))" -ForegroundColor DarkMagenta
 			return $false
 		}
 		return $true
@@ -124,31 +125,38 @@ function Git-NumberedAdd {
 		return
 	}
 
-	foreach ($info in $fileInfos) {
-		git add $info.file -v
-	}
+	$files = $fileInfos | % {$_.file}
+	git add $files -v
 }
 
 
+
 function Git-NumberedDiff {
+	if ($args.length -eq 0 -or $args[0] -eq $null) {
+		$args = @("0-$($global:gitStatusNumbers.length - 1)")
+	}
+
 	$fileInfos = Parse-GitIndexes $args
 	if (-not $fileInfos) {
 		return
 	}
 
-	# TODO: git diff added file --> git add -N ?
-	# TODO: should call once instead of looping...
-	foreach ($info in $fileInfos) {
-		if ($info.state -eq 'A') {
-			git add -N $info.file
-		}
-		git diff $info.file
+	# git add -N, --intent-to-add
+	# so that new files are shown in the diff
+	$newFiles = $fileInfos | ? {$_.state -eq 'A'} | % {$_.file}
+	if ($newFiles) {
+		Write-Host "git add --intent-to-add $newFiles"
+		git add -Nv $newFiles
 	}
+
+	# Filter deleted files from diff (git doesn't like it)
+	$files = $fileInfos | ? {$_.state -ne 'D'} | % {$_.file}
+	git diff $files
 }
 
 
 function Git-NumberedReset {
-$fileInfos = Parse-GitIndexes $args
+	$fileInfos = Parse-GitIndexes $args
 	if (-not $fileInfos) {
 		return
 	}
@@ -156,7 +164,9 @@ $fileInfos = Parse-GitIndexes $args
 	# TODO: Cannot reset already staged files now...
 	# Negative indexes for diffing --cached?
 
-	# git reset HEAD -- $info.file
+	# ($fileInfos | % {$_.file })
+
+	# git reset HEAD -- ($fileInfos | % {$_.file })
 
 	foreach ($info in $fileInfos) {
 		git reset HEAD -- $info.file
