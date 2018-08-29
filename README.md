@@ -9,10 +9,10 @@ Configure Windows Explorer, link your important files to cloud folders, setup .g
 Install your software with [Boxstarter](http://boxstarter.org/).
 
 **Step 2:**  
-Configure `bootstrap.json` files.
+Configure your stuff in `.\bootstrap` and `.\config`.
 
 **Step 3:**  
-Run `.\bootstrap.ps1` from an Administrator PowerShell.
+Run `.\bootstrap.ps1` from an Administrator PowerShell prompt.
 
 Boxstarter
 ==========
@@ -22,3 +22,8 @@ iex ((New-Object System.Net.WebClient).DownloadString('http://boxstarter.org/boo
 
 Install-BoxstarterPackage -PackageName https://gist.githubusercontent.com/Laoujin/{raw} -DisableReboots
 ```
+
+Other dotfiles
+==============
+
+- [jayharris/dotfiles-windows](https://github.com/jayharris/dotfiles-windows)  
