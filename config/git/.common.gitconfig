@@ -68,9 +68,9 @@
 	col = checkout laoujin
 
 	### Committing & Amending
-	#ci = "!f() { git commit -m"$1"; }; f"
+	cim = "!f() { git commit -vm\"$1\"; }; f"
 	ci = commit
-	cim = commit --no-edit # ci merge
+	# cim = commit --no-edit # ci merge
 	unci = reset --soft HEAD^
 	amend = !git add -A && git commit --amend --no-edit
 	ciamend = commit --amend --no-edit
