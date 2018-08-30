@@ -14,6 +14,19 @@ Configure your stuff in `.\bootstrap` and `.\config`.
 **Step 3:**  
 Run `.\bootstrap.ps1` from an Administrator PowerShell prompt.
 
+Clone
+=====
+
+Started using submodules for parts of dotfiles that can exist on their own.
+
+```powershell
+# First time
+git submodule update --init --recursive
+
+# Update after first time
+git pull --recurse-submodules
+```
+
 Boxstarter
 ==========
 
