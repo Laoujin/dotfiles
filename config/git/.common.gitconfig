@@ -70,8 +70,8 @@
 	### Committing & Amending
 	cim = "!f() { git commit -vm\"$1\"; }; f"
 	ci = commit
-	# cim = commit --no-edit # ci merge
 	unci = reset --soft HEAD^
+	rh = reset --soft HEAD^
 	amend = !git add -A && git commit --amend --no-edit
 	ciamend = commit --amend --no-edit
 	cp = cherry-pick
