@@ -5,6 +5,21 @@
 # https://github.com/lzybkr/PSReadLine/blob/master/PSReadLine/en-US/about_PSReadline.help.txt
 # [Microsoft.PowerShell.PSConsoleReadLine]::GetKeyHandlers($true, $false)
 
+# Install-Module PSReadLine -RequiredVersion 2.0.0-beta2 -AllowPrerelease
+# (Get-Module PSReadLine).Version
+
+# TODO: Setting ErrorColors is broken in 1.2
+# But installing 2.0.0-beta2 fails initialization...
+# https://github.com/lzybkr/PSReadLine/issues/614
+
+# Try again with final release?
+# https://www.powershellgallery.com/packages/PSReadLine
+# https://github.com/lzybkr/PSReadLine/releases
+
+# Change colors
+# $options = Get-PSReadlineOption
+# $options.ErrorForegroundColor = "Green"
+# $options.ErrorBackgroundColor = "Red"
 
 if ($host.Name -ne 'ConsoleHost') {
 	return
