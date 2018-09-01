@@ -1,10 +1,13 @@
-Control + Shift + q : ST3 Console
+Control + ù : Bring Cmder to front
 Control + µ : Activate Ditto  
+Control + Shift + q : ST3 Console
 
+## Sublime
+
+Control + M : Jump to matching brace
 
 ## Cmder
 
-Control + ù : Bring Cmder to front
 Control + Alt : Drag window with mouse
 Left Control + Click : Goto url
 Left Alt : Block selection
