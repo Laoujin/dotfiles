@@ -7,6 +7,10 @@
     "tag_scope"   : "bracket.tag",
     "high_visibility_enabled_by_default": false,
     "content_highlight_bar": true,
-    "popup_bracket_emphasis": "blue",
+
+    // Doesn't seem to be working (defaults to blue):
+    "use_custom_popup_bracket_emphasis": true,
+    "popup_bracket_emphasis": "green",
+
     "search_threshold": 10000
 }
