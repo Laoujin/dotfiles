@@ -13,6 +13,11 @@
 				"type": "symlink",
 				"link": "Programs\\VisualStudio\\2017\\Settings\\CurrentSettings.vssettings",
 				"to": "<LocalApplicationData>\\Microsoft\\VisualStudio\\15.0_a53153e5\\Settings\\CurrentSettings.vssettings"
+			},
+			{
+				"type": "symlink",
+				"link": "Programs\\VisualStudio\\2017\\Settings\\CurrentSettings.vssettings",
+				"to": "<LocalApplicationData>\\Microsoft\\VisualStudio\\15.0_98c8f003\\Settings\\CurrentSettings.vssettings"
 			}
 		]
 	}
