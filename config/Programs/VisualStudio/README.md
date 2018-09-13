@@ -6,6 +6,14 @@ Shortcuts
 
 Tools > Options > Environment > Keyboard
 
+
+Add all mapped shortcuts here
+- Edit.*
+- 
+
+
+
+
 ### General
 
 - Tools.Options: Ctrl O, O (Open Options)
@@ -13,7 +21,10 @@ Tools > Options > Environment > Keyboard
 	- **In Code**: File.OpenContainingFolder: Ctrl O, F
 	- **In Solution Explorer**: ProjectandSolutionContextMenus.Project.OpenFolderinFileExplorer: Ctrl O, D (Open Directory)
 - View.FullScreen: Shift Alt Enter
-
+- Window.AutoHideAll: Ctrl H, A (Hide All)
+- Window.KeepTabOpen
+- Tools.ExtensionsAndUpdates: Ctrl E, A (Extension Add)
+- Tools.CodeSnippetsManager: Ctrl K, B
 
 ### Project Shortcuts
 
@@ -31,6 +42,7 @@ Tools > Options > Environment > Keyboard
 - Project.ShowAllFiles: Ctrl P, H (Project Hidden)
 - Project.UnloadProject: Ctrl P, U (Project Unload)
 - File.CloseSolution: Ctrl P, C (Project Close)
+- Project.AddReference: Ctrl A, R (Add Reference)
 
 
 ### File Shortcuts
@@ -41,12 +53,20 @@ Tools > Options > Environment > Keyboard
 	- Resharper: Alt+Ins to add class, enum, ...  
 - Project.RunCustomTool: Ctrl R, T (Run Tool)
 - View.OpenWith: Ctrl F, O (File Open)
+- Window.CloseAllDocuments: Ctrl C, A (Close All)
 
 ### Git
 
 - Team.Git.ViewHistory: Ctrl G, H (Git History)
 - Team.Git.Annotate: Ctrl G, B (Git Blame)
-- Team.Git.CompareWithUnmodified: Ctrl G, U
+- Team.Git.CompareWithUnmodified: Ctrl G, U (Git Unmodified)
+
+### TFS
+
+- File.GetLastestVersion?
+- File.TfsGetLastestVersion: Ctrl T, L (Tfs Latest)
+- File.TfsHistory: Ctrl T, H (Tfs History)
+
 
 ### Testing
 
@@ -58,3 +78,49 @@ Tools > Options > Environment > Keyboard
 ## Build
 
 - Build.Cancel: Ctrl B, C (Build Cancel)
+
+
+## Debug
+
+- Debug.Start: F5
+- Debug.StartWithoutDebugging: Ctrl F5
+- Debug.Restart: Ctrl Shift F5
+- Debug.StopDebugging: Shift F5
+- Debug.RunToCursor: Ctrl F10
+- Debug.SetNextStatement: Ctrl Shift F10
+- Debug.ShowNextStatement: Alt Num*
+- Debug.StepInto: F11
+- Debug.StepIntoCurrentProcess: Ctrl Alt F11
+- Debug.StepOut: Shift F11
+- Debug.StepOutCurrentProcess: Ctrl Shift Alt F11
+- Debug.StepOver: F10
+- Debug.StepOverCurrentProcess: Ctrl Alt F10
+- 
+
+
+- Debug.ExceptionSettings: Ctrl Alt E
+- Debug.Immediate: Ctrl Alt I
+- Debug.QuickWatch: Ctrl Alt Q
+- Debug.CallStack: Ctrl Alt C
+- Debug.Watch1: Ctrl Alt W & 1
+
+- Debug.AttachtoProcess: Ctrl Alt P
+- Debug.ReattachtoProcess: Shift Alt P
+- Debug.BreakAll: Ctrl Alt Break
+- Debug.GoToDisassembly: Alt G
+
+- Debug.Breakpoints: Ctrl Alt B
+- Debug.DeleteAllBreakpoints: Ctrl Shift F9
+- Debug.EnableBreakpoint: Ctrl F9
+- Debug.ToggleBreakpoint: F9
+- EditorContextMenus.CodeWindow.Breakpoint.BreakpointConditions: Alt F9 & C
+- EditorContextMenus.CodeWindow.Breakpoint.BreakpointLabels: Alt F9 & L
+
+
+- Debug.Memory1: Ctrl Alt M & 1
+- Debug.ParallelStacks: Ctrl Shift D & S
+- Debug.ParallelWatch1: Ctrl Shift D & 1
+- Debug.Processes: Ctrl Alt Z
+- Debug.Registers: Ctrl Alt G
+- Debug.Tasks: Ctrl Shift D & K
+- Debug.Threads: Ctrl Alt H
