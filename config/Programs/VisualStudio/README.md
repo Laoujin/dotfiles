@@ -9,10 +9,13 @@ Tools > Options > Environment > Keyboard
 
 Add all mapped shortcuts here
 - Edit.*
-- 
+- Window.*
+- File.Tfs*
+- Team.Git.*
 
 
-
+ATTN: Make sure you don't bind something to Ctrl C, X or Control C won't work anymore :)
+(Same for Ctrl F, ...)
 
 ### General
 
@@ -20,11 +23,14 @@ Add all mapped shortcuts here
 - Open Explorer
 	- **In Code**: File.OpenContainingFolder: Ctrl O, F
 	- **In Solution Explorer**: ProjectandSolutionContextMenus.Project.OpenFolderinFileExplorer: Ctrl O, D (Open Directory)
+	- ???: File.OpenFolder: Ctrl Shift Alt O
 - View.FullScreen: Shift Alt Enter
 - Window.AutoHideAll: Ctrl H, A (Hide All)
 - Window.KeepTabOpen
 - Tools.ExtensionsAndUpdates: Ctrl E, A (Extension Add)
+
 - Tools.CodeSnippetsManager: Ctrl K, B
+- File.NewSnippet
 
 ### Project Shortcuts
 
@@ -35,6 +41,7 @@ Add all mapped shortcuts here
 - File.AddNewProject: Ctrl P, N (Project New)
 - File.NewProject: Ctrl Shift N
 - File.OpenProject: Ctrl Shift O
+- File.OpenWebSite: Shift Alt O
 - Project.EditProjectFile: Ctrl P, E (Project Edit)
 - Project.ExcludeFromProject: Ctrl P, X (Project eXclude)
 - Project.IncludeInProject: Ctrl P, I (Project Include)
@@ -48,12 +55,15 @@ Add all mapped shortcuts here
 ### File Shortcuts
 
 - Project.AddExistingItem: Shift Alt A
-- Project.AddNewItem: Ctrl A
+- Project.AddNewItem: Ctrl N
 	- Used to be bound to File.NewFile (but who uses that)  
 	- Resharper: Alt+Ins to add class, enum, ...  
 - Project.RunCustomTool: Ctrl R, T (Run Tool)
-- View.OpenWith: Ctrl F, O (File Open)
-- Window.CloseAllDocuments: Ctrl C, A (Close All)
+- View.OpenWith: 
+- Window.CloseAllDocuments: 
+- File.CloseAllButThis: 
+- 
+
 
 ### Git
 
