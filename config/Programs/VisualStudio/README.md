@@ -15,7 +15,9 @@ Add all mapped shortcuts here
 
 
 ATTN: Make sure you don't bind something to Ctrl C, X or Control C won't work anymore :)
-(Same for Ctrl F, ...)
+(Same for Ctrl F, Ctrl A, ...)  
+--> Make sure there is not a binding for the Ctrl "first" shortcut.
+
 
 ### General
 
@@ -25,7 +27,7 @@ ATTN: Make sure you don't bind something to Ctrl C, X or Control C won't work an
 	- **In Solution Explorer**: ProjectandSolutionContextMenus.Project.OpenFolderinFileExplorer: Ctrl O, D (Open Directory)
 	- ???: File.OpenFolder: Ctrl Shift Alt O
 - View.FullScreen: Shift Alt Enter
-- Window.AutoHideAll: Ctrl H, A (Hide All)
+- Window.AutoHideAll: 
 - Window.KeepTabOpen
 - Tools.ExtensionsAndUpdates: Ctrl E, A (Extension Add)
 
@@ -34,7 +36,7 @@ ATTN: Make sure you don't bind something to Ctrl C, X or Control C won't work an
 
 ### Project Shortcuts
 
-- Project.SetasStartUpProject: Ctrl S, P (StartUp Project)
+- Project.SetasStartUpProject: Ctrl S, P (StartUp Project) or Ctrl Alt R
 - Build.PubishSelection: Ctrl P, P (Project Publish)
 - ClassViewContextMenus.ClassViewProject.Debug.Startnewinstance: Ctrl D, S (Debug Start)
 - File.AddExistingProject: Ctrl P, A (Project Add)
@@ -49,7 +51,7 @@ ATTN: Make sure you don't bind something to Ctrl C, X or Control C won't work an
 - Project.ShowAllFiles: Ctrl P, H (Project Hidden)
 - Project.UnloadProject: Ctrl P, U (Project Unload)
 - File.CloseSolution: Ctrl P, C (Project Close)
-- Project.AddReference: Ctrl A, R (Add Reference)
+- Project.AddReference: 
 
 
 ### File Shortcuts
@@ -74,7 +76,7 @@ ATTN: Make sure you don't bind something to Ctrl C, X or Control C won't work an
 ### TFS
 
 - File.GetLastestVersion?
-- File.TfsGetLastestVersion: Ctrl T, L (Tfs Latest)
+- File.TfsGetLastestVersion: Ctrl T, L (Tfs Latest) --> ReSharper already hooks in on the Ctrl + T
 - File.TfsHistory: Ctrl T, H (Tfs History)
 
 
@@ -105,8 +107,6 @@ ATTN: Make sure you don't bind something to Ctrl C, X or Control C won't work an
 - Debug.StepOutCurrentProcess: Ctrl Shift Alt F11
 - Debug.StepOver: F10
 - Debug.StepOverCurrentProcess: Ctrl Alt F10
-- 
-
 
 - Debug.ExceptionSettings: Ctrl Alt E
 - Debug.Immediate: Ctrl Alt I
