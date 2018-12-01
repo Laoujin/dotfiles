@@ -9,11 +9,11 @@ Push-Location "$PSScriptRoot\src"
 Pop-Location
 
 Push-Location "$PSScriptRoot\src\modules"
-Get-ChildItem | ForEach-Object { . ".\$_" }
+Get-ChildItem | ForEach-Object { . "$_" }
 Pop-Location
 
 Push-Location "$PSScriptRoot\src\lib"
-Get-ChildItem -Filter *.ps1 | ForEach-Object { . ".\$_" }
+Get-ChildItem -Filter *.ps1 | ForEach-Object { . "$_" }
 Pop-Location
 
 Import-Module "$PSScriptRoot\src\lib\PSYaml"

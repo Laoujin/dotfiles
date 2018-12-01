@@ -12,5 +12,7 @@
 	email =
 	name =
 
+# Windows style path:
+# path = c:\\users\\username\\.common.gitconfig
 [include]
 	path = ~/.common.gitconfig
