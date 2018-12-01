@@ -52,6 +52,7 @@ ATTN: Make sure you don't bind something to Ctrl C, X or Control C won't work an
 - Project.UnloadProject: Ctrl P, U (Project Unload)
 - File.CloseSolution: Ctrl P, C (Project Close)
 - Project.AddReference: 
+- Project.AddNewSolutionFolder: Ctrl P, F (Project Folder)
 
 
 ### File Shortcuts
