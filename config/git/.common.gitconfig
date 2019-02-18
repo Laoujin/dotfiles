@@ -9,6 +9,8 @@
 # Create alias
 # git config --global alias.ci commit
 
+# TODO: find branch name that matches $1
+
 [alias]
 	fam = !git checkout development && git fetch && git merge origin/development && git dm
 
@@ -128,11 +130,16 @@
 	fm = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short -i --grep=$1; }; f"
 
 	# Ignore changes to a file
-	# TODO: "assume" is not ideal. Compare with --skip-worktree
-	# Also see: http://stackoverflow.com/questions/29549318/not-possible-to-switch-branch-after-skip-worktree
+	hide = update-index --skip-worktree
+	unhide = update-index --no-skip-worktree
+	hidden = "!git ls-files -v | grep ^S | cut -c 3-"
+
 	assume = update-index --assume-unchanged
 	noassume = update-index --no-assume-unchanged
-	unassume = !git noassume
+	unassume = update-index --no-assume-unchanged
+	# The alias one below requires file paths to be relative from git root
+	# (while the others are relative from current working directory)
+	# unassume = !git noassume
 	assumed = "!git ls-files -v | grep ^h | cut -c 3-"
 
 	la = !git l --all
