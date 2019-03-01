@@ -60,6 +60,7 @@
 	branches = branch -a
 	br = branch
 	brd = branch -d
+	fb = "!f() { git branch -a | grep \"$1\"; }; f"
 	co = checkout
 	cob = checkout -b
 	cod = checkout development
