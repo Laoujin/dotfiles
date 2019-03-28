@@ -119,7 +119,12 @@
 
 	# Delete merged branches but not branches called master or development
 	# Sort of works in PowerShell (but best call this from development branch)
-	dm = !git branch --merged | egrep -v \"(\\*| ) (development|master|develop)\" | xargs -n 1 git branch -d
+	merged-branches = !git branch --merged | egrep -v \"(\\*| ) (development|master|develop)\" | xargs -n 1
+	dm = !git merged-branches git branch -d
+
+	my-merged-remote-branches = !git for-each-ref --format='%(authorname):%(refname)' | egrep \"Wouter\" | egrep \"refs/remotes\" | sed -e \"s/^.*:refs\\/remotes\\/origin\\//:/\"
+	# PowerShell:
+	# git my-merged-remote-branches | % { git push --no-verify origin $_ }
 
 
 	### The rest
