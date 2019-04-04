@@ -31,7 +31,8 @@
 	st = status # -u: Show all untracked files (instead of just directories)
 
 	### Diffing
-	df = diff
+	df = diff --ignore-all-space -- ':(exclude)*yarn.lock' ':!**package-lock.json'
+	dfa = diff
 	df1 = diff HEAD~
 	df2 = diff HEAD~~
 	df3 = diff HEAD~~~
