@@ -37,7 +37,7 @@ ATTN: Make sure you don't bind something to Ctrl C, X or Control C won't work an
 ### Project Shortcuts
 
 - Project.SetasStartUpProject: Ctrl S, P (StartUp Project) or Ctrl Alt R
-- Build.PubishSelection: Ctrl P, P (Project Publish)
+- Build.PublishSelection: Ctrl P, P (Project Publish)
 - ClassViewContextMenus.ClassViewProject.Debug.Startnewinstance: Ctrl D, S (Debug Start)
 - File.AddExistingProject: Ctrl P, A (Project Add)
 - File.AddNewProject: Ctrl P, N (Project New)
