@@ -7,6 +7,7 @@ Install-PS-Modules:
 
 
 Create-Links:
+# .NET Core
 - type: symlink
   link: PowerShell\profiles
   match: "*.ps1"
@@ -15,7 +16,6 @@ Create-Links:
 - type: junction
   link: PowerShell\scripts
   to: <MYDOCUMENTS>\PowerShell\dotfiles
-
 
 - type: symlink
   link: PowerShell\cd-aliases.ini
@@ -28,3 +28,14 @@ Create-Links:
 - type: symlink
   link: PowerShell\auto-print.md
   to: <MYDOCUMENTS>\PowerShell\auto-print.md
+
+
+# Package Manager Console
+- type: symlink
+  link: PowerShell\profiles
+  match: "NuGet_profile.ps1"
+  to: <MYDOCUMENTS>\WindowsPowerShell
+
+- type: junction
+  link: PowerShell\scripts
+  to: <MYDOCUMENTS>\WindowsPowerShell\dotfiles
