@@ -3,6 +3,12 @@
 	[
 		"component.html"
 	],
+	"Bash":
+	[
+		"bash",
+		"sh",
+		"zsh"
+	],
 	"Git Config":
 	[
 		"gitconfig"

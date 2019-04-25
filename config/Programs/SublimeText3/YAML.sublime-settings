@@ -1,10 +1,10 @@
 {
-	"tab_size": 2,
 	"extensions":
 	[
-		".gemrc",
 		"YAML-tmLanguage",
 		"yml.dist",
+		".gemrc",
 		"yml"
-	]
+	],
+	"tab_size": 2
 }
