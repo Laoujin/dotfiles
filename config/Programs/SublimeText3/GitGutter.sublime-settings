@@ -6,5 +6,7 @@
 // Default.gitgutter-theme
 // Default HIDPI.gitgutter-theme
 {
-	"theme": "Default.gitgutter-theme"
+	"theme": "Default.gitgutter-theme",
+	"enable_hover_diff_popup": false,
+	"show_line_annotation": "false"
 }
