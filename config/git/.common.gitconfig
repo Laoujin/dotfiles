@@ -188,6 +188,8 @@
 	autocrlf = true
 	excludesfile = ~/.gitignore_global
 	attributesfile = ~/.gitattributes_global
+	precomposeunicode = true
+	quotePath = false
 
 	## -- Pager used for diffs, logs, ...
 	# Short version:
