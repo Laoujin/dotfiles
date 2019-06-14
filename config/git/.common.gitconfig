@@ -71,6 +71,7 @@
 	col = checkout laoujin
 
 	### Committing & Amending
+	adp = add -p
 	cim = "!f() { git commit -vm\"$1\"; }; f"
 	ci = commit
 	unci = reset --soft HEAD^
