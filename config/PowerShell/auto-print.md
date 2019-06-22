@@ -23,32 +23,71 @@ Ctrl + P, Ctrl + F : Add new solution folder
 
 Ctrl + ^ : Goto matching brace
 
-
-
 ## Visual Studio Code
 
-Linting: Markdown/JSON (with comments): Allow extra newlines
-
-
-Shortcuts:
+### Editor
 
 Control + Alt + Left/Right: Move file to Left/Right Pane
+Alt Up/Down: Move line
+Control K, S: Save all
+Alt Z: Toggle Wordwrap
 
+### Layout
 
-
+Control + K, M: Toggle Mini map
 Control + B: Toggle Side Bar
 Control + J: Toggle Bottom Pane
 
+Control Shift E: Show Explorer
+"ctrl+e ctrl+f": "workbench.files.action.collapseExplorerFolders"
 
+### Bookmarks
+
+ctrl+alt+k: Toggle
+ctrl+alt+l: Next
+ctrl+alt+j: Previous
 
 
 ## TODO
 
-Control + D: Should only duplicate when there is no text selection (otherwise multiple cursors)
+- Shortcut for opening settings/keybindings json & UI
+- Control + D: Should only duplicate when there is no text selection (otherwise multiple cursors)
+- Different shortcut for open terminal (now conflicting with ditto)
+- Terminal: cmd is default for new terminals: turn into cmder
+- Linting: Markdown/JSON (with comments): Allow extra newlines
 
-Different shortcut for open terminal (now conflicting with )
+Extensions:
+- Settings Sync
+- live Server
+- ESLint & Airbnb JavaScript Style Guide + Prettier
+- Bracket Pair Colorizor
+- Highlight Matching Tag
+- Auto Rename Tag
+- Quokka: test JS / TS directly in VSC
+- Path Intellisense
+- Project Manager
+- Better Comments
+- VS Code Icons : prettier icons? / Material Icon Theme 
+- Import Cost
+- WakaTime
+- CSS Peek
+- Instant Markdown
+- Rainbow Brackets
+- Faker
+- HTML Boilerplate
+- Color Info
+- Azure Functions
+- REST Client
 
 
 LEARN
-- Pane Left/Right/Below
-- 
+- Pane Below
+- Multiple Cursors
+- Snippets
+- Macro's
+
+
+## Git
+
+Control Shift G, B: Git Blame
+Control Shift G, H: File history

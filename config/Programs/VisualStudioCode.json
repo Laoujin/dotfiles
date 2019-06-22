@@ -37,7 +37,8 @@
 			"dbaeumer.vscode-eslint",
 			"davidanson.vscode-markdownlint",
 			"donjayamanne.githistory",
-			"eamodio.gitlens"
+			"eamodio.gitlens",
+			"alefragnani.Bookmarks"
 		]
 	}
 }

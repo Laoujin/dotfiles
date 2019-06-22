@@ -1,5 +1,5 @@
 {
-    "window.zoomLevel": 0,
+    "window.zoomLevel": -1,
     "files.autoGuessEncoding": true,
     "files.exclude": {
         "node_modules/**": false
@@ -53,8 +53,10 @@
     // Defining custom colors instead of default "Rainbow" for dark backgrounds.
     // (Sorry: Changing them needs an editor restart for now!)
     "indentRainbow.colors": [
-        "rgba(255,255,64,0.00)",
-        "rgba(127,255,127,0.00)",
+        "rgba(0,0,0,0)",
+        "rgba(0,0,0,0)",
+        "rgba(255,255,64,0.07)",
+        "rgba(127,255,127,0.07)",
         "rgba(255,127,255,0.07)",
         "rgba(79,236,236,0.07)"
     ],
@@ -80,6 +82,8 @@
     "workbench.statusBar.feedback.visible": false,
     "workbench.settings.openDefaultKeybindings": true,
     "workbench.settings.openDefaultSettings": true,
+    "workbench.tree.indent": 32,
+    "workbench.startupEditor": "newUntitledFile",
     "window.restoreWindows": "all",
     "explorer.autoReveal": false,
     "search.exclude": {
@@ -88,7 +92,7 @@
     "search.location": "panel",
     "search.showLineNumbers": true,
     "scm.diffDecorationsGutterWidth": 5,
-    "terminal.external.windowsExec": "",
+    // "terminal.external.windowsExec": "",
     "terminal.integrated.shell.windows": "cmd.exe",
     "terminal.integrated.shellArgs.windows": [
         "/K",
@@ -98,4 +102,9 @@
     // "terminal.external.windowsExec": "C:\\Program Files\\PowerShell\\6.0.4\\pwsh.exe",
     // "terminal.integrated.shell.windows": "C:\\Program Files\\PowerShell\\6.0.4\\pwsh.exe"
     "java.dependency.showOutline": false,
+    "editor.defaultFormatter": null,
+    "workbench.editor.highlightModifiedTabs": true,
+    "editor.cursorStyle": "line",
+    "editor.cursorWidth": 4,
+    "editor.acceptSuggestionOnEnter": "off",
 }
