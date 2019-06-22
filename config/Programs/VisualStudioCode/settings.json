@@ -1,0 +1,39 @@
+{
+    "explorer.confirmDragAndDrop": false,
+    "window.zoomLevel": 0,
+    "editor.minimap.enabled": false,
+    "explorer.confirmDelete": false,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "code-runner.executorMap": {
+        "autohotkey": "\"C:\\Program Files\\AutoHotkey\\AutoHotkey.exe\"",
+    },
+    "code-runner.defaultLanguage": "autohotkey",
+    "code-runner.executorMapByFileExtension": {
+        "ahk": "\"C:\\Program Files\\AutoHotkey\\AutoHotkey.exe\""
+    },
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "editor.renderWhitespace": "all",
+
+
+    // Extension: oderwat.indent-rainbow
+    // For which languages indent-rainbow should be activated (if empty it means all).
+    "indentRainbow.includedLanguages": [], // for example ["nim", "nims", "python"]
+    // For which languages indent-rainbow should be deactivated (if empty it means none).
+    "indentRainbow.excludedLanguages": [
+        "plaintext",
+        "yaml",
+        "json"
+    ],
+    // The delay in ms until the editor gets updated.
+    "indentRainbow.updateDelay": 100, // 10 makes it super fast but may cost more resources
+    // Defining custom colors instead of default "Rainbow" for dark backgrounds.
+    // (Sorry: Changing them needs an editor restart for now!)
+    "indentRainbow.colors": [
+        "rgba(255,255,64,0.00)",
+        "rgba(127,255,127,0.00)",
+        "rgba(255,127,255,0.07)",
+        "rgba(79,236,236,0.07)"
+    ],
+    "indentRainbow.errorColor": "rgba(128,32,32,0.6)"
+}

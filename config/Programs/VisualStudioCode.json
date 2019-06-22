@@ -1,0 +1,45 @@
+{
+	"title": "Visual Studio Code",
+	"modules":
+	{
+		"Create-Links":
+		[
+			{
+				"type": "junction",
+				"link": "Programs\\VisualStudioCode\\snippets",
+				"to": "<APPDATA_ROAMING>\\Code\\User\\snippets"
+			},
+			{
+				"type": "symlink",
+				"link": "Programs\\VisualStudioCode\\keybindings.json",
+				"to": "<APPDATA_ROAMING>\\Code\\User\\keybindings.json"
+			},
+			{
+				"type": "symlink",
+				"link": "Programs\\VisualStudioCode\\settings.json",
+				"to": "<APPDATA_ROAMING>\\Code\\User\\settings.json"
+			}
+		],
+		"Install-CodeExtensions": [
+			"geeebe.duplicate",
+			"oderwat.indent-rainbow",
+
+			
+			"slevesque.vscode-autohotkey",
+			"formulahendry.code-runner",
+			"msjsdiag.debugger-for-chrome",
+			"vscjava.vscode-java-pack",
+			"ms-vscode.powershell",
+			"octref.vetur",
+			"visualstudioexptteam.vscodeintellicode",
+			"hollowtree.vue-snippets",
+			"faisalhakim47.vue-inline-template",
+			"editorconfig.editorconfig",
+			"dotjoshjohnson.xml",
+			"dbaeumer.vscode-eslint",
+			"davidanson.vscode-markdownlint",
+			"donjayamanne.githistory",
+			"eamodio.gitlens"
+		]
+	}
+}
