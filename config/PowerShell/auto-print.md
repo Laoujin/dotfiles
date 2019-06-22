@@ -1,10 +1,6 @@
 Control + ù : Bring Cmder to front
 Control + µ : Activate Ditto  
 
-## Visual Studio Code
-
-
-
 ## Cmder
 
 Control + Alt : Drag window with mouse
@@ -26,3 +22,33 @@ Ctrl + P, Ctrl + N : Add new project
 Ctrl + P, Ctrl + F : Add new solution folder
 
 Ctrl + ^ : Goto matching brace
+
+
+
+## Visual Studio Code
+
+Linting: Markdown/JSON (with comments): Allow extra newlines
+
+
+Shortcuts:
+
+Control + Alt + Left/Right: Move file to Left/Right Pane
+
+
+
+Control + B: Toggle Side Bar
+Control + J: Toggle Bottom Pane
+
+
+
+
+## TODO
+
+Control + D: Should only duplicate when there is no text selection (otherwise multiple cursors)
+
+Different shortcut for open terminal (now conflicting with )
+
+
+LEARN
+- Pane Left/Right/Below
+- 

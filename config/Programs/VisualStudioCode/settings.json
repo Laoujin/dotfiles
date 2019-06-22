@@ -94,7 +94,8 @@
         "/K",
         "C:\\tools\\Cmder\\vendor\\init.bat"
     ],
-    "terminal.integrated.fontFamily": "monospace"
+    "terminal.integrated.fontFamily": "monospace", // Fira Code
     // "terminal.external.windowsExec": "C:\\Program Files\\PowerShell\\6.0.4\\pwsh.exe",
     // "terminal.integrated.shell.windows": "C:\\Program Files\\PowerShell\\6.0.4\\pwsh.exe"
+    "java.dependency.showOutline": false,
 }

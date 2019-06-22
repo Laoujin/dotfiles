@@ -3,6 +3,10 @@
     {
         "key": "shift+alt+l",
         "command": "workbench.files.action.showActiveFileInExplorer"
+    },
+    {
+        "key": "ctrl+k ctrl+a",
+        "command": "workbench.action.addRootFolder"
     }
     
 ]
