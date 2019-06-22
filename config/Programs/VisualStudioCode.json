@@ -23,8 +23,6 @@
 		"Install-CodeExtensions": [
 			"geeebe.duplicate",
 			"oderwat.indent-rainbow",
-
-			
 			"slevesque.vscode-autohotkey",
 			"formulahendry.code-runner",
 			"msjsdiag.debugger-for-chrome",

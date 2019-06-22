@@ -52,3 +52,4 @@ VisualStudio2017Community
 VisualStudio2019Community
 visualstudiocode
 php
+firacode

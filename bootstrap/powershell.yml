@@ -39,3 +39,10 @@ Create-Links:
 - type: junction
   link: PowerShell\scripts
   to: <MYDOCUMENTS>\WindowsPowerShell\dotfiles
+
+
+# Visual Studio Code Profile
+- type: symlink
+  link: PowerShell\profiles
+  match: "Microsoft.VSCode_profile.ps1"
+  to: <MYDOCUMENTS>\WindowsPowerShell

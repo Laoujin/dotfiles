@@ -1,4 +1,8 @@
 // Place your key bindings in this file to override the defaults
 [
+    {
+        "key": "shift+alt+l",
+        "command": "workbench.files.action.showActiveFileInExplorer"
+    }
     
 ]

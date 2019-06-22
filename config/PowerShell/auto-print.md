@@ -1,10 +1,9 @@
 Control + ù : Bring Cmder to front
 Control + µ : Activate Ditto  
-Control + Shift + q : ST3 Console
 
-## Sublime
+## Visual Studio Code
 
-Control + M : Jump to matching brace
+
 
 ## Cmder
 
