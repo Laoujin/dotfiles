@@ -8,12 +8,14 @@ Push-Location "$PSScriptRoot\src"
 . ".\programs.ps1"
 Pop-Location
 
-Push-Location "$PSScriptRoot\src\modules"
-Get-ChildItem | ForEach-Object { . "$_" }
-Pop-Location
 
 Push-Location "$PSScriptRoot\src\lib"
-Get-ChildItem -Filter *.ps1 | ForEach-Object { . "$_" }
+Get-ChildItem -Filter *.ps1 | ForEach-Object { . $_.FullName }
+Pop-Location
+
+
+Push-Location "$PSScriptRoot\src\modules"
+Get-ChildItem | ForEach-Object { . $_.FullName }
 Pop-Location
 
 Import-Module "$PSScriptRoot\src\lib\PSYaml"
