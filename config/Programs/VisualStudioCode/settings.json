@@ -1,19 +1,26 @@
 {
-    "explorer.confirmDragAndDrop": false,
     "window.zoomLevel": 0,
-    "editor.minimap.enabled": false,
+
+
+    "explorer.confirmDragAndDrop": false,
     "explorer.confirmDelete": false,
-    "typescript.updateImportsOnFileMove.enabled": "always",
-    "code-runner.executorMap": {
-        "autohotkey": "\"C:\\Program Files\\AutoHotkey\\AutoHotkey.exe\"",
-    },
-    "code-runner.defaultLanguage": "autohotkey",
-    "code-runner.executorMapByFileExtension": {
-        "ahk": "\"C:\\Program Files\\AutoHotkey\\AutoHotkey.exe\""
-    },
+    
+    
+    // Editor
+    "editor.minimap.enabled": false,
     "editor.suggestSelection": "first",
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "editor.renderWhitespace": "all",
+    "editor.rulers": [120, 180],
+    // "workbench.colorCustomizations": {
+    //     "editorRuler.foreground": "#ff4081"
+    // },
+    "editor.wordWrapColumn": 140,
+    "editor.mouseWheelZoom": true,
+    "editor.renderControlCharacters": true,
+    
+    
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "typescript.updateImportsOnFileMove.enabled": "always",
 
 
     // Extension: oderwat.indent-rainbow
@@ -35,5 +42,16 @@
         "rgba(255,127,255,0.07)",
         "rgba(79,236,236,0.07)"
     ],
-    "indentRainbow.errorColor": "rgba(128,32,32,0.6)"
+    "indentRainbow.errorColor": "rgba(128,32,32,0.6)",
+
+
+
+    // Extension
+    "code-runner.executorMap": {
+        "autohotkey": "\"C:\\Program Files\\AutoHotkey\\AutoHotkey.exe\"",
+    },
+    "code-runner.defaultLanguage": "autohotkey",
+    "code-runner.executorMapByFileExtension": {
+        "ahk": "\"C:\\Program Files\\AutoHotkey\\AutoHotkey.exe\""
+    }
 }
