@@ -38,7 +38,11 @@
 			"davidanson.vscode-markdownlint",
 			"donjayamanne.githistory",
 			"eamodio.gitlens",
-			"alefragnani.Bookmarks"
+			"alefragnani.Bookmarks",
+			"vscode-icons-team.vscode-icons",
+			"aaron-bond.better-comments",
+			"esbenp.prettier-vscode",
+			"alefragnani.project-manager"
 		]
 	}
 }

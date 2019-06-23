@@ -6,10 +6,10 @@
         // "_site"
         // ".sass-cache"
         // "build/",
-		// "main.js.map",
-		// "dist/*",
-		// "package-lock.json",
-		// "yarn.lock"
+        // "main.js.map",
+        // "dist/*",
+        // "package-lock.json",
+        // "yarn.lock"
     },
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
@@ -53,12 +53,11 @@
     // Defining custom colors instead of default "Rainbow" for dark backgrounds.
     // (Sorry: Changing them needs an editor restart for now!)
     "indentRainbow.colors": [
-        "rgba(0,0,0,0)",
-        "rgba(0,0,0,0)",
-        "rgba(255,255,64,0.07)",
-        "rgba(127,255,127,0.07)",
-        "rgba(255,127,255,0.07)",
-        "rgba(79,236,236,0.07)"
+        "rgba(127,255,127,0.01)",
+        "rgba(255,255,64,0.04)",
+        "rgba(255,127,255,0.01)",
+        "rgba(230,236,236,0.04)",
+        "rgba(255,127,255,0.01)",
     ],
     "indentRainbow.errorColor": "rgba(128,32,32,0.6)",
     // Extension: formulahendry.code-runner
@@ -107,4 +106,25 @@
     "editor.cursorStyle": "line",
     "editor.cursorWidth": 4,
     "editor.acceptSuggestionOnEnter": "off",
+    "workbench.iconTheme": "vscode-icons",
+    "better-comments.tags": [
+        {
+            "tag": "hack",
+            "color": "#FF2D00",
+            "strikethrough": false,
+            "backgroundColor": "transparent"
+        },
+        {
+            "tag": "bug",
+            "color": "#FF2D00",
+            "strikethrough": false,
+            "backgroundColor": "transparent"
+        },
+        {
+            "tag": "todo",
+            "color": "#FF2D00",
+            "strikethrough": false,
+            "backgroundColor": "transparent"
+        }
+    ],
 }

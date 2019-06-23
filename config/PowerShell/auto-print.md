@@ -23,7 +23,15 @@ Ctrl + P, Ctrl + F : Add new solution folder
 
 Ctrl + ^ : Goto matching brace
 
+
 ## Visual Studio Code
+
+### Configuration
+
+Control , : Settings UI
+Control , control j: Setting JSON
+control k, control s: Open Keyboard Shortcuts UI
+control k, control b: Open Keyboard Shortcuts JSON
 
 ### Editor
 
@@ -31,6 +39,17 @@ Control + Alt + Left/Right: Move file to Left/Right Pane
 Alt Up/Down: Move line
 Control K, S: Save all
 Alt Z: Toggle Wordwrap
+
+### Search
+
+Control Shift F: Find in files
+Control Shift J: Toggle include/exclude files
+
+### Bookmarks
+
+ctrl+alt+k: Toggle
+ctrl+alt+l: Next
+ctrl+alt+j: Previous
 
 ### Layout
 
@@ -41,13 +60,6 @@ Control + J: Toggle Bottom Pane
 Control Shift E: Show Explorer
 "ctrl+e ctrl+f": "workbench.files.action.collapseExplorerFolders"
 
-### Bookmarks
-
-ctrl+alt+k: Toggle
-ctrl+alt+l: Next
-ctrl+alt+j: Previous
-
-
 ## TODO
 
 - Shortcut for opening settings/keybindings json & UI
@@ -55,6 +67,9 @@ ctrl+alt+j: Previous
 - Different shortcut for open terminal (now conflicting with ditto)
 - Terminal: cmd is default for new terminals: turn into cmder
 - Linting: Markdown/JSON (with comments): Allow extra newlines
+- Jump between braces
+- Code folding
+
 
 Extensions:
 - Settings Sync
@@ -65,9 +80,6 @@ Extensions:
 - Auto Rename Tag
 - Quokka: test JS / TS directly in VSC
 - Path Intellisense
-- Project Manager
-- Better Comments
-- VS Code Icons : prettier icons? / Material Icon Theme 
 - Import Cost
 - WakaTime
 - CSS Peek

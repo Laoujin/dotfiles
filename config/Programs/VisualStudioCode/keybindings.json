@@ -28,6 +28,13 @@
     {
         "key": "ctrl+k ctrl+m",
         "command": "editor.action.toggleMinimap"
+    },
+    {
+        "key": "ctrl+oem_comma ctrl+j",
+        "command": "workbench.action.openSettingsJson"
+    },
+    {
+        "key": "ctrl+k ctrl+b",
+        "command": "workbench.action.openGlobalKeybindingsFile"
     }
-    
 ]
