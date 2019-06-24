@@ -49,4 +49,7 @@ dotpeek
 visualstudiocommunity2013
 VisualStudio2015Community
 VisualStudio2017Community
+VisualStudio2019Community
+visualstudiocode
 php
+firacode

@@ -3,6 +3,7 @@
 	"Create-StartupLinks": true,
 	"Install-NodePackages": false,
 	"Install-PS-Modules": false,
+	"Install-CodeExtensions": true,
 	"Manage-Services": true,
 	"Update-Registry": false,
 	"Process-Programs": true

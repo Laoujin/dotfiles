@@ -1,0 +1,130 @@
+{
+    "window.zoomLevel": -1,
+    "files.autoGuessEncoding": true,
+    "files.exclude": {
+        "node_modules/**": false
+        // "_site"
+        // ".sass-cache"
+        // "build/",
+        // "main.js.map",
+        // "dist/*",
+        // "package-lock.json",
+        // "yarn.lock"
+    },
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.watcherExclude": {
+        "**/node_modules/*/**": true
+    },
+    // Explorer
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+    // Editor
+    // "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
+    "editor.minimap.enabled": false,
+    "editor.suggestSelection": "first",
+    "editor.renderWhitespace": "all",
+    "editor.rulers": [
+        120,
+        180
+    ],
+    // "workbench.colorCustomizations": {
+    //     "editorRuler.foreground": "#ff4081"
+    // },
+    "editor.wordWrapColumn": 140,
+    "editor.mouseWheelZoom": true,
+    "editor.renderControlCharacters": true,
+    "editor.formatOnSave": false,
+    "editor.formatOnPaste": false,
+    // Extensions
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    // Extension: oderwat.indent-rainbow
+    // For which languages indent-rainbow should be activated (if empty it means all).
+    "indentRainbow.includedLanguages": [], // for example ["nim", "nims", "python"]
+    // For which languages indent-rainbow should be deactivated (if empty it means none).
+    "indentRainbow.excludedLanguages": [
+        "plaintext",
+        "yaml",
+        "json"
+    ],
+    // The delay in ms until the editor gets updated.
+    "indentRainbow.updateDelay": 100, // 10 makes it super fast but may cost more resources
+    // Defining custom colors instead of default "Rainbow" for dark backgrounds.
+    // (Sorry: Changing them needs an editor restart for now!)
+    "indentRainbow.colors": [
+        "rgba(127,255,127,0.01)",
+        "rgba(255,255,64,0.04)",
+        "rgba(255,127,255,0.01)",
+        "rgba(230,236,236,0.04)",
+        "rgba(255,127,255,0.01)",
+    ],
+    "indentRainbow.errorColor": "rgba(128,32,32,0.6)",
+    // Extension: formulahendry.code-runner
+    "code-runner.executorMap": {
+        "autohotkey": "\"C:\\Program Files\\AutoHotkey\\AutoHotkey.exe\"",
+    },
+    "code-runner.defaultLanguage": "autohotkey",
+    "code-runner.executorMapByFileExtension": {
+        "ahk": "\"C:\\Program Files\\AutoHotkey\\AutoHotkey.exe\""
+    },
+    // Languages
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "[yaml]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+        "editor.autoIndent": false
+    },
+    "[ahk]": {
+        "files.encoding": "utf8bom"
+    },
+    "workbench.statusBar.feedback.visible": false,
+    "workbench.settings.openDefaultKeybindings": true,
+    "workbench.settings.openDefaultSettings": true,
+    "workbench.tree.indent": 32,
+    "workbench.startupEditor": "newUntitledFile",
+    "window.restoreWindows": "all",
+    "explorer.autoReveal": false,
+    "search.exclude": {
+        "**/dist": true
+    },
+    "search.location": "panel",
+    "search.showLineNumbers": true,
+    "scm.diffDecorationsGutterWidth": 5,
+    // "terminal.external.windowsExec": "",
+    "terminal.integrated.shell.windows": "cmd.exe",
+    "terminal.integrated.shellArgs.windows": [
+        "/K",
+        "C:\\tools\\Cmder\\vendor\\init.bat"
+    ],
+    "terminal.integrated.fontFamily": "monospace", // Fira Code
+    // "terminal.external.windowsExec": "C:\\Program Files\\PowerShell\\6.0.4\\pwsh.exe",
+    // "terminal.integrated.shell.windows": "C:\\Program Files\\PowerShell\\6.0.4\\pwsh.exe"
+    "java.dependency.showOutline": false,
+    "editor.defaultFormatter": null,
+    "workbench.editor.highlightModifiedTabs": true,
+    "editor.cursorStyle": "line",
+    "editor.cursorWidth": 4,
+    "editor.acceptSuggestionOnEnter": "off",
+    "workbench.iconTheme": "vscode-icons",
+    "better-comments.tags": [
+        {
+            "tag": "hack",
+            "color": "#FF2D00",
+            "strikethrough": false,
+            "backgroundColor": "transparent"
+        },
+        {
+            "tag": "bug",
+            "color": "#FF2D00",
+            "strikethrough": false,
+            "backgroundColor": "transparent"
+        },
+        {
+            "tag": "todo",
+            "color": "#FF2D00",
+            "strikethrough": false,
+            "backgroundColor": "transparent"
+        }
+    ],
+}
