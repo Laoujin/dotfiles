@@ -1,6 +1,7 @@
 {
     "window.zoomLevel": 0.5,
-    "files.autoGuessEncoding": true,
+    "files.encoding": "utf8",
+    "files.autoGuessEncoding": false,
     "files.exclude": {
         "node_modules/**": false
         // "_site"
