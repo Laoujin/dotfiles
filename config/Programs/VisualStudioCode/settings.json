@@ -1,5 +1,5 @@
 {
-    "window.zoomLevel": -1,
+    "window.zoomLevel": 0.5,
     "files.autoGuessEncoding": true,
     "files.exclude": {
         "node_modules/**": false
@@ -37,6 +37,7 @@
     "editor.renderControlCharacters": true,
     "editor.formatOnSave": false,
     "editor.formatOnPaste": false,
+    "editor.fontSize": 14,
     // Extensions
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     // Extension: oderwat.indent-rainbow
