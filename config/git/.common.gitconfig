@@ -101,6 +101,9 @@
 	### Collaborating
 	sha = rev-parse HEAD
 	gom = pull origin master
+	mod = merge origin/development
+	mods = merge origin/develop
+	mom = merge origin/master
 
 	# push/delete origin
 	branch-name = "!git rev-parse --abbrev-ref HEAD"
