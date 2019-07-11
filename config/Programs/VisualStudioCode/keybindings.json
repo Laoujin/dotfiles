@@ -36,5 +36,18 @@
     {
         "key": "ctrl+k ctrl+b",
         "command": "workbench.action.openGlobalKeybindingsFile"
+    },
+    {
+        "key": "ctrl+oem_comma",
+        "command": "workbench.action.openSettings2"
+    },
+    {
+        "key": "ctrl+alt+oem_5", // Control + Alt + µ
+        "command": "workbench.action.terminal.toggleTerminal"
+    },
+    {
+        "key": "ctrl+oem_3", // Default Ctrl + µ conflicts with Ditto`
+        // And why µ is first oem_5 and then oem_3...
+        "command": "-workbench.action.terminal.toggleTerminal"
     }
 ]

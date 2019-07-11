@@ -129,4 +129,5 @@
             "backgroundColor": "transparent"
         }
     ],
+    "vsicons.dontShowNewVersionMessage": true,
 }

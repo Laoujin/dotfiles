@@ -21,7 +21,6 @@
 			}
 		],
 		"Install-CodeExtensions": [
-			"geeebe.duplicate",
 			"oderwat.indent-rainbow",
 			"slevesque.vscode-autohotkey",
 			"formulahendry.code-runner",
@@ -42,7 +41,8 @@
 			"vscode-icons-team.vscode-icons",
 			"aaron-bond.better-comments",
 			"esbenp.prettier-vscode",
-			"alefragnani.project-manager"
+			"alefragnani.project-manager",
+			"Ionide.Ionide-fsharp"
 		]
 	}
 }
