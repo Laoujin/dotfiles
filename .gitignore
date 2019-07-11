@@ -2,3 +2,5 @@ config/Programs/VisualStudio/2013/Settings/Windows Azure Subscriptions.xml
 
 config/Programs/FileZilla/
 config/Programs/filezilla.json
+
+.ionide
