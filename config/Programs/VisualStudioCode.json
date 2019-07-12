@@ -42,7 +42,9 @@
 			"aaron-bond.better-comments",
 			"esbenp.prettier-vscode",
 			"alefragnani.project-manager",
-			"Ionide.Ionide-fsharp"
+			"Ionide.Ionide-fsharp",
+			"yzhang.markdown-all-in-one",
+			"zignd.html-css-class-completion"
 		]
 	}
 }

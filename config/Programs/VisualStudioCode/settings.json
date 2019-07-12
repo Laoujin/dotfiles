@@ -1,5 +1,5 @@
 {
-    "window.zoomLevel": 0.5,
+    "window.zoomLevel": 1,
     "files.encoding": "utf8",
     "files.autoGuessEncoding": false,
     "files.exclude": {
@@ -130,4 +130,23 @@
         }
     ],
     "vsicons.dontShowNewVersionMessage": true,
+
+    // Hide icons in the Title Menu Bar
+    "code-runner.showRunIconInEditorTitleMenu": false,
+    "gitHistory.showEditorTitleMenuBarIcons": false,
+
+    "gitlens.blame.ignoreWhitespace": true,
+    "gitlens.currentLine.enabled": false,
+
+    "markdownlint.config": {
+        "default": true,
+        // Rules:
+        // https://github.com/DavidAnson/vscode-markdownlint#rules
+        "single-title": false,
+        "no-multiple-blanks": false,
+        "blanks-around-lists": false,
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    }
 }
