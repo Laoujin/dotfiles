@@ -1,5 +1,7 @@
 {
     "window.zoomLevel": 1,
+    "window.restoreWindows": "all",
+
     "files.encoding": "utf8",
     "files.autoGuessEncoding": false,
     "files.exclude": {
@@ -17,10 +19,51 @@
     "files.watcherExclude": {
         "**/node_modules/*/**": true
     },
-    // Explorer
+
+
+
+    // ---------------------------------------
+    // ------------- Workbench ---------------
+    // ---------------------------------------
+    "workbench.settings.openDefaultKeybindings": true,
+    "workbench.settings.openDefaultSettings": true,
+    "workbench.tree.indent": 32,
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.editor.highlightModifiedTabs": true,
+    "workbench.iconTheme": "vscode-icons",
+
+
+
+    // ---------------------------------------
+    // ----------- Explorer ------------------
+    // ---------------------------------------
     "explorer.confirmDragAndDrop": false,
     "explorer.confirmDelete": false,
-    // Editor
+    "explorer.autoReveal": false,
+
+
+
+    // ---------------------------------------
+    // ------------- SCM ---------------------
+    // ---------------------------------------
+    "scm.diffDecorationsGutterWidth": 5,
+
+
+
+    // ---------------------------------------
+    // ------------- Search ------------------
+    // ---------------------------------------
+    "search.exclude": {
+        "**/dist": true
+    },
+    "search.location": "panel",
+    "search.showLineNumbers": true,
+
+
+
+    // ---------------------------------------
+    // ------------- Editor ------------------
+    // ---------------------------------------
     // "editor.fontFamily": "Fira Code",
     "editor.fontLigatures": true,
     "editor.minimap.enabled": false,
@@ -39,9 +82,13 @@
     "editor.formatOnSave": false,
     "editor.formatOnPaste": false,
     "editor.fontSize": 14,
-    // Extensions
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "editor.defaultFormatter": null,
+    "editor.cursorStyle": "line",
+    "editor.cursorWidth": 4,
+    "editor.acceptSuggestionOnEnter": "off",
+
     // Extension: oderwat.indent-rainbow
+    // https://github.com/oderwat/vscode-indent-rainbow
     // For which languages indent-rainbow should be activated (if empty it means all).
     "indentRainbow.includedLanguages": [], // for example ["nim", "nims", "python"]
     // For which languages indent-rainbow should be deactivated (if empty it means none).
@@ -62,53 +109,9 @@
         "rgba(255,127,255,0.01)",
     ],
     "indentRainbow.errorColor": "rgba(128,32,32,0.6)",
-    // Extension: formulahendry.code-runner
-    "code-runner.executorMap": {
-        "autohotkey": "\"C:\\Program Files\\AutoHotkey\\AutoHotkey.exe\"",
-    },
-    "code-runner.defaultLanguage": "autohotkey",
-    "code-runner.executorMapByFileExtension": {
-        "ahk": "\"C:\\Program Files\\AutoHotkey\\AutoHotkey.exe\""
-    },
-    // Languages
-    "typescript.updateImportsOnFileMove.enabled": "always",
-    "[yaml]": {
-        "editor.insertSpaces": true,
-        "editor.tabSize": 2,
-        "editor.autoIndent": false
-    },
-    "[ahk]": {
-        "files.encoding": "utf8bom"
-    },
-    "workbench.statusBar.feedback.visible": false,
-    "workbench.settings.openDefaultKeybindings": true,
-    "workbench.settings.openDefaultSettings": true,
-    "workbench.tree.indent": 32,
-    "workbench.startupEditor": "newUntitledFile",
-    "window.restoreWindows": "all",
-    "explorer.autoReveal": false,
-    "search.exclude": {
-        "**/dist": true
-    },
-    "search.location": "panel",
-    "search.showLineNumbers": true,
-    "scm.diffDecorationsGutterWidth": 5,
-    // "terminal.external.windowsExec": "",
-    "terminal.integrated.shell.windows": "cmd.exe",
-    "terminal.integrated.shellArgs.windows": [
-        "/K",
-        "C:\\tools\\Cmder\\vendor\\init.bat"
-    ],
-    "terminal.integrated.fontFamily": "monospace", // Fira Code
-    // "terminal.external.windowsExec": "C:\\Program Files\\PowerShell\\6.0.4\\pwsh.exe",
-    // "terminal.integrated.shell.windows": "C:\\Program Files\\PowerShell\\6.0.4\\pwsh.exe"
-    "java.dependency.showOutline": false,
-    "editor.defaultFormatter": null,
-    "workbench.editor.highlightModifiedTabs": true,
-    "editor.cursorStyle": "line",
-    "editor.cursorWidth": 4,
-    "editor.acceptSuggestionOnEnter": "off",
-    "workbench.iconTheme": "vscode-icons",
+
+    // Extension: aaron-bond.better-comments
+    // https://github.com/aaron-bond/better-comments
     "better-comments.tags": [
         {
             "tag": "hack",
@@ -129,15 +132,40 @@
             "backgroundColor": "transparent"
         }
     ],
-    "vsicons.dontShowNewVersionMessage": true,
 
-    // Hide icons in the Title Menu Bar
-    "code-runner.showRunIconInEditorTitleMenu": false,
-    "gitHistory.showEditorTitleMenuBarIcons": false,
 
-    "gitlens.blame.ignoreWhitespace": true,
-    "gitlens.currentLine.enabled": false,
 
+    // ---------------------------------------
+    // ------------- Terminal ----------------
+    // ---------------------------------------
+    // "terminal.external.windowsExec": "",
+    // TODO: Cmder Terminal isn't working...
+    "terminal.integrated.shell.windows": "cmd.exe",
+    "terminal.integrated.shellArgs.windows": [
+        "/K",
+        "C:\\tools\\Cmder\\vendor\\init.bat"
+    ],
+    "terminal.integrated.fontFamily": "monospace", // Fira Code
+    // "terminal.external.windowsExec": "C:\\Program Files\\PowerShell\\6.0.4\\pwsh.exe",
+    // "terminal.integrated.shell.windows": "C:\\Program Files\\PowerShell\\6.0.4\\pwsh.exe"
+
+
+
+    // ---------------------------------------
+    // ------------- Languages ---------------
+    // ---------------------------------------
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "[yaml]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+        "editor.autoIndent": false
+    },
+    "[ahk]": {
+        "files.encoding": "utf8bom"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
     "markdownlint.config": {
         "default": true,
         // Rules:
@@ -151,7 +179,30 @@
         "blanks-around-lists": false,
         "ul-indent": false,
     },
-    "[jsonc]": {
-        "editor.defaultFormatter": "vscode.json-language-features"
-    }
+    "java.dependency.showOutline": false,
+
+
+
+    // ---------------------------------------
+    // ------------- Extensions --------------
+    // ---------------------------------------
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+
+    // Extension: formulahendry.code-runner
+    // https://github.com/formulahendry/vscode-code-runner
+    "code-runner.executorMap": {
+        "autohotkey": "\"C:\\Program Files\\AutoHotkey\\AutoHotkey.exe\"",
+    },
+    "code-runner.defaultLanguage": "autohotkey",
+    "code-runner.executorMapByFileExtension": {
+        "ahk": "\"C:\\Program Files\\AutoHotkey\\AutoHotkey.exe\""
+    },
+    "vsicons.dontShowNewVersionMessage": true,
+
+    // Hide icons in the Title Menu Bar
+    "code-runner.showRunIconInEditorTitleMenu": false,
+    "gitHistory.showEditorTitleMenuBarIcons": false,
+
+    "gitlens.blame.ignoreWhitespace": true,
+    "gitlens.currentLine.enabled": false,
 }
