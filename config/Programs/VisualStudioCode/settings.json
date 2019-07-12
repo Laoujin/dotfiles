@@ -143,8 +143,13 @@
         // Rules:
         // https://github.com/DavidAnson/vscode-markdownlint#rules
         "single-title": false,
+        "heading-style": false,
+
         "no-multiple-blanks": false,
+        "no-hard-tabs": false,
+        
         "blanks-around-lists": false,
+        "ul-indent": false,
     },
     "[jsonc]": {
         "editor.defaultFormatter": "vscode.json-language-features"
