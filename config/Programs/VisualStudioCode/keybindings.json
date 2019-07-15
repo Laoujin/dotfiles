@@ -1,8 +1,21 @@
 // Place your key bindings in this file to override the defaults
 [
+    // https://code.visualstudio.com/docs/getstarted/keybindings#_keyboard-layouts
     {
         "key": "shift+alt+l",
         "command": "workbench.files.action.showActiveFileInExplorer"
+    },
+    {
+        "key": "ctrl+k ctrl+a",
+        "command": "workbench.action.toggleActivityBarVisibility"
+    },
+    {
+        "key": "ctrl+k ctrl+n",
+        "command": "workbench.action.nextSideBarView"
+    },
+    {
+        "key": "ctrl+k ctrl+b",
+        "command": "workbench.action.previousSideBarView"
     },
     {
         "key": "ctrl+k ctrl+a",
@@ -38,12 +51,11 @@
         "command": "workbench.action.openGlobalKeybindingsFile"
     },
     {
-        "key": "ctrl+alt+oem_5", // Control + Alt + µ
+        "key": "ctrl+alt+oem_3", // Control + Alt + ù
         "command": "workbench.action.terminal.toggleTerminal"
     },
     {
-        "key": "ctrl+oem_3", // Default Ctrl + µ conflicts with Ditto`
-        // And why µ is first oem_5 and then oem_3...
+        "key": "ctrl+oem_3", // Default Ctrl + ù conflicts with Ditto`
         "command": "-workbench.action.terminal.toggleTerminal"
     },
     {
@@ -61,5 +73,10 @@
     {
         "key": "ctrl+oem_comma",
         "command": "-workbench.action.openSettings"
+    },
+    {
+        "key": "ctrl+shift+j",
+        "command": "editor.action.joinLines",
+        "when": "editorFocus"
     }
 ]

@@ -32,11 +32,11 @@ Set-Alias mdp $markdownEditor
 # https://code.visualstudio.com/docs/editor/command-line
 function Start-VSCode {
 	if ($args.length -eq 0 -or $null -eq $args[0]) {
-		& $ide --new-window
+		& $ide --reuse-window
 		return
 	}
-	
+
 	$folder = Resolve-Path $args
-	& "$ide" --new-window "$folder"
+	& "$ide" "$folder"
 }
 Set-Alias cde Start-VSCode

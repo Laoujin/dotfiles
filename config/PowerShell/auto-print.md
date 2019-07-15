@@ -1,7 +1,7 @@
 # Learn these
 
 Control + ù : Bring Cmder to front
-Control + µ : Activate Ditto  
+Control + µ : Activate Ditto
 
 ## Cmder
 
@@ -19,7 +19,7 @@ Shift + Apps + Arrows : Change tab sizes
 
 ## Visual Studio
 
-Ctrl + P, Ctrl + E : Edit csproj  
+Ctrl + P, Ctrl + E : Edit csproj
 Ctrl + P, Ctrl + U : Unload project (R to Reload)
 Ctrl + P, Ctrl + A : Add existing project
 Ctrl + P, Ctrl + N : Add new project
@@ -147,19 +147,15 @@ Control Shift E: Show Explorer
 
 
 Extensions:
-- Settings Sync
 - live Server
 - ESLint & Airbnb JavaScript Style Guide + Prettier
-- Bracket Pair Colorizor
-- Highlight Matching Tag
-- Auto Rename Tag
+
+- https://marketplace.visualstudio.com/items?itemName=IBM.output-colorizer
+- https://marketplace.visualstudio.com/items?itemName=pnp.polacode
+
 - Quokka: test JS / TS directly in VSC
-- Path Intellisense
-- Import Cost
 - WakaTime
-- CSS Peek
 - Instant Markdown
-- Rainbow Brackets
 - Faker
 - HTML Boilerplate
 - Color Info
@@ -179,5 +175,5 @@ Control Shift G, B: Git Blame
 Control Shift G, H: File history
 
 
-Open issues:  
+Open issues:
 [Pin Tabs](https://github.com/Microsoft/vscode/issues/12622)

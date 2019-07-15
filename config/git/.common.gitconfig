@@ -194,6 +194,7 @@
 	attributesfile = ~/.gitattributes_global
 	precomposeunicode = true
 	quotePath = false
+	editor = code --wait
 
 	## -- Pager used for diffs, logs, ...
 	# Short version:
@@ -227,11 +228,16 @@
 ### Diff tooling
 
 [diff]
-	tool = bc3
+	tool = vsc
 
 [difftool "bc3"]
 	path = C:\\Program Files (x86)\\Beyond Compare 3\\bcomp.exe
 #	cmd = \"c:/program files (x86)/beyond compare 3/bcomp.exe\" \"$LOCAL\" \"$REMOTE\"
+
+[difftool "vsc"]
+	cmd = code --wait --diff $LOCAL $REMOTE
+	# cmd = \"C:\\Users\\Wouter\\AppData\\Local\\Programs\\Microsoft VS Code\\bin\\Code.cmd\" \"$LOCAL\" \"$REMOTE\" --diff --wait
+
 
 [merge]
 	tool = bc3
@@ -242,9 +248,11 @@
 
 [mergetool "bc3"]
 	path = C:\\Program Files (x86)\\Beyond Compare 3\\bcomp.exe
-#	cmd = \"c:/program files (x86)/beyond compare 3/bcomp.exe\" \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
 	trustExitCode = true
 
+[mergetool "vsc"]
+	# path = C:\\Users\\Wouter\\AppData\\Local\\Programs\\Microsoft VS Code\\bin\\Code.cmd
+	cmd = code --wait $MERGED
 
 
 ### Colors

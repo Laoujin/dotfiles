@@ -21,30 +21,55 @@
 			}
 		],
 		"Install-CodeExtensions": [
+			"vscode-icons-team.vscode-icons",
+			"PKief.material-icon-theme",
+			"ibm.output-colorizer",
 			"oderwat.indent-rainbow",
-			"slevesque.vscode-autohotkey",
+			"coenraads.bracket-pair-colorizer-2",
+			"vincaslt.highlight-matching-tag",
+			"aaron-bond.better-comments",
+
+			"funkyremi.vscode-google-translate",
+			"britesnow.vscode-toggle-quotes",
+			"christian-kohler.path-intellisense",
+			"steoates.autoimport",
+			"visualstudioexptteam.vscodeintellicode",
 			"formulahendry.code-runner",
-			"msjsdiag.debugger-for-chrome",
+
 			"vscjava.vscode-java-pack",
 			"ms-vscode.powershell",
-			"octref.vetur",
-			"visualstudioexptteam.vscodeintellicode",
-			"hollowtree.vue-snippets",
-			"faisalhakim47.vue-inline-template",
-			"editorconfig.editorconfig",
+			"slevesque.vscode-autohotkey",
+			"ms-vscode.csharp",
+			"Ionide.Ionide-fsharp",
 			"dotjoshjohnson.xml",
-			"dbaeumer.vscode-eslint",
+			"ionutvmi.reg",
+
 			"davidanson.vscode-markdownlint",
+			"yzhang.markdown-all-in-one",
+
+			"msjsdiag.debugger-for-chrome",
+			"christian-kohler.npm-intellisense",
+			"wix.vscode-import-cost",
+			"lannonbr.vscode-js-annotations",
+			"zignd.html-css-class-completion",
+			"pranaygp.vscode-css-peek",
+			"shinnn.stylelint",
+			"ms-vscode.vscode-typescript-tslint-plugin",
+			"faisalhakim47.vue-inline-template",
+			"octref.vetur",
+			"hollowtree.vue-snippets",
+
+			"editorconfig.editorconfig",
+			"dbaeumer.vscode-eslint",
+			"esbenp.prettier-vscode",
+
 			"donjayamanne.githistory",
 			"eamodio.gitlens",
+			"waderyan.gitblame",
+			"sidneys1.gitconfig",
+
 			"alefragnani.Bookmarks",
-			"vscode-icons-team.vscode-icons",
-			"aaron-bond.better-comments",
-			"esbenp.prettier-vscode",
-			"alefragnani.project-manager",
-			"Ionide.Ionide-fsharp",
-			"yzhang.markdown-all-in-one",
-			"zignd.html-css-class-completion"
+			"alefragnani.project-manager"
 		]
 	}
 }
