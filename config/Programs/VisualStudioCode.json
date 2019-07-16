@@ -28,6 +28,7 @@
 			"coenraads.bracket-pair-colorizer-2",
 			"vincaslt.highlight-matching-tag",
 			"aaron-bond.better-comments",
+			"johnpapa.vscode-peacock",
 
 			"funkyremi.vscode-google-translate",
 			"britesnow.vscode-toggle-quotes",
@@ -40,7 +41,6 @@
 			"ms-vscode.powershell",
 			"slevesque.vscode-autohotkey",
 			"ms-vscode.csharp",
-			"Ionide.Ionide-fsharp",
 			"dotjoshjohnson.xml",
 			"ionutvmi.reg",
 

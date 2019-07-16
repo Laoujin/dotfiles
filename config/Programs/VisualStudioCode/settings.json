@@ -1,31 +1,35 @@
 {
     "window.zoomLevel": 0,
     "window.restoreWindows": "all",
+    "window.title": "${dirty}${activeEditorShort}${separator}${rootName}${separator}${activeFolderLong}",
     "files.hotExit": "onExit",
+    "window.openFoldersInNewWindow": "on",
+    "workbench.colorTheme": "Visual Studio Dark",
+    "workbench.iconTheme": "material-icon-theme",
 
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
 
     "files.encoding": "utf8",
     "files.autoGuessEncoding": false,
+    "files.eol": "auto",
+    "files.defaultLanguage": "",
+    "files.associations": {
+        "*.ini.php": "ini",
+    },
     "files.exclude": {
-        "node_modules/**": false
-        // "_site"
-        // ".sass-cache"
+        "node_modules/**": true,
+        "build/**": true,
+        "_site": true,
+        ".sass-cache": true,
         // "build/",
         // "main.js.map",
         // "dist/*",
         // "package-lock.json",
         // "yarn.lock"
     },
-    "files.insertFinalNewline": true,
-    "files.trimFinalNewlines": true,
-    "files.trimTrailingWhitespace": true,
     "files.watcherExclude": {
         "**/node_modules/*/**": true
-    },
-    "files.associations": {
-        // "*.extension": "html",
     },
     "files.simpleDialog.enable": false,
 
@@ -33,19 +37,20 @@
     // ---------------------------------------
     // ------------- Workbench ---------------
     // ---------------------------------------
+    "workbench.list.multiSelectModifier": "ctrlCmd",
     "workbench.settings.openDefaultKeybindings": true,
-    "workbench.settings.openDefaultSettings": true,
-    "workbench.tree.indent": 32,
-    "workbench.startupEditor": "newUntitledFile",
-    "workbench.editor.highlightModifiedTabs": true,
-    "workbench.iconTheme": "material-icon-theme",
-    "workbench.sideBar.location": "left",
+    "workbench.settings.openDefaultSettings": false,
+    "workbench.settings.useSplitJSON": false,
     "workbench.activityBar.visible": true,
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.sideBar.location": "left",
+    "workbench.tree.indent": 32,
+
     "workbench.editor.showTabs": true,
+    "workbench.editor.highlightModifiedTabs": true,
     "workbench.editor.labelFormat": "default",
     "workbench.editor.tabCloseButton": "off",
     "workbench.editor.tabSizing": "shrink",
-    "workbench.settings.useSplitJSON": true,
 
 
     // ---------------------------------------
@@ -53,10 +58,11 @@
     // ---------------------------------------
     "explorer.autoReveal": false,
     "explorer.confirmDelete": false,
+    "explorer.enableDragAndDrop": true,
     "explorer.confirmDragAndDrop": false,
 
     "vsicons.presets.angular": true,
-    "vsicons.presets.hideExplorerArrows": true,
+    "vsicons.presets.hideExplorerArrows": false,
 
 
     // ---------------------------------------
@@ -70,11 +76,12 @@
     // ---------------------------------------
     // ------------- Search ------------------
     // ---------------------------------------
+    "editor.find.addExtraSpaceOnTop": false,
     "search.exclude": {
         "**/dist": true,
         "**/freelance.yml": true,
         "**/node_modules": true,
-		"**/bower_components": true,
+        "**/bower_components": true,
     },
     "search.location": "panel",
     "search.showLineNumbers": true,
@@ -92,34 +99,61 @@
     "references.preferredLocation": "peek",
 
     // https://github.com/tonsky/FiraCode
-    "editor.fontFamily": "Fira Code",
+    "editor.fontFamily": "Fira Code, Consolas, 'Courier New', monospace",
     "editor.fontLigatures": true,
     "editor.minimap.enabled": false,
-    "editor.suggestSelection": "first",
     "editor.renderWhitespace": "all",
+    "editor.renderControlCharacters": false,
+
+    "files.autoSave": "off",
+    "files.autoSaveDelay": 1000,
+
+    "editor.wordWrap": "off",
     "editor.rulers": [
         120,
         180
     ],
     // "workbench.colorCustomizations": {
-    //     "editorRuler.foreground": "#ff4081"
+        //     "editorRuler.foreground": "#ff4081"
     // },
+    "editor.fontSize": 14,
+    "editor.cursorStyle": "line",
+    "editor.cursorBlinking": "blink",
+    "editor.cursorWidth": 4,
+    "editor.letterSpacing": 0,
     "editor.wordWrapColumn": 140,
     "editor.mouseWheelZoom": true,
-    "editor.renderControlCharacters": false,
-    "editor.formatOnSave": false,
-    "editor.formatOnPaste": true,
-    "editor.fontSize": 14,
+
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": false,
+    "files.trimTrailingWhitespace": true,
+
     "editor.defaultFormatter": null,
-    "editor.cursorStyle": "line",
-    "editor.cursorWidth": 4,
-    "editor.acceptSuggestionOnEnter": "off",
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": false,
+    "editor.formatOnSaveTimeout": 750,
+    "editor.codeActionsOnSave": {},
+    "editor.codeActionsOnSaveTimeout": 750,
+
+    "editor.tabSize": 4,
+    "editor.autoIndent": true,
+    "editor.detectIndentation": true,
+    "editor.insertSpaces": true, // Ignored when detectIndentation is true
+
+    "editor.autoClosingBrackets": "always",
+    "editor.autoClosingQuotes": "always",
+    "editor.autoSurround": "languageDefined",
     "editor.tabCompletion": "on",
+    "editor.suggestSelection": "first",
+    "editor.acceptSuggestionOnEnter": "off",
     "editor.quickSuggestions": {
         "other": true,
         "comments": false,
         "strings": false
     },
+    "editor.parameterHints.cycle": true,
+
+    "editor.multiCursorModifier": "alt",
 
     // Extension: oderwat.indent-rainbow
     // https://github.com/oderwat/vscode-indent-rainbow
@@ -146,6 +180,7 @@
 
     // Extension: aaron-bond.better-comments
     // https://github.com/aaron-bond/better-comments
+    "better-comments.highlightPlainText": true,
     "better-comments.tags": [
         {
             "tag": "hack",
@@ -169,14 +204,14 @@
 
 
     // https://github.com/CoenraadS/Bracket-Pair-Colorizer-2
+    "editor.matchBrackets": false,
     "bracket-pair-colorizer-2.colors": [
         "Gold",
         "Orchid",
         "LightSkyBlue",
         "White",
     ],
-    "bracketPairColorizer.highlightActiveScope": true,
-    "editor.matchBrackets": false,
+    "bracket-pair-colorizer-2.highlightActiveScope": true,
     "bracket-pair-colorizer-2.showBracketsInGutter": true,
     "bracket-pair-colorizer-2.showBracketsInRuler": false,
     "bracket-pair-colorizer-2.excludedLanguages": ["markdown"],
@@ -186,8 +221,7 @@
     // ------------- Terminal ----------------
     // ---------------------------------------
     // "terminal.external.windowsExec": "",
-    // TODO: Cmder Terminal isn't working...
-    "terminal.integrated.shell.windows": "C:\\Windows\\System32\\cmd.exe",
+    "terminal.integrated.shell.windows": "cmd.exe",
     "terminal.integrated.shellArgs.windows": [
         "/K",
         "C:\\tools\\Cmder\\vendor\\init.bat"
@@ -273,7 +307,4 @@
     "gitblame.statusBarMessageFormat": "${author.name} (${time.ago}) — ${commit.summary}",
 
     "sync.gist": "eb201494af87c818a3756206352d69ba",
-
-    "better-comments.highlightPlainText": true,
-    "workbench.colorTheme": "Visual Studio Dark",
 }

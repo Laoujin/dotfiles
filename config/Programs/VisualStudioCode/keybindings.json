@@ -78,5 +78,14 @@
         "key": "ctrl+shift+j",
         "command": "editor.action.joinLines",
         "when": "editorFocus"
-    }
+    },
+    // TODO: Should open new instance
+    // {
+    //     "key": "ctrl+k ctrl+o",
+    //     "command": "-workbench.action.files.openFolder"
+    // },
+    // {
+    //     "key": "ctrl+k ctrl+o",
+    //     "command": "projectManager.openInNewWindow"
+    // },
 ]
