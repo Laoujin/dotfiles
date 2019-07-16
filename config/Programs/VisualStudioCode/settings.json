@@ -267,8 +267,8 @@
     "code-runner.showRunIconInEditorTitleMenu": false,
     // "gitHistory.showEditorTitleMenuBarIcons": false,
 
-    // "gitlens.blame.ignoreWhitespace": true,
-    // "gitlens.currentLine.enabled": false,
+    "gitlens.blame.ignoreWhitespace": true,
+    "gitlens.currentLine.enabled": false,
     "gitblame.ignoreWhitespace": true,
     "gitblame.statusBarMessageFormat": "${author.name} (${time.ago}) — ${commit.summary}",
 
