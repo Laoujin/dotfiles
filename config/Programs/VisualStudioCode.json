@@ -46,6 +46,10 @@
 
 			"davidanson.vscode-markdownlint",
 			"yzhang.markdown-all-in-one",
+			"yzane.markdown-pdf",
+			"bierner.markdown-preview-github-styles",
+			"bierner.markdown-emoji",
+			"hnw.vscode-auto-open-markdown-preview",
 
 			"msjsdiag.debugger-for-chrome",
 			"christian-kohler.npm-intellisense",
