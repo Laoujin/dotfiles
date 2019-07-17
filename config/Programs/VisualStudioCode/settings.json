@@ -1,4 +1,7 @@
 {
+    // Extensions: lihui.vs-color-picker
+    // humao.rest-client
+
     "window.zoomLevel": 0,
     "window.restoreWindows": "all",
     "window.title": "${dirty}${activeEditorShort}${separator}${rootName}${separator}${activeFolderLong}",
