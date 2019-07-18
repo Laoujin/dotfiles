@@ -62,6 +62,8 @@
 			"faisalhakim47.vue-inline-template",
 			"octref.vetur",
 			"hollowtree.vue-snippets",
+			"angular.ng-template",
+			"johnpapa.angular2",
 
 			"editorconfig.editorconfig",
 			"dbaeumer.vscode-eslint",
