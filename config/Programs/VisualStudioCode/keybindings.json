@@ -1,4 +1,3 @@
-// Place your key bindings in this file to override the defaults
 [
     // https://code.visualstudio.com/docs/getstarted/keybindings#_keyboard-layouts
     {
@@ -79,13 +78,16 @@
         "command": "editor.action.joinLines",
         "when": "editorFocus"
     },
-    // TODO: Should open new instance
-    // {
-    //     "key": "ctrl+k ctrl+o",
-    //     "command": "-workbench.action.files.openFolder"
-    // },
-    // {
-    //     "key": "ctrl+k ctrl+o",
-    //     "command": "projectManager.openInNewWindow"
-    // },
+
+    // https://github.com/yzhang-gh/vscode-markdown/issues/89
+    {
+        "key": "alt+b",
+        "command": "markdown.extension.editing.toggleBold",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == 'markdown'"
+    },
+    {
+        "key": "ctrl+b",
+        "command": "-markdown.extension.editing.toggleBold",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == 'markdown'"
+    },
 ]

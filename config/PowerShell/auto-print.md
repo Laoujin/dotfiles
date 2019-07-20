@@ -44,16 +44,14 @@ Control + K, Arrow: Move Editor Group
 Control + PageUp/Down: Select next/prev tab
 
 Control K, S: Save all
-Alt Z: Toggle Wordwrap
 
 Shift + Alt + F: Format document
 Control + K, Control + F: Format selection
 
 Alt + Left/Right: Prev/next cursor position
-(shift + ) alt + f5: prev/next change
 
 
-ctrl+shift+; : Jump to bracket
+ctrl+shift+µ: Go to bracket
 Ctrl + K, F12: Open defintion in right pane
 Alt + F12: peek definition
 Ctrl + F12: go to implementation
@@ -83,10 +81,13 @@ control + ; : Quick fix
 shift+alt+; : Auto fix
 
 
+control+; : Spell check suggestions
+
+
 #### Multiple Cursors
 
 Alt + Click: Extra cursor
-Control + F2: Select all occurences
+Control + F2: Select all occurrences
 Control + Alt + Up/Down: Multiline cursor
 Shift + Alt + I: Split selected lines into cursors
 
@@ -101,7 +102,7 @@ ctrl+alt+j: Previous
 
 Control + K, M: Toggle Mini map
 Control + Alt + ù: Toggle Terminal
-Control + Shift + ù: New
+Control + Shift + ù: New Terminal
 
 
 ## Git

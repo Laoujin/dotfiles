@@ -4,3 +4,4 @@ config/Programs/FileZilla/
 config/Programs/filezilla.json
 
 .ionide
+.vscode

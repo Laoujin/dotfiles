@@ -26,7 +26,6 @@
 			"ibm.output-colorizer",
 			"oderwat.indent-rainbow",
 			"coenraads.bracket-pair-colorizer-2",
-			"vincaslt.highlight-matching-tag",
 			"aaron-bond.better-comments",
 			"johnpapa.vscode-peacock",
 
@@ -43,6 +42,7 @@
 			"ms-vscode.csharp",
 			"dotjoshjohnson.xml",
 			"ionutvmi.reg",
+			"tomoki1207.pdf",
 
 			"davidanson.vscode-markdownlint",
 			"yzhang.markdown-all-in-one",
@@ -50,13 +50,16 @@
 			"bierner.markdown-preview-github-styles",
 			"bierner.markdown-emoji",
 			"hnw.vscode-auto-open-markdown-preview",
+			"streetsidesoftware.code-spell-checker",
 
 			"msjsdiag.debugger-for-chrome",
+			"vincaslt.highlight-matching-tag",
 			"christian-kohler.npm-intellisense",
 			"wix.vscode-import-cost",
 			"lannonbr.vscode-js-annotations",
 			"zignd.html-css-class-completion",
 			"pranaygp.vscode-css-peek",
+			"lihui.vs-color-picker",
 			"shinnn.stylelint",
 			"ms-vscode.vscode-typescript-tslint-plugin",
 			"faisalhakim47.vue-inline-template",
@@ -75,7 +78,8 @@
 			"sidneys1.gitconfig",
 
 			"alefragnani.Bookmarks",
-			"alefragnani.project-manager"
+			"alefragnani.project-manager",
+			"humao.rest-client"
 		]
 	}
 }
