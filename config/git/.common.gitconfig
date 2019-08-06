@@ -143,6 +143,7 @@
 	hide = update-index --skip-worktree
 	unhide = update-index --no-skip-worktree
 	hidden = "!git ls-files -v | grep ^S | cut -c 3-"
+	hiden = "!git hidden"
 
 	assume = update-index --assume-unchanged
 	noassume = update-index --no-assume-unchanged
