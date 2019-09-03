@@ -1,3 +1,4 @@
+# Only available in Package Manager Console
 Set-Alias cleanbins Clean-BinFolders
 
 function Clean-BinFolders {
