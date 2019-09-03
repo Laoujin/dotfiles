@@ -99,7 +99,6 @@
 		"react/prop-types": 2,
 		"react/react-in-jsx-scope": 0,
 		"react/self-closing-comp": 2,
-		"react/sort-comp": 0,
-		"react/wrap-multilines": 1
+		"react/sort-comp": 0
 	}
 }
