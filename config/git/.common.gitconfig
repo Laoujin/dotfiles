@@ -55,6 +55,7 @@
 	snp = "!f() { git stash save -p \"$1\"; }; f"
 	sp = stash pop
 	sa = stash apply
+	sA = !git add . && git stash
 
 	### Branching
 	branches = branch -a
