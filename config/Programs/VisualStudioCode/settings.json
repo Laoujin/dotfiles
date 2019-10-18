@@ -400,5 +400,6 @@
         "wireframes"
     ],
     "vsicons.projectDetection.disableDetect": true,
-    "eslint.lintTask.enable": true,
+    "java.errors.incompleteClasspath.severity": "ignore",
+    "java.configuration.checkProjectSettingsExclusions": false,
 }
