@@ -1,6 +1,7 @@
 $editor = "C:\Program Files\Notepad++\notepad++.exe"
 $ide_subl = "C:\Program Files\Sublime Text 3\sublime_text.exe"
 $ide = "C:\Users\$($env:username)\AppData\Local\Programs\Microsoft VS Code\bin\Code.cmd"
+$ide2 = "C:\Program Files\Microsoft VS Code\bin\Code.cmd"
 $markdownEditor = "C:\Program Files (x86)\MarkdownPad 2\MarkdownPad2.exe"
 
 
@@ -31,12 +32,17 @@ Set-Alias mdp $markdownEditor
 
 # https://code.visualstudio.com/docs/editor/command-line
 function Start-VSCode {
+	$idePath = $ide
+	if (-not (Test-Path $idePath)) {
+		$idePath = $ide2
+	}
+
 	if ($args.length -eq 0 -or $null -eq $args[0]) {
-		& $ide --reuse-window
+		& $idePath --reuse-window
 		return
 	}
 
 	$folder = Resolve-Path $args
-	& "$ide" "$folder"
+	& "$idePath" "$folder"
 }
 Set-Alias cde Start-VSCode
