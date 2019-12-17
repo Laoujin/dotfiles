@@ -24,7 +24,13 @@
 	merge-diff = "!git diff `git merge-span ... $1`"
 	# As above, but in your difftool
 	merge-dt = "!git difftool `git merge-span ... $1`"
+
 	mm = merge master
+	md = merge development
+	mds = merge develop
+	mom = merge origin/master
+	mod = merge origin/development
+	mods = merge origin/develop
 
 
 	### Status
