@@ -62,6 +62,7 @@
 	sp = stash pop
 	sa = stash apply
 	sA = !git add . && git stash
+	sd = "!f() { git stash drop \"stash@{$1}\"; }; f"
 
 	### Branching
 	branches = branch -a
