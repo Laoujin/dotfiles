@@ -4,6 +4,7 @@ Install-PS-Modules:
 - PSReadLine
 - Jump.Location
 - PSYaml
+- Git-NumberedAdd
 
 
 Create-Links:
