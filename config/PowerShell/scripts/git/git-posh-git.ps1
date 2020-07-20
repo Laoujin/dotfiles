@@ -20,7 +20,7 @@ $GitPromptSettings.WorkingColor.ForegroundColor = 'Yellow'
 # $GitPromptSettings.BranchColor.ForegroundColor = 'Green'
 
 $GitPromptSettings.BranchAheadStatusSymbol.ForegroundColor = 'Green'
-$GitPromptSettings.BranchBehindStatusSymbol.ForegroundColor = 'DarkMagenta'
+$GitPromptSettings.BranchBehindStatusSymbol.ForegroundColor = 'Magenta'
 $GitPromptSettings.BranchBehindAndAheadStatusSymbol.ForegroundColor = 'Yellow'
 
 
