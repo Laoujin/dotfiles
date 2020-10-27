@@ -8,6 +8,7 @@ Import-Module Posh-Git
 
 # Posh-Git v1.x
 # Update-Module Posh-Git -RequiredVersion 1.0.0-beta2 -AllowPrerelease
+# Get all settings: `$GitPromptSettings`| gm`
 
 # Interprets colors with System.Drawing.ColorTranslator.FromHtml()
 # But available colors are only: [ConsoleColor].GetEnumNames()
