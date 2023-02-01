@@ -7,3 +7,4 @@ Set-Alias guit git
 Set-Alias giut git
 Set-Alias giot git
 Set-Alias goit git
+Set-Alias igt git
