@@ -127,8 +127,9 @@
 	open = !explorer `git config remote.origin.url`
 	issues = !explorer `git config remote.origin.url`/issues
 	open-dir = !explorer `git config remote.origin.url`/tree/$(git branch-name)/$(git rev-parse --show-prefix ${GIT_PREFIX:-./} | tail -n 1)
-	mr = remote add mine
-	pm = "!git push -u mine $(git branch-name)"
+	rao = remote add origin
+	# mr = remote add mine
+	# pm = "!git push -u mine $(git branch-name)"
 
 	# Delete merged branches but not branches called master or development
 	# Sort of works in PowerShell (but best call this from development branch)
@@ -219,7 +220,15 @@
 	default = simple
 	followTags = true
 
+[credential]
+	helper = wincred
+	useHttpPath = false
 
+[http]
+	sslVerify = true
+
+[rerere]
+	enabled = true
 
 ### Not in use
 
