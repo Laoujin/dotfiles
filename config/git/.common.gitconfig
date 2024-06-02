@@ -9,8 +9,6 @@
 # Create alias
 # git config --global alias.ci commit
 
-# TODO: find branch name that matches $1
-
 [alias]
 	fam = !git checkout development && git fetch && git merge origin/development && git dm
 
