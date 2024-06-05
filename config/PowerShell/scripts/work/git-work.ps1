@@ -1,7 +1,12 @@
 function Create-PullRequest() {
-	$urlTemplate += "{base-url}/pullrequestcreate?sourceRef={source-branch}&targetRef={target-branch}"
-
 	$baseUrl = git remote get-url origin
+
+	if ($baseUrl -match 'github.com') {
+		$urlTemplate += "{base-url}/compare/{target-branch}...{source-branch}"
+	} else {
+		$urlTemplate += "{base-url}/pullrequestcreate?sourceRef={source-branch}&targetRef={target-branch}"
+	}
+
 	$sourceBranch = git rev-parse --abbrev-ref HEAD
 	# $targetBranch = "develop"
 	$targetBranch = "master"
