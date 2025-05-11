@@ -141,6 +141,7 @@
 
 	### The rest
 	subm = submodule
+	smi = submodule update --init --recursive
 
 	# Find commits by source code
 	fc = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short -i -S$1; }; f"
