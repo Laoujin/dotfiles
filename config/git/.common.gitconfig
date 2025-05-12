@@ -26,7 +26,6 @@
 	mm = merge master
 	md = merge development
 	mds = merge develop
-	mom = merge origin/master
 	mod = merge origin/development
 	mods = merge origin/develop
 
