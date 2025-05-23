@@ -1,15 +1,12 @@
 {
-    "window.zoomLevel": 0,
     "window.restoreWindows": "all",
     "window.title": "${dirty}${activeEditorShort}${separator}${rootName}${separator}${activeFolderLong}",
     "files.hotExit": "onExit",
     "window.openFoldersInNewWindow": "on",
     "workbench.colorTheme": "Visual Studio Dark",
     "workbench.iconTheme": "material-icon-theme",
-
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
-
     "files.encoding": "utf8",
     "files.autoGuessEncoding": false,
     "files.eol": "auto",
@@ -32,8 +29,6 @@
         "**/node_modules/*/**": true
     },
     "files.simpleDialog.enable": false,
-
-
     // ---------------------------------------
     // ------------- Workbench ---------------
     // ---------------------------------------
@@ -123,23 +118,17 @@
     "editor.letterSpacing": 0,
     "editor.wordWrapColumn": 140,
     "editor.mouseWheelZoom": true,
-
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": false,
     "files.trimTrailingWhitespace": true,
-
-    // "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnPaste": true,
-    "editor.formatOnSave": false,
+    "editor.formatOnSave": true,
     "editor.formatOnSaveTimeout": 750,
     "editor.codeActionsOnSave": {},
     "editor.codeActionsOnSaveTimeout": 750,
-
     "editor.tabSize": 4,
     "editor.autoIndent": true,
     "editor.detectIndentation": true,
     "editor.insertSpaces": true, // Ignored when detectIndentation is true
-
     "editor.autoClosingBrackets": "always",
     "editor.autoClosingQuotes": "always",
     "editor.autoSurround": "languageDefined",
@@ -268,6 +257,7 @@
             "strings": true
         },
         "files.trimTrailingWhitespace": false,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
     },
     "markdownlint.config": {
         "default": true,
@@ -276,12 +266,10 @@
         "single-title": false,
         "heading-style": false,
         "header-increment": false,
-
         "no-multiple-blanks": false,
         "no-hard-tabs": false,
         "no-inline-html": false,
         "blanks-around-fences": false,
-
         "blanks-around-lists": false,
         "ul-indent": false,
     },
@@ -290,14 +278,10 @@
     "markdown.extension.preview.autoShowPreviewToSide": false,
     "markdown.extension.print.absoluteImgPath": true,
     "markdown.extension.toc.githubCompatibility": true,
-
-
-
     // ---------------------------------------
     // ------------- Extensions --------------
     // ---------------------------------------
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-
     // Extension: formulahendry.code-runner
     // https://github.com/formulahendry/vscode-code-runner
     "code-runner.executorMap": {
@@ -308,20 +292,16 @@
         "ahk": "\"C:\\Program Files\\AutoHotkey\\AutoHotkey.exe\""
     },
     "vsicons.dontShowNewVersionMessage": true,
-
     // Hide icons in the Title Menu Bar
     "code-runner.showRunIconInEditorTitleMenu": false,
     // "gitHistory.showEditorTitleMenuBarIcons": false,
-
     "gitlens.blame.ignoreWhitespace": true,
     "gitlens.currentLine.enabled": false,
     "gitblame.ignoreWhitespace": true,
     "gitlens.codeLens.authors.enabled": false,
     "gitlens.codeLens.recentChange.enabled": false,
     "gitblame.statusBarMessageFormat": "${author.name} (${time.ago}) — ${commit.summary}",
-
     "sync.gist": "eb201494af87c818a3756206352d69ba",
-
     "peacock.favoriteColors": [
         {
             "name": "Angular Red",
@@ -402,4 +382,7 @@
     "vsicons.projectDetection.disableDetect": true,
     "java.errors.incompleteClasspath.severity": "ignore",
     "java.configuration.checkProjectSettingsExclusions": false,
+    "eslint.codeActionsOnSave.rules": null,
+    "eslint.format.enable": true,
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
 }
