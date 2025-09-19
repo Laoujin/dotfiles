@@ -29,6 +29,12 @@ function CreateAndSet-Directory([String] $path) {
 	Set-Location $path
 }
 
+Set-Alias cwd Clipboard-Working-Directory
+
+function Clipboard-Working-Directory() {
+	$pwd.Path | Clip
+}
+
 # Determine size of a file or total size of a directory
 # TODO: print the directory
 # TODO: fs dirName still gives info on ./ dir...
