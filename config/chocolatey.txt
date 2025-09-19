@@ -4,8 +4,6 @@ firefox
 opera
 git
 git-credential-winstore
-sublimetext3
-sublimetext3.packagecontrol
 notepadplusplus.install
 dropbox
 onedrive
