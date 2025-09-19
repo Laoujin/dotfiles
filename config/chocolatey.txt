@@ -25,7 +25,6 @@ nodejs.install
 python2
 python
 virtualbox
-vagrant
 sourcetree
 teamviewer
 vlc
