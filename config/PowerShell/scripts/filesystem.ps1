@@ -1,9 +1,13 @@
 # Basic commands
 function touch($file) {
-	$Utf8NoBomEncoding = New-Object System.Text.UTF8Encoding $False
-	$path = Get-Location
-	$path = Join-Path -Path $path -ChildPath $file
-	[System.IO.File]::WriteAllText($path, "", $Utf8NoBomEncoding)
+	if (Test-Path $file) {
+		(Get-ChildItem $file).LastWriteTime = Get-Date
+	} else {
+		$Utf8NoBomEncoding = New-Object System.Text.UTF8Encoding $False
+		$path = Get-Location
+		$path = Join-Path -Path $path -ChildPath $file
+		[System.IO.File]::WriteAllText($path, "", $Utf8NoBomEncoding)
+	}
 }
 # Append: Add-Content fileName "content"
 
