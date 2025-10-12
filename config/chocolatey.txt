@@ -4,6 +4,7 @@ firefox
 opera
 git
 git-credential-winstore
+git-lfs
 notepadplusplus.install
 dropbox
 onedrive
