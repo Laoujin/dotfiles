@@ -1,7 +1,7 @@
 Configure You Windows
 =====================
 
-**Dotfiles for Windows 8.1.**  
+**Dotfiles for Windows**  
 
 Automatically install software and keep their settings synchronized.  
 Configure Windows Explorer, link your important files to cloud folders, setup .gitconfig, .bashrc and PowerShell $profile, install modules for your package managers.  
@@ -31,9 +31,12 @@ git pull --recurse-submodules
 Boxstarter
 ==========
 
-```ps1
-iex ((New-Object System.Net.WebClient).DownloadString('http://boxstarter.org/bootstrapper.ps1')); get-boxstarter -Force
+- [How to install from a Github Gist](https://boxstarter.org/learn/weblauncher)
+- [Example Gist](https://gist.github.com/Laoujin/12f5d2f76d51ee6c0a49)
 
+```ps1
+Set-ExecutionPolicy Unrestricted
+. { iwr -useb https://boxstarter.org/bootstrapper.ps1 } | iex; Get-Boxstarter -Force
 Install-BoxstarterPackage -PackageName https://gist.githubusercontent.com/Laoujin/{raw} -DisableReboots
 ```
 
