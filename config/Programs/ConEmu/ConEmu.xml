@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <key name="Software">
 	<key name="ConEmu">
-		<key name=".Vanilla" modified="2020-01-12 23:13:33" build="161206">
+		<key name=".Vanilla" modified="2025-12-29 23:32:31" build="230724">
 			<value name="ColorTable00" type="dword" data="00222827"/>
 			<value name="ColorTable01" type="dword" data="009e5401"/>
 			<value name="ColorTable02" type="dword" data="0004aa74"/>
@@ -171,7 +171,7 @@
 			<value name="ClipboardConfirmEnter" type="hex" data="01"/>
 			<value name="ClipboardConfirmLonger" type="ulong" data="500"/>
 			<value name="FarGotoEditorOpt" type="hex" data="01"/>
-			<value name="FarGotoEditorPath" type="string" data="far.exe /e%1:%2 &quot;%3&quot;"/>
+			<value name="FarGotoEditorPath" type="string" data='far.exe /e%1:%2 "%3"'/>
 			<value name="FixFarBorders" type="hex" data="01"/>
 			<value name="FixFarBordersRanges" type="string" data="2013-25C4;"/>
 			<value name="ExtendUCharMap" type="hex" data="01"/>
@@ -294,7 +294,7 @@
 			<value name="MinimizeOnLoseFocus" type="hex" data="00"/>
 			<value name="DisableFarFlashing" type="hex" data="00"/>
 			<value name="DisableAllFlashing" type="hex" data="00"/>
-			<value name="FindText" type="string" data="Visual Studio"/>
+			<value name="FindText" type="string" data="cegeka"/>
 			<value name="FindMatchCase" type="hex" data="00"/>
 			<value name="FindMatchWholeWords" type="hex" data="00"/>
 			<value name="FindTransparent" type="hex" data="01"/>
@@ -414,9 +414,9 @@
 			<value name="Key.TileToLeft" type="dword" data="80808000"/>
 			<value name="Key.TileToRIght" type="dword" data="80808000"/>
 			<value name="KeyMacro01" type="dword" data="0012a031"/>
-			<value name="KeyMacro01.Text" type="string" data="Task(&quot;cmd&quot;)"/>
+			<value name="KeyMacro01.Text" type="string" data='Task("cmd")'/>
 			<value name="KeyMacro02" type="dword" data="0012a032"/>
-			<value name="KeyMacro02.Text" type="string" data="Task(&quot;PowerShell&quot;)"/>
+			<value name="KeyMacro02.Text" type="string" data='Task("PowerShell")'/>
 			<value name="KeyMacro03" type="dword" data="000011d0"/>
 			<value name="KeyMacro03.Text" type="string" data="FontSetSize(1,2)"/>
 			<value name="KeyMacro04" type="dword" data="000011d1"/>
@@ -489,7 +489,7 @@
 				<value name="Count" type="long" data="13"/>
 				<key name="Task1" modified="2020-01-12 23:13:33" build="161206">
 					<value name="Name" type="string" data="{PowerShell::PowerShell50 (Admin)}"/>
-					<value name="GuiArgs" type="string" data="/dir &quot;c:\&quot;"/>
+					<value name="GuiArgs" type="string" data='/dir "c:\"'/>
 					<value name="Cmd1" type="string" data="pwsh.exe -new_console:s50H:a"/>
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
@@ -498,7 +498,7 @@
 				</key>
 				<key name="Task2" modified="2020-01-12 23:13:33" build="161206">
 					<value name="Name" type="string" data="{PowerShell::PowerShell (Admin)}"/>
-					<value name="GuiArgs" type="string" data="/dir &quot;c:\&quot;"/>
+					<value name="GuiArgs" type="string" data='/dir "c:\"'/>
 					<value name="Cmd1" type="string" data="pwsh.exe -new_console:a"/>
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
@@ -508,7 +508,7 @@
 				<key name="Task3" modified="2020-01-12 23:13:33" build="161206">
 					<value name="Name" type="string" data="{PowerShell::PowerShell50Down}"/>
 					<value name="Hotkey" type="dword" data="0010124d"/>
-					<value name="GuiArgs" type="string" data="/dir &quot;c:\&quot;"/>
+					<value name="GuiArgs" type="string" data='/dir "c:\"'/>
 					<value name="Cmd1" type="string" data="pwsh.exe -new_console:s50V"/>
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
@@ -517,7 +517,7 @@
 				<key name="Task4" modified="2020-01-12 23:13:33" build="161206">
 					<value name="Name" type="string" data="{PowerShell::PowerShell50}"/>
 					<value name="Hotkey" type="dword" data="00101250"/>
-					<value name="GuiArgs" type="string" data="/dir &quot;c:\&quot;"/>
+					<value name="GuiArgs" type="string" data='/dir "c:\"'/>
 					<value name="Cmd1" type="string" data="pwsh.exe -new_console:s50H"/>
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
@@ -526,91 +526,91 @@
 				<key name="Task5" modified="2020-01-12 23:13:33" build="161206">
 					<value name="Name" type="string" data="{PowerShell::PowerShell}"/>
 					<value name="Hotkey" type="dword" data="00001250"/>
-					<value name="GuiArgs" type="string" data="/dir &quot;c:\&quot;"/>
+					<value name="GuiArgs" type="string" data='/dir "c:\"'/>
 					<value name="Cmd1" type="string" data="pwsh.exe"/>
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
 					<value name="Flags" type="dword" data="00000000"/>
-					<value name="Cmd2" type="string" data="&gt;pwsh.exe -new_console:s1THn:d:&quot;C:\code\projects\confac\front&quot;:t:&quot;confac-cli&quot;"/>
-					<value name="Cmd3" type="string" data="pwsh.exe -NoExit -Command &quot;npm start&quot; -new_console:s1TVn:d:&quot;C:\code\projects\confac\front&quot;:t:&quot;confac-front&quot;"/>
-					<value name="Cmd4" type="string" data="cmd /k &quot;&quot;%ConEmuDir%\..\init.bat&quot; &amp; gulp&quot; -cur_console:s2THn:d:&quot;C:\projects\Digipolis\FedPol\App\Focus.FedPol.App&quot;:t:&quot;FedPol-gulp&quot;"/>
+					<value name="Cmd2" type="string" data='&gt;pwsh.exe -new_console:s1THn:d:"C:\code\projects\confac\front":t:"confac-cli"'/>
+					<value name="Cmd3" type="string" data='pwsh.exe -NoExit -Command "npm start" -new_console:s1TVn:d:"C:\code\projects\confac\front":t:"confac-front"'/>
+					<value name="Cmd4" type="string" data='cmd /k ""%ConEmuDir%\..\init.bat" &amp; gulp" -cur_console:s2THn:d:"C:\projects\Digipolis\FedPol\App\Focus.FedPol.App":t:"FedPol-gulp"'/>
 				</key>
 				<key name="Task6" modified="2020-01-12 23:13:33" build="161206">
 					<value name="Name" type="string" data="{confac}"/>
 					<value name="Hotkey" type="dword" data="00101143"/>
-					<value name="GuiArgs" type="string" data=" /icon &quot;C:\Code\projects\confac\confac.ico&quot;"/>
-					<value name="Cmd1" type="string" data="pwsh.exe -NoExit -Command &quot;npm start&quot; -new_console:d:&quot;C:\Users\Wouter\Dropbox\Personal\Programming\UnixCode\projects\confac\back&quot;:t:&quot;confac-back&quot;"/>
+					<value name="GuiArgs" type="string" data=' /icon "C:\Code\projects\confac\confac.ico"'/>
+					<value name="Cmd1" type="string" data='pwsh.exe -NoExit -Command "npm start" -new_console:d:"C:\Users\Wouter\Dropbox\Personal\Programming\UnixCode\projects\confac\back":t:"confac-back"'/>
 					<value name="Active" type="long" data="2"/>
 					<value name="Count" type="long" data="3"/>
-					<value name="Cmd2" type="string" data="&gt;pwsh.exe -new_console:s1THn:d:&quot;C:\Users\Wouter\Dropbox\Personal\Programming\UnixCode\projects\confac\front&quot;:t:&quot;confac-cli&quot;"/>
-					<value name="Cmd3" type="string" data="pwsh.exe -NoExit -Command &quot;npm start&quot; -new_console:s1TVn:d:&quot;C:\Users\Wouter\Dropbox\Personal\Programming\UnixCode\projects\confac\front&quot;:t:&quot;confac-front&quot;"/>
-					<value name="Cmd4" type="string" data="powershell -new_console:d:&quot;C:\projects\Digipolis\Note\App&quot;:t:&quot;Note.App&quot;"/>
-					<value name="Cmd5" type="string" data="powershell -new_console:d:&quot;C:\projects\Digipolis\Note\Service&quot;:t:&quot;Note.Service&quot;"/>
+					<value name="Cmd2" type="string" data='&gt;pwsh.exe -new_console:s1THn:d:"C:\Users\Wouter\Dropbox\Personal\Programming\UnixCode\projects\confac\front":t:"confac-cli"'/>
+					<value name="Cmd3" type="string" data='pwsh.exe -NoExit -Command "npm start" -new_console:s1TVn:d:"C:\Users\Wouter\Dropbox\Personal\Programming\UnixCode\projects\confac\front":t:"confac-front"'/>
+					<value name="Cmd4" type="string" data='powershell -new_console:d:"C:\projects\Digipolis\Note\App":t:"Note.App"'/>
+					<value name="Cmd5" type="string" data='powershell -new_console:d:"C:\projects\Digipolis\Note\Service":t:"Note.Service"'/>
 					<value name="Flags" type="dword" data="00000000"/>
 				</key>
 				<key name="Task7" modified="2020-01-12 23:13:33" build="161206">
 					<value name="Name" type="string" data="{bliki}"/>
 					<value name="Hotkey" type="dword" data="00101142"/>
-					<value name="GuiArgs" type="string" data=" /icon &quot;C:\Code\itenium\favicon.ico&quot;"/>
-					<value name="Cmd1" type="string" data="pwsh.exe -NoExit -Command &quot;bundle exec jekyll serve -I&quot; -new_console:d:&quot;C:\code\itenium\site&quot;:t:&quot;bliki-jekyll&quot;"/>
-					<value name="Cmd2" type="string" data="&gt;pwsh.exe -new_console:s1THn:d:&quot;C:\code\itenium\site\_posts&quot;:t:&quot;bliki_posts&quot;"/>
+					<value name="GuiArgs" type="string" data=' /icon "C:\Code\itenium\favicon.ico"'/>
+					<value name="Cmd1" type="string" data='pwsh.exe -NoExit -Command "bundle exec jekyll serve -I" -new_console:d:"C:\code\itenium\site":t:"bliki-jekyll"'/>
+					<value name="Cmd2" type="string" data='&gt;pwsh.exe -new_console:s1THn:d:"C:\code\itenium\site\_posts":t:"bliki_posts"'/>
 					<value name="Active" type="long" data="2"/>
 					<value name="Count" type="long" data="3"/>
-					<value name="Cmd3" type="string" data="pwsh.exe -new_console:s1TVn:d:&quot;C:\code\itenium\site&quot;:t:&quot;bliki-site&quot;"/>
-					<value name="Cmd4" type="string" data="pwsh.exe -NoExit -Command &quot;npm start&quot; -new_console:s50V:d:&quot;C:\Users\Wouter\Dropbox\Personal\Programming\UnixCode\projects\stockoma\site\front-admin&quot;:t:&quot;eli-admin&quot;"/>
-					<value name="Cmd5" type="string" data="pwsh.exe -NoExit -Command &quot;npm start&quot; -new_console:s50V:d:&quot;C:\Users\Wouter\Dropbox\Personal\Programming\UnixCode\projects\stockoma\site\front-admin&quot;:t:&quot;eli-admin&quot;"/>
-					<value name="Cmd6" type="string" data="powershell -new_console:d:&quot;C:\projects\Digipolis\FedPol\App&quot;:t:&quot;FedPol.App&quot;"/>
-					<value name="Cmd7" type="string" data="powershell -new_console:d:&quot;C:\projects\Digipolis\FedPol\Service&quot;:t:&quot;FedPol.Service&quot;"/>
+					<value name="Cmd3" type="string" data='pwsh.exe -new_console:s1TVn:d:"C:\code\itenium\site":t:"bliki-site"'/>
+					<value name="Cmd4" type="string" data='pwsh.exe -NoExit -Command "npm start" -new_console:s50V:d:"C:\Users\Wouter\Dropbox\Personal\Programming\UnixCode\projects\stockoma\site\front-admin":t:"eli-admin"'/>
+					<value name="Cmd5" type="string" data='pwsh.exe -NoExit -Command "npm start" -new_console:s50V:d:"C:\Users\Wouter\Dropbox\Personal\Programming\UnixCode\projects\stockoma\site\front-admin":t:"eli-admin"'/>
+					<value name="Cmd6" type="string" data='powershell -new_console:d:"C:\projects\Digipolis\FedPol\App":t:"FedPol.App"'/>
+					<value name="Cmd7" type="string" data='powershell -new_console:d:"C:\projects\Digipolis\FedPol\Service":t:"FedPol.Service"'/>
 					<value name="Flags" type="dword" data="00000000"/>
 				</key>
 				<key name="Task8" modified="2020-01-12 23:13:33" build="161206">
 					<value name="Name" type="string" data="{stockoma}"/>
 					<value name="Hotkey" type="dword" data="00101145"/>
-					<value name="GuiArgs" type="string" data="/icon &quot;C:\Code\projects\stockoma\favicon.ico&quot;"/>
-					<value name="Cmd1" type="string" data="pwsh.exe -new_console:d:&quot;C:\code\projects\stockoma\site&quot;:t:&quot;eli-cli&quot;"/>
+					<value name="GuiArgs" type="string" data='/icon "C:\Code\projects\stockoma\favicon.ico"'/>
+					<value name="Cmd1" type="string" data='pwsh.exe -new_console:d:"C:\code\projects\stockoma\site":t:"eli-cli"'/>
 					<value name="Active" type="long" data="2"/>
 					<value name="Count" type="long" data="4"/>
 					<value name="Flags" type="dword" data="00000004"/>
-					<value name="Cmd2" type="string" data="&gt;pwsh.exe -NoExit -Command &quot;npm start&quot; -new_console:s50H:d:&quot;C:\code\projects\stockoma\site\front&quot;:t:&quot;eli-front&quot;"/>
-					<value name="Cmd3" type="string" data="pwsh.exe -NoExit -Command &quot;npm run watch-css&quot; -new_console:s33V:d:&quot;C:\code\projects\stockoma\site\front&quot;:t:&quot;eli-front-css&quot;"/>
-					<value name="Cmd4" type="string" data="pwsh.exe -NoExit -Command &quot;npm start&quot; -new_console:s50V:d:&quot;C:\Users\Wouter\Dropbox\Personal\Programming\UnixCode\projects\stockoma\site\front-admin&quot;:t:&quot;eli-admin&quot;"/>
+					<value name="Cmd2" type="string" data='&gt;pwsh.exe -NoExit -Command "npm start" -new_console:s50H:d:"C:\code\projects\stockoma\site\front":t:"eli-front"'/>
+					<value name="Cmd3" type="string" data='pwsh.exe -NoExit -Command "npm run watch-css" -new_console:s33V:d:"C:\code\projects\stockoma\site\front":t:"eli-front-css"'/>
+					<value name="Cmd4" type="string" data='pwsh.exe -NoExit -Command "npm start" -new_console:s50V:d:"C:\Users\Wouter\Dropbox\Personal\Programming\UnixCode\projects\stockoma\site\front-admin":t:"eli-admin"'/>
 				</key>
 				<key name="Task9" modified="2020-01-12 23:13:33" build="161206">
 					<value name="Name" type="string" data="{Partena::ProSalary}"/>
 					<value name="Hotkey" type="dword" data="00101150"/>
-					<value name="GuiArgs" type="string" data="/icon &quot;C:\Work\partena.ico&quot;"/>
-					<value name="Cmd1" type="string" data="pwsh.exe -NoExit -Command &quot;npm start&quot; -new_console:d:&quot;C:\Work\ProSalary\Frontend\ProSalary-Angular&quot;:t:&quot;prosalary-front&quot;"/>
+					<value name="GuiArgs" type="string" data='/icon "C:\Work\partena.ico"'/>
+					<value name="Cmd1" type="string" data='pwsh.exe -NoExit -Command "npm start" -new_console:d:"C:\Work\ProSalary\Frontend\ProSalary-Angular":t:"prosalary-front"'/>
 					<value name="Active" type="long" data="2"/>
 					<value name="Count" type="long" data="2"/>
 					<value name="Flags" type="dword" data="00000004"/>
-					<value name="Cmd2" type="string" data="&gt;pwsh.exe -new_console:s1THn:d:&quot;C:\Work\ProSalary\Frontend\ProSalary-Angular&quot;:t:&quot;prosalary-cli&quot;"/>
+					<value name="Cmd2" type="string" data='&gt;pwsh.exe -new_console:s1THn:d:"C:\Work\ProSalary\Frontend\ProSalary-Angular":t:"prosalary-cli"'/>
 				</key>
 				<key name="Task10" modified="2020-01-12 23:13:33" build="161206">
 					<value name="Name" type="string" data="{Partena::CreateWorker}"/>
 					<value name="Hotkey" type="dword" data="00101157"/>
-					<value name="GuiArgs" type="string" data="/icon &quot;C:\work\partena.ico&quot;"/>
-					<value name="Cmd1" type="string" data="pwsh.exe -NoExit -Command &quot;ng serve&quot; -new_console:d:&quot;C:\Work\CreateWorker\Frontend\CreationBusinessLeader.Angular&quot;:t:&quot;worker-front&quot;"/>
-					<value name="Cmd2" type="string" data="&gt;pwsh.exe -new_console:s1THn:d:&quot;C:\Work\CreateWorker\Frontend\CreationBusinessLeader.Angular&quot;:t:worker-cli&quot;"/>
+					<value name="GuiArgs" type="string" data='/icon "C:\work\partena.ico"'/>
+					<value name="Cmd1" type="string" data='pwsh.exe -NoExit -Command "ng serve" -new_console:d:"C:\Work\CreateWorker\Frontend\CreationBusinessLeader.Angular":t:"worker-front"'/>
+					<value name="Cmd2" type="string" data='&gt;pwsh.exe -new_console:s1THn:d:"C:\Work\CreateWorker\Frontend\CreationBusinessLeader.Angular":t:worker-cli"'/>
 					<value name="Active" type="long" data="2"/>
 					<value name="Count" type="long" data="2"/>
-					<value name="Cmd3" type="string" data="cmd /k &quot;&quot;%ConEmuDir%\..\init.bat&quot; &amp; gulp&quot; -cur_console:s1THn:d:&quot;C:\projects\Digipolis\Wtm\App\Focus.Wtm.App&quot;:t:&quot;Wtm-gulp&quot;"/>
-					<value name="Cmd4" type="string" data="cmd /k &quot;&quot;%ConEmuDir%\..\init.bat&quot; &amp; gulp&quot; -cur_console:s2THn:d:&quot;C:\projects\Digipolis\FedPol\App\Focus.FedPol.App&quot;:t:&quot;FedPol-gulp&quot;"/>
-					<value name="Cmd5" type="string" data="cmd /k &quot;%ConEmuDir%\..\init.bat&quot;  -new_console:d:C:\projects\Digipolis"/>
+					<value name="Cmd3" type="string" data='cmd /k ""%ConEmuDir%\..\init.bat" &amp; gulp" -cur_console:s1THn:d:"C:\projects\Digipolis\Wtm\App\Focus.Wtm.App":t:"Wtm-gulp"'/>
+					<value name="Cmd4" type="string" data='cmd /k ""%ConEmuDir%\..\init.bat" &amp; gulp" -cur_console:s2THn:d:"C:\projects\Digipolis\FedPol\App\Focus.FedPol.App":t:"FedPol-gulp"'/>
+					<value name="Cmd5" type="string" data='cmd /k "%ConEmuDir%\..\init.bat"  -new_console:d:C:\projects\Digipolis'/>
 					<value name="Flags" type="dword" data="00000004"/>
 				</key>
 				<key name="Task11" modified="2020-01-12 23:13:33" build="161206">
 					<value name="Name" type="string" data="{Partena::UXLib}"/>
 					<value name="Hotkey" type="dword" data="00101155"/>
 					<value name="GuiArgs" type="string" data=""/>
-					<value name="Cmd1" type="string" data="pwsh.exe -NoExit -Command &quot;npm start&quot; -new_console:d:&quot;C:\Work\UX-Library\src\UXLib&quot;:t:&quot;UXLib-Serve&quot;"/>
+					<value name="Cmd1" type="string" data='pwsh.exe -NoExit -Command "npm start" -new_console:d:"C:\Work\UX-Library\src\UXLib":t:"UXLib-Serve"'/>
 					<value name="Active" type="long" data="2"/>
 					<value name="Count" type="long" data="3"/>
-					<value name="Cmd2" type="string" data="&gt;pwsh.exe -new_console:s1THn:d:&quot;C:\Work\UX-Library\src\UXLib\projects\partena-ux-library&quot;:t:&quot;UXLib-CLI&quot;"/>
-					<value name="Cmd3" type="string" data="pwsh.exe -new_console:s1TVn:d:&quot;C:\Work\UX-Library\src\UXLib&quot;:t:&quot;UX-CLI&quot;"/>
-					<value name="Cmd4" type="string" data="powershell -new_console:d:&quot;C:\projects\Digipolis\Wtm\App&quot;:t:&quot;Wtm.App&quot;"/>
-					<value name="Cmd5" type="string" data="powershell -new_console:d:&quot;C:\projects\Digipolis\Wtm\TfsService\Dev&quot;:t:&quot;Wtm.Service&quot;"/>
-					<value name="Cmd6" type="string" data="powershell -new_console:d:&quot;C:\projects\Digipolis\FedPol\App&quot;:t:&quot;FedPol.App&quot;"/>
-					<value name="Cmd7" type="string" data="powershell -new_console:d:&quot;C:\projects\Digipolis\FedPol\Service&quot;:t:&quot;FedPol.Service&quot;"/>
+					<value name="Cmd2" type="string" data='&gt;pwsh.exe -new_console:s1THn:d:"C:\Work\UX-Library\src\UXLib\projects\partena-ux-library":t:"UXLib-CLI"'/>
+					<value name="Cmd3" type="string" data='pwsh.exe -new_console:s1TVn:d:"C:\Work\UX-Library\src\UXLib":t:"UX-CLI"'/>
+					<value name="Cmd4" type="string" data='powershell -new_console:d:"C:\projects\Digipolis\Wtm\App":t:"Wtm.App"'/>
+					<value name="Cmd5" type="string" data='powershell -new_console:d:"C:\projects\Digipolis\Wtm\TfsService\Dev":t:"Wtm.Service"'/>
+					<value name="Cmd6" type="string" data='powershell -new_console:d:"C:\projects\Digipolis\FedPol\App":t:"FedPol.App"'/>
+					<value name="Cmd7" type="string" data='powershell -new_console:d:"C:\projects\Digipolis\FedPol\Service":t:"FedPol.Service"'/>
 					<value name="Flags" type="dword" data="00000004"/>
 				</key>
 				<key name="Task12" modified="2020-01-12 23:13:33" build="161206">
@@ -620,17 +620,17 @@
 					<value name="GuiArgs" type="string" data=""/>
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
-					<value name="Cmd1" type="string" data="pwsh.exe -NoExit -new_console:d:&quot;\\ss-bxl-s-003\groupdir\g-ss-devhost\Doc Paie\4_Analyse\BD - Messages\Copys COBOL&quot;:t:&quot;CopyBooks&quot;"/>
+					<value name="Cmd1" type="string" data='pwsh.exe -NoExit -new_console:d:"\\ss-bxl-s-003\groupdir\g-ss-devhost\Doc Paie\4_Analyse\BD - Messages\Copys COBOL":t:"CopyBooks"'/>
 				</key>
 				<key name="Task13" modified="2020-01-12 23:13:33" build="161206">
 					<value name="Name" type="string" data="{ttc}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
-					<value name="GuiArgs" type="string" data="/icon &quot;C:\code\ttc\ttc.ico&quot;"/>
+					<value name="GuiArgs" type="string" data='/icon "C:\code\ttc\ttc.ico"'/>
 					<value name="Active" type="long" data="2"/>
 					<value name="Count" type="long" data="2"/>
-					<value name="Cmd1" type="string" data="pwsh.exe -NoExit -Command &quot;npm start&quot; -new_console:d:&quot;C:\code\ttc\react-redux\frontend&quot;:t:&quot;ttc-front&quot;"/>
-					<value name="Cmd2" type="string" data="&gt;pwsh.exe -new_console:s1THn:d:&quot;C:\code\ttc\react-redux\frontend&quot;:t:ttc-cli&quot;"/>
+					<value name="Cmd1" type="string" data='pwsh.exe -NoExit -Command "npm start" -new_console:d:"C:\code\ttc\react-redux\frontend":t:"ttc-front"'/>
+					<value name="Cmd2" type="string" data='&gt;pwsh.exe -new_console:s1THn:d:"C:\code\ttc\react-redux\frontend":t:ttc-cli"'/>
 				</key>
 			</key>
 			<key name="Apps" modified="2020-01-12 23:13:33" build="161206">
@@ -879,9 +879,9 @@
 				<value name="PastePathKey" type="dword" data="00101144"/>
 				<value name="PasteCygwinKey" type="dword" data="00005d2d"/>
 				<value name="KeyMacro01" type="dword" data="00a01231"/>
-				<value name="KeyMacro01.Text" type="string" data="Task(&quot;cmd&quot;)"/>
+				<value name="KeyMacro01.Text" type="string" data='Task("cmd")'/>
 				<value name="KeyMacro02" type="dword" data="00a01232"/>
-				<value name="KeyMacro02.Text" type="string" data="Task(&quot;PowerShell&quot;)"/>
+				<value name="KeyMacro02.Text" type="string" data='Task("PowerShell")'/>
 				<value name="KeyMacro03" type="dword" data="000011d0"/>
 				<value name="KeyMacro03.Text" type="string" data="FontSetSize(1,2)"/>
 				<value name="KeyMacro04" type="dword" data="000011d1"/>
@@ -973,3 +973,4 @@
 		</key>
 	</key>
 </key>
+
