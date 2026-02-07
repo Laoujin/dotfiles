@@ -4,6 +4,10 @@ Create-Links:
   to: <HOME>\.common.gitconfig
 
 - type: symlink
+  link: git\.windows.gitconfig
+  to: <HOME>\.windows.gitconfig
+
+- type: symlink
   link: git\.gitignore_global
   to: <HOME>\.gitignore_global
 
