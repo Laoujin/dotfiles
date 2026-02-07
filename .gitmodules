@@ -1,3 +1,6 @@
 [submodule "config/PowerShell/scripts/git-numberedadd"]
 	path = config/PowerShell/scripts/git-numberedadd
 	url = https://github.com/itenium-be/Git-NumberedAdd
+[submodule "config/git"]
+	path = config/git
+	url = https://github.com/Laoujin/Git-Config
