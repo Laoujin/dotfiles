@@ -106,9 +106,8 @@
 
 	# Reflog
 	# Check: https://stackoverflow.com/questions/17369254/is-there-a-way-to-cause-git-reflog-to-show-a-date-alongside-each-entry
-	# refl = reflog --format='%C(auto)%h %<|(20)%gd %C(blue)%cr%C(reset) %gs (%s)'
-	refl = reflog --date=relative --pretty=format:'%C(magenta)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd)%C(bold blue)<%an>%Creset'
-	# refld = reflog --format='%C(auto)%h %<|(20)%gd %C(blue)%ad%C(reset) %gs (%s)' --date=format-local:'%Y-%m-%d %H:%M:%S'
+	refl = reflog --date=relative --pretty=format:'%C(magenta)%h%Creset -%C(yellow)%d%Creset %gs %s %Cgreen(%cd)%C(bold blue)<%an>%Creset'
+	refld = !git refl --date=format-local:'%Y-%m-%d %H:%M:%S'
 
 	### Collaborating
 	sha = rev-parse HEAD
