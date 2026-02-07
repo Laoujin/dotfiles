@@ -4,3 +4,6 @@ config/Programs/FileZilla/
 config/Programs/filezilla.json
 
 .ionide
+
+.claude
+_bmad
