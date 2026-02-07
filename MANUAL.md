@@ -1,19 +1,12 @@
 Stuff Done Manually
 ===================
 
-Download Irfanview + Plugins
-
-
-Manual Syncs
-============
-
-Programs that store passwords in plain text.
-
-
 FileZilla
 ---------
 
-Base64 encoded passwords.
+Base64 encoded passwords.  
+Stored in `%APPDATA%/FileZilla`.
+Synced but excluded from git.
 
 
 HeidiSQL
