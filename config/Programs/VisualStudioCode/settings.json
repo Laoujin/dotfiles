@@ -5,8 +5,7 @@
     "window.openFoldersInNewWindow": "on",
     "workbench.colorTheme": "Visual Studio Dark",
     "workbench.iconTheme": "material-icon-theme",
-    "telemetry.enableCrashReporter": false,
-    "telemetry.enableTelemetry": false,
+    "telemetry.telemetryLevel": "off",
     "files.encoding": "utf8",
     "files.autoGuessEncoding": false,
     "files.eol": "auto",
@@ -15,7 +14,7 @@
         "*.ini.php": "ini",
     },
     "files.exclude": {
-        "node_modules/**": true,
+        "node_modules/**": false,
         "build/**": true,
         "_site": true,
         ".sass-cache": true,
@@ -36,18 +35,14 @@
     "workbench.settings.openDefaultKeybindings": true,
     "workbench.settings.openDefaultSettings": false,
     "workbench.settings.useSplitJSON": false,
-    "workbench.activityBar.visible": true,
     "workbench.startupEditor": "newUntitledFile",
     "workbench.sideBar.location": "left",
     "workbench.tree.indent": 32,
-
-    "workbench.editor.showTabs": true,
+    "workbench.editor.showTabs": "multiple",
     "workbench.editor.highlightModifiedTabs": true,
     "workbench.editor.labelFormat": "default",
     "workbench.editor.tabCloseButton": "off",
     "workbench.editor.tabSizing": "shrink",
-
-
     // ---------------------------------------
     // ----------- Explorer ------------------
     // ---------------------------------------
@@ -55,19 +50,15 @@
     "explorer.confirmDelete": false,
     "explorer.enableDragAndDrop": true,
     "explorer.confirmDragAndDrop": false,
-
     "vsicons.presets.angular": true,
     "vsicons.presets.hideExplorerArrows": true,
-
-
     // ---------------------------------------
     // ------------- SCM ---------------------
     // ---------------------------------------
     "scm.diffDecorationsGutterWidth": 5,
     "git.enabled": true,
     "git.countBadge": "off",
-
-
+    "git.autoRepositoryDetection": true,
     // ---------------------------------------
     // ------------- Search ------------------
     // ---------------------------------------
@@ -78,31 +69,20 @@
         "**/node_modules": true,
         "**/bower_components": true,
     },
-    "search.location": "panel",
     "search.showLineNumbers": true,
     // Search case-insensitively if the pattern is all lowercase, otherwise, search case-sensitively.
     "search.smartCase": false,
     "search.useGlobalIgnoreFiles": true, // Use global .gitignore
-    "search.usePCRE2": true, // Use the PCRE2 regex engine (as supported by JavaScript)
-    "editor.find.seedSearchStringFromSelection": false,
-
-
-    // ---------------------------------------
-    // ------------- Editor ------------------
-    // ---------------------------------------
-    "breadcrumbs.enabled": false,
+    "editor.find.seedSearchStringFromSelection": "never",
     "references.preferredLocation": "peek",
-
     // https://github.com/tonsky/FiraCode
     "editor.fontFamily": "Fira Code, Consolas, 'Courier New', monospace",
     "editor.fontLigatures": true,
     "editor.minimap.enabled": false,
     "editor.renderWhitespace": "all",
     "editor.renderControlCharacters": true,
-
     "files.autoSave": "off",
     "files.autoSaveDelay": 1000,
-
     "editor.wordWrap": "off",
     "editor.rulers": [
         120,
@@ -121,12 +101,9 @@
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": false,
     "files.trimTrailingWhitespace": true,
-    "editor.formatOnSave": true,
-    "editor.formatOnSaveTimeout": 750,
     "editor.codeActionsOnSave": {},
-    "editor.codeActionsOnSaveTimeout": 750,
     "editor.tabSize": 4,
-    "editor.autoIndent": true,
+    "editor.autoIndent": "full",
     "editor.detectIndentation": true,
     "editor.insertSpaces": true, // Ignored when detectIndentation is true
     "editor.autoClosingBrackets": "always",
@@ -141,9 +118,6 @@
         "strings": false
     },
     "editor.parameterHints.cycle": true,
-
-    "editor.multiCursorModifier": "alt",
-
     // Extension: oderwat.indent-rainbow
     // https://github.com/oderwat/vscode-indent-rainbow
     // For which languages indent-rainbow should be activated (if empty it means all).
@@ -166,7 +140,6 @@
         "rgba(255,127,255,0.01)",
     ],
     "indentRainbow.errorColor": "rgba(128,32,32,0.6)",
-
     // Extension: aaron-bond.better-comments
     // https://github.com/aaron-bond/better-comments
     "better-comments.highlightPlainText": true,
@@ -194,12 +167,17 @@
             "color": "#FF9912",
             "strikethrough": false,
             "backgroundColor": "transparent"
+        },
+        {
+            "tag": "NEXT:",
+            "color": "#cfff33",
+            "strikethrough": false,
+            "backgroundColor": "transparent",
+            "bold": true
         }
     ],
-
-
     // https://github.com/CoenraadS/Bracket-Pair-Colorizer-2
-    "editor.matchBrackets": false,
+    "editor.matchBrackets": "never",
     "bracket-pair-colorizer-2.colors": [
         "Gold",
         "Orchid",
@@ -209,9 +187,9 @@
     "bracket-pair-colorizer-2.highlightActiveScope": true,
     "bracket-pair-colorizer-2.showBracketsInGutter": true,
     "bracket-pair-colorizer-2.showBracketsInRuler": false,
-    "bracket-pair-colorizer-2.excludedLanguages": ["markdown"],
-
-
+    "bracket-pair-colorizer-2.excludedLanguages": [
+        "markdown"
+    ],
     // ---------------------------------------
     // ------------- Terminal ----------------
     // ---------------------------------------
@@ -224,16 +202,12 @@
     "terminal.integrated.fontFamily": "monospace", // Fira Code
     // "terminal.external.windowsExec": "C:\\Program Files\\PowerShell\\6.0.4\\pwsh.exe",
     // "terminal.integrated.shell.windows": "C:\\Program Files\\PowerShell\\6.0.4\\pwsh.exe"
-
-
     // ---------------------------------------
     // ------------- ZEN Mode ----------------
     // ---------------------------------------
     "zenMode.hideLineNumbers": false,
     "zenMode.hideActivityBar": false,
     "zenMode.hideStatusBar": false,
-
-
     // ---------------------------------------
     // ------------- Languages ---------------
     // ---------------------------------------
@@ -241,7 +215,7 @@
     "[yaml]": {
         "editor.insertSpaces": true,
         "editor.tabSize": 2,
-        "editor.autoIndent": false
+        "editor.autoIndent": "advanced"
     },
     "[ahk]": {
         "files.encoding": "utf8bom"
@@ -257,7 +231,7 @@
             "strings": true
         },
         "files.trimTrailingWhitespace": false,
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.defaultFormatter": null,
     },
     "markdownlint.config": {
         "default": true,
@@ -380,9 +354,46 @@
         "wireframes"
     ],
     "vsicons.projectDetection.disableDetect": true,
-    "java.errors.incompleteClasspath.severity": "ignore",
-    "java.configuration.checkProjectSettingsExclusions": false,
+    "security.workspace.trust.untrustedFiles": "open",
+    "dart.checkForSdkUpdates": false,
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.multiCursorModifier": "ctrlCmd",
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "prettier.embeddedLanguageFormatting": "off",
+    "git.openRepositoryInParentFolders": "never",
+    "[css]": {
+        "editor.defaultFormatter": "vscode.css-language-features"
+    },
+    "projectManager.git.maxDepthRecursion": -1,
+    "powershell.promptToUpdatePowerShell": false,
+    "editor.guides.bracketPairs": true,
+    "window.zoomLevel": 1,
+    "typescript.tsdk": "C:\\Program Files\\Microsoft VS Code\\resources\\app\\extensions\\node_modules\\typescript\\lib\\lib.esnext.d.ts",
+    "workbench.editor.tabActionCloseVisibility": false,
+    "terminal.integrated.commandsToSkipShell": [
+        "language-julia.interrupt"
+    ],
+    "julia.symbolCacheDownload": true,
+    "julia.enableTelemetry": false,
+    "julia.executablePath": "C:\\Users\\wouter\\AppData\\Local\\Programs\\Julia-1.11.4\\bin\\julia.exe",
+    "eslint.codeAction.disableRuleComment": {
+        "location": "sameLine"
+    },
     "eslint.codeActionsOnSave.rules": null,
     "eslint.format.enable": true,
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "tailwindCSS.classFunctions": [
+        "cva",
+        "cx"
+    ],
+    "git.blame.editorDecoration.enabled": false,
+    "claudeCode.preferredLocation": "panel"
 }
