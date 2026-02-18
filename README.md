@@ -1,6 +1,10 @@
 Configure You Windows
 =====================
 
+**ARCHIVED**: This worked but it was not awesome. Check out [Perch](https://github.com/Laoujin/Perch)!
+
+
+
 **Dotfiles for Windows**  
 
 Automatically install software and keep their settings synchronized.  
